@@ -354,3 +354,26 @@
     transform: translateY(-50%);
     position: absolute;
 }
+
+.search-modal-input-text {
+    padding-left: 45px;
+    border-color: rgba(86,105,143,0.1200);
+    justify-content: center;
+    align-items: center;
+    text-overflow: ellipsis;
+    box-shadow: 0px 0px 20px 0px rgba(24,37,61,0.0600);
+    border-radius: 16px;
+    padding: 20px;
+    width: 800px;
+    color: rgba(18,19,20,1);
+    border: 1px solid;
+    background-color: #ffffff;
+    outline: none;
+    display: flex;
+    font-weight: 400;
+    letter-spacing: -.28px;
+    font-family: "PretendardVariable","PretendardVariable Fallback";
+    font-size: 14px;
+    line-height: 20px;
+    border-width: 0;
+}
