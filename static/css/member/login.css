@@ -1,0 +1,1207 @@
+* {
+    box-sizing: border-box;
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-synthesis: none;
+}
+
+body {
+    background: #fff;
+    color: 46px;
+}
+
+body {
+    height: 100%;
+    line-height: inherit;
+}
+
+
+
+
+.jc_center {
+    justify-content: center;
+    align-items: anchor-center;
+    /* transform: translateY(-6px); */
+}
+
+.bg_backgrounds\.canvas\.intense {
+    background: #f5f6fa;
+}
+
+.h_100svh {
+    height: 100svh;
+}
+
+.w_100\% {
+    width: 100%;
+}
+
+.d_flex {
+    display: flex;
+}
+
+.flex-sh_0 {
+    flex-shrink: 0;
+}
+
+.ov-y_auto {
+    overflow-y: auto;
+}
+
+.gap_20px {
+    gap: 20px;
+}
+
+.p_20px {
+    padding: 20px;
+}
+
+.ov_hidden {
+    overflow: hidden;
+}
+
+.bdr_12px {
+    border-radius: 12px;
+}
+
+.h_100\% {
+    height: 100%;
+}
+
+.pos_relative {
+    position: relative;
+}
+
+img, video {
+    max-width: 100%;
+    height: auto;
+}
+
+.top_40px {
+    top: 40px;
+}
+
+.left_50\% {
+    left: 50%;
+}
+
+.trf_translateX\(-50\%\) {
+    transform: translateX(-50%);
+}
+
+.pos_absolute {
+    position: absolute;
+}
+
+.ai_center {
+    align-items: center;
+}
+
+.d_inline-flex {
+    display: inline-flex;
+}
+
+.c_foregrounds\.neutral\.primary {
+    color: rgba(18,19,20,1);
+}
+
+.flex-d_column {
+    flex-direction: column;
+}
+
+.max-w_384px {
+    max-width: 384px;
+}
+
+.gap_30px {
+    gap: 30px;
+}
+
+.ai_flex-start {
+    align-items: flex-start;
+}
+
+.white-space_pre-line {
+    white-space: pre-line;
+}
+
+.textStyle_Display\.DisplayM {
+    letter-spacing: -.64px;
+    font-family: "PretendardVariable","PretendardVariable Fallback";
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 46px;
+}
+
+.gap_24px {
+    gap: 24px;
+}
+
+.gap_6px {
+    gap: 6px;
+}
+
+.trs_background-color_0\.3s {
+    transition: background-color .3s;
+}
+
+.px_16px {
+    padding-inline: 16px;
+}
+
+.w_fit-content {
+    width: fit-content;
+}
+
+.bdr_8px {
+    border-radius: 8px;
+}
+
+.h_40px {
+    height: 40px;
+}
+
+.cursor_pointer {
+    cursor: pointer;
+}
+
+.us_none {
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.tov_ellipsis {
+    text-overflow: ellipsis;
+}
+
+.ta_center {
+    text-align: center;
+}
+
+.c_foregrounds\.neutral\.secondary {
+    color: rgba(18,19,20,0.6000);
+}
+
+.white-space_nowrap {
+    white-space: nowrap;
+}
+
+.textStyle_Body\.BodyM_Bold {
+    font-weight: 500;
+}
+
+.bg_backgrounds\.surface\.standard {
+    background: rgba(86,105,143,0.0600);
+}
+
+.trs_all_0\.3s {
+    transition: all .3s;
+}
+
+.op_1 {
+    opacity: 1;
+}
+
+.gap_12px {
+    gap: 12px;
+}
+
+.p_0px_8px_6px_8px {
+    padding: 0 8px 6px;
+}
+
+.gap_4px {
+    gap: 4px;
+}
+
+.bd-c_strokes\.surface\.standard {
+    border-color: rgba(86,105,143,0.1200);
+}
+
+.flex-d_row {
+    flex-direction: row;
+}
+
+.min-h_44px {
+    min-height: 44px;
+}
+
+.p_6px {
+    padding: 6px;
+}
+
+.min-w_32px {
+    min-width: 32px;
+}
+
+.bg_transparent {
+    background: rgb(0 0 0/0);
+}
+
+.bd_1px_solid {
+    border: 1px solid rgba(86, 105, 143, 0.1200);
+}
+
+.p_8px {
+    padding: 8px;
+}
+
+.flex_1_0_0 {
+    flex: 1 0 0;
+}
+
+/* 이메일 & 비밀번호 */
+.bd_none {
+    border: none;
+}
+
+.h_20px {
+    height: 20px;
+}
+
+.ring_none {
+    outline: none;
+}
+
+.textStyle_Body\.BodyM, .textStyle_Body\.BodyS {
+    font-weight: 400;
+}
+
+.textStyle_Body\.BodyM, .textStyle_Body\.BodyM_Bold {
+    letter-spacing: -.28px;
+    font-family: "PretendardVariable","PretendardVariable Fallback";
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.bg-c_transparent {
+    background-color: rgb(0 0 0/0);
+}
+
+/*  */
+.disabled\:op_0\.4:is(:disabled,[disabled],[data-disabled]) {
+    opacity: .4;
+}
+
+.disabled\:cursor_not-allowed:is(:disabled,[disabled],[data-disabled]) {
+    cursor: not-allowed;
+}
+
+.bg-c_backgrounds\.surface\.standard {
+    background-color: rgba(86,105,143,0.0600);
+}
+
+.p_0px_16px {
+    padding: 0 16px;
+}
+
+.max-h_56px {
+    max-height: 56px;
+}
+
+.min-h_56px {
+    min-height: 56px;
+}
+
+.d_inline-flex {
+    display: inline-flex;
+}
+
+.bdr_999px {
+    border-radius: 999px;
+}
+
+.p_0px_8px {
+    padding: 0 8px;
+}
+
+/* 간편(소셜) 로그인 */
+.gap_8px {
+    gap: 8px;
+}
+
+.min-w_76px {
+    min-width: 76px;
+}
+
+.flex_1_1_0 {
+    flex: 1 1 0;
+}
+
+.p_14px {
+    padding: 14px;
+}
+
+button {
+    color: inherit;
+    outline: 2px solid transparent;
+}
+
+/* 간편 로그인 - 네이버 */
+.bg-c_temp\.naver {
+    background-color: #03CF5D;
+}
+
+.max-h_56px {
+    max-height: 56px;
+}
+
+/* 간편 로그인 - 카카오 */
+.bg-c_temp\.kakaotalk {
+    background-color: #FEE500;
+}
+
+/* 약관 */
+.p_6px_8px {
+    padding: 6px 8px;
+}
+
+.msk_none {
+    mask: none;
+    -webkit-mask: none;
+}
+
+.textStyle_Textual\.TextualL, .textStyle_Textual\.TextualS {
+    letter-spacing: 0;
+    font-family: "PretendardVariable","PretendardVariable Fallback";
+    font-weight: 400;
+}
+
+.textStyle_Textual\.TextualS {
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.text-decoration-line_underline {
+    text-decoration-line: underline;
+}
+
+.text-underline-position_under {
+    text-underline-position: under;
+}
+
+.td-t_0\.8px {
+    text-decoration-thickness: .8px;
+}
+
+.top_20px {
+    top: 20px;
+}
+
+.right_20px {
+    right: 20px;
+}
+
+.pos_fixed {
+    position: fixed;
+}
+
+.max-h_48px {
+    max-height: 48px;
+}
+
+.min-h_48px {
+    min-height: 48px;
+}
+
+.p_12px {
+    padding: 12px;
+}
+
+.\[\&_svg\]\:c_foregrounds\.neutral\.primary svg {
+    color: rgba(18,19,20,1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
