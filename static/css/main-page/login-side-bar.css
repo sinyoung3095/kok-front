@@ -351,7 +351,7 @@
     transform: scale(0.99); 
     pointer-events: auto;
     /* 확인용 */
-    opacity: 1;
+    opacity: 0;
 }
 
 .search-modal-height-auto {
