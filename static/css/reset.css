@@ -1,0 +1,147 @@
+*, ::backdrop, ::file-selector-button, ::after, ::before {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    border-width: 0px;
+}
+
+html {
+    line-height: 1.5;
+}
+
+body {
+    margin: 0;
+    -webkit-overflow-scrolling: touch;
+    overflow: hidden;
+    font-family: 'PretendardVariable';
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    display: none
+}
+
+img {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none
+}
+
+input[type=number] {
+    &::-webkit-inner-spin-button,&::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0
+    }
+}
+
+hr {
+    height: 0;
+    color: inherit;
+    border-top-width: 1px
+}
+
+body {
+    height: 100%;
+    line-height: inherit
+}
+
+img {
+    border-style: none
+}
+
+audio,canvas,embed,iframe,img,object,svg,video {
+    display: block;
+}
+
+img,video {
+    max-width: 100%;
+    height: auto
+}
+
+h1,h2,h3,h4,h5,h6 {
+    text-wrap: balance;
+    font-size: inherit;
+    font-weight: inherit
+}
+
+h1,h2,h3,h4,h5,h6,p {
+    overflow-wrap: break-word
+}
+
+menu,ol,ul {
+    list-style: none
+}
+
+::file-selector-button, button, input:where([type=button],[type=reset],[type=submit]) {
+    appearance:button;
+    -webkit-appearance: button
+}
+
+::file-selector-button,button,input,optgroup,select,textarea {
+    font: inherit;
+    font-feature-settings: inherit;
+    font-variation-settings: inherit;
+    letter-spacing: inherit;
+    color: inherit;
+    background: var(--colors-transparent)
+}
+
+::placeholder {
+    opacity: 1;
+    color: rgba(0,0,0,0.5);
+}
+
+textarea {
+    resize: vertical
+}
+
+table {
+    text-indent: 0;
+    border-collapse: collapse;
+    border-color: inherit
+}
+
+summary {
+    display: list-item
+}
+
+small {
+    font-size: 80%
+}
+
+sub,sup {
+    position: relative;
+    vertical-align: baseline;
+    font-size: 75%;
+    line-height: 0
+}
+
+sub {
+    bottom: -.25em
+}
+
+sup {
+    top: -.5em
+}
+
+dialog {
+    padding: 0
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit
+}
+
+abbr:where([title]) {
+    text-decoration:underline dotted
+}
+
+b,strong {
+    font-weight: bolder
+}
+progress {
+    vertical-align: baseline
+}
