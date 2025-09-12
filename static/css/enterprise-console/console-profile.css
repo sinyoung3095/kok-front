@@ -1,0 +1,344 @@
+body *{
+    border-color: #e5e5e5;
+    outline-color: #a1a1a180;
+}
+
+*, ::backdrop, :after, :before {
+    box-sizing: border-box;
+    border: 0 solid;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+menu, ol, ul {
+    list-style: none;
+}
+
+ol {
+    display: block;
+    list-style-type: decimal;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    padding-inline-start: 40px;
+    unicode-bidi: isolate;
+}
+
+body {
+    background-color: white;
+    color: #0a0a0a;
+}
+
+header {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+nav {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+    unicode-bidi: isolate;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+}
+
+section {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+button, input:where([type=button],[type=reset],[type=submit]) {
+    appearance: button;
+}
+
+button, input, optgroup, select, textarea {
+    font: inherit;
+    font-feature-settings: inherit;
+    font-variation-settings: inherit;
+    letter-spacing: inherit;
+    color: inherit;
+    opacity: 1;
+    background-color: #0000;
+    border-radius: 0;
+}
+
+table {
+    text-indent: 0;
+    border-color: inherit;
+    border-collapse: collapse;
+}
+
+thead {
+    display: table-header-group;
+    vertical-align: middle;
+    unicode-bidi: isolate;
+    border-color: inherit;
+}
+
+h1 {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+}
+
+audio, canvas, embed, iframe, img, object, svg, video {
+    display: block;
+}
+
+label {
+    cursor: default;
+}
+
+img, video {
+    max-width: 100%;
+    height: auto;
+}
+
+main.main{
+    box-shadow: #0000;
+    border-radius: 14px;
+    margin-left: 0px;
+    margin: 8px;
+    background-color: white;
+    flex-direction: column;
+    flex: 1;
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+
+div.wrap-enter{
+    background-color: #fafafa;
+    overflow: hidden;
+    width: 100%;
+    min-height: 898px;
+    height: 898px;
+    display: flex;
+}
+
+div.profile-wrap{
+    overflow: auto;
+    flex-direction: column;
+    flex: 1;
+    min-height: 0px;
+    display: flex;
+}
+
+div.profile-wrap-2{
+    gap: 8px;
+    flex-direction: column;
+    flex: 1;
+    display: flex;
+    container: main / inline-size;
+}
+
+div.profile-wrap-inner{
+    padding-block: 24px;
+    gap: 24px;
+    flex-direction: column;
+    display: flex;
+    color-scheme: light;
+}
+
+div.profile-wrap-inner-2{
+    padding: 24px;
+    margin-inline: auto;
+    max-width: 96rem;
+    width: 100%;
+}
+
+div.profile-top{
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    margin-block-start: 0px;
+    margin-block-end: 16px;
+    color-scheme: light;
+}
+
+h1.profile-h1{
+    letter-spacing: -0.75px;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 1.2;
+    color-scheme: light;
+}
+
+p.profile-p{
+    color: #737373;
+    color-scheme: light;
+}
+
+div.profile-main{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    display: grid;
+    margin-block-start: 0px;
+    margin-block-end: 16px;
+    color-scheme: light;
+}
+
+div.profile-main-inner{
+    grid-column: span 2 / span 2;
+    color-scheme: light;
+}
+
+div.profile-inner-2{
+    box-shadow: #0000;
+    color: #0a0a0a;
+    padding-block: 24px;
+    background-color: white;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 14px;
+    gap: 24px;
+    flex-direction: column;
+    display: flex;
+    margin-block-start: 0px;
+    margin-block-end: 16px;
+    color-scheme: light;
+}
+
+div.profile-head{
+    padding-inline: 24px;
+    gap: 6px;
+    align-items: flex-start;
+    grid-template-rows: auto auto;
+    grid-auto-rows: min-content;
+    display: grid;
+    container: card-header / inline-size;
+}
+
+div.profile-head-inner{
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    color: #0a0a0a;
+}
+
+div.head-main{
+    font-weight: 600;
+    line-height: 1;
+    color: #0a0a0a;
+}
+
+div.head-sub{
+    color: #737373;
+    font-size: 14px;
+    line-height: 1.42857;
+}
+
+button.edit-profile{
+    padding-inline: 10px;
+    outline-style: none;
+    transition-property: color, box-shadow;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+    transition-duration: .15s;
+    box-shadow: #0000;
+    white-space: nowrap;
+    font-weight: 500;
+    font-size: 14px;
+    line-height:1.42857;
+    background-color: white;
+    border-color: #e5e5e5;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 8px;
+    gap: 6px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    flex-shrink: 0;
+    height: 32px;
+    display: inline-flex;
+}
+
+svg.edit-icon{
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    pointer-events: none;
+    margin-right: 8px;
+    white-space: nowrap;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.42857;
+    cursor: pointer;
+}
+
+div.profile-content{
+    padding-inline: 24px;
+    color: #0a0a0a;
+}
+
+div.contents{
+    margin-block-start: 0px;
+    margin-block-end: 16px;
+    color: #0a0a0a;
+}
+
+label.profile-label{
+    user-select: none;
+    font-weight: 500;
+    line-height: 1;
+    font-size: 14px;
+    gap: 8px;
+    align-items: center;
+    display: flex;
+    margin-block-start: 0px;
+    margin-block-end: 8px;
+    color: #0a0a0a;
+}
+
+div.img-wrap{
+    color: #0a0a0a;
+}
+
+div.back-wrap{
+    max-width: 672px;
+    position: relative;
+    margin-block-start: 0px;
+    margin-block-end: 12px;
+    color: #0a0a0a;
+}
+
+div.back-img-div{
+    aspect-ratio: 5 / 1;
+    width: 100%;
+    color: #0a0a0a;
+}
+
+img.back-img{
+    object-fit: cover;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    color: #0a0a0a;
+}
+
+input.back-input{
+    display: none;
+}
