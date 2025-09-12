@@ -735,6 +735,14 @@ button.list-item-header .list-item-title {
     margin-top: 8px;
 }
 
+.form-item .file-icon {
+    width: 32px;
+    height: 32px;
+    background-color: #ccc;
+    border-radius: 8px;
+    background: url("../../../images/experience/list/icon_file_default.svg");
+}
+
 .form-field {
     border: 1px solid rgba(24,37,61,0.0600);
     border-radius: 12px;
@@ -756,6 +764,37 @@ button.list-item-header .list-item-title {
     background-position: right 12px center;
     background: right 12px center / 24px 24px 
     no-repeat url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='rgba(18,19,20,0.4)'><path fill-rule='evenodd' clip-rule='evenodd' d='M6.434 9.435a.8.8 0 0 1 1.132 0L12 13.869l4.434-4.434a.8.8 0 1 1 1.132 1.13l-5 5a.8.8 0 0 1-1.132 0l-5-5a.8.8 0 0 1 0-1.13'/></svg>");
+}
+
+.file-list .form-item {
+    display: flex;
+    gap: 8px;
+    justify-content: space-between;
+}
+
+.file-container {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-check-container .btn-check {
+    width: 24px;
+    height: 24px;
+    border-radius: 6px;
+    background-color: rgba(18,19,20,1);
+}
+
+.file-container .file-label {
+    font-weight: 500;
+}
+
+.file-container .file-name {
+    color: rgba(18,19,20,0.6000);
+    font-size: 12px;
+}
+
+.file-container .file-name.url {
+    color: #0088FF;
 }
 
 .must {
@@ -782,6 +821,27 @@ button.list-item-header .list-item-title {
     background-color: rgba(18,19,20,1);
     color: #fff;
 }
+
+/* 체크박스 */
+.check-box input[type="checkbox"] {
+  display: none;
+}
+
+.icon-check {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border: 1px solid rgba(86,105,143,0.1600);
+  border-radius: 6px;
+  background-color: #fff;
+  cursor: pointer;
+  position: relative;
+}
+.icon-check:has(input[type="checkbox"]:checked) {
+  background: url("../../../images/experience/list/icon_check.svg") center / 20px 20px no-repeat #000;
+}
+
+
 
 
 /* 반응형 */
