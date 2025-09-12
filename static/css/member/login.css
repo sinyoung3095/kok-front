@@ -30,7 +30,7 @@ body {
     /* transform: translateY(-6px); */
 }
 
-.bg_backgrounds\.canvas\.intense {
+.background-color {
     background: #f5f6fa;
 }
 
@@ -38,7 +38,7 @@ body {
     height: 100svh;
 }
 
-.w_100\% {
+.w_100 {
     width: 100%;
 }
 
@@ -88,7 +88,7 @@ img, video {
 }
 
 .left_50\% {
-    left: 50%;
+    left: 8%;
 }
 
 .trf_translateX\(-50\%\) {
@@ -184,21 +184,23 @@ img, video {
     text-align: center;
 }
 
-.c_foregrounds\.neutral\.secondary {
-    color: rgba(18,19,20,0.6000);
+.textStyle_Body\.BodyM_Bold {
+    font-weight: 500;
 }
 
 .white-space_nowrap {
     white-space: nowrap;
 }
 
-.textStyle_Body\.BodyM_Bold {
-    font-weight: 500;
-}
-
+/* 일반 회원/기업 회원 선택 스타일 */
 .bg_backgrounds\.surface\.standard {
     background: rgba(86,105,143,0.0600);
 }
+
+.c_foregrounds\.neutral\.secondary {
+    color: rgba(18,19,20,0.6000);
+}
+/*  */
 
 .trs_all_0\.3s {
     transition: all .3s;
@@ -284,10 +286,11 @@ img, video {
     background-color: rgb(0 0 0/0);
 }
 
-/*  */
+/* 로그인 버튼 비활성화 */
 .disabled\:op_0\.4:is(:disabled,[disabled],[data-disabled]) {
     opacity: .4;
 }
+/*  */
 
 .disabled\:cursor_not-allowed:is(:disabled,[disabled],[data-disabled]) {
     cursor: not-allowed;
@@ -1205,3 +1208,20 @@ button {
 
 
 
+/* 기본: PC */
+.pc {
+    display: block;
+}
+.mob {
+    display: none;
+}
+
+/* 1023px 이하일 때: 모바일 */
+@media (max-width: 1023px) {
+    .pc {
+        display: none;
+    }
+    .mob {
+        display: block;
+    }
+}
