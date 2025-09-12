@@ -281,6 +281,11 @@ button.white-button{
     margin-block-end: 8px;
 }
 
+button.white-button:hover{
+    color: #171717;
+    background-color: oklch(.97 0 0);
+}
+
 button.black-button{
     outline-style: none;
     transition-property: color, box-shadow;
@@ -306,6 +311,10 @@ button.black-button{
     width: 100%;
     height: 36px;
     display: inline-flex;
+}
+
+button.black-button:hover{
+    background-color: #171717e6;
 }
 
 div.table-wrap{
