@@ -22,7 +22,7 @@
                             </svg>
                         </div>
                     </a>
-                    <div class="sidebar-search">
+                    <button class="sidebar-search">
                         <div class="sidebar-search-text">
                             <p class="sidebar-search-placeholder">기업, 체험공고, 고용공고</p>
                         </div>
@@ -34,7 +34,7 @@
                                 <p class="sidebar-search-key-text">K</p>
                             </div>
                         </div>
-                    </div>
+                    </button>
                 </div>
             </div>
             <!-- sidebar 리스트 -->
@@ -47,7 +47,7 @@
                                 <div class="sidebar-item-active">
                                     <div class="sidebar-item-icon-active">
                                         <svg color="foregrounds.surface.inverted" fill="currentColor" height="19.2" role="img" width="19.2" viewBox="0 0 24 24">
-                                            <path clip-rule="evenodd" d="M11 3a3 3 0 0 0-3 3v1H5a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-8a3 3 0 0 0-3-3h-3V6a3 3 0 0 0-3-3zm3 4V6a1 1 0 0 0-1-1h-2a1 1 0 0 0-1 1v1z" fill-rule="evenodd"></path>
+                                            <path d="M11 4.85c-2.195-1.022-5.52-1.565-8.633.979A1 1 0 0 0 2 6.603V19a1 1 0 0 0 1.633.774c2.736-2.237 5.734-1.31 7.367-.255zm2 14.669c1.633-1.056 4.63-1.982 7.367.255A1 1 0 0 0 22 19V6.603a1 1 0 0 0-.367-.774C18.52 3.285 15.195 3.828 13 4.849z"></path>
                                         </svg>
                                     </div>
                                     <div class="sidebar-item-text">
@@ -92,9 +92,8 @@
                             <a href="">
                                 <div class="sidebar-item">
                                     <div class="sidebar-item-icon">
-                                        <svg color="foregrounds.neutral.tertiary" fill="currentColor" height="19.2" role="img" width="19.2" viewBox="0 0 24 24">
-                                            <path d="M15 5a3 3 0 0 0-3-3H5a3 3 0 0 0-3 3v9a1 1 0 0 0 1.555.832l2.496-1.664A1 1 0 0 1 6.606 13H7v-1a5 5 0 0 1 5-5h3z"></path>
-                                            <path d="M12 9a3 3 0 0 0-3 3v5a3 3 0 0 0 3 3h5.394a1 1 0 0 1 .555.168l2.496 1.664A1 1 0 0 0 22 21v-9a3 3 0 0 0-3-3z"></path>
+                                        <svg fill="rgba(18,19,20,0.4000)" height="24" role="img" width="24" viewBox="0 0 24 24">
+                                            <path d="M12 2c-3.866 0-7 3.134-7 7v3.6L4.3 15.3a1 1 0 0 0 .7 1.7H19a1 1 0 0 0 .7-1.7L19 12.6V9c0-3.866-3.134-7-7-7zm0 20c1.657 0 3-1.343 3-3H9c0 1.657 1.343 3 3 3z"/>
                                         </svg>
                                     </div>
                                     <div class="sidebar-item-text">
@@ -103,7 +102,7 @@
                                     </div>
                                     <div></div>
                                 </div>
-                            </a> 
+                            </a>
                             <!-- 기업 --> 
                             <a href="">
                                 <div class="sidebar-item">
@@ -122,7 +121,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- 개인정보 법적 고지 -->
                 <div class="sidebar-notice">
                     <div class="start-line">
                         <div class="sidebar-line"></div>
@@ -137,29 +135,22 @@
                             © 2025 Rocketpunch, 주식회사 더블에이스, 홍원표, 대한민국 서울특별시 성동구 성수일로10길 12, 12층 1호, 04793, support@rocketpunch.com, +82 10-2710-7121
                         </p>
                     </div>
-                    <!-- 접기 상태 -->
-                    <div class="sidebar-business">
+                    <!-- 사업자 번호 더보기/접기 -->
+                    <div class="sidebar-business collapsed">
                         <div class="sidebar-business-text">
-                            <p>사업자등록번호 206-87-09615</p>
+                            <p>
+                                사업자등록번호 206-87-09615 <br>
+                                <span class="extra-text">
+                                    통신판매업신고번호 2025-서울성동-0105 <br>
+                                    직업정보제공사업신고번호: J1202020240015 <br>
+                                    유료직업소개사업등록번호: 제2025-3030135-14-5-00002
+                                </span>
+                            </p>
                         </div>
                         <div class="sidebar-business-text">
                             <p><span class="sidebar-business-toggle">더보기</span></p>
                         </div>
                     </div>
-                    <!-- 더보기 상태 -->
-                    <!-- <div class="sidebar-business">
-                        <div class="sidebar-business-text">
-                            <p>
-                                사업자등록번호 206-87-09615 <br>
-                                통신판매업신고번호 2025-서울성동-0105 <br>
-                                직업정보제공사업신고번호: J1202020240015 <br>
-                                유료직업소개사업등록번호: 제2025-3030135-14-5-00002
-                            </p>
-                        </div>
-                        <div class="sidebar-business-text">
-                            <p><span class="sidebar-business-toggle">접기</span></p>
-                        </div>
-                    </div> -->
                 </div>
             </div>
             <!-- 로그인 버튼 -->
@@ -203,10 +194,11 @@
                                 </div>
                             </button>
                         </div>
-                        <!-- 모달창 회원 리스트 -->
+                        <!-- 왼쪽 리스트 -->
                         <div class="search-modal-main-wrap">
                             <div class="search-modal-list-wrap">
                                 <div class="search-modal-list-wrap2">
+                                    <!-- 회원 클릭 시 -->
                                     <div class="search-modal-body-wrap">
                                         <div class="search-modal-group">
                                             <div class="search-modal-group-section-active">
@@ -217,7 +209,6 @@
                                             </div>
                                         </div>
                                         <div class="search-modal-list">
-                                            <!-- 회원 리스트 (화면 스크롤 120명 출력됨)-->
                                             <div class="search-modal-list-section">
                                                 <span class="search-modal-list-number">1</span>
                                                 <img alt="image" width="40" height="40" srcset="" src="" style="color: transparent; border-radius: 999px; cursor: default; max-height: 40px; max-width: 40px; min-height: 40px; min-width: 40px; object-fit: contain;">
@@ -273,10 +264,80 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <!-- 기업 클릭 시 -->
+                                    <!-- <div class="search-modal-body-wrap">
+                                        <div class="search-modal-group">
+                                            <div class="search-modal-group-section">
+                                                <p class="search-modal-group-context">회원</p>
+                                            </div>
+                                            <div class="search-modal-group-section-active">
+                                                <p class="search-modal-group-context-active">기업</p>
+                                            </div>
+                                        </div>
+                                        <div class="search-modal-list">
+                                            <div class="search-modal-list-section">
+                                                <span class="search-modal-list-number">1</span>
+                                                <img alt="image" width="40" height="40" srcset="" src="" style="color: transparent; border-radius: 999px; cursor: default; max-height: 40px; max-width: 40px; min-height: 40px; min-width: 40px; object-fit: contain;">
+                                                <div class="search-modal-list-member">
+                                                    <span class="search-modal-list-name">삼성</span>
+                                                    <p class="search-modal-list-job">체험공고 27</p>
+                                                </div>
+                                            </div>
+                                            <div class="search-modal-list-section">
+                                                <span class="search-modal-list-number">1</span>
+                                                <img alt="image" width="40" height="40" srcset="" src="" style="color: transparent; border-radius: 999px; cursor: default; max-height: 40px; max-width: 40px; min-height: 40px; min-width: 40px; object-fit: contain;">
+                                                <div class="search-modal-list-member">
+                                                    <span class="search-modal-list-name">삼성</span>
+                                                    <p class="search-modal-list-job">체험공고 27</p>
+                                                </div>
+                                            </div>
+                                            <div class="search-modal-list-section">
+                                                <span class="search-modal-list-number">1</span>
+                                                <img alt="image" width="40" height="40" srcset="" src="" style="color: transparent; border-radius: 999px; cursor: default; max-height: 40px; max-width: 40px; min-height: 40px; min-width: 40px; object-fit: contain;">
+                                                <div class="search-modal-list-member">
+                                                    <span class="search-modal-list-name">삼성</span>
+                                                    <p class="search-modal-list-job">체험공고 27</p>
+                                                </div>
+                                            </div>
+                                            <div class="search-modal-list-section">
+                                                <span class="search-modal-list-number">1</span>
+                                                <img alt="image" width="40" height="40" srcset="" src="" style="color: transparent; border-radius: 999px; cursor: default; max-height: 40px; max-width: 40px; min-height: 40px; min-width: 40px; object-fit: contain;">
+                                                <div class="search-modal-list-member">
+                                                    <span class="search-modal-list-name">삼성</span>
+                                                    <p class="search-modal-list-job">체험공고 27</p>
+                                                </div>
+                                            </div>
+                                            <div class="search-modal-list-section">
+                                                <span class="search-modal-list-number">1</span>
+                                                <img alt="image" width="40" height="40" srcset="" src="" style="color: transparent; border-radius: 999px; cursor: default; max-height: 40px; max-width: 40px; min-height: 40px; min-width: 40px; object-fit: contain;">
+                                                <div class="search-modal-list-member">
+                                                    <span class="search-modal-list-name">삼성</span>
+                                                    <p class="search-modal-list-job">체험공고 27</p>
+                                                </div>
+                                            </div>
+                                            <div class="search-modal-list-section">
+                                                <span class="search-modal-list-number">1</span>
+                                                <img alt="image" width="40" height="40" srcset="" src="" style="color: transparent; border-radius: 999px; cursor: default; max-height: 40px; max-width: 40px; min-height: 40px; min-width: 40px; object-fit: contain;">
+                                                <div class="search-modal-list-member">
+                                                    <span class="search-modal-list-name">삼성</span>
+                                                    <p class="search-modal-list-job">체험공고 27</p>
+                                                </div>
+                                            </div>
+                                            <div class="search-modal-list-section">
+                                                <span class="search-modal-list-number">1</span>
+                                                <img alt="image" width="40" height="40" srcset="" src="" style="color: transparent; border-radius: 999px; cursor: default; max-height: 40px; max-width: 40px; min-height: 40px; min-width: 40px; object-fit: contain;">
+                                                <div class="search-modal-list-member">
+                                                    <span class="search-modal-list-name">삼성</span>
+                                                    <p class="search-modal-list-job">체험공고 27</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> -->
+                                    <!-- 오른쪽 리스트 -->
                                     <div class="search-modal-company-wrap">
                                         <div class="search-modal-company-wrap-top">
                                             <div class="search-modal-company-text-wrap">
-                                                <span class="search-modal-company-text">체험 및 고용 중인 기업</span>
+                                                <span class="search-modal-company-text">열심히 채용 중인 기업</span>
                                             </div>
                                             <div class="search-modal-company-all-wrap">
                                                 <button class="search-modal-company-all-button">
@@ -290,42 +351,42 @@
                                                 <img alt="image" width="36" height="36" srcset="" src="" style="color: transparent; border-radius: 5.4px; cursor: default; max-height: 36px; max-width: 36px; min-height: 36px; min-width: 36px; object-fit: contain;">
                                                 <div class="search-modal-company-section">
                                                     <span class="search-modal-company-name">삼성</span>
-                                                    <p class="search-modal-company-experience">체험공고 27</p>
+                                                    <p class="search-modal-company-experience">체용공고 27</p>
                                                 </div>
                                             </div>
                                             <div class="search-modal-company-list">
                                                 <img alt="image" width="36" height="36" srcset="" src="" style="color: transparent; border-radius: 5.4px; cursor: default; max-height: 36px; max-width: 36px; min-height: 36px; min-width: 36px; object-fit: contain;">
                                                 <div class="search-modal-company-section">
                                                     <span class="search-modal-company-name">삼성</span>
-                                                    <p class="search-modal-company-experience">체험공고 27</p>
+                                                    <p class="search-modal-company-experience">체용공고 27</p>
                                                 </div>
                                             </div>
                                             <div class="search-modal-company-list">
                                                 <img alt="image" width="36" height="36" srcset="" src="" style="color: transparent; border-radius: 5.4px; cursor: default; max-height: 36px; max-width: 36px; min-height: 36px; min-width: 36px; object-fit: contain;">
                                                 <div class="search-modal-company-section">
                                                     <span class="search-modal-company-name">삼성</span>
-                                                    <p class="search-modal-company-experience">체험공고 27</p>
+                                                    <p class="search-modal-company-experience">체용공고 27</p>
                                                 </div>
                                             </div>
                                             <div class="search-modal-company-list">
                                                 <img alt="image" width="36" height="36" srcset="" src="" style="color: transparent; border-radius: 5.4px; cursor: default; max-height: 36px; max-width: 36px; min-height: 36px; min-width: 36px; object-fit: contain;">
                                                 <div class="search-modal-company-section">
                                                     <span class="search-modal-company-name">삼성</span>
-                                                    <p class="search-modal-company-experience">체험공고 27</p>
+                                                    <p class="search-modal-company-experience">체용공고 27</p>
                                                 </div>
                                             </div>
                                             <div class="search-modal-company-list">
                                                 <img alt="image" width="36" height="36" srcset="" src="" style="color: transparent; border-radius: 5.4px; cursor: default; max-height: 36px; max-width: 36px; min-height: 36px; min-width: 36px; object-fit: contain;">
                                                 <div class="search-modal-company-section">
                                                     <span class="search-modal-company-name">삼성</span>
-                                                    <p class="search-modal-company-experience">체험공고 27</p>
+                                                    <p class="search-modal-company-experience">체용공고 27</p>
                                                 </div>
                                             </div>
                                             <div class="search-modal-company-list">
                                                 <img alt="image" width="36" height="36" srcset="" src="" style="color: transparent; border-radius: 5.4px; cursor: default; max-height: 36px; max-width: 36px; min-height: 36px; min-width: 36px; object-fit: contain;">
                                                 <div class="search-modal-company-section">
                                                     <span class="search-modal-company-name">삼성</span>
-                                                    <p class="search-modal-company-experience">체험공고 27</p>
+                                                    <p class="search-modal-company-experience">체용공고 27</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -339,4 +400,5 @@
         </div>
     </div>
 </body>
+<script src="../../static/js/main-page/side-bar/event.js"></script>
 </html>
