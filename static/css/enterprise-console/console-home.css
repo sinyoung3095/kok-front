@@ -74,7 +74,7 @@ button, input, optgroup, select, textarea {
     letter-spacing: inherit;
     color: inherit;
     opacity: 1;
-    background-color: #0000;
+    background-color: 0 0 #0000;
     border-radius: 0;
 }
 
@@ -92,7 +92,7 @@ thead {
 }
 
 main.main{
-    box-shadow: #0000;
+    box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000, 0 0 #0000, 0 1px 3px 0 #0000001a, 0 1px 2px -1px #0000001a;
     border-radius: 14px;
     margin-left: 0px;
     margin: 8px;
@@ -175,7 +175,7 @@ div.card-group{
 }
 
 div.card{
-    box-shadow: #0000;
+    box-shadow: 0 0 #0000;
     color: #0a0a0a;
     padding-block: 24px;
     background-color: white;
@@ -258,7 +258,7 @@ button.white-button{
     transition-property: color, box-shadow;
     transition-timing-function: cubic-bezier(.4,0,.2,1);
     transition-duration: .15s;
-    box-shadow: #0000;
+    box-shadow: 0 0 #0000;
     white-space: nowrap;
     font-weight: 500;
     font-size: 14px;
@@ -291,7 +291,7 @@ button.black-button{
     transition-property: color, box-shadow;
     transition-timing-function:cubic-bezier(.4,0,.2,1);
     transition-duration: .15s;
-    box-shadow: #0000;
+    box-shadow: 0 0 #0000;
     color: #fafafa;
     white-space: nowrap;
     font-weight: 500;

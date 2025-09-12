@@ -229,6 +229,20 @@
     display: flex;
 }
 
+.sidebar-business .extra-text {
+    display: none;
+}
+
+.sidebar-business.expanded .extra-text {
+    display: inline;
+}
+
+.sidebar-business-toggle {
+    cursor: pointer;
+    user-select: none;
+}
+
+
 .sidebar-legal,
 .sidebar-address,
 .sidebar-business-text {
@@ -337,6 +351,18 @@
     padding: 14vh !important;
     z-index: 1000;
     position: fixed; 
+    display: none; 
+    align-items: flex-start; 
+    justify-content: center; 
+    width: 100%; 
+    inset: 0px; 
+    padding: 14vh 16px 16px;
+}
+
+.search-modal-wrap.active {
+    padding: 14vh !important;
+    z-index: 1000;
+    position: fixed; 
     display: flex; 
     align-items: flex-start; 
     justify-content: center; 
@@ -348,10 +374,15 @@
 .search-modal {
     max-width: 800px;
     width: 800px; 
-    transform: scale(0.99); 
     pointer-events: auto;
-    /* 확인용 */
+    transform: scale(0.99);
+    opacity: 0;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.search-modal-wrap.active .search-modal {
     opacity: 1;
+    transform: scale(1);
 }
 
 .search-modal-height-auto {
@@ -609,7 +640,7 @@
 }
 
 .search-modal-company-wrap {
-    border-color: rgba(86,105,143,0.1200);
+    border-color: rgba(86,105,143,0.1200) !important;
     flex-direction: column;
     border-top: none;
     max-height: 436px;
