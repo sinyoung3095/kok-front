@@ -10,13 +10,13 @@
 </head>
 <body>
     <body>
-        <div data-theme="light" class="ai_center background-color d_flex h_100svh jc_center w_100 dark:background-color">
-            <div class="ai_center d_flex flex-sh_0 gap_20px h_100% jc_center ov-y_auto w_100">
-                <div class="bdr_12px h_100% ov_hidden p_20px pos_relative w_100">
+        <div data-theme="light" class="login-page">
+            <div class="login-container">
+                <div class="image-container">
                     <!-- 좌측 이미지 -->
                     <img src="../../static/images/login_image.jpg" preload="auto" src="" style="border-radius: 12px; height: 100%; object-fit: cover; width: 100%; z-index: 0;">
-                    <div class="left_50% pos_absolute top_40px trf_translateX(-50%)">
-                        <div class="ai_center d_inline-flex flex-sh_0 c_foregrounds.neutral.primary">
+                    <div class="logo-pos">
+                        <div class="logo-container">
                             <!-- 로고 -->
                             <div fill="currentColor" height="32" width="186" aria-label="logo" role="img">
                                 <img src="../../static/images/kok.png" style="height: 60px;">
@@ -25,46 +25,49 @@
                     </div>
                 </div>
                 <!-- 우측 입력창 -->
-                <div class="ai_center d_flex flex-d_column h_100% jc_center w_100">
-                    <div class="ai_center d_flex flex-d_column gap_30px h_100% max-w_384px ov-y_auto p_20px w_100 jc_center" style="transform: translateY(-38px);">
-                        <div class="ai_flex-start d_flex flex-d_column gap_20px w_100">
-                            <div class="c_foregrounds.neutral.primary white-space_pre-line textStyle_Display.DisplayM">자주 사용하는 방법으로
+                <div class="right-side">
+                    <div class="input-container" style="transform: translateY(-47px);">
+                        <div class="login-title">
+                            <div class="title-content">자주 사용하는 방법으로
                                 시작하세요.
                             </div>
                         </div>
-                        <div class="ai_flex-start d_flex flex-d_column gap_24px w_100">
-                            <div class="ai_center d_inline-flex gap_6px">
-                                <div class="ai_center cursor_pointer d_flex jc_center pos_relative trs_background-color_0.3s w_fit-content bg_backgrounds.surface.standard h_40px px_16px bdr_8px">
-                                    <p class="c_foregrounds.neutral.primary ta_center tov_ellipsis textStyle_Body.BodyM_Bold us_none w_fit-content white-space_nowrap">일반 회원</p>
+                        <div class="input-content-container">
+                            <!-- 일반회원/기업회원 선택 버튼 -->
+                            <div class="select-container">
+                                <div class="select-login-type general-member">
+                                    <p class="general-p">일반 회원</p>
                                 </div>
-                                <div class="ai_center cursor_pointer d_flex jc_center pos_relative trs_background-color_0.3s w_fit-content h_40px px_16px bdr_8px">
-                                    <p class="c_foregrounds.neutral.secondary ta_center tov_ellipsis textStyle_Body.BodyM_Bold us_none w_fit-content white-space_nowrap">기업 회원</p>
+                                <div class="select-login-type company-member">
+                                    <p class="company-p">기업 회원</p>
                                 </div>
                             </div>
-                            <div class="ai_center d_flex flex-d_column h_100% op_1 trs_all_0.3s w_100" style="height: 376px;">
-                                <div class="w_100">
-                                    <div class="ai_flex-start d_flex flex-d_column gap_28px w_100">
-                                        <div class="ai_flex-start d_flex flex-d_column gap_12px w_100">
-                                            <div class="ai_center d_flex gap_12px w_100">
-                                                <div class="ai_flex-start d_flex flex-d_column w_100">
-                                                    <div class="ai_center d_flex gap_4px w_100 p_0px_8px_6px_8px">
-                                                        <div class="c_foregrounds.neutral.primary textStyle_Body.BodyM_Bold">이메일</div>
+                            <div class="login-content-container" style="height: 376px;">
+                                <div class="width100">
+                                    <div class="login-content">
+                                        <div class="email-password-container">
+                                            <!-- 이메일 입력칸 -->
+                                            <div class="email-container">
+                                                <div class="email-input-container">
+                                                    <div class="email-content">
+                                                        <div class="email-content-style">이메일</div>
                                                     </div>
-                                                    <div class="ai_center bd_1px_solid bd-c_strokes.surface.standard d_flex min-w_32px w_100 flex-d_row p_6px bdr_12px min-h_44px bg_transparent">
-                                                        <div class="d_flex flex_1_0_0 w_100 p_8px" style="cursor: text;">
-                                                            <input placeholder="example@email.com" class="disabled:cursor_not-allowed disabled:op_0.5 placeholder:c_foregrounds.neutral.tertiary placeholder:us_none bg-c_transparent bd_none c_foregrounds.neutral.primary ring_none ov_hidden tov_ellipsis w_100 h_20px textStyle_Body.BodyM" value="" style="cursor: text;">
+                                                    <div class="email-input-box01">
+                                                        <div class="email-input-box02" style="cursor: text;">
+                                                            <input placeholder="example@email.com" class="email-input" value="" style="cursor: text;">
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="ai_center d_flex gap_12px w_100">
-                                                <div class="ai_flex-start d_flex flex-d_column w_100">
-                                                    <div class="ai_center d_flex gap_4px w_100 p_0px_8px_6px_8px">
-                                                        <div class="c_foregrounds.neutral.primary textStyle_Body.BodyM_Bold">비밀번호</div>
+                                            <!-- 비밀번호 입력칸 -->
+                                            <div class="password-container">
+                                                <div class="password-input-container">
+                                                    <div class="password-content">
+                                                        <div class="password-content-style">비밀번호</div>
                                                     </div>
-                                                    <div class="ai_center bd_1px_solid bd-c_strokes.surface.standard d_flex min-w_32px w_100 flex-d_row p_6px bdr_12px min-h_44px bg_transparent">
-                                                        <div class="d_flex flex_1_0_0 w_100 p_8px" style="cursor: text;">
-                                                            <input placeholder="비밀번호" class="disabled:cursor_not-allowed disabled:op_0.5 placeholder:c_foregrounds.neutral.tertiary placeholder:us_none bg-c_transparent bd_none c_foregrounds.neutral.primary ring_none ov_hidden tov_ellipsis w_100 h_20px textStyle_Body.BodyM" type="password" value="" style="cursor: text;">
+                                                    <div class="password-input-box01">
+                                                        <div class="password-input-box02" style="cursor: text;">
+                                                            <input placeholder="비밀번호" class="password-input" type="password" value="" style="cursor: text;">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -72,32 +75,22 @@
                                         </div>
 
                                         <!-- 로그인 버튼 -->
-                                        <button class="disabled:cursor_not-allowed disabled:op_0.4 ai_center cursor_pointer d_inline-flex jc_center ring_none bdr_999px w_100 [&amp;_svg]:c_foregrounds.neutral.primary bg-c_backgrounds.surface.standard c_foregrounds.neutral.primary max-h_56px min-h_56px p_0px_16px" disabled="" type="button" style="backdrop-filter: blur(calc(var(--blurs-standard) / 2));margin-top: 28px;margin-bottom: 9px;">
-                                            <span class="ai_center d_flex jc_center us_none white-space_nowrap p_0px_8px textStyle_Body.BodyL_Bold">로그인</span>
+                                        <button class="login-button login-disabled" type="button" style="backdrop-filter: blur(calc(var(--blurs-standard) / 2)); margin-top: 25px; margin-bottom: 6px;">
+                                            <span class="login-button-span">로그인</span>
                                         </button>
 
                                         <!-- 회원가입 -->
-                                        <button style="color: #656565;
-                                            font-weight: 500;
-                                            font-size: 14px;
-                                            align-self: end;
-                                            margin-right: 10px;
-                                            margin-bottom: 20px;"> 회원가입 </button>
-
+                                        <button style="color: #656565; font-weight: 500; font-size: 14px; align-self: end; margin-right: 10px; margin-bottom: 20px;"> 회원가입 </button>
                                         <!-- 가로선 -->
                                         <div style="border-bottom: 1.5px solid #e1e1e1; width: 348px;"></div>
-
                                         <!-- 간편(소셜) 로그인 -->
-                                        <div style="font-family: var(--texts--fonts--body);
-                                            font-weight: var(--texts--font-weight--body-bold);
-                                            align-self: center;
-                                            margin-top: 32px;
-                                            margin-bottom: 22px;"> 간편 로그인 </div>
-                                        <div class="ai_center d_flex flex-d_column h_100% op_1 trs_all_0.3s w_100" style="height: 56px;">
-                                            <div class="w_100">
-                                                <div class="ai_flex-start d_flex gap_8px w_100">
-                                                    <div class="flex_1_1_0 min-w_76px pos_relative">
-                                                        <button class="disabled:cursor_not-allowed disabled:op_0.4 ai_center cursor_pointer d_inline-flex jc_center ring_none bdr_999px w_100 max-h_56px min-h_56px p_14px bg-c_backgrounds.surface.standard" type="button" style="backdrop-filter: none;">
+                                        <div style="font-family: var(--texts--fonts--body); font-weight: var(--texts--font-weight--body-bold); align-self: center; margin-top: 32px; margin-bottom: 22px;"> 간편 로그인 </div>
+                                        <div class="social-login-container" style="height: 56px;">
+                                            <div class="width100">
+                                                <div class="social-login-boxes">
+                                                    <!-- 구글 -->
+                                                    <div class="google-box">
+                                                        <button class="google-box-button" type="button" style="backdrop-filter: none;">
                                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 40 40" height="28" width="28">
                                                                 <path fill="#FC4C53" d="M33.813 17.334H20v5.68h7.893c-.346 1.826-1.386 3.373-2.946 4.413-1.307.88-2.974 1.413-4.947 1.413-3.813 0-7.053-2.573-8.213-6.04h-.018l.018-.013A8.8 8.8 0 0 1 11.32 20c0-.973.173-1.907.467-2.786 1.16-3.467 4.4-6.04 8.213-6.04 2.16 0 4.08.746 5.613 2.186l4.2-4.2C27.267 6.787 23.96 5.333 20 5.333c-5.733 0-10.68 3.294-13.093 8.094-1 1.973-1.574 4.2-1.574 6.573s.574 4.6 1.574 6.573v.014c2.413 4.787 7.36 8.08 13.093 8.08 3.96 0 7.28-1.307 9.707-3.547 2.773-2.56 4.373-6.32 4.373-10.786 0-1.04-.093-2.04-.267-3" style="fill: color(display-p3 0.9882 0.298 0.3255); fill-opacity: 1;"></path>
                                                                 <mask id="google_svg__a" width="30" height="30" x="5" y="5" maskUnits="userSpaceOnUse" style="mask-type: luminance;">
@@ -127,15 +120,17 @@
                                                             </svg>
                                                         </button>
                                                     </div>
-                                                    <div class="flex_1_1_0 min-w_76px pos_relative">
-                                                        <button class="disabled:cursor_not-allowed disabled:op_0.4 ai_center cursor_pointer d_inline-flex jc_center ring_none bdr_999px w_100 max-h_56px min-h_56px p_14px bg-c_temp.naver" type="button" style="backdrop-filter: none;">
+                                                    <!-- 네이버 -->
+                                                    <div class="naver-box">
+                                                        <button class="naver-box-button" type="button" style="backdrop-filter: none;">
                                                             <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" viewBox="0 0 40 40" height="28" width="28">
                                                                 <path d="m24.136 31.9-8.394-12.313v12.314H7V8.099h8.864l8.394 12.322V8.1H33v23.802z"></path>
                                                             </svg>
                                                         </button>
                                                     </div>
-                                                    <div class="flex_1_1_0 min-w_76px pos_relative">
-                                                        <button class="disabled:cursor_not-allowed disabled:op_0.4 ai_center cursor_pointer d_inline-flex jc_center ring_none bdr_999px w_100 max-h_56px min-h_56px p_14px bg-c_temp.kakaotalk" type="button" style="backdrop-filter: none;">
+                                                    <!-- 카카오 -->
+                                                    <div class="kakao-box">
+                                                        <button class="kakao-box-button" type="button" style="backdrop-filter: none;">
                                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 40 40" height="28" width="28">
                                                                 <path fill="#1E1E1E" fill-rule="evenodd" d="M5 18.027c-.019-6.544 6.682-11.87 14.966-11.893S34.98 11.396 35 17.94s-6.682 11.87-14.966 11.893a19 19 0 0 1-2.697-.183l-6.07 4.122a.43.43 0 0 1-.675-.474l1.399-5.286C7.8 25.923 5.012 22.235 5 18.027m6.721 3.87c.443-.002.717-.29.716-.754l-.015-5.211 1.508-.004c.475-.002.642-.353.641-.654a.636.636 0 0 0-.645-.652l-4.452.013a.633.633 0 0 0-.64.656c.001.3.17.652.644.65l1.509-.004.015 5.21c.001.463.276.75.72.75m7.22-.143c.127.091.284.134.44.12a.63.63 0 0 0 .654-.621 1.2 1.2 0 0 0-.083-.369l-2.034-5.502c-.189-.53-.58-.833-1.071-.832-.56.002-.917.435-1.065.84l-2.067 5.523a.8.8 0 0 0-.065.315.68.68 0 0 0 .708.661.655.655 0 0 0 .689-.512l.318-.97 2.998-.01.317.981c.04.152.132.285.26.376m5.89-.353a.7.7 0 0 0 .06-.25.64.64 0 0 0-.17-.479.69.69 0 0 0-.517-.198l-1.99.006-.014-5.196c-.002-.462-.277-.748-.72-.747-.442 0-.717.289-.715.75l.016 5.709c.002.497.284.793.753.792l2.674-.008a.65.65 0 0 0 .624-.38m5.321.442c.154 0 .66-.043.714-.565.038-.293-.137-.52-.349-.794v-.001l-2.052-2.67 1.723-1.747q.091-.105.17-.191l.005-.006c.234-.26.351-.39.351-.588.008-.422-.341-.651-.688-.66a.8.8 0 0 0-.57.264l-2.52 2.642-.006-2.3a.675.675 0 0 0-.72-.704.69.69 0 0 0-.716.709l.017 5.939c.001.41.29.685.72.683a.687.687 0 0 0 .716-.687l-.006-1.932.514-.527 1.893 2.564c.277.373.427.54.692.566q.056.005.112.005m-14.388-2.71 1.071-3.268.003-.005.003-.002a.015.015 0 0 1 .022.007l1.092 3.262z" clip-rule="evenodd" style="fill: color(display-p3 0.1176 0.1176 0.1176); fill-opacity: 1;"></path>
                                                                 <path fill="#FEE300" d="M12.437 21.143c.001.463-.273.752-.716.753s-.718-.286-.719-.749l-.015-5.21-1.51.004c-.473.002-.642-.35-.642-.65a.634.634 0 0 1 .64-.656l4.451-.013a.634.634 0 0 1 .645.652c0 .3-.166.652-.641.654l-1.508.004z" style="fill: color(display-p3 0.9961 0.8902 0); fill-opacity: 1;"></path>
@@ -149,14 +144,14 @@
                                         </div>
                                     </div>
                                     <!-- 개인정보 처리방침 -->
-                                    <div class="d_flex" style="padding-top: 20px;">
-                                        <div class="ai_flex-start cursor_pointer d_flex gap_8px p_6px_8px pos_relative w_100">
-                                            <div draggable="false" class="ai_center d_inline-flex jc_center c_foregrounds.neutral.primary msk_none" style="border-radius: 0px; height: 16px; padding: 0px;">
+                                    <div class="personal-information-container" style="padding-top: 20px;">
+                                        <div class="personal-information">
+                                            <div draggable="false" class="checksign" style="border-radius: 0px; height: 16px; padding: 0px;">
                                                 <svg aria-label="icon" color="foregrounds.neutral.primary" fill="currentColor" height="16" role="img" width="16">
                                                     <use href="#check-thick-outline"></use>
                                                 </svg>
                                             </div>
-                                            <span class="c_foregrounds.neutral.secondary textStyle_Textual.TextualS">계정 생성 시 서비스 이용을 위한 필수 항목인 <span class="c_foregrounds.neutral.secondary cursor_pointer text-decoration-line_underline td-t_0.8px text-underline-position_under">서비스 이용약관</span>과 <span class="c_foregrounds.neutral.secondary cursor_pointer text-decoration-line_underline td-t_0.8px text-underline-position_under">개인정보 처리방침</span>에 동의합니다.</span>
+                                            <span class="personal-information-content01">계정 생성 시 서비스 이용을 위한 필수 항목인 <span class="personal-information-content02">서비스 이용약관</span>과 <span class="personal-information-content02">개인정보 처리방침</span>에 동의합니다.</span>
                                         </div>
                                     </div>
                                 </div>
@@ -164,9 +159,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="pos_fixed right_20px top_20px">
-                    <button class="disabled:cursor_not-allowed disabled:op_0.4 ai_center cursor_pointer d_inline-flex jc_center ring_none bdr_999px [&amp;_svg]:c_foregrounds.neutral.primary bg-c_backgrounds.surface.standard max-h_48px min-h_48px p_12px" type="button" style="backdrop-filter: blur(calc(var(--blurs-standard) / 2));">
-                        <div draggable="false" class="ai_center d_inline-flex jc_center c_foregrounds.neutral.secondary msk_none" style="border-radius: 0px; height: 24px; padding: 0px;">
+                <div class="x-button-container">
+                    <button class="x-button" type="button" style="backdrop-filter: blur(calc(var(--blurs-standard) / 2));">
+                        <div draggable="false" class="x-button-symbol" style="border-radius: 0px; height: 24px; padding: 0px;">
                             <svg aria-label="icon" color="foregrounds.neutral.secondary" fill="currentColor" height="24" role="img" width="24">
                                 <use href="#close-outline"></use>
                             </svg>
@@ -196,7 +191,12 @@
             <symbol id="close-outline" viewBox="0 0 24 24">
                 <path clip-rule="evenodd" d="M6.434 6.435a.8.8 0 0 1 1.132 0L12 10.869l4.434-4.434a.8.8 0 1 1 1.132 1.13L13.13 12l4.435 4.435a.8.8 0 1 1-1.132 1.13L12 13.133l-4.434 4.434a.8.8 0 0 1-1.132-1.131L10.87 12 6.434 7.566a.8.8 0 0 1 0-1.131" fill-rule="evenodd"></path>
             </symbol>
+            <!-- 개인정보 체크 심볼 -->
+            <symbol id="check-thick-outline" viewBox="0 0 24 24">
+                <path clip-rule="evenodd" d="M20.49 5.51a1.4 1.4 0 0 1 0 1.98l-11 11a1.4 1.4 0 0 1-1.98 0l-4-4a1.4 1.4 0 0 1 1.98-1.98l3.01 3.01L18.51 5.51a1.4 1.4 0 0 1 1.98 0" fill-rule="evenodd"></path>
+            </symbol>
         </svg>
     </body>
 </body>
+<script src="../../static/js/member/login.js"></script>
 </html>
