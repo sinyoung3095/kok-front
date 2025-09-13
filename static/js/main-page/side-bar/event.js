@@ -82,6 +82,7 @@ groupSections.forEach((section) => {
     });
 });
 
+// 사이드바 설정 모달
 const settingBtn = document.querySelector(".sidebar-setting");
 const settingModal = document.querySelector(".sidebar-setting-modal");
 const settingCloseBtn = document.querySelector(
