@@ -1,16 +1,3 @@
-* {
-    box-sizing: border-box;
-    word-break: keep-all;
-    overflow-wrap: anywhere;
-    -webkit-text-size-adjust: 100%;
-    -moz-text-size-adjust: 100%;
-    text-size-adjust: 100%;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizeLegibility;
-    font-synthesis: none;
-}
-
 body {
     background: #fff;
     color: 46px;
@@ -53,6 +40,7 @@ div.login-container {
 	justify-content: center;
 }
 
+/* 좌측 이미지 */
 div.image-container {
 	position: relative;
 	height: 100%;
@@ -97,6 +85,17 @@ div.input-container {
 	display: flex;
 	width: 100%;
 	justify-content: center;
+}
+
+.input-container.member {
+	transform: translateY(-47px);
+	transition: .3s ease-out;
+
+}
+
+.input-container.company {
+	transform: translateY(8px);
+	transition: .3s ease-out;
 }
 
 div.login-title {
@@ -395,22 +394,36 @@ div.company-member {
     font-weight: 500; 
     font-size: 14px; 
     align-self: center; 
-    margin-right: 10px; 
+    margin-right: 13px; 
     margin-bottom: 20px;
     margin-left: 25px;
     margin-top: 11px;
 }
 
+.join-member {
+	display: none;
+}
+
+.join-company {
+	display: none;
+}
+
+.join-member.show {
+	display: inline;
+}
+
+.join-company.show {
+	display: inline;
+}
+
 .find-email::before {
     content: " | ";
-    padding: 0 8px;
     color: #d3d5d7;
     margin: 4px 12px 0;
 }
 
 .find-password::before {
     content: " | ";
-    padding: 0 8px;
     color: #d3d5d7;
     margin: 4px 12px 0;
 }
@@ -500,8 +513,18 @@ div.company-member {
 	justify-content: center;
 }
 
+.social-login-title.hide {
+	display: none;
+}
+
+.social-login-container.hide {
+	display: none;
+}
+
+/* 개인정보 처리방침 */
 .personal-information-container {
 	display: flex;
+	transition: .3s ease-out;
 }
 
 .personal-information {
