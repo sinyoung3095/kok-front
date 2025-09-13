@@ -42,12 +42,10 @@ groupSections.forEach((section) => {
     section.addEventListener("click", () => {
         const selectedText = section.textContent.trim();
 
-        // 1. 모든 섹션 초기화
         groupSections.forEach((s) => {
             s.classList.remove("search-modal-group-section-active");
             s.classList.add("search-modal-group-section");
 
-            // 안의 p 클래스도 같이 초기화
             const p = s.querySelector("p");
             if (p) {
                 p.classList.remove("search-modal-group-context-active");
@@ -55,7 +53,6 @@ groupSections.forEach((section) => {
             }
         });
 
-        // 2. 클릭한 섹션 활성화
         section.classList.remove("search-modal-group-section");
         section.classList.add("search-modal-group-section-active");
 
@@ -65,7 +62,6 @@ groupSections.forEach((section) => {
             p.classList.add("search-modal-group-context-active");
         }
 
-        // 3. body 보여주기/숨기기
         bodyWraps.forEach((body) => {
             const activeSection = body.querySelector(
                 ".search-modal-group-section-active p"
