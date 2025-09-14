@@ -18,6 +18,37 @@ searchModal.addEventListener("click", (e) => {
     }
 });
 
+// 사이드바 카테고리
+document.querySelectorAll(".sidebar-menu .start-line a").forEach((link) => {
+    link.addEventListener("click", function (e) {
+        // 임시 페이지 이동 막기
+        // 서버 구상 시 제외하시면 됩니다
+        e.preventDefault();
+
+        document.querySelectorAll(".sidebar-item-active").forEach((el) => {
+            el.classList.replace("sidebar-item-active", "sidebar-item");
+        });
+        document.querySelectorAll(".sidebar-item-icon-active").forEach((el) => {
+            el.classList.replace(
+                "sidebar-item-icon-active",
+                "sidebar-item-icon"
+            );
+        });
+
+        const item = this.querySelector(".sidebar-item, .sidebar-item-active");
+        const icon = this.querySelector(
+            ".sidebar-item-icon, .sidebar-item-icon-active"
+        );
+
+        if (item) item.classList.replace("sidebar-item", "sidebar-item-active");
+        if (icon)
+            icon.classList.replace(
+                "sidebar-item-icon",
+                "sidebar-item-icon-active"
+            );
+    });
+});
+
 // 사업자 번호 더보기/접기
 const toggleBtn = document.querySelector(".sidebar-business-toggle");
 const businessSection = toggleBtn.closest(".sidebar-business");
@@ -145,3 +176,20 @@ alarmWrap.addEventListener("click", () => {
     alarmWrap.style.background = activeBg;
     profileWrap.style.background = inactiveBg;
 });
+
+// 고객지원창
+const supportButton = document.querySelector(".sidebar-support-wrap");
+const supportModal = document.getElementById("crisp-chatbox-chat");
+const closeButton = document.querySelector(
+    ".customer-support-top-close-button"
+);
+
+if (supportButton && supportModal && closeButton) {
+    supportButton.addEventListener("click", () => {
+        supportModal.classList.add("active");
+    });
+
+    closeButton.addEventListener("click", () => {
+        supportModal.classList.remove("active");
+    });
+}

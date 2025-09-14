@@ -92,7 +92,7 @@
                             <a href="">
                                 <div class="sidebar-item">
                                     <div class="sidebar-item-icon">
-                                        <svg fill="rgba(18,19,20,0.4000)" height="24" role="img" width="24" viewBox="0 0 24 24">
+                                        <svg color="foregrounds.neutral.tertiary" fill="currentColor" height="19.2" role="img" width="19.2" viewBox="0 0 24 24">
                                             <path d="M12 2c-3.866 0-7 3.134-7 7v3.6L4.3 15.3a1 1 0 0 0 .7 1.7H19a1 1 0 0 0 .7-1.7L19 12.6V9c0-3.866-3.134-7-7-7zm0 20c1.657 0 3-1.343 3-3H9c0 1.657 1.343 3 3 3z"/>
                                         </svg>
                                     </div>
@@ -676,23 +676,69 @@
         </div>
     </div>
     <!-- 고객지원 모달창 -->
-    <div class="sidebar-customer-modal">
-        <div class="sidebar-customer-header">
-            <div class="buttons">
-                <button>대화</button>
-                <button>지원센터</button>
+    <div class="crisp-chatbox-chat" id="crisp-chatbox-chat">
+        <div class="customer-support-wrap">
+            <div class="customer-support">
+                <!-- 고객지원 모달 top -->
+                <div class="customer-support-top-wrap">
+                    <div class="customer-support-top">
+                        <span class="customer-support-top-section">
+                            <div class="customer-support-talk-wrap" role="button" tabindex="0">
+                                <span class="customer-support-talk-icon"></span>
+                                <span class="customer-support-talk-text">대화</span>
+                            </div>
+                            <div class="customer-support-center-wrap" role="button" tabindex="0">
+                                <span class="customer-support-center-icon"></span>
+                                <span class="customer-support-center-text">지원 센터</span>
+                            </div>
+                        </span>
+                        <div class="customer-support-top-title-wrap">
+                            <span class="customer-support-top-title">
+                                <span class="customer-support-top-text">가장 자주 읽는 기사</span>
+                            </span>
+                        </div>
+                        <span class="customer-support-top-close-wrap">
+                            <span class="customer-support-top-close-button" role="button" tabindex="0">
+                                <span class="customer-support-top-close-icon"></span>
+                            </span>
+                        </span>
+                    </div>
+                </div>
+                <div class="customer-support-body-wrap1">
+                    <div class="customer-support-body-wrap2">
+                        <div class="customer-support-body-wrap3">
+                            <div class="customer-support-body-wrap4">
+                                <div class="customer-support-body-wrap5">
+                                    <div class="customer-support-body-wrap6">
+                                        <!-- 자주 묻는 질문 list -->
+                                        <ul class="customer-support-list">
+                                            <li class="customer-support-list-section">
+                                                <div class="customer-support-list-content">
+                                                    <span class="customer-support-list-title-wrap">
+                                                        <span class="customer-support-list-title-icon"></span>기업 프로필 관리 권한은 어떻게 취득할 수 있나요?
+                                                    </span>
+                                                    <span class="customer-support-list-text">
+                                                        로켓펀치는 기업이 효과적으로 기업의 인지도를 높이고, 인재 채용 및 기타 활동을 활발히 이어갈 수 있도록 기업 전용 프로필을 제공합니다.
+                                                        기업 프로필을 통해 채용 공고 등록, 기업 브랜딩, 콘텐츠 작성 등을 자유롭게 진행할 수 있으며, 담당자 인증을 통해 안전하게 권한을 취득하고 관리할 수 있습니다.
+                                                        이 문서에서는 안전하게 기업 프로필 관리 권한을 취득하는 방법과 기업 프로필로 게시글을 작성하는 방법을 안내합니다.
+                                                    </span>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- 검색 -->
+                                    <div class="customer-support-bottom">
+                                        <form class="customer-support-search" name="form_helpdesk" action="">
+                                            <span class="customer-support-search-icon"></span>
+                                            <input class="customer-support-search-text" placeholder="도움말 센터 검색..." type="text" name="helpdesk_search" maxlength="100">
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <p class="title">가장 자주 읽는 기사</p>
-        </div>
-        <div class="sidebar-customer-body">
-            <ul class="customer-questions">
-                <li class="question">
-                    <button>
-                        <p>로켓펀치 계정을 삭제하고 싶습니다.</p>
-                        <p>로켓펀치 계정을 삭제하고 싶습니다.</p>
-                    </button>
-                </li>
-            </ul>
         </div>
     </div>
 </body>
