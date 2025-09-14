@@ -112,7 +112,8 @@
     width: fit-content;
     border-radius: 999px;
     cursor: pointer;
-    padding: 12px;
+    padding: 6px;
+    flex-direction: column;
 }
 
 .top-right-button {
@@ -122,7 +123,19 @@
     justify-content: center;
     align-items: center;
     display: inline-flex;
-    color: rgba(18,19,20,1);
+    color: rgba(18,19,20,0.6000);
+}
+
+.top-right-button-text {
+    text-overflow: ellipsis;
+    text-align: center;
+    color: rgba(18,19,20,0.6000);
+    overflow: hidden;
+    letter-spacing: -.2px;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    font-family: "PretendardVariable","PretendardVariable Fallback";
 }
 
 /* 사이드바 */
@@ -172,27 +185,20 @@
     display: flex;
 }
 
-.sidebar-list-logo-section {
+.sidebar-list-profile-section {
     flex-direction: column;
     padding: 8px;
     gap: 12px;
     display: flex;
 }
 
-.sidebar-list-logo {
-    flex-shrink: 0;
-    align-items: center;
-    display: inline-flex;
-    color: rgba(18,19,20,1);
-}
-
-.sidebar-list-login {
+.sidebar-list-info {
     flex-direction: column;
     gap: 2px;
     display: flex;
 }
 
-.sidebar-list-login-main {
+.sidebar-list-member-name {
     color: rgba(18,19,20,1);
     letter-spacing: -0.32px;
     font-size: 16px;
@@ -201,14 +207,37 @@
     font-family: "PretendardVariable","PretendardVariable Fallback";
 }
 
-.sidebar-list-login-sub {
-    white-space: pre-line;
+.sidebar-list-member-job {
     color: rgba(18,19,20,0.6000);
     letter-spacing: -0.24px;
     font-size: 12px;
     font-weight: 400;
     line-height: 18px;
     font-family: "PretendardVariable","PretendardVariable Fallback";
+}
+
+.sidebar-logout {
+    column-gap: 3px;
+    justify-content: center;
+    align-items: center;
+    padding: 0 6px;
+    min-height: 28px;
+    max-height: 28px;
+    display: inline-flex;
+    width: fit-content;
+    border-radius: 999px;
+    cursor: pointer;
+    letter-spacing: -.24px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    font-family: "PretendardVariable","PretendardVariable Fallback";
+}
+
+.sidebar-logout-text {
+    user-select: none;
+    color: rgba(18,19,20,0.6000);
+    white-space: nowrap;
 }
 
 .sidebar-line-wrap {
