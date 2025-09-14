@@ -1,21 +1,41 @@
 // 로그인 방법 선택
+const inputContainer = document.querySelector('.input-container');
 const generalMember = document.querySelector('.general-member');
 const companyMember = document.querySelector('.company-member');
 companyMember.classList.add('unselected');
 companyMember.classList.remove('select-login-type');
 
+const socialLoginTitle = document.querySelector('.social-login-title');
+const socialLoginContainer = document.querySelector('.social-login-container');
+const joinMember = document.querySelector('.join-member');
+const joinCompany = document.querySelector('.join-company');
+
 generalMember.addEventListener("click", (e) => {
+    // 일반 로그인
+    inputContainer.classList.add('member');
+    inputContainer.classList.remove('company');
     generalMember.classList.add('select-login-type');
     generalMember.classList.remove('unselected');
     companyMember.classList.remove('select-login-type');
     companyMember.classList.add('unselected');
+    socialLoginTitle.classList.remove('hide');
+    socialLoginContainer.classList.remove('hide');
+    joinMember.classList.add('show');
+    joinCompany.classList.remove('show');
 });
 
 companyMember.addEventListener("click", (e) => {
+    // 기업 로그인
+    inputContainer.classList.remove('member');
+    inputContainer.classList.add('company');
     generalMember.classList.remove('select-login-type');
     generalMember.classList.add('unselected');
     companyMember.classList.add('select-login-type');
     companyMember.classList.remove('unselected');
+    socialLoginTitle.classList.add('hide');
+    socialLoginContainer.classList.add('hide');
+    joinMember.classList.remove('show');
+    joinCompany.classList.add('show');
 });
 
 
@@ -47,6 +67,7 @@ const isValidEmail = (value) => {
 };
 const toastLogin = document.querySelector("#toast-login");
 const toastEmail = document.querySelector("#toast-email");
+const toastPassword = document.querySelector("#toast-password");
 
 function showLoginErrorToast() {
     toastLogin.classList.add("show");
@@ -58,7 +79,11 @@ function showLoginErrorToast() {
 }
 
 loginButton.addEventListener("click", (e) => {
-    if (!isValidEmail(emailInput.value)) {
+    if (emailInput.value.length === 0 || passwordInput.value.length === 0) {
+        return;
+    }   // 이메일 또는 비밀번호가 비어 있을 때
+
+     else if (!isValidEmail(emailInput.value)) {
         showLoginErrorToast();
     }   // 이메일 형식이 올바르지 않을 때
 });
@@ -70,4 +95,5 @@ toastLogin.addEventListener("mouseover", (e) => {
 toastLogin.addEventListener("mouseout", (e) => {
     toastEmail.classList.remove("show-red");
 });     // 로그인 오류 토스트에서 마우스 아웃 시 이메일 오류 토스트 숨김
+
 
