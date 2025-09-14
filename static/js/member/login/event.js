@@ -68,10 +68,8 @@ const isValidEmail = (value) => {
 const toastLogin = document.querySelector("#toast-login");
 const toastEmail = document.querySelector("#toast-email");
 const toastPassword = document.querySelector("#toast-password");
-
 function showLoginErrorToast() {
     toastLogin.classList.add("show");
-
     // 3초 후에 토스트 메시지 숨기기
     setTimeout(() => {
         toastLogin.classList.remove("show");
@@ -79,21 +77,51 @@ function showLoginErrorToast() {
 }
 
 loginButton.addEventListener("click", (e) => {
+    // 이메일 또는 비밀번호가 비어 있을 때
     if (emailInput.value.length === 0 || passwordInput.value.length === 0) {
         return;
-    }   // 이메일 또는 비밀번호가 비어 있을 때
+    }
 
-     else if (!isValidEmail(emailInput.value)) {
+    // 이메일 형식&비밀번호 길이 검사
+    if (!isValidEmail(emailInput.value)) {
         showLoginErrorToast();
-    }   // 이메일 형식이 올바르지 않을 때
+
+        // 이메일 오류 토스트 표시
+        toastLogin.addEventListener("mouseover", (e) => {
+            toastEmail.classList.add("show-red");
+        });
+        toastLogin.addEventListener("mouseout", (e) => {
+            toastEmail.classList.remove("show-red");
+        });
+
+    } else if (!isValidEmail(emailInput.value) && passwordInput.value.length < 4) {
+        showLoginErrorToast();
+
+        // 이메일 오류 토스트 표시
+        toastLogin.addEventListener("mouseover", (e) => {
+            toastEmail.classList.add("show-red");
+            toastPassword.classList.remove("show-red");
+        });
+        toastLogin.addEventListener("mouseout", (e) => {
+            toastEmail.classList.remove("show-red");
+        });
+
+    // 비밀번호가 4자 미만일 때
+    } else if (isValidEmail(emailInput.value) && passwordInput.value.length < 4) {
+        showLoginErrorToast();
+
+        // 비밀번호 오류 토스트 표시
+        toastLogin.addEventListener("mouseover", (e) => {
+            toastPassword.classList.add("show-red");
+            toastEmail.classList.remove("show-red");
+        });
+        toastLogin.addEventListener("mouseout", (e) => {
+            toastPassword.classList.remove("show-red");
+        });
+    }
+    
 });
 
-toastLogin.addEventListener("mouseover", (e) => {
-    toastEmail.classList.add("show-red");
-});     // 로그인 오류 토스트에 마우스 오버 시 이메일 오류 토스트 표시
 
-toastLogin.addEventListener("mouseout", (e) => {
-    toastEmail.classList.remove("show-red");
-});     // 로그인 오류 토스트에서 마우스 아웃 시 이메일 오류 토스트 숨김
 
 
