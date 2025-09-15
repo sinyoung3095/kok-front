@@ -18,6 +18,37 @@ searchModal.addEventListener("click", (e) => {
     }
 });
 
+// 사이드바 카테고리
+document.querySelectorAll(".sidebar-menu .start-line a").forEach((link) => {
+    link.addEventListener("click", function (e) {
+        // 임시 페이지 이동 막기
+        // 서버 구상 시 제외하시면 됩니다
+        e.preventDefault();
+
+        document.querySelectorAll(".sidebar-item-active").forEach((el) => {
+            el.classList.replace("sidebar-item-active", "sidebar-item");
+        });
+        document.querySelectorAll(".sidebar-item-icon-active").forEach((el) => {
+            el.classList.replace(
+                "sidebar-item-icon-active",
+                "sidebar-item-icon"
+            );
+        });
+
+        const item = this.querySelector(".sidebar-item, .sidebar-item-active");
+        const icon = this.querySelector(
+            ".sidebar-item-icon, .sidebar-item-icon-active"
+        );
+
+        if (item) item.classList.replace("sidebar-item", "sidebar-item-active");
+        if (icon)
+            icon.classList.replace(
+                "sidebar-item-icon",
+                "sidebar-item-icon-active"
+            );
+    });
+});
+
 // 사업자 번호 더보기/접기
 const toggleBtn = document.querySelector(".sidebar-business-toggle");
 const businessSection = toggleBtn.closest(".sidebar-business");
@@ -42,12 +73,10 @@ groupSections.forEach((section) => {
     section.addEventListener("click", () => {
         const selectedText = section.textContent.trim();
 
-        // 1. 모든 섹션 초기화
         groupSections.forEach((s) => {
             s.classList.remove("search-modal-group-section-active");
             s.classList.add("search-modal-group-section");
 
-            // 안의 p 클래스도 같이 초기화
             const p = s.querySelector("p");
             if (p) {
                 p.classList.remove("search-modal-group-context-active");
@@ -55,7 +84,6 @@ groupSections.forEach((section) => {
             }
         });
 
-        // 2. 클릭한 섹션 활성화
         section.classList.remove("search-modal-group-section");
         section.classList.add("search-modal-group-section-active");
 
@@ -65,7 +93,6 @@ groupSections.forEach((section) => {
             p.classList.add("search-modal-group-context-active");
         }
 
-        // 3. body 보여주기/숨기기
         bodyWraps.forEach((body) => {
             const activeSection = body.querySelector(
                 ".search-modal-group-section-active p"
@@ -82,6 +109,7 @@ groupSections.forEach((section) => {
     });
 });
 
+// 사이드바 설정 모달
 const settingBtn = document.querySelector(".sidebar-setting");
 const settingModal = document.querySelector(".sidebar-setting-modal");
 const settingCloseBtn = document.querySelector(
@@ -148,3 +176,52 @@ alarmWrap.addEventListener("click", () => {
     alarmWrap.style.background = activeBg;
     profileWrap.style.background = inactiveBg;
 });
+
+// 고객지원창
+const supportButton = document.querySelector(".sidebar-support-wrap");
+const supportModal = document.getElementById("crisp-chatbox-chat");
+const closeButton = document.querySelector(
+    ".customer-support-top-close-button"
+);
+
+if (supportButton && supportModal && closeButton) {
+    supportButton.addEventListener("click", () => {
+        supportModal.classList.add("active");
+    });
+
+    closeButton.addEventListener("click", () => {
+        supportModal.classList.remove("active");
+    });
+}
+
+// 고객지원 상세창
+const faqItems = document.querySelectorAll(".customer-support-list-section");
+const detailModal = document.getElementById("crisp-chatbox-chat-detail");
+const detailCloseBtn = document.querySelector(".detail-top-close-button");
+const detailBackBtn = document.querySelector(".detail-back-wrap");
+const supportTab = document.querySelector(".detail-top-title-section2");
+
+faqItems.forEach((item) => {
+    item.addEventListener("click", () => {
+        if (detailModal) detailModal.classList.add("active");
+    });
+});
+
+if (detailCloseBtn) {
+    detailCloseBtn.addEventListener("click", () => {
+        if (detailModal) detailModal.classList.remove("active");
+        if (supportModal) supportModal.classList.remove("active");
+    });
+}
+
+if (detailBackBtn) {
+    detailBackBtn.addEventListener("click", () => {
+        if (detailModal) detailModal.classList.remove("active");
+    });
+}
+
+if (supportTab) {
+    supportTab.addEventListener("click", () => {
+        if (detailModal) detailModal.classList.remove("active");
+    });
+}

@@ -761,8 +761,7 @@ border-radius: 8px;
     align-items: center;
     background: rgba(0,0,0,0.3200);
     position: fixed;
-    display: block;
-    display: flex;
+    display: none;
     width: 100%;
     
 }
@@ -863,4 +862,494 @@ border-radius: 8px;
     width: 100%;
     gap: 16px;
     display: flex;
+}
+.setting-13{
+    flex-direction: column;
+    align-self: stretch;
+    align-items: center;
+    width: 100%;
+    flex: 1 0 0;
+    display: flex;
+}
+.setting-14{
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+    height: 100%;
+    width: 100%;
+    gap: 16px;
+    display: flex;
+}
+.setting-15{
+    position: relative;
+    display: flex;
+}
+.setting-16{
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    cursor: pointer;
+    display: flex;
+}
+.setting-17{
+    background-color: rgba(18,19,20,1);
+    justify-content: center;
+    align-items: center;
+    padding: 0px 6px;
+    min-height: 30px;
+    max-height: 30px;
+    color: #ffffff;
+    display: inline-flex;
+    border-radius: 999px;
+    cursor: pointer;
+    outline: none;
+}
+.setting-18{
+    border-radius: 0px;
+    height: 16px;
+    padding: 0px;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    color: rgba(18,19,20,0.6000);
+}
+.setting-19{
+    align-items: flex-start;
+    gap: 8px;
+    width: 100%;
+    display: flex;
+}
+.setting-20{
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+    display: flex;
+}
+.setting-21{
+    align-items: center;
+    padding: 0 8px 6px;
+    gap: 4px;
+    width: 100%;
+    display: flex;
+}
+.setting-22{
+    color: rgba(18,19,20,1);
+    letter-spacing: -0.28px;
+    font-family: "PretendardVariable","PretendardVariable Fallback";
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+}
+.setting-23{
+    flex-direction: row;
+    align-items: center;
+    min-height: 44px;
+    padding: 6px;
+    background: rgb(0 0 0/0);
+    border-radius: 12px;
+    border: 1px solid rgba(86,105,143,0.1200);
+    width: 100%;
+    display: flex;
+}
+.setting-24{
+    cursor: pointer;
+    padding: 8px;
+    width: 100%;
+    flex: 1 0 0;
+    display: flex;
+}
+.setting-25{
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 6px;
+    display: flex;
+    width: 100%;
+}
+.setting-26{
+    align-items: center;
+    padding-inline: 8px;
+    gap: 4px;
+    display: flex;
+}
+.setting-27{
+    color: rgba(18,19,20,1);
+    letter-spacing: -0.28px;
+    font-family: "PretendardVariable","PretendardVariable Fallback";
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+}
+.setting-28{
+    align-items: center;
+    padding: 6px 14px 6px 6px;
+    min-height: 48px;
+    cursor: pointer;
+    border-radius: 12px;
+    border: 1px solid rgba(86,105,143,0.1200);
+    display: flex;
+    width: 100%;
+    position: relative;
+}
+.setting-29{
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    gap: 6px;
+    flex: 1 0 0;display: flex;
+}
+.setting-30{
+    align-items: center;
+    flex: 1 1 0;
+    padding: 8px;
+    display: flex;
+}
+.setting-31{
+    border-radius: 0px;
+    height: 24px;
+    padding: 0px;
+    justify-content: center;
+    align-items: center;
+    color: rgba(18,19,20,0.4000);
+    display: inline-flex;
+}
+.setting-32{
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+    display: flex;
+}
+.setting-33{
+    align-items: center;
+    padding: 0 8px 6px;
+    gap: 4px;
+    width: 100%;
+    display: flex;
+}
+.setting-34{
+    color: rgba(18,19,20,1);
+    letter-spacing: -0.28px;
+    font-family: "PretendardVariable","PretendardVariable Fallback";
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+}
+.setting-35{
+    flex-direction: column;
+    align-items: center;
+    padding: 6px;
+    min-width: 32px;
+    background: rgb(0 0 0/0);
+    border-radius: 12px;
+    border: 1px solid rgba(86,105,143,0.1200);
+    display: flex;
+    width: 100%;
+}
+.setting-36{
+    cursor: text;
+    padding: 8px;
+    width: 100%;
+    flex: 1 0 0;
+    display: flex;
+}
+.setting-37{
+    background-color: rgb(0 0 0/0);
+    min-height: 76px;
+    max-height: 200px;
+    border: none;
+    outline: none;
+    width: 100%;
+}
+.setting-38{
+    align-items: center;
+    padding: 4px 8px 0;
+    gap: 4px;
+    display: flex;
+}
+.setting-39{
+    letter-spacing: -.24px;
+    font-family: "PretendardVariable","PretendardVariable Fallback";
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    color: rgba(18,19,20,0.6000);
+}
+.setting-40{
+    border-color: rgba(24,37,61,0.0600);
+    align-items: flex-start;
+    align-self: stretch;
+    padding: 16px;
+    gap: 8px;
+    display: flex;
+}
+.setting-41{
+    background-color: rgba(18,19,20,1);
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    max-height: 48px;
+    min-height: 48px;
+    display: inline-flex;
+    border-radius: 999px;
+    padding: 0 12px;
+    cursor: pointer;
+    width: 100%;
+    outline: none;
+}
+.setting-42{
+    justify-content: center;
+    align-items: center;
+    padding: 0 7px;
+    white-space: nowrap;
+    display: flex;
+    letter-spacing: -.32px;
+    font-family: "PretendardVariable","PretendardVariable Fallback";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+}
+.profile{
+    height: auto;
+    left: 80px;
+    max-height: 220px;
+    position: absolute;
+    top: 70px;
+    width: 200px;
+    opacity: 1;
+    transform: none;
+    flex-direction: column;
+    z-index: 10000;
+    box-shadow: 0px 4px 20px 0px rgba(24,37,61,0.0600);
+    border-radius: 16px;
+    border: 1px solid rgba(86,105,143,0.1200);
+    background: #ffffff;
+    display: none;
+}
+.profile-1{
+    overflow: auto;
+    display: flex;
+}
+.profile-2{
+    flex-direction: column;
+    width: 220px;
+    padding: 8px;
+    display: flex;
+}
+.profile-3{
+    align-items: flex-start;
+    justify-content: center;
+    border-radius: 8px;
+    padding: 8px;
+    gap: 6px;
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+}
+.profile-4{
+    border-radius: 0px;
+    height: 24px;
+    padding: 0px;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    color: rgba(18,19,20,1);
+}
+.profile-5{
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 24px;
+    padding-inline: 4px;
+    flex: 1 0 0px;
+    display: flex;
+}
+.profile-6{
+    color: rgba(18,19,20,1);  
+    letter-spacing: -0.28px;
+    font-family: "PretendardVariable","PretendardVariable Fallback";
+    font-size: 14px;
+    line-height: 20px;
+}
+.job{
+    height: auto;
+    left: 965px;
+    max-height: 220px;
+    position: absolute;
+    top: 470px;
+    width: 300px;
+    opacity: 1;
+    transform: none;
+    flex-direction: column;
+    z-index: 10000;
+    box-shadow: 0px 4px 20px 0px rgba(24,37,61,0.0600);
+    border-radius: 16px;
+    border: 1px solid rgba(86,105,143,0.1200);
+    background: #ffffff;
+    display: none;
+    cursor: default;
+}
+.job-1{
+    overflow: auto;
+    display: flex;
+}
+.job-2{
+    flex-direction: column;
+    width: 300px;
+    padding: 8px;
+    display: flex;
+}
+.job-3{
+    align-items: flex-start;
+    justify-content: center;
+    border-radius: 8px;
+    padding: 8px;
+    gap: 6px;
+    width: 100%;
+    display: flex;
+}
+
+.job-4{
+    border-radius: 0px;
+    height: 24px;
+    padding: 0px;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    color: rgba(18,19,20,1);
+}
+.job-5{
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 24px;
+    padding-inline: 4px;
+    flex: 1 0 0px;
+    display: flex;
+    cursor: pointer;
+}
+.job-6{
+    color: rgba(18,19,20,1);  
+    letter-spacing: -0.28px;
+    font-family: "PretendardVariable","PretendardVariable Fallback";
+    font-size: 14px;
+    line-height: 20px;
+}
+.notice.active{
+    background-color: black; 
+    color: #fff;
+}
+.del{
+    z-index: 1001;
+    opacity: 1;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.3200);
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    display: none;
+    top: 0;
+    left: 0;
+    overscroll-behavior: none;
+}
+.del-1{
+    opacity: 1;
+    transform: none;
+    border-radius: 20px;
+    box-shadow: 0px 4px 20px 0px rgba(24,37,61,0.0600);
+    background: #ffffff;
+}
+.del-2{
+    flex-direction: column;
+    width: 360px;
+    display: flex;
+}
+.del-3{
+    align-items: center;
+    padding: 32px 16px 16px;
+    gap: 16px;
+}
+.del-4{
+    margin: 0 auto;
+    border-radius: 0px;
+    height: 40px;
+    padding: 0px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: rgba(18,19,20,1);
+}
+.del-5{
+    flex-direction: column;
+    align-items: center;
+    padding-inline: 8px;
+    gap: 8px;
+    display: flex;
+}
+.del-6{
+    text-align: center;
+    white-space: pre-line;
+    color: rgba(18,19,20,1);
+    letter-spacing: -.48px;
+    font-family: "PretendardVariable","PretendardVariable Fallback";
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 34px;
+}
+.del-7{
+    padding: 0 8px;
+    gap: 12px;
+    width: 100%;
+    display: flex;
+}
+.del-8{
+    text-align: center;
+    white-space: pre-line;
+    color: rgba(18,19,20,1);
+    letter-spacing: 0;
+    font-family: "PretendardVariable","PretendardVariable Fallback";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+}
+.del-9{
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 16px;
+    gap: 8px;
+    display: flex;
+}
+.del-10{
+    background-color: rgba(18,19,20,1);
+    justify-content: center;
+    align-items: center;
+    padding: 0 16px;
+    max-height: 56px;
+    color: #ffffff;
+    min-height: 56px;
+    display: inline-flex;
+    border-radius: 999px;
+    cursor: pointer;
+    width: 100%;
+    outline: var(--borders-none);
+}
+.del-11{
+    letter-spacing: -.32px;
+    font-family: "PretendardVariable","PretendardVariable Fallback";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+}
+.del-12{
+    background-color: rgba(86,105,143,0.0600);
+    justify-content: center;
+    align-items: center;
+    padding: 0 16px;
+    max-height: 56px;
+    color: rgba(18,19,20,1);
+    min-height: 56px;
+    display: inline-flex;
+    border-radius: 999px;
+    cursor: pointer;
+    width: 100%;
+    outline: var(--borders-none);
 }
