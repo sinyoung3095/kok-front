@@ -437,7 +437,7 @@ body #kok {
     padding: 20px 30px 0 0;
 }
 
-#kok-header .header-menu-btn-payment {
+#kok-header .header-menu-btn-manage {
     background-color: #fff;
     border-radius: 50%;
     color: #56626a;
@@ -449,18 +449,18 @@ body #kok {
     cursor: pointer;
 }
 
-#kok-header .header-menu-btn-payment:hover {
+#kok-header .header-menu-btn-manage:hover {
     box-shadow: 0 0 8px rgb(89, 102, 122, .15);
     color: #507cf3;
     cursor: pointer;
 }
 
-.kok-link .header-menu-btn-payment {
+.kok-link .header-menu-btn-manage {
     position: relative;
 }
 
-.kok-link .header-menu-btn-payment::after {
-    content: "정산내역"; 
+.kok-link .header-menu-btn-manage::after {
+    content: "신고 게시글"; 
     position: absolute;
     top: 100%; 
     left: 50%;
@@ -478,11 +478,11 @@ body #kok {
     margin-top: 4px;
 }
 
-.kok-link .header-menu-btn-payment:hover::after {
+.kok-link .header-menu-btn-manage:hover::after {
     opacity: 1;
 }
 
-#kok-header .header-menu-btn-payment i {
+#kok-header .header-menu-btn-manage i {
     font-size: 22px;
     cursor: pointer;
 }
