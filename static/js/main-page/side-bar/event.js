@@ -193,3 +193,35 @@ if (supportButton && supportModal && closeButton) {
         supportModal.classList.remove("active");
     });
 }
+
+// 고객지원 상세창
+const faqItems = document.querySelectorAll(".customer-support-list-section");
+const detailModal = document.getElementById("crisp-chatbox-chat-detail");
+const detailCloseBtn = document.querySelector(".detail-top-close-button");
+const detailBackBtn = document.querySelector(".detail-back-wrap");
+const supportTab = document.querySelector(".detail-top-title-section2");
+
+faqItems.forEach((item) => {
+    item.addEventListener("click", () => {
+        if (detailModal) detailModal.classList.add("active");
+    });
+});
+
+if (detailCloseBtn) {
+    detailCloseBtn.addEventListener("click", () => {
+        if (detailModal) detailModal.classList.remove("active");
+        if (supportModal) supportModal.classList.remove("active");
+    });
+}
+
+if (detailBackBtn) {
+    detailBackBtn.addEventListener("click", () => {
+        if (detailModal) detailModal.classList.remove("active");
+    });
+}
+
+if (supportTab) {
+    supportTab.addEventListener("click", () => {
+        if (detailModal) detailModal.classList.remove("active");
+    });
+}

@@ -14,6 +14,9 @@ const lists = document.getElementsByClassName("list");
 const remove = document.getElementsByClassName("remove");
 const del = document.getElementsByClassName("del")[0];
 const cancle = document.getElementsByClassName("del-12")[0];
+const job = document.getElementsByClassName("setting-28")[0];
+const joblist = document.getElementsByClassName("job")[0];
+const listbtn = document.getElementById("list");
 
 label.addEventListener("click", (e) => {
     background.click();
@@ -35,7 +38,16 @@ submit.addEventListener("click", (e) => {
 profileset.addEventListener("click", (e) => {
     profile.style.display = "flex";
 });
-
+// 직군 변경
+job.addEventListener("click", (e) => {
+    if (joblist.style.display === "none" || joblist.style.display === "") {
+        joblist.style.display = "flex";
+        listbtn.innerHTML = `<path clip-rule="evenodd" d="M17.566 14.566a.8.8 0 0 0 0-1.132l-5-5a.8.8 0 0 0-1.132 0l-5 5a.8.8 0 0 0 1.132 1.132L12 10.13l4.434 4.435a.8.8 0 0 0 1.132 0" fill-rule="evenodd"></path>`;
+    } else {
+        joblist.style.display = "none";
+        listbtn.innerHTML = `<path clip-rule="evenodd" d="M6.434 9.435a.8.8 0 0 1 1.132 0L12 13.869l4.434-4.434a.8.8 0 1 1 1.132 1.13l-5 5a.8.8 0 0 1-1.132 0l-5-5a.8.8 0 0 1 0-1.13" fill-rule="evenodd"></path>`;
+    }
+});
 // 내 게시물
 first.forEach((item) => {
     item.addEventListener("click", (e) => {

@@ -1169,6 +1169,70 @@ border-radius: 8px;
     font-size: 14px;
     line-height: 20px;
 }
+.job{
+    height: auto;
+    left: 965px;
+    max-height: 220px;
+    position: absolute;
+    top: 470px;
+    width: 300px;
+    opacity: 1;
+    transform: none;
+    flex-direction: column;
+    z-index: 10000;
+    box-shadow: 0px 4px 20px 0px rgba(24,37,61,0.0600);
+    border-radius: 16px;
+    border: 1px solid rgba(86,105,143,0.1200);
+    background: #ffffff;
+    display: none;
+    cursor: default;
+}
+.job-1{
+    overflow: auto;
+    display: flex;
+}
+.job-2{
+    flex-direction: column;
+    width: 300px;
+    padding: 8px;
+    display: flex;
+}
+.job-3{
+    align-items: flex-start;
+    justify-content: center;
+    border-radius: 8px;
+    padding: 8px;
+    gap: 6px;
+    width: 100%;
+    display: flex;
+}
+
+.job-4{
+    border-radius: 0px;
+    height: 24px;
+    padding: 0px;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    color: rgba(18,19,20,1);
+}
+.job-5{
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 24px;
+    padding-inline: 4px;
+    flex: 1 0 0px;
+    display: flex;
+    cursor: pointer;
+}
+.job-6{
+    color: rgba(18,19,20,1);  
+    letter-spacing: -0.28px;
+    font-family: "PretendardVariable","PretendardVariable Fallback";
+    font-size: 14px;
+    line-height: 20px;
+}
 .notice.active{
     background-color: black; 
     color: #fff;
