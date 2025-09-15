@@ -6,6 +6,10 @@ const sideSubLinks = document.querySelectorAll(".kok-link");
 const icons = document.querySelectorAll(".icon-wrapper i");
 const tabNameItems = document.querySelectorAll(".tab-name-list .tab-name");
 const allMenus = document.querySelectorAll("#kok-side .menu-item");
+const modal = document.querySelector(".member-modal");
+const actionButtons = document.querySelectorAll(".action-btn");
+const closeButtons = document.querySelectorAll(".close");
+const closeFooterButton = document.querySelector(".btn-close");
 
 // 홈 버튼 클릭
 homeButton.addEventListener("click", (e) => {
@@ -162,4 +166,44 @@ tabNameItems.forEach((tab) => {
             }
         });
     });
+});
+
+// 회원 상세 모달
+actionButtons.forEach((actionButton) => {
+    actionButton.addEventListener("click", (e) => {
+        modal.style.display = "block";
+        setTimeout(() => {
+            modal.classList.add("show");
+            modal.style.background = "rgba(0,0,0,0.5)";
+            document.body.classList.add("modal-open");
+        }, 100);
+    });
+});
+
+closeButtons.forEach((closeButton) => {
+    closeButton.addEventListener("click", (e) => {
+        modal.classList.remove("show");
+        document.body.classList.remove("modal-open");
+        setTimeout(() => {
+            modal.style.display = "none";
+        }, 100);
+    });
+});
+
+modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+        modal.classList.remove("show");
+        document.body.classList.remove("modal-open");
+        setTimeout(() => {
+            modal.style.display = "none";
+        }, 100);
+    }
+});
+
+closeFooterButton.addEventListener("click", (e) => {
+    modal.classList.remove("show");
+    document.body.classList.remove("modal-open");
+    setTimeout(() => {
+        modal.style.display = "none";
+    }, 100);
 });
