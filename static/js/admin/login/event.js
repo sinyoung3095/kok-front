@@ -2,7 +2,7 @@ const auto_login_checkbox = document.getElementById("auto-login-checkbox");
 const auto_login_icon = document.querySelector(".kok-check-box i");
 const modal = document.querySelector(".kok-modal");
 const modal_Inner = document.querySelector(".modal-inner");
-const modalButton = document.getElementById("kok-modal-success-button");
+const modalButton = document.getElementById("kok-modal-check-button");
 const loginButton = document.querySelector(".btn-login");
 const email = document.querySelector('input[name="kok"]');
 const pw = document.querySelector('input[name="password"]');
