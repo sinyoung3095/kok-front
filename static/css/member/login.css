@@ -365,9 +365,9 @@ div.company-member {
 	display: inline-flex;
 	min-height: 56px;
 	padding: 0 16px;
-	background-color: rgba(86, 105, 143, 0.0600);
+	background-color: #0aa5ff;;
 	outline: none;
-	color: rgba(18, 19, 20, 1);
+	color: #fff;
 	align-items: center;
 	width: 100%;
 	justify-content: center;
@@ -386,6 +386,8 @@ div.company-member {
 	align-items: center;
 	display: flex;
 	justify-content: center;
+	font-weight: 500;
+	font-size: 16px;
 }
 
 /* 회원가입/이메일 찾기/비밀번호 찾기 */
@@ -578,6 +580,7 @@ div.company-member {
     border-radius: 12px;
     box-shadow: 0px 4px 20px 0px rgba(24,37,61,0.0600);
     opacity: 0;
+	visibility: hidden;
     transition: .5s ease;
 }
 
@@ -603,12 +606,14 @@ div.company-member {
 .toast-warning.show {
     transform: translate(-50%, 0);
     opacity: 1;
+	visibility: visible;
 	z-index: 1;
 }
 
 .toast-warning.show-red {
     transform: translate(-50%, -210%);
     opacity: 1;
+	visibility: visible;
 	z-index: 0;
 	transition: opacity 0.5s ease;
 }
@@ -616,6 +621,14 @@ div.company-member {
 .toast-p {
 	font-size: 14px;
 	padding-left: 25px;
+}
+
+#toast-email {
+	z-index: 2;
+}
+
+#toast-password {
+	z-index: 1;
 }
 
 /* 닫기 버튼 */

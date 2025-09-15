@@ -68,9 +68,9 @@ const isValidEmail = (value) => {
 const toastLogin = document.querySelector("#toast-login");
 const toastEmail = document.querySelector("#toast-email");
 const toastPassword = document.querySelector("#toast-password");
+// 로그인 오류 토스트
 function showLoginErrorToast() {
     toastLogin.classList.add("show");
-    // 3초 후에 토스트 메시지 숨기기
     setTimeout(() => {
         toastLogin.classList.remove("show");
     }, 3000);
@@ -83,18 +83,21 @@ loginButton.addEventListener("click", (e) => {
     }
 
     // 이메일 형식&비밀번호 길이 검사
-    if (!isValidEmail(emailInput.value)) {
+    if (!isValidEmail(emailInput.value) && passwordInput.value.length < 4) {
+        console.log("이메일 형식 오류 + 비밀번호 4자 미만");
         showLoginErrorToast();
 
         // 이메일 오류 토스트 표시
         toastLogin.addEventListener("mouseover", (e) => {
             toastEmail.classList.add("show-red");
+            toastPassword.classList.remove("show-red");
         });
         toastLogin.addEventListener("mouseout", (e) => {
             toastEmail.classList.remove("show-red");
         });
 
-    } else if (!isValidEmail(emailInput.value) && passwordInput.value.length < 4) {
+    } else if (!isValidEmail(emailInput.value) && passwordInput.value.length >= 4) {
+        console.log("이메일 형식 오류 + 비밀번호 4자 이상");
         showLoginErrorToast();
 
         // 이메일 오류 토스트 표시
@@ -107,7 +110,8 @@ loginButton.addEventListener("click", (e) => {
         });
 
     // 비밀번호가 4자 미만일 때
-    } else if (isValidEmail(emailInput.value) && passwordInput.value.length < 4) {
+    } else if (passwordInput.value.length < 4) {
+        console.log("비밀번호 4자 미만");
         showLoginErrorToast();
 
         // 비밀번호 오류 토스트 표시

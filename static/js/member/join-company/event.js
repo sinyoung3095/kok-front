@@ -42,30 +42,35 @@ function formatBizNumber(input) {
     return input.value;
 }
 
+// 이름 오류 토스트
 function showNameErrorToast() {
     toastName.classList.add("show");
     setTimeout(() => {
         toastName.classList.remove("show");
     }, 3000);
 }
+// 전화번호 오류 토스트
 function showNumberErrorToast() {
     toastNumber.classList.add("show");
     setTimeout(() => {
         toastNumber.classList.remove("show");
     }, 3000);
 }
+// 이메일 오류 토스트
 function showEmailErrorToast() {
     toastEmail.classList.add("show");
     setTimeout(() => {
         toastEmail.classList.remove("show");
     }, 3000);
 }
+// 비밀번호 오류 토스트
 function showPasswordErrorToast() {
     toastPassword.classList.add("show");
     setTimeout(() => {
         toastPassword.classList.remove("show");
     }, 3000);
 }
+// 사업자 번호 오류 토스트
 function showCompanyNumberErrorToast() {
     toastCompanyNumber.classList.add("show");
     setTimeout(() => {
@@ -75,15 +80,20 @@ function showCompanyNumberErrorToast() {
 
 
 submitButton.addEventListener("click", (e) => {
-    if (inputName.value.length === 0 || inputName.value == null) {
+    // 이름 공란
+    if (inputName.value.length === 0) {
         showNameErrorToast();
-    } else if (inputNumber.value.length === 0 || inputNumber.value == null || inputNumber.value.trim().length < 13) {
+    // 전화번호 공란 또는 길이 오류
+    } else if (inputNumber.value.trim().length < 13) {
         showNumberErrorToast();
-    } else if (inputEmail.value.length === 0 || inputEmail.value == null || !isValidEmail(inputEmail.value)) {
+    // 이메일 공란 또는 형식 오류
+    } else if (inputEmail.value.length === 0 || !isValidEmail(inputEmail.value)) {
         showEmailErrorToast();
-    } else if (inputPassword.value.length === 0 || inputPassword.value == null || inputPassword.value.trim().length < 4) {
+    // 비밀번호 공란 또는 길이 오류
+    } else if (inputPassword.value.trim().length < 4) {
         showPasswordErrorToast();
-    } else if (inputCompanyNumber.value.length === 0 || inputCompanyNumber.value == null || inputCompanyNumber.value.trim().length < 12) {
+    // 사업자 번호 공란 또는 형식 오류
+    } else if (inputCompanyNumber.value.trim().length < 12) {
         showCompanyNumberErrorToast();
     }
 });
