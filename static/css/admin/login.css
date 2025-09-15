@@ -160,7 +160,7 @@ body #kok {
     height: 100%;
 }
 
-#kok-notify-container {
+.kok-notify-container {
     padding: 20px 20px 0 0;
     position: fixed;
     right: 0;
@@ -178,6 +178,7 @@ body #kok {
     top: 10%;
     transform: translate(-50%);
     z-index: 1041;
+    width: 0px;
 }
 
 #kok #kok-main {
@@ -185,17 +186,14 @@ body #kok {
     overflow-y: auto;
 }
 
-.full-window {
+.login-container {
+    background-color: #f5f5f5;
     bottom: 0;
     left: 0;
     overflow: auto;
     position: fixed;
     right: 0;
     top: 0;
-}
-
-.login-container {
-    background-color: #f5f5f5;
 }
 
 .login-container .horizontal-center {
@@ -479,7 +477,7 @@ button:focus:not(:focus-visible) {
   align-items: center;
 }
 
-.kok-modal .modal-inner {
+.modal-inner {
     border-radius: 5px;
     display: inline-block;
     max-width: 500px;
@@ -488,11 +486,11 @@ button:focus:not(:focus-visible) {
     width: 100%;
 }
 
-.kok-modal .modal-inner.raise {
+.modal-inner.raise {
     animation: raise .1s ease-in-out;
 }
 
-.kok-modal .modal-inner .header {
+.modal-header {
     background-color: #fff;
     border-top-left-radius: 2px;
     border-top-right-radius: 2px;
@@ -503,7 +501,7 @@ button:focus:not(:focus-visible) {
     display: flex;
 }
 
-.kok-modal .modal-inner .header h3.modal-title {
+.modal-header-title {
     color: #37394e;
     font-size: 18px;
     font-weight: 600;
@@ -511,7 +509,7 @@ button:focus:not(:focus-visible) {
     padding: 0;
 }
 
-.kok-modal .modal-inner>.body {
+.modal-body {
     background-color: #fff;
     box-shadow: none;
     color: #828797;
@@ -525,7 +523,7 @@ button:focus:not(:focus-visible) {
     word-break: break-all;
 }
 
-.kok-modal .modal-inner>.footer {
+.modal-footer {
     background-color: #eff0f6;
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
@@ -538,7 +536,7 @@ button:focus:not(:focus-visible) {
     width: 100%;
 }
 
-.kok-modal .modal-inner>.footer a.modal-button {
+.kok-modal-check-button {
     border: 0;
     border-radius: 5px;
     display: inline-block;
@@ -549,7 +547,7 @@ button:focus:not(:focus-visible) {
     text-align: center;
 }
 
-.kok-modal .modal-inner>.footer a.success-btn {
+.kok-modal-check-button {
     background-color: #507cf3;
     color: #fff;
 }
