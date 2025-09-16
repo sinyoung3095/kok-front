@@ -15,7 +15,6 @@ const inputPassword = document.getElementById("input-password");
 const isValidEmail = (value) => {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value.trim());
 };
-
 // 전화번호 포맷팅
 function formatPhoneNumber(input) {
     input.value = input.value
