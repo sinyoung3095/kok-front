@@ -155,7 +155,7 @@ sideSubLinks.forEach((submenu) => {
     });
 });
 
-// 회원 상세 모달
+// 체험공고 상세 모달
 actionButtons.forEach((actionButton) => {
     actionButton.addEventListener("click", (e) => {
         modal.style.display = "block";
