@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>콕(KOK) 관리자</title>
     <link href="../../static/images/member/kok_favicon.png" rel="icon" type="image/x-icon">
-    <link rel="stylesheet" href="../../static/css/admin/company.css">
+    <link rel="stylesheet" href="../../static/css/admin/experience.css">
 </head>
 <body>
     <div id="kok">
@@ -37,18 +37,18 @@
                             </a>
                         </li>
                         <li class="menu menu-item d-flex flex-column">
-                            <a class="menu-btn d-flex w-100 current">
+                            <a class="menu-btn d-flex w-100">
                                 <svg fill="rgb(255, 255, 255)" height="24" role="img" width="24" stroke="black" stroke-width="1.5">
                                     <path d="M12 2a5 5 0 1 0 0 10 5 5 0 0 0 0-10M9 14a5 5 0 0 0-5 5v1a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-1a5 5 0 0 0-5-5z"></path>
                                 </svg>
                                 <span class="menu-name">회원관리</span>
                                 <div class="icon-wrapper flex-grow-1 text-right">
-                                    <i class="mdi mdi-chevron-down"></i>
+                                    <i class="mdi mdi-chevron-right"></i>
                                     <!-- 리스트가 보이는 상태의 아이콘 i class="mdi mdi-chevron-down" -->
                                 </div>
                             </a>
                             <!-- 리스트가 보이는 상태 ul class="menu-sub-list collapse show" -->
-                            <ul class="menu-sub-list collapse show" id="menu-6109064136799700f1ebced6">
+                            <ul class="menu-sub-list collapse" id="menu-6109064136799700f1ebced6">
                                 <li class="submenu menu-item">
                                     <!-- 클릭 한 부분 active -->
                                     <a href="" class="kok-link">
@@ -57,7 +57,7 @@
                                     </a>
                                 </li>
                                 <li class="submenu menu-item">
-                                    <a href="" class="kok-link active">
+                                    <a href="" class="kok-link">
                                         - 
                                         기업회원
                                     </a>
@@ -73,7 +73,7 @@
                             </a>                           
                         </li>
                         <li class="menu menu-item d-flex flex-column">
-                            <a class="menu-btn d-flex w-100" id="menu-employ">
+                            <a class="menu-btn d-flex w-100 current" id="menu-employ">
                                 <svg fill="rgb(255, 255, 255)" height="24" role="img" width="24" stroke="black" stroke-width="1.5">
                                     <path clip-rule="evenodd" d="M11 3a3 3 0 0 0-3 3v1H5a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-8a3 3 0 0 0-3-3h-3V6a3 3 0 0 0-3-3zm3 4V6a1 1 0 0 0-1-1h-2a1 1 0 0 0-1 1v1z" fill-rule="evenodd"></path>
                                 </svg>
@@ -160,30 +160,17 @@
             </div>
             <div class="page ana-user-index wide-page">
                 <div class="page-header">
-                    <div class="page-title">회원관리</div>
+                    <div class="page-title">인턴공고</div>
                     <div class="page-subtitle"></div>
                 </div>
                 <div class="page-body">
-                    <div class="tab-box">
-                        <div class="tab-row white-panel">
-                            <div class="row">
-                                <div class="col col-auto">
-                                    <ul class="tab-name-list list-unstyled list-inline">
-                                        <!-- 클릭 한 부분은 active -->
-                                        <li class="tab-name">일반회원</li>
-                                        <li class="tab-name active">기업회원</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                     <div class="page-content">
                         <div class="table-layout white-panel">
                             <div class="filter-section">
                                 <div class="row">
                                     <div class="col-auto">
                                         <span class="member-count">총
-                                            <span class="count-amount">n</span>명
+                                            <span class="count-amount">n</span>건
                                         </span>
                                     </div>
                                     <!-- PG 선택, 결제방식선택, 결제상태선택 버튼 -->
@@ -229,7 +216,7 @@
                                     <div class="col-auto">
                                         <div class="filter-wrapper filter-search ml-1">
                                             <div class="input-group">
-                                                <input class="form-control flex-grow-1" type="text" placeholder="ID/기업명/산업분야/기업규모" value="">
+                                                <input class="form-control flex-grow-1" type="text" placeholder="기업명/모집상태/직군" value="">
                                                 <div class="input-group-append">
                                                     <button class="btn btn-search">
                                                         <span class="comp-icon icon-magnify" id="icons/ico-search.svg">
@@ -248,29 +235,23 @@
                                 <table class="table grey-header-table w-100 member-table">
                                     <thead>
                                         <tr>
-                                            <th class="td-name">회원</th>
-                                            <th class="td-amount text-right pr-4">기업명</th>
-                                            <th class="td-email">대표 이메일</th>
-                                            <th class="td-phone">대표 번호</th>
-                                            <th class="td-profile">프로필 URL</th>
-                                            <th class="td-job">산업분야</th>
+                                            <th class="td-name">기업명</th>
+                                            <th class="td-main-title">인턴공고 제목</th>
+                                            <th class="td-sub-title">인턴공고 부제목</th>
+                                            <th class="td-status">모집상태</th>
+                                            <th class="td-date">모집 종료일</th>                                           
+                                            <th class="td-job">직군</th>
                                             <th class="td-action">상세</th>
                                         </tr>
                                     </thead>
-                                    <!-- 회원 리스트 -->
                                     <tbody class="">
                                         <tr>
-                                            <td class="td-name">
-                                                <div class="member-name">대표자명
-                                                    <span class="badge-label badge text-danger ml-2">기업회원</span>
-                                                </div>
-                                                <div class="member-id">test01@gmail.com</div>
-                                            </td>
-                                            <td class="td-amount text-right pr-4 font-weight-bold">코리아IT</td>
-                                            <td class="td-email">test01@gmail.com</td>
-                                            <td class="td-phone">010-1234-5678</td>
-                                            <td class="td-profile">1234abcd</td>
-                                            <td class="td-job">IT/웹/통신</td>
+                                            <td class="td-name">코리아IT</td>
+                                            <td class="td-main-title">SW 개발 백엔드 체험</td>
+                                            <td class="td-sub-title">AWS 클라우드를 활용한 풀스택 & 자동화 실무 개발</td>
+                                            <td class="td-status">모집중</td>
+                                            <td class="td-date">2025/09/19</td>  
+                                            <td class="td-job">SW 개발</td>
                                             <td class="td-action text-center">
                                                 <div class="action-btn">
                                                     <i class="mdi mdi-chevron-right"></i>
@@ -314,14 +295,14 @@
                         </div>
                     </div>
                 </div>
-                <!-- 기업회원 상세 모달 창 -->
+                <!-- 인턴공고 상세 모달 창 -->
                 <div class="modal fade member-modal" style="display: none;">
                     <div class="modal-dialog modal-lg">
                         <div class="modal-content">
                             <div class="modal-header">
                                 <div class="modal-title">
-                                    (TestId01) Test01
-                                    <span class="badge-label text-danger font-weight-bold ml-2">기업회원</span>
+                                    SW 개발 백엔드 체험
+                                    <span class="badge-label text-danger font-weight-bold ml-2">코리아IT</span>
                                 </div>
                                 <button class="close">
                                     <i class="mdi mdi-close"></i>
@@ -337,76 +318,46 @@
                                                     <div class="info-layout detail-info">
                                                         <div class="info-title justify-content-between">
                                                             <div class="flex-left d-flex">
-                                                                <div class="title">회원 상세정보</div>
+                                                                <div class="title">인턴공고 상세정보</div>
                                                             </div>
                                                             <div class="flex-right"></div>
                                                         </div>
-                                                        <div class="d-table w-100">
-                                                            <!-- 테이블 왼쪽 -->
-                                                            <div class="d-table-cell">
-                                                                <table class="info-table">
-                                                                    <tbody>
-                                                                        <tr>
-                                                                            <th>회원ID (이메일)</th>
-                                                                            <td>test01@gmail.com</td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <th>대표 번호</th>
-                                                                            <td>010-1234-5678</td>
-                                                                        </tr> 
-                                                                        <tr>
-                                                                            <th>프로필 URL</th>
-                                                                            <td>1234abcd</td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <th>팔로워</th>
-                                                                            <td>3.1천명</td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <th>체험공고 횟수</th>
-                                                                            <td>3</td>
-                                                                        </tr> 
-                                                                    </tbody>
-                                                                </table>
-                                                            </div>
-                                                            <!-- 테이블 오른쪽 -->                                                        
-                                                            <div class="d-table-cell">
-                                                                <table class="info-table">
-                                                                    <tbody>                                                                        
-                                                                        <tr>
-                                                                            <th>기업</th>
-                                                                            <td>코리아IT</td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <th>사업자번호</th>
-                                                                            <td>815-88-00171</td>
-                                                                        </tr>                                                                    
-                                                                        <tr>
-                                                                            <th>산업분야</th>
-                                                                            <td>IT/웹/통신</td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <th>기업규모</th>
-                                                                            <td>중간규모(100-400명)</td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <th>인턴공고 횟수</th>
-                                                                            <td>3</td>
-                                                                        </tr> 
-                                                                    </tbody>
-                                                                </table>
-                                                            </div>
-                                                        </div>
+                                                        <table class="info-table w-100">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th>모집 시작일</th>
+                                                                    <td>2025/09/16</td>
+                                                                    <th>모집 종료일</th>
+                                                                    <td>2025/09/19</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>인턴공고 제목</th>
+                                                                    <td colspan="3">SW 개발 백엔드 체험</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>인턴공고 부제목</th>
+                                                                    <td colspan="3">AWS 클라우드를 활용한 풀스택 & 자동화 실무 개발</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>직무소개</th>
+                                                                    <td colspan="3">-</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>주요업무</th>
+                                                                    <td colspan="3">-</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>참고사항</th>
+                                                                    <td colspan="3">-</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
                                                     </div>
-                                                    <!-- 체험공고 내역 -->
+                                                    <!-- 신청자 내역 -->
                                                     <div class="info-layout detail-info">
                                                         <div class="info-title justify-content-between">
                                                             <div class="flex-left d-flex">
-                                                                <a href="" class="info-detail">
-                                                                    <div class="title">체험공고 내역
-                                                                        <i class="mdi mdi-menu-left ml-2"></i>
-                                                                    </div>
-                                                                </a>
+                                                                <div class="title">신청자 내역</div>
                                                             </div>
                                                             <div class="flex-right"></div>
                                                         </div>
@@ -414,68 +365,31 @@
                                                             <table class="info-table">
                                                                 <thead>
                                                                     <tr>
-                                                                        <th class="middle">체험공고 제목</th>
-                                                                        <th class="long">체험공고 부제목</th>
-                                                                        <th class="short">모집상태</th>
+                                                                        <th class="middle">이름</th>
+                                                                        <th class="middle">이메일</th>
+                                                                        <th class="middle">전화번호</th>
+                                                                        <th class="middle" style="text-align: center;">지원상태</th>
                                                                     </tr>
                                                                 </thead>
-                                                                <tbody>
+                                                                <tbody>                                                                   
                                                                     <tr>
-                                                                        <td>SW 개발 백엔드 체험</td>
-                                                                        <td>AWS 클라우드를 활용한 풀스택 & 자동화 실무 개발</td>
-                                                                        <td>모집중</td>
+                                                                        <td>테스트01</td>
+                                                                        <td>test01@gmail.com</td>
+                                                                        <td>010-1234-5678</td>
+                                                                        <td style="text-align: center;">합격</td>
+                                                                    </tr>                                                                   
+                                                                    <tr>
+                                                                        <td>테스트01</td>
+                                                                        <td>test01@gmail.com</td>
+                                                                        <td>010-1234-5678</td>
+                                                                        <td style="text-align: center;">서류 접수</td>
                                                                     </tr>
                                                                     <tr>
-                                                                        <td>AI 개발과정</td>
-                                                                        <td>클라우드 AI기반 마이크로서비스 풀스택(리액트/자바) 개발</td>
-                                                                        <td>모집완료</td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>프레임워크 기반 SW 개발자</td>
-                                                                        <td>풀스택 프레임워크(자바,스프링)기반 데이터 융합SW개발자 과정</td>
-                                                                        <td>모집완료</td>
-                                                                    </tr>                                                                                                                                   
-                                                                </tbody>
-                                                            </table>
-                                                        </div>                             
-                                                    </div>
-                                                    <!-- 인턴공고 내역 -->
-                                                    <div class="info-layout detail-info">
-                                                        <div class="info-title justify-content-between">
-                                                            <div class="flex-left d-flex">
-                                                                <a href="" class="info-detail">
-                                                                    <div class="title">인턴공고 내역
-                                                                        <i class="mdi mdi-menu-left ml-2"></i>
-                                                                    </div>
-                                                                </a>
-                                                            </div>
-                                                            <div class="flex-right"></div>
-                                                        </div>
-                                                        <div class="d-table w-100">
-                                                            <table class="info-table">
-                                                                <thead>
-                                                                    <tr>
-                                                                        <th class="middle">인턴공고 제목</th>
-                                                                        <th class="long">인턴공고 부제목</th>
-                                                                        <th class="short">모집상태</th>
-                                                                    </tr>
-                                                                </thead>
-                                                                <tbody>
-                                                                    <tr>
-                                                                        <td>SDK 개발자 (Kotlin Multiplatform)</td>
-                                                                        <td>크로스 플랫폼 광고 SDK 개발로 전문성을 쌓아갈 개발자 모집</td>
-                                                                        <td>모집중</td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>인턴 백엔드 개발자</td>
-                                                                        <td>CTV 광고 플랫폼에서 전문성을 키워나갈 인턴 개발자 모집</td>
-                                                                        <td>모집완료</td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>Windows Developer</td>
-                                                                        <td>소프트웨어 엔지니어, 개발자</td>
-                                                                        <td>모집완료</td>
-                                                                    </tr>                                                                                                                                 
+                                                                        <td>테스트01</td>
+                                                                        <td>test01@gmail.com</td>
+                                                                        <td>010-1234-5678</td>
+                                                                        <td style="text-align: center;">불합격</td>
+                                                                    </tr> 
                                                                 </tbody>
                                                             </table>
                                                         </div>                             
@@ -496,5 +410,5 @@
         </div>
     </div>
 </body>
-<script src="../../static/js/admin/company/event.js"></script>
+<script src="../../static/js/admin/experience/event.js"></script>
 </html>
