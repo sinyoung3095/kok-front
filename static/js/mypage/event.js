@@ -103,3 +103,139 @@ lists.forEach((list) => {
         }
     });
 });
+// 팝업
+function popupFn() {
+    const triggers = document.querySelectorAll(".popup-trigger");
+    const popups = document.querySelectorAll(".popup-container");
+    const dropdowns = document.querySelectorAll(".option-menu");
+
+    if (!triggers) return;
+
+    // 팝업 - from 안의 버튼 submit 막기
+    document.addEventListener(
+        "submit",
+        (e) => {
+            if (e.target.closest(".popup-container")) {
+                e.preventDefault();
+            }
+        },
+        true
+    );
+
+    // 팝업 열기
+    triggers.forEach((trigger) => {
+        trigger.addEventListener("click", () => {
+            const target = trigger.getAttribute("data-target");
+            const popup = document.querySelector(target);
+
+            // 드롭다운도 전부 닫기
+            dropdowns.forEach((menu) => menu.classList.remove("active"));
+
+            // 다른 팝업 닫기 (data-sticky가 붙어있는 팝업 제외)
+            popups.forEach((pop) => {
+                if (!pop.hasAttribute("data-sticky")) {
+                    pop.classList.remove("active");
+                }
+            });
+
+            // 현재(부모) 팝업 닫기 - 스티키면 유지
+            const parentPopup = trigger.closest(".popup-container");
+            if (parentPopup && !parentPopup.hasAttribute("data-sticky")) {
+                parentPopup.classList.remove("active");
+            }
+
+            // 해당 팝업 열기
+            if (popup) {
+                popup.classList.add("active");
+            }
+        });
+    });
+
+    // 팝업 닫기 버튼
+    const popupRemoves = document.querySelectorAll(".popup-remove");
+    popupRemoves.forEach((closeBtn) => {
+        closeBtn.addEventListener("click", () => {
+            const popup = closeBtn.closest(".popup-container");
+            if (popup) {
+                popup.classList.remove("active");
+            }
+        });
+    });
+
+    // 바깥 클릭 시 닫기
+    // document.addEventListener("click", (e) => {
+    //     document
+    //         .querySelectorAll(".popup-container.active")
+    //         .forEach((popup) => {
+    //             if (
+    //                 !e.target.closest(".popup-inner") &&
+    //                 !e.target.closest(".popup-trigger")
+    //             ) {
+    //                 popup.classList.remove("active");
+    //             }
+    //         });
+    // });
+}
+popupFn();
+
+// 드롭다운
+function dropdownFn() {
+    const triggers = document.querySelectorAll(".dropdown-trigger");
+    const menus = document.querySelectorAll(".option-menu");
+
+    if (!triggers) return;
+
+    // 드롭다운 열기
+    triggers.forEach((trigger) => {
+        trigger.addEventListener("click", (e) => {
+            e.stopPropagation();
+
+            // 다른 드롭다운 닫기
+            menus.forEach((menu) => menu.classList.remove("active"));
+
+            const target = trigger.getAttribute("data-target");
+            const menu = document.querySelector(target);
+
+            if (menu) {
+                menu.classList.add("active");
+            }
+        });
+    });
+
+    // 옵션 클릭 시 input에 값 반영 + 닫기
+    document.querySelectorAll(".option-item").forEach((item) => {
+        item.addEventListener("click", () => {
+            const dropdown = item.closest(".form-field-dropdown");
+            const input = dropdown.querySelector(".dropdown-trigger");
+            const target = input.getAttribute("data-target");
+            const menu = document.querySelector(target);
+
+            // 직접 입력
+            if (item.classList.contains("option-input")) {
+                dropdown.classList.add("is-manual");
+                if (input) {
+                    input.readOnly = false;
+                    input.value = "";
+                    input.focus();
+                }
+                menu.classList.remove("active");
+                return;
+            }
+
+            // 일반 옵션
+            const text = item.innerText.trim();
+            if (input && input.tagName === "INPUT") {
+                input.value = text;
+                input.readOnly = true;
+                dropdown.classList.remove("is-manual");
+            }
+            menu.classList.remove("active");
+        });
+    });
+
+    // 바깥 클릭 시 닫기
+    // document.addEventListener("click", () => {
+    //     menus.forEach((menu) => menu.classList.remove("active"));
+    // });
+}
+dropdownFn();
