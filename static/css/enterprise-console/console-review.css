@@ -106,7 +106,6 @@ main.main{
 
 div.wrap-enter{
     background-color: #fafafa;
-    overflow: hidden;
     width: 100%;
     min-height: 898px;
     height: 898px;
@@ -300,4 +299,20 @@ textarea {
 
 .submit-btn:hover {
   background-color: #333;
+}
+
+div.content-in-box{
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    display: grid;
+}
+
+div.main-content{
+  grid-column: span 2 / span 2;
+}
+
+div.sub-content{
+  height: 190px;
+  top: 0;
+  position: sticky;
 }
