@@ -1563,7 +1563,7 @@ table.info-table th {
     width: 120px;
 } */
 
-.modal.member-modal .tab-inner.tab-detail table.info-table td {
+.modal.member-modal .tab-inner.tab-detail table.info-table td.short {
     white-space: pre-line;
     word-break: break-all;
 }
