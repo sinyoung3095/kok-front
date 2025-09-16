@@ -83,3 +83,45 @@ document.querySelectorAll("tr.body-tr").forEach((tr) => {
         }
     });
 });
+
+const suregoBtn = document.getElementById("surego");
+const drkbElem = document.getElementById("drkb");
+const squaElem = document.getElementById("squa");
+const sureNoBtn = document.querySelector(".sure-no");
+const sureYesBtn = document.querySelector(".sure.yes");
+
+function showModal() {
+    drkbElem.style.display = "block";
+    squaElem.style.display = "block";
+}
+
+function hideModal() {
+    drkbElem.style.display = "none";
+    squaElem.style.display = "none";
+}
+
+suregoBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    showModal();
+});
+
+sureNoBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    hideModal();
+});
+
+sureYesBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    console.log("등록 전송");
+    hideModal();
+});
+
+document.addEventListener("click", (e) => {
+    if (
+        squaElem.style.display === "block" &&
+        !squaElem.contains(e.target) &&
+        e.target !== suregoBtn
+    ) {
+        hideModal();
+    }
+});
