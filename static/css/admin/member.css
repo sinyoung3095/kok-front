@@ -1543,6 +1543,7 @@ table.info-table th {
     max-width: 60px;
     min-width: 60px;
     width: 60px;
+    text-align: center;
 }
 
 .modal.member-modal .tab-inner.tab-detail table.info-table th.middle {
@@ -1563,7 +1564,7 @@ table.info-table th {
     width: 120px;
 } */
 
-.modal.member-modal .tab-inner.tab-detail table.info-table td.short {
+.modal.member-modal .tab-inner.tab-detail table.info-table td {
     white-space: pre-line;
     word-break: break-all;
 }
