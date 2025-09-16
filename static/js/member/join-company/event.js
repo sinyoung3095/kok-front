@@ -17,7 +17,6 @@ const inputCompanyNumber = document.getElementById("input-company-number");
 const isValidEmail = (value) => {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value.trim());
 };
-
 // 전화번호 포맷팅
 function formatPhoneNumber(input) {
     input.value = input.value
@@ -27,15 +26,13 @@ function formatPhoneNumber(input) {
 
 // 사업자 번호 포맷팅
 function formatBizNumber(input) {
-    // 1) 숫자만 남기기, 10자리 제한
+    // 숫자만 남기기, 10자리 제한
     input.value = input.value.replace(/\D/g, '').slice(0, 10);
 
-    // 2) 자리수에 따라 점진적으로 하이픈 삽입
+    // 자리수에 따라 점진적으로 하이픈 삽입
     if (input.value.length > 5) {
-        // 3-2-나머지 (최대 5자리)
         input.value = input.value.replace(/^(\d{3})(\d{2})(\d+)/, '$1-$2-$3');
     } else if (input.value.length > 3) {
-        // 3-나머지
         input.value = input.value.replace(/^(\d{3})(\d+)/, '$1-$2');
     }
 

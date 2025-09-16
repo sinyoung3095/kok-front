@@ -21,11 +21,10 @@ function formatPhoneNumber(input) {
         .replace(/[^0-9]/g, '')
         .replace(/(^02|^01[0-9]|[0-9]{3})([0-9]+)?([0-9]{4})$/, '$1 $2 $3');
 }
-
 // 인증번호 포맷팅
 function formatCertiNumber(input) {
     // 숫자만 남기기
-    input.value = input.value.replace(/\D/g, '');
+    input.value = input.value.replace(/\D/g, '').slice(0, 6);
 }
 
 // 이름 공란 토스트

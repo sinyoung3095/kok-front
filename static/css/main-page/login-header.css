@@ -57,7 +57,7 @@
 /* 프로필 모달 */
 .profile-modal {
     height: auto;
-    left: 1141.67px;
+    left: 1248px;
     max-height: 220px;
     position: absolute;
     top: 60.6667px;
@@ -246,7 +246,7 @@
     transition: background-color 0.3s;
     width: fit-content;
     height: 36px;
-    background: rgba(86,105,143,0.0600);
+    background: #0aa5ff;
     padding-inline: 12px;
     cursor: pointer;
     position: relative;
@@ -259,7 +259,7 @@
     text-overflow: ellipsis;
     text-align: center;
     white-space: nowrap;
-    color: rgba(18,19,20,1);
+    color: #ffffff;
     letter-spacing: -.28px;
     font-family: "PretendardVariable","PretendardVariable Fallback";
     font-size: 14px;
