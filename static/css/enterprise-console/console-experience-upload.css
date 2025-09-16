@@ -663,7 +663,10 @@ body button.category-sub.active{
     box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000, 0 0 #0000, 0 1px 3px 0 #0000001a, 0 1px 2px -1px #0000001a;
 }
 
-div.darckback{
+/* 어두운 배경 */
+
+div.darkback{
+    display: none;
     pointer-events: auto;
     animation: .15s ease;
     background-color:#00000080;
@@ -673,6 +676,7 @@ div.darckback{
 }
 
 div.sure{
+    display: none;
     pointer-events: auto;
     animation: .15s ease;
     max-width: 512px;
@@ -685,7 +689,6 @@ div.sure{
     gap:16px;
     translate: -50% -50%;
     width: 100%;
-    display: grid;
     z-index: 50;
     left: 50%;
     top: 50%;
