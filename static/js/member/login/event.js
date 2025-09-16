@@ -10,8 +10,8 @@ const socialLoginContainer = document.querySelector('.social-login-container');
 const joinMember = document.querySelector('.join-member');
 const joinCompany = document.querySelector('.join-company');
 
+// 일반 로그인
 generalMember.addEventListener("click", (e) => {
-    // 일반 로그인
     inputContainer.classList.add('member');
     inputContainer.classList.remove('company');
     generalMember.classList.add('select-login-type');
@@ -24,8 +24,8 @@ generalMember.addEventListener("click", (e) => {
     joinCompany.classList.remove('show');
 });
 
+// 기업 로그인
 companyMember.addEventListener("click", (e) => {
-    // 기업 로그인
     inputContainer.classList.remove('member');
     inputContainer.classList.add('company');
     generalMember.classList.remove('select-login-type');
@@ -84,7 +84,6 @@ loginButton.addEventListener("click", (e) => {
 
     // 이메일 형식&비밀번호 길이 검사
     if (!isValidEmail(emailInput.value) && passwordInput.value.length < 4) {
-        console.log("이메일 형식 오류 + 비밀번호 4자 미만");
         showLoginErrorToast();
 
         // 이메일 오류 토스트 표시
@@ -97,7 +96,6 @@ loginButton.addEventListener("click", (e) => {
         });
 
     } else if (!isValidEmail(emailInput.value) && passwordInput.value.length >= 4) {
-        console.log("이메일 형식 오류 + 비밀번호 4자 이상");
         showLoginErrorToast();
 
         // 이메일 오류 토스트 표시
@@ -111,7 +109,6 @@ loginButton.addEventListener("click", (e) => {
 
     // 비밀번호가 4자 미만일 때
     } else if (passwordInput.value.length < 4) {
-        console.log("비밀번호 4자 미만");
         showLoginErrorToast();
 
         // 비밀번호 오류 토스트 표시
@@ -125,7 +122,4 @@ loginButton.addEventListener("click", (e) => {
     }
     
 });
-
-
-
 
