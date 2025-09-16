@@ -65,6 +65,7 @@ div.logo-container {
 
 }
 
+/* 우측 입력창 */
 div.right-side {
 	flex-direction: column;
 	align-items: center;
@@ -124,24 +125,22 @@ div.input-content-container {
 	width: 100%;
 }
 
+/* 일반회원/기업회원 선택 버튼 */
 div.select-container {
 	display: inline-flex;
 	gap: 6px;
 	align-items: center;
 }
 
-/* 로그인 방법 선택 스타일 */
-/* 선택 */
 div.select-login-type {
 	background: rgba(86, 105, 143, 0.0600);
 	color: rgba(18, 19, 20, 1);
-}
+}	/* 선택 */
 
-/* 미선택 */
 div.unselected {
     background: none;
     color: rgb(111 111 111 / 60%);
-}
+}	/* 미선택 */
 
 div.general-member {
 	cursor: pointer;
@@ -225,6 +224,7 @@ div.company-member {
 	width: 100%;
 }
 
+/* 이메일 입력칸 */
 .email-container {
 	gap: 12px;
 	align-items: center;
@@ -291,6 +291,7 @@ div.company-member {
 	width: 100%;
 }
 
+/* 비밀번호 입력칸 */
 .password-container {
 	gap: 12px;
 	align-items: center;
@@ -357,7 +358,7 @@ div.company-member {
 	width: 100%;
 }
 
-/* 로그인 가능 */
+/* 로그인 버튼 */
 .login-button {
     cursor: pointer;
 	max-height: 56px;
@@ -371,13 +372,12 @@ div.company-member {
 	align-items: center;
 	width: 100%;
 	justify-content: center;
-}
+}	/* 로그인 가능 */
 
-/* 로그인 불가능 */
 .login-disabled {
     cursor: not-allowed;
     opacity: .4;
-}
+}	/* 로그인 불가능 */
 
 .login-button-span {
 	padding: 0 8px;
@@ -568,6 +568,39 @@ div.company-member {
 	cursor: pointer;
 }
 
+/* 닫기 버튼 */
+.x-button-container {
+	position: fixed;
+	right: 20px;
+	top: 20px;
+}
+
+.x-button {
+	padding: 12px;
+	max-height: 48px;
+	min-height: 48px;
+	border-radius: 999px;
+	display: inline-flex;
+	background-color: rgba(86, 105, 143, 0.0600);
+	outline: none;
+	cursor: pointer;
+	align-items: center;
+	justify-content: center;
+}
+
+.x-button-symbol {
+	mask: none;
+	-webkit-mask: none;
+	display: inline-flex;
+	color: rgba(18, 19, 20, 0.6000);
+	align-items: center;
+	justify-content: center;
+}
+
+.x-button-symbol svg {
+	color: rgba(18, 19, 20, 1);
+}
+
 /* 토스트 팝업 */
 .toast-warning {
     max-width: 90vw;
@@ -630,40 +663,6 @@ div.company-member {
 #toast-password {
 	z-index: 1;
 }
-
-/* 닫기 버튼 */
-.x-button-container {
-	position: fixed;
-	right: 20px;
-	top: 20px;
-}
-
-.x-button {
-	padding: 12px;
-	max-height: 48px;
-	min-height: 48px;
-	border-radius: 999px;
-	display: inline-flex;
-	background-color: rgba(86, 105, 143, 0.0600);
-	outline: none;
-	cursor: pointer;
-	align-items: center;
-	justify-content: center;
-}
-
-.x-button-symbol {
-	mask: none;
-	-webkit-mask: none;
-	display: inline-flex;
-	color: rgba(18, 19, 20, 0.6000);
-	align-items: center;
-	justify-content: center;
-}
-
-.x-button-symbol svg {
-	color: rgba(18, 19, 20, 1);
-}
-
 
 /* 기본: PC */
 .pc {

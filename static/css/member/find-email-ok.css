@@ -43,7 +43,7 @@ ol, ul {
     display: flex;
 }
 
-/* 안내 문구 */
+/* 안내 문구 타이틀 */
 .title-box {
     align-items: flex-start;
     flex-direction: column;
@@ -112,7 +112,7 @@ ol, ul {
     color: rgb(153, 153, 153);
 }
 
-/* 비밀번호 찾기/로그인 */
+/* 비밀번호 찾기/로그인 버튼 */
 .account-result-actions {
     margin-top: 27px;
     font-size: 14px;
@@ -152,95 +152,21 @@ ol, ul {
     border-radius: 30px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* 기본: PC */
+.pc {
+    display: block;
+}
+.mob {
+    display: none;
+}
+
+/* 1023px 이하일 때: 모바일 */
+@media (max-width: 1023px) {
+    .pc {
+        display: none;
+    }
+    .mob {
+        display: block;
+    }
+}
 
