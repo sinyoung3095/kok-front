@@ -1,5 +1,7 @@
 const homeButton = document.getElementById("menu-home");
 const payButton = document.getElementById("menu-payment");
+const experienceButton = document.getElementById("menu-experience");
+const employButton = document.getElementById("menu-employ");
 const sideMenuButtons = document.querySelectorAll(".menu-btn");
 const sideSubLists = document.querySelectorAll(".menu-sub-list");
 const sideSubLinks = document.querySelectorAll(".kok-link");
@@ -25,6 +27,44 @@ homeButton.addEventListener("click", (e) => {
 
     sideSubLists.forEach((list) => list.classList.remove("show"));
     sideSubLinks.forEach((link) => link.classList.remove("active"));
+    icons.forEach((icon) => {
+        icon.classList.remove("mdi-chevron-down");
+        icon.classList.add("mdi-chevron-right");
+    });
+
+    tabNameItems.forEach((tab) => tab.classList.remove("active"));
+});
+
+// 체험 버튼 클릭
+experienceButton.addEventListener("click", (e) => {
+    // js 확인용 a태그 이동 방지
+    e.preventDefault();
+    sideMenuButtons.forEach((menuBtn) => menuBtn.classList.remove("current"));
+    experienceButton.classList.add("current");
+
+    sideSubLists.forEach((list) => list.classList.remove("show"));
+    sideSubLinks.forEach((link) => link.classList.remove("active"));
+
+    icons.forEach((icon) => {
+        icon.classList.remove("mdi-chevron-down");
+        icon.classList.add("mdi-chevron-right");
+    });
+
+    tabNameItems.forEach((tab) => tab.classList.remove("active"));
+});
+
+// 인턴 버튼 클릭
+employButton.addEventListener("click", (e) => {
+    // js 확인용 a태그 이동 방지
+    e.preventDefault();
+    sideMenuButtons.forEach((menuBtn) => menuBtn.classList.remove("current"));
+
+    employButton.classList.add("current");
+
+    sideSubLists.forEach((list) => list.classList.remove("show"));
+
+    sideSubLinks.forEach((link) => link.classList.remove("active"));
+
     icons.forEach((icon) => {
         icon.classList.remove("mdi-chevron-down");
         icon.classList.add("mdi-chevron-right");
