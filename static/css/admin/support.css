@@ -848,6 +848,32 @@ table.table tr td, table.table tr>th {
     font-size: 15px;
 }
 
+.table-wrapper {
+    position: relative;
+}
+
+/* 테이블 안 등록 버튼 */
+.table-wrapper .btn-register {
+    position: absolute;
+    top: -42px;
+    right: 0;  
+    background-color: #f3f3f7; 
+    color: #212529;; 
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+    text-align: center;
+    z-index: 2;
+}
+
+.table-wrapper .btn-register:hover {
+    background-color: #212529; 
+    color: #f3f3f7; 
+    cursor: pointer;
+}
+
 /* 페이지 번호 */
 .kok-pagination-wrapper {
     align-items: center;
@@ -908,5 +934,98 @@ table.table tr td, table.table tr>th {
 .kok-pagination-wrapper .des .highlight {
     color: #181c32;
     font-weight: 700;
+}
+
+/* 자주 묻는 질문 등록 css */
+form#faq-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+form#faq-form .form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+form#faq-form label {
+    font-weight: 700;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #333;
+}
+
+form#faq-form input[type="text"],
+form#faq-form textarea {
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 14px;
+    width: 100%;
+    font-family: Arial, NotoSansKr, sans-serif;
+    background-color: #fdfdfd;
+    transition: all 0.2s ease-in-out;
+}
+
+form#faq-form textarea {
+    min-height: 180px;
+    resize: none;
+}
+
+form#faq-form input[type="text"]:focus,
+form#faq-form textarea:focus {
+    outline: none;
+    border-color: #507cf3;
+    box-shadow: 0 0 6px rgba(80,124,243,0.3);
+}
+
+
+form#faq-form input::placeholder,
+form#faq-form textarea::placeholder {
+    color: #a0a0a0;
+}
+
+form#faq-form .form-actions {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    margin-top: 10px;
+}
+
+
+form#faq-form button,
+form#faq-form a.btn {
+    width: 120px;
+    text-align: center;
+    font-size: 14px;
+    font-family: Arial, NotoSansKr, sans-serif;
+    padding: 10px 0;
+    border-radius: 6px;
+    transition: all 0.2s ease-in-out;
+}
+
+/* 버튼 색상 */
+form#faq-form button.btn-primary {
+    background-color: #507cf3;
+    color: #fff;
+    border: 1px solid #507cf3;
+}
+
+form#faq-form a.btn-outline-primary {
+    border: 1px solid #507cf3;
+    color: #507cf3;
+    background-color: transparent;
+}
+
+/* 버튼 호버 */
+form#faq-form button:hover,
+form#faq-form a.btn:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+    cursor: pointer;
 }
 
