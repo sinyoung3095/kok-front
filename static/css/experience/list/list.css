@@ -188,7 +188,7 @@ html {
 }
 
 .dropdown-actions .apply-btn {
-    background-color: rgba(18,19,20,1);
+    background-color: #0aa5ff;
     color: #fff;
 }
 
@@ -617,8 +617,12 @@ button.list-item-header .list-item-title {
 }
 
 .detail-action-btn:first-child {
-    background-color: rgba(18,19,20,1);
+    background-color: #0aa5ff;
     color: #fff;
+}
+
+.detail-action-btn:first-child:hover {
+    background-color: #40b9ff;
 }
 
 .detail-meta {
