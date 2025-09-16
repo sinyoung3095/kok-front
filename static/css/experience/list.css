@@ -96,6 +96,7 @@ html {
 }
 
 .dropdown-menu {
+    z-index: 999;
     display: none;
     height: auto;
     left: -20px;
@@ -912,6 +913,13 @@ button.list-item-header .list-item-title {
     padding: 0 12px;
     color: rgba(0,0,0,0.5);
     cursor: pointer;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    line-height: 50px;
+    padding-right: 40px;
     background-position: right 12px center;
     background: right 12px center / 24px 24px 
     no-repeat url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='rgba(18,19,20,0.4)'><path fill-rule='evenodd' clip-rule='evenodd' d='M6.434 9.435a.8.8 0 0 1 1.132 0L12 13.869l4.434-4.434a.8.8 0 1 1 1.132 1.13l-5 5a.8.8 0 0 1-1.132 0l-5-5a.8.8 0 0 1 0-1.13'/></svg>");
@@ -1215,16 +1223,18 @@ input:-internal-autofill-selected {
     }
 
     .popup-inner {
-        width: 100%;
+        width: 100% !important;
         border-radius: 20px 20px 0 0;
     }
 
     .form-item.flex-1-1 {
         flex: 1;
+        width: 50%;
     }
 
     .form-item.flex-3 {
         flex: 1;
+        width: 50%;
     }
 
     .detail-meta {
@@ -1241,6 +1251,10 @@ input:-internal-autofill-selected {
 
     .popup-body .no-data {
         height: auto;
+    }
+
+    .form-field-dropdown .option-menu {
+        top: -180px;
     }
 
     /* 토스트 팝업 */
