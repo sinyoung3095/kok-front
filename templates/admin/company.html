@@ -208,41 +208,7 @@
                                     <div class="col-auto"></div>
                                     <div class="col-auto"></div>
                                     <div class="col-auto"></div>
-                                    <div class="col text-right"></div>
-                                    <div class="col-auto">
-                                        <div class="filter-wrapper filter-time">
-                                            <div class="kok-date-range-input-container" id="kok-date-input">
-                                                <div class="form-group date ml-2 undefined">
-                                                    <div class="row p-0 m-0 h-100 align-items-center">
-                                                        <div class="input-col">
-                                                            <input class="date-input" size="16" placeholder="2025-07-21 00:00">
-                                                        </div>
-                                                        <div class="icon-col p-0 m-0">
-                                                            <span class="comp-icon icon" id="icons/ico-calendar.svg">
-                                                                <svg class="icon-img" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                    <path class="icon-color fill" d="M10.625 1.875h2.5a.625.625 0 0 1 .625.625v10a.624.624 0 0 1-.625.625H1.875a.625.625 0 0 1-.625-.625v-10a.625.625 0 0 1 .625-.625h2.5V.625h1.25v1.25h3.75V.625h1.25v1.25zm-1.25 1.25h-3.75v1.25h-1.25v-1.25H2.5v2.5h10v-2.5h-1.875v1.25h-1.25v-1.25zm3.125 3.75h-10v5h10v-5z" fill="#AFB7BA"></path>
-                                                                </svg>
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="form-group date ml-2 undefined">
-                                                    <div class="row p-0 m-0 h-100 align-items-center">
-                                                        <div class="input-col">
-                                                            <input class="date-input" size="16" placeholder="2025-07-28 23:59">
-                                                        </div>
-                                                        <div class="icon-col p-0 m-0">
-                                                            <span class="comp-icon icon" id="icons/ico-calendar.svg">
-                                                                <svg class="icon-img" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                    <path class="icon-color fill" d="M10.625 1.875h2.5a.625.625 0 0 1 .625.625v10a.624.624 0 0 1-.625.625H1.875a.625.625 0 0 1-.625-.625v-10a.625.625 0 0 1 .625-.625h2.5V.625h1.25v1.25h3.75V.625h1.25v1.25zm-1.25 1.25h-3.75v1.25h-1.25v-1.25H2.5v2.5h10v-2.5h-1.875v1.25h-1.25v-1.25zm3.125 3.75h-10v5h10v-5z" fill="#AFB7BA"></path>
-                                                                </svg>
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <div class="col text-right"></div>                                    
                                     <div class="col-auto">
                                         <div class="filter-wrapper filter-search ml-1">
                                             <div class="input-group">
@@ -263,6 +229,15 @@
                             </div>
                             <div class="fill-table-layout">
                                 <table class="table grey-header-table w-100 member-table">
+                                    <colgroup>
+                                        <col style="width:14%">
+                                        <col style="width:14%">
+                                        <col style="width:14%">
+                                        <col style="width:14%">
+                                        <col style="width:14%">
+                                        <col style="width:14%">
+                                        <col style="width:14%">
+                                    </colgroup>
                                     <thead>
                                         <tr>
                                             <th class="td-name">회원</th>
@@ -283,11 +258,21 @@
                                                 </div>
                                                 <div class="member-id">test01@gmail.com</div>
                                             </td>
-                                            <td class="td-amount text-right pr-4 font-weight-bold">코리아IT</td>
-                                            <td class="td-email">test01@gmail.com</td>
-                                            <td class="td-phone">010-1234-5678</td>
-                                            <td class="td-profile">1234abcd</td>
-                                            <td class="td-job">IT/웹/통신</td>
+                                            <td class="td-amount text-right pr-4 font-weight-bold">
+                                                <p>코리아IT</p>
+                                            </td>
+                                            <td class="td-email">
+                                                <p>test01@gmail.com</p>
+                                            </td>
+                                            <td class="td-phone">
+                                                <p>010-1234-5678</p>
+                                            </td>
+                                            <td class="td-profile">
+                                                <p>1234abcd</p>
+                                            </td>
+                                            <td class="td-job">
+                                                <p>IT/웹/통신</p>
+                                            </td>
                                             <td class="td-action text-center">
                                                 <div class="action-btn">
                                                     <i class="mdi mdi-chevron-right"></i>
@@ -337,7 +322,7 @@
                         <div class="modal-content">
                             <div class="modal-header">
                                 <div class="modal-title">
-                                    (TestId01) Test01
+                                    코리아IT
                                     <span class="badge-label text-danger font-weight-bold ml-2">기업회원</span>
                                 </div>
                                 <button class="close">

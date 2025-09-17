@@ -112,6 +112,7 @@ dl, ol, ul {
 }
 
 table {
+    table-layout: fixed;
     border-collapse: collapse;
 }
 

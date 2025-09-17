@@ -1,7 +1,11 @@
+.main {
+    min-width: 100% !important;
+}
+
 /* 검색 */
 .search-container {
     min-width: 600px;
-    width: 100%;
+    width: 1000px;
     padding: 12px;
     border-radius: 12px;
     background-color: #fff;
@@ -239,11 +243,11 @@
     gap:12px;
     padding: 12px;
     flex-direction: column;
-    max-width: 1000px;
     margin: 0 auto;
 }
 
 .content-container {
+    width: 1000px;
     display: flex;
     border-radius: 12px;
     background-color: #fff;
@@ -494,7 +498,7 @@
 .content-detail {
     display: none;
     opacity: 0;
-    flex: 3;
+    flex: 2.3;
     border-left: 1px solid rgba(24,37,61,0.0600);
     transform: translateX(50px);
     transition: opacity 0.3s ease, transform 0.3s ease;
@@ -1125,11 +1129,13 @@ input:-internal-autofill-selected {
 /* 반응형 */
 @media (max-width: 1023px) {
     .content-layout {
+        width: 100%;
         padding: 0;
         gap: 5px;
     }
 
     .search-container {
+        width: 100%;
         padding: 12px;
         min-width: 100%;
         background-color: transparent;
@@ -1239,6 +1245,7 @@ input:-internal-autofill-selected {
     }
 
     .content-container {
+        width: 100%;
         border-radius: 12px 12px 0  0;
     }
 
