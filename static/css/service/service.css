@@ -2,7 +2,7 @@ body {
     overflow: auto;
 }
 
-.main-content {
+.main-content-1 {
     align-items: flex-start;
     background: #fff;
     /* height: 100svh; */
@@ -13,7 +13,7 @@ body {
     overflow: scroll;
 }
 
-.main-shell {
+.main-1 {
     flex-direction: column;
     align-self: stretch;
     align-items: center;
