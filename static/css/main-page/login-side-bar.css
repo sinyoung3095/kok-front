@@ -373,22 +373,6 @@
     color: rgba(18,19,20,0.6000);
 }
 
-
-/* main 확인용 */
-.main {
-    border-color: rgba(255,255,255,0.0000);
-    flex-direction: column;
-    align-self: stretch;
-    align-items: center;
-    background: #f5f6fa;
-    min-width: 480px;
-    border-radius: 12px;
-    border: 1px solid;
-    flex: 1 0 0;
-    display: flex;
-    border-width: 0;
-}
-
 /* 검색 버튼 모달창 */
 .search-modal-wrap {
     padding: 14vh !important;
@@ -855,6 +839,32 @@
 }
 
 .sidebar-support-text {
+    user-select: none;
+    color: rgba(18,19,20,1);
+    letter-spacing: -.28px;
+    font-family: "PretendardVariable","PretendardVariable Fallback";
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+}  
+
+.sidebar-service-wrap {
+    align-items: center;
+    border-radius: 8px;
+    cursor: pointer;
+    gap: 12px;
+    width: 100%;
+    padding: 12px;
+    display: flex;
+}
+
+.sidebar-service {
+    flex-direction: column;
+    flex: 1 0 0;
+    display: flex;
+}
+
+.sidebar-service-text {
     user-select: none;
     color: rgba(18,19,20,1);
     letter-spacing: -.28px;

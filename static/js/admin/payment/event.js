@@ -2,6 +2,8 @@ const sideMenuButtons = document.querySelectorAll(".menu-btn");
 const icons = document.querySelectorAll(".icon-wrapper i");
 const userMenuWrapper = document.querySelector(".user-menu-wrapper");
 const userMenuContent = document.querySelector(".user-menu-content");
+const pageNums = document.querySelectorAll(".page-num");
+const pageItemNums = document.querySelectorAll(".page-item-num");
 
 // 사이드바 펼침/접힘
 sideMenuButtons.forEach((menu) => {
@@ -33,4 +35,13 @@ document.addEventListener("click", (e) => {
     ) {
         userMenuContent.classList.remove("show");
     }
+});
+
+// 페이지 번호
+pageItemNums.forEach((pageItemNum) => {
+    pageItemNum.addEventListener("click", (e) => {
+        e.preventDefault();
+        pageNums.forEach((pageNum) => pageNum.classList.remove("active"));
+        pageItemNum.parentElement.classList.add("active");
+    });
 });

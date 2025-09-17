@@ -6,7 +6,6 @@ const closeButtons = document.querySelectorAll(".close");
 const closeFooterButton = document.querySelector(".btn-close");
 const userMenuWrapper = document.querySelector(".user-menu-wrapper");
 const userMenuContent = document.querySelector(".user-menu-content");
-const btnGroup = document.querySelector(".btn-group");
 const pageNums = document.querySelectorAll(".page-num");
 const pageItemNums = document.querySelectorAll(".page-item-num");
 
@@ -28,7 +27,7 @@ sideMenuButtons.forEach((menu) => {
     });
 });
 
-// 회원 상세 모달
+// 상세 모달
 actionButtons.forEach((actionButton) => {
     actionButton.addEventListener("click", () => {
         modal.style.display = "block";
@@ -67,17 +66,6 @@ closeFooterButton.addEventListener("click", () => {
         modal.style.display = "none";
     }, 100);
 });
-
-// 버튼 그룹 (1주, 2주, 1개월)
-if (btnGroup) {
-    const buttons = btnGroup.querySelectorAll("button");
-    buttons.forEach((button) => {
-        button.addEventListener("click", () => {
-            buttons.forEach((btn) => btn.classList.remove("active"));
-            button.classList.add("active");
-        });
-    });
-}
 
 // 관리자 이메일 토글
 userMenuWrapper.addEventListener("click", () => {

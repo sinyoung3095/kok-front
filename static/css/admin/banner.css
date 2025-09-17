@@ -88,7 +88,9 @@ dl, ol, ul {
 }
 
 table {
-    border-collapse: collapse;
+    border-collapse: collapse; 
+    border-spacing: 0; 
+    table-layout: fixed;
 }
 
 th {
@@ -216,6 +218,10 @@ button:not(:disabled) {
 
 .p-0 {
     padding: 0 !important;
+}
+
+.p-5 {
+    padding: 3rem !important;
 }
 
 .m-0 {
@@ -1005,7 +1011,7 @@ body #kok {
 
 .register-link:hover {
     color: #fff;
-    background-color: #3498db;
+    background-color: #0aa5ff;
 }
 
 .attach-image:hover {
@@ -1013,16 +1019,28 @@ body #kok {
     cursor: pointer;
 }
 
-.order-update-btn, .banner-delete-btn {
+.order-update-btn {
     background-color: #fff;
-    color: #525f7f;
+    color: #507cf3;
     border: 1px solid;
     border-radius: 4px;
 }
 
-.order-update-btn:hover, .banner-delete-btn:hover {
+.banner-delete-btn {
+    background-color: #fff;
+    color: #fe657e;
+    border: 1px solid;
+    border-radius: 4px;
+}
+
+.order-update-btn:hover {
     color: #fff;
-    background-color: #3498db;
+    background-color: #507cf3;
+}
+
+.banner-delete-btn:hover {
+    color: #fff;
+    background-color: #fe657e;
 }
 
 .dropdown-menu.show {
@@ -1097,4 +1115,73 @@ body #kok {
     margin-bottom: 1rem;
     width: 100%;
     table-layout: fixed;
+}
+
+/* 페이지 번호 */
+.kok-pagination-wrapper {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.pagination {
+    border-radius: .25rem;
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+}
+
+.kok-pagination-wrapper ul.kok-pagination {
+    border-radius: 0;
+    margin-bottom: 0;
+}
+
+.kok-pagination-wrapper ul.kok-pagination>li.page-item {
+    padding: 2.5px;
+}
+
+.kok-pagination-wrapper ul.kok-pagination>li.page-item a {
+    border-color: transparent;
+    border-radius: 4px;
+    color: #8b9298;
+    font-size: 15px;
+    line-height: 15px;
+    min-width: 32px;
+    padding: 7px 10px;
+    text-align: center;
+}
+
+.kok-pagination-wrapper ul.kok-pagination>li.page-item.active>a {
+    color: #507cf3;
+    font-weight: 700;
+}
+
+/* 일반회원이 1페이지(10명 미만)일 때 */
+.kok-pagination-wrapper .pagination-desc {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.text-ignore {
+    color: #9fafb7;
+}
+
+.kok-pagination-wrapper .des {
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+.kok-pagination-wrapper .des .highlight {
+    color: #181c32;
+    font-weight: 700;
+}
+
+table td > p {
+    white-space: nowrap;  
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
 }

@@ -3,850 +3,853 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shorcut icon" href="../../static/images/member/kok_favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="../../static/css/reset.css">
     <link rel="stylesheet" href="../../static/font/font.css">
     <link rel="stylesheet" href="../../static/css/experience/list.css">
     <title>kok</title>
 </head>
 <body>
-    <main>
-        <div class="container">
-            <div class="search-container">
-                <div class="search-box">
-                    <div class="search-list">
-                        <div class="search-item search-input-item">
-                            <div class="search-label">
-                                <label for="keyword-input" class="search-name">키워드</label>
-                                <div class="info-container">
-                                    <div class="info-icon">
-                                        <svg viewBox="0 0 24 24" fill="currentColor" height="12" role="img" width="12">
-                                            <path clip-rule="evenodd" d="M12 3.8a8.2 8.2 0 1 0 0 16.4 8.2 8.2 0 0 0 0-16.4M2.2 12c0-5.412 4.388-9.8 9.8-9.8s9.8 4.388 9.8 9.8-4.388 9.8-9.8 9.8-9.8-4.387-9.8-9.8M12 8.19a.8.8 0 0 1 .8.8V9a.8.8 0 0 1-1.6 0v-.01a.8.8 0 0 1 .8-.8m0 3.01a.8.8 0 0 1 .8.8v3a.8.8 0 0 1-1.6 0v-3a.8.8 0 0 1 .8-.8" fill-rule="evenodd"></path>
-                                        </svg>
+    <div id="main-content" class="main-content">
+        <main class="main">
+            <div class="content-layout">
+                <div class="search-container wide">
+                    <div class="search-box">
+                        <div class="search-list">
+                            <div class="search-item search-input-item">
+                                <div class="search-label">
+                                    <label for="keyword-input" class="search-name">키워드</label>
+                                    <div class="info-container">
+                                        <div class="info-icon">
+                                            <svg viewBox="0 0 24 24" fill="currentColor" height="12" role="img" width="12">
+                                                <path clip-rule="evenodd" d="M12 3.8a8.2 8.2 0 1 0 0 16.4 8.2 8.2 0 0 0 0-16.4M2.2 12c0-5.412 4.388-9.8 9.8-9.8s9.8 4.388 9.8 9.8-4.388 9.8-9.8 9.8-9.8-4.387-9.8-9.8M12 8.19a.8.8 0 0 1 .8.8V9a.8.8 0 0 1-1.6 0v-.01a.8.8 0 0 1 .8-.8m0 3.01a.8.8 0 0 1 .8.8v3a.8.8 0 0 1-1.6 0v-3a.8.8 0 0 1 .8-.8" fill-rule="evenodd"></path>
+                                            </svg>
+                                        </div>
+                                        <div class="info-box">
+                                            <strong>키워드 검색</strong>
+                                            <p>기업명, 직무명을 비롯해 공고 내 포함된 단어를 찾을 수 있습니다. 쉼표&#40;,&#41;를 이용해 여러 키워드를 한 번에 검색할 수 있습니다. 
+                                                <br/>예&#41; Next.js, 파워포인트, 점심식대, 대출이자지원, 성과급 등
+                                            </p>
+                                        </div>
                                     </div>
-                                    <div class="info-box">
-                                        <strong>키워드 검색</strong>
-                                        <p>기업명, 직무명을 비롯해 공고 내 포함된 단어를 찾을 수 있습니다. 쉼표&#40;,&#41;를 이용해 여러 키워드를 한 번에 검색할 수 있습니다. 
-                                            <br/>예&#41; Next.js, 파워포인트, 점심식대, 대출이자지원, 성과급 등
-                                        </p>
+                                </div>
+                                <input type="text" id="keyword-input" placeholder="기업명, 직무명, 기술스택, 담당 업무">
+                                <button type="button" class="keyword-delete">
+                                    <svg aria-label="icon" color="foregrounds.neutral.tertiary" fill="currentColor" height="24" role="img" width="24">
+                                        <path clip-rule="evenodd" d="M6.434 6.435a.8.8 0 0 1 1.132 0L12 10.869l4.434-4.434a.8.8 0 1 1 1.132 1.13L13.13 12l4.435 4.435a.8.8 0 1 1-1.132 1.13L12 13.133l-4.434 4.434a.8.8 0 0 1-1.132-1.131L10.87 12 6.434 7.566a.8.8 0 0 1 0-1.131" fill-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="search-item">
+                                <div class="search-label">
+                                    <p class="search-name">직군</p>
+                                </div>
+
+                                <div class="dropdown-container">
+                                    <button class="dropdown-open-btn">전체</button>
+
+                                    <div class="dropdown-menu">
+                                        <p class="dropdown-name">직군</p>
+                                        <div class="dropdown-content">
+                                            <ul class="dropdown-list">
+                                                <li class="dropdown-item">
+                                                    <button class="dropdown-btn">
+                                                        <p>SW 개발</p>
+                                                    </button>
+                                                </li>
+                                                <li class="dropdown-item">
+                                                    <button class="dropdown-btn">
+                                                        <p>데이터/AI</p>
+                                                    </button>
+                                                </li>
+                                                <li class="dropdown-item">
+                                                    <button class="dropdown-btn">
+                                                        <p>기획/전략</p>
+                                                    </button>
+                                                </li>
+                                                <li class="dropdown-item">
+                                                    <button class="dropdown-btn">
+                                                        <p>디자인/UX</p>
+                                                    </button>
+                                                </li>
+                                                <li class="dropdown-item">
+                                                    <button class="dropdown-btn">
+                                                        <p>마케팅/PR</p>
+                                                    </button>
+                                                </li>
+                                                <li class="dropdown-item">
+                                                    <button class="dropdown-btn">
+                                                        <p>경영/운영</p>
+                                                    </button>
+                                                </li>
+                                                <li class="dropdown-item">
+                                                    <button class="dropdown-btn">
+                                                        <p>HR/인사</p>
+                                                    </button>
+                                                </li>
+                                                <li class="dropdown-item">
+                                                    <button class="dropdown-btn">
+                                                        <p>회계/재무</p>
+                                                    </button>
+                                                </li>
+                                                <li class="dropdown-item">
+                                                    <button class="dropdown-btn">
+                                                        <p>법률/법무</p>
+                                                    </button>
+                                                </li>
+                                            </ul>
+                                            <div class="dropdown-actions">
+                                                <button class="select-all-btn">전체 선택</button>
+                                                <button class="apply-btn">적용</button>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <input type="text" id="keyword-input" placeholder="기업명, 직무명, 기술스택, 담당 업무">
-                            <button type="button" class="keyword-delete">
-                                <svg aria-label="icon" color="foregrounds.neutral.tertiary" fill="currentColor" height="24" role="img" width="24">
-                                    <path clip-rule="evenodd" d="M6.434 6.435a.8.8 0 0 1 1.132 0L12 10.869l4.434-4.434a.8.8 0 1 1 1.132 1.13L13.13 12l4.435 4.435a.8.8 0 1 1-1.132 1.13L12 13.133l-4.434 4.434a.8.8 0 0 1-1.132-1.131L10.87 12 6.434 7.566a.8.8 0 0 1 0-1.131" fill-rule="evenodd"></path>
+                            <div class="search-item">
+                                <div class="search-label">
+                                    <p class="search-name">숙련도</p>
+                                </div>
+
+                                <div class="dropdown-container">
+                                    <button class="dropdown-open-btn">숙련도</button>
+
+                                    <div class="dropdown-menu">
+                                        <p class="dropdown-name">숙련도</p>
+                                        <div class="dropdown-content">
+                                            <ul class="dropdown-list">
+                                                <li class="dropdown-item">
+                                                    <button class="dropdown-btn">
+                                                        <p>신입</p>
+                                                        <span>인턴 또는 실무 경험 없음</span>
+                                                    </button>
+                                                </li>
+                                                <li class="dropdown-item">
+                                                    <button class="dropdown-btn">
+                                                        <p>주니어</p>
+                                                        <span>기초적인 업무 수행<br/>(1~3년차에 준하는 실력)</span>
+                                                    </button>
+                                                </li>
+                                                <li class="dropdown-item">
+                                                    <button class="dropdown-btn">
+                                                        <p>미들</p>
+                                                        <span>준수한 이해도, 프로젝트 전담<br/>(3~7년차에 준하는 실력)</span>
+                                                    </button>
+                                                </li>
+                                                <li class="dropdown-item">
+                                                    <button class="dropdown-btn">
+                                                        <p>시니어</p>
+                                                        <span>높은 이해도, 다수로 구성된 팀 리드<br/>(7~15년차에 준하는 실력)</span>
+                                                    </button>
+                                                </li>
+                                                <li class="dropdown-item">
+                                                    <button class="dropdown-btn">
+                                                        <p>C레벨</p>
+                                                        <span>전문가 수준, 임원급 의사결정권<br/>(15년 이상에 준하는 실력)</span>
+                                                    </button>
+                                                </li>
+                                            </ul>
+                                            <div class="dropdown-actions">
+                                                <button class="select-all-btn">전체 선택</button>
+                                                <button class="apply-btn">적용</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="search-item">
+                                <div class="search-label">
+                                    <p class="search-name">기업 규모</p>
+                                </div>
+                                
+                                <div class="dropdown-container">
+                                    <button class="dropdown-open-btn">전체</button>
+
+                                    <div class="dropdown-menu">
+                                        <p class="dropdown-name">기업 규모</p>
+                                        <div class="dropdown-content">
+                                            <ul class="dropdown-list">
+                                                <li class="dropdown-item">
+                                                    <button class="dropdown-btn">
+                                                        <p>매우 작은 규모</p>
+                                                        <span>30명 미만</span>
+                                                    </button>
+                                                </li>
+                                                <li class="dropdown-item">
+                                                    <button class="dropdown-btn">
+                                                        <p>작은 규모</p>
+                                                        <span>30-100명</span>
+                                                    </button>
+                                                </li>
+                                                <li class="dropdown-item">
+                                                    <button class="dropdown-btn">
+                                                        <p>중간 규모</p>
+                                                        <span>100-400명</span>
+                                                    </button>
+                                                </li>
+                                                <li class="dropdown-item">
+                                                    <button class="dropdown-btn">
+                                                        <p>큰 규모</p>
+                                                        <span>400-2,000명</span>
+                                                    </button>
+                                                </li>
+                                                <li class="dropdown-item">
+                                                    <button class="dropdown-btn">
+                                                        <p>매우 큰 규모</p>
+                                                        <span>2,000명 초과</span>
+                                                    </button>
+                                                </li>
+                                            </ul>
+                                            <div class="dropdown-actions">
+                                                <button class="select-all-btn">전체 선택</button>
+                                                <button class="apply-btn">적용</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="search-item">
+                                <div class="search-label">
+                                    <p class="search-name">근무 방식</p>
+                                </div>
+                                
+                                <div class="dropdown-container">
+                                    <button class="dropdown-open-btn">전체</button>
+
+                                    <div class="dropdown-menu">
+                                        <p class="dropdown-name">근무 방식</p>
+                                        <div class="dropdown-content">
+                                            <ul class="dropdown-list">
+                                                <li class="dropdown-item">
+                                                    <button class="dropdown-btn">
+                                                        <p>상시 출근</p>
+                                                        <span>재택 근무 없음</span>
+                                                    </button>
+                                                </li>
+                                                <li class="dropdown-item">
+                                                    <button class="dropdown-btn">
+                                                        <p>출근-재택 혼합</p>
+                                                        <span>매주 1-4회 재택 근무</span>
+                                                    </button>
+                                                </li>
+                                                <li class="dropdown-item">
+                                                    <button class="dropdown-btn">
+                                                        <p>상시 재택</p>
+                                                        <span>드물게 동반되는 출근 포함</span>
+                                                    </button>
+                                                </li>
+                                            </ul>
+                                            <div class="dropdown-actions">
+                                                <button class="select-all-btn">전체 선택</button>
+                                                <button class="apply-btn">적용</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="pc"> -->
+                            <button class="search-button">
+                                <svg viewBox="0 0 24 24" fill="#fff" height="24" role="img" width="24">
+                                    <path clip-rule="evenodd" d="M11 4.8a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4M3.2 11a7.8 7.8 0 1 1 13.852 4.921l3.514 3.514a.8.8 0 1 1-1.132 1.13l-3.513-3.513A7.8 7.8 0 0 1 3.2 11" fill-rule="evenodd"></path>
                                 </svg>
                             </button>
-                        </div>
-                        <div class="search-item">
-                            <div class="search-label">
-                                <p class="search-name">직군</p>
-                            </div>
-
-                            <div class="dropdown-container">
-                                <button class="dropdown-open-btn">전체</button>
-
-                                <div class="dropdown-menu">
-                                    <p class="dropdown-name">직군</p>
-                                    <div class="dropdown-content">
-                                        <ul class="dropdown-list">
-                                            <li class="dropdown-item">
-                                                <button class="dropdown-btn">
-                                                    <p>SW 개발</p>
-                                                </button>
-                                            </li>
-                                            <li class="dropdown-item">
-                                                <button class="dropdown-btn">
-                                                    <p>데이터/AI</p>
-                                                </button>
-                                            </li>
-                                            <li class="dropdown-item">
-                                                <button class="dropdown-btn">
-                                                    <p>기획/전략</p>
-                                                </button>
-                                            </li>
-                                            <li class="dropdown-item">
-                                                <button class="dropdown-btn">
-                                                    <p>디자인/UX</p>
-                                                </button>
-                                            </li>
-                                            <li class="dropdown-item">
-                                                <button class="dropdown-btn">
-                                                    <p>마케팅/PR</p>
-                                                </button>
-                                            </li>
-                                            <li class="dropdown-item">
-                                                <button class="dropdown-btn">
-                                                    <p>경영/운영</p>
-                                                </button>
-                                            </li>
-                                            <li class="dropdown-item">
-                                                <button class="dropdown-btn">
-                                                    <p>HR/인사</p>
-                                                </button>
-                                            </li>
-                                            <li class="dropdown-item">
-                                                <button class="dropdown-btn">
-                                                    <p>회계/재무</p>
-                                                </button>
-                                            </li>
-                                            <li class="dropdown-item">
-                                                <button class="dropdown-btn">
-                                                    <p>법률/법무</p>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                        <div class="dropdown-actions">
-                                            <button class="select-all-btn">전체 선택</button>
-                                            <button class="apply-btn">적용</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="search-item">
-                            <div class="search-label">
-                                <p class="search-name">숙련도</p>
-                            </div>
-
-                            <div class="dropdown-container">
-                                <button class="dropdown-open-btn">숙련도</button>
-
-                                <div class="dropdown-menu">
-                                    <p class="dropdown-name">숙련도</p>
-                                    <div class="dropdown-content">
-                                        <ul class="dropdown-list">
-                                            <li class="dropdown-item">
-                                                <button class="dropdown-btn">
-                                                    <p>신입</p>
-                                                    <span>인턴 또는 실무 경험 없음</span>
-                                                </button>
-                                            </li>
-                                            <li class="dropdown-item">
-                                                <button class="dropdown-btn">
-                                                    <p>주니어</p>
-                                                    <span>기초적인 업무 수행<br/>(1~3년차에 준하는 실력)</span>
-                                                </button>
-                                            </li>
-                                            <li class="dropdown-item">
-                                                <button class="dropdown-btn">
-                                                    <p>미들</p>
-                                                    <span>준수한 이해도, 프로젝트 전담<br/>(3~7년차에 준하는 실력)</span>
-                                                </button>
-                                            </li>
-                                            <li class="dropdown-item">
-                                                <button class="dropdown-btn">
-                                                    <p>시니어</p>
-                                                    <span>높은 이해도, 다수로 구성된 팀 리드<br/>(7~15년차에 준하는 실력)</span>
-                                                </button>
-                                            </li>
-                                            <li class="dropdown-item">
-                                                <button class="dropdown-btn">
-                                                    <p>C레벨</p>
-                                                    <span>전문가 수준, 임원급 의사결정권<br/>(15년 이상에 준하는 실력)</span>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                        <div class="dropdown-actions">
-                                            <button class="select-all-btn">전체 선택</button>
-                                            <button class="apply-btn">적용</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="search-item">
-                            <div class="search-label">
-                                <p class="search-name">기업 규모</p>
-                            </div>
-                            
-                            <div class="dropdown-container">
-                                <button class="dropdown-open-btn">전체</button>
-
-                                <div class="dropdown-menu">
-                                    <p class="dropdown-name">기업 규모</p>
-                                    <div class="dropdown-content">
-                                        <ul class="dropdown-list">
-                                            <li class="dropdown-item">
-                                                <button class="dropdown-btn">
-                                                    <p>매우 작은 규모</p>
-                                                    <span>30명 미만</span>
-                                                </button>
-                                            </li>
-                                            <li class="dropdown-item">
-                                                <button class="dropdown-btn">
-                                                    <p>작은 규모</p>
-                                                    <span>30-100명</span>
-                                                </button>
-                                            </li>
-                                            <li class="dropdown-item">
-                                                <button class="dropdown-btn">
-                                                    <p>중간 규모</p>
-                                                    <span>100-400명</span>
-                                                </button>
-                                            </li>
-                                            <li class="dropdown-item">
-                                                <button class="dropdown-btn">
-                                                    <p>큰 규모</p>
-                                                    <span>400-2,000명</span>
-                                                </button>
-                                            </li>
-                                            <li class="dropdown-item">
-                                                <button class="dropdown-btn">
-                                                    <p>매우 큰 규모</p>
-                                                    <span>2,000명 초과</span>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                        <div class="dropdown-actions">
-                                            <button class="select-all-btn">전체 선택</button>
-                                            <button class="apply-btn">적용</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="search-item">
-                            <div class="search-label">
-                                <p class="search-name">근무 방식</p>
-                            </div>
-                            
-                            <div class="dropdown-container">
-                                <button class="dropdown-open-btn">전체</button>
-
-                                <div class="dropdown-menu">
-                                    <p class="dropdown-name">근무 방식</p>
-                                    <div class="dropdown-content">
-                                        <ul class="dropdown-list">
-                                            <li class="dropdown-item">
-                                                <button class="dropdown-btn">
-                                                    <p>상시 출근</p>
-                                                    <span>재택 근무 없음</span>
-                                                </button>
-                                            </li>
-                                            <li class="dropdown-item">
-                                                <button class="dropdown-btn">
-                                                    <p>출근-재택 혼합</p>
-                                                    <span>매주 1-4회 재택 근무</span>
-                                                </button>
-                                            </li>
-                                            <li class="dropdown-item">
-                                                <button class="dropdown-btn">
-                                                    <p>상시 재택</p>
-                                                    <span>드물게 동반되는 출근 포함</span>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                        <div class="dropdown-actions">
-                                            <button class="select-all-btn">전체 선택</button>
-                                            <button class="apply-btn">적용</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- <div class="pc"> -->
-                        <button class="search-button">
-                            <svg viewBox="0 0 24 24" fill="#fff" height="24" role="img" width="24">
-                                <path clip-rule="evenodd" d="M11 4.8a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4M3.2 11a7.8 7.8 0 1 1 13.852 4.921l3.514 3.514a.8.8 0 1 1-1.132 1.13l-3.513-3.513A7.8 7.8 0 0 1 3.2 11" fill-rule="evenodd"></path>
-                            </svg>
-                        </button>
-                    <!-- </div> -->
-                </div>
-            </div>
-            <div class="content-container">
-                <div class="content-main">
-                    <div class="sort-options">
-                        <div class="sort-options-item">
-                            <button class="sort-btn active">적합순</button>
-                        </div>
-                        <div class="sort-options-item">
-                            <button class="sort-btn">인기순</button>
-                        </div>
-                        <div class="sort-options-item">
-                            <button class="sort-btn">최신순</button>
-                        </div>
-                        <div class="sort-options-item">
-                            <button class="sort-btn">규모순</button>
-                        </div>
-                    </div>
-                    <div class="list-container">
-                        <div class="list-item">
-                            <button class="list-item-btn">
-                                <div class="list-item-header">
-                                    <div class="list-item-thumb">
-                                        <img src="https://www.rocketpunch.com/_next/image?url=https%3A%2F%2Fimage.rocketpunch.com%2Fcompany_profile%2F210280%2F2025%2F09%2F09%2Flogo_1757380047672.jpg&w=64&q=75" alt="">
-                                    </div>
-                                    <div class="list-item-content">
-                                        <p class="list-item-title">애니포인트미디어</p>
-                                        <p class="list-item-subtitle">SDK 개발자 (Kotlin Multiplatform)</p>
-                                        <p class="list-item-description">크로스 플랫폼 광고 SDK 개발로 전문성을 쌓아갈 개발자 모집</p>
-                                    </div>
-                                </div>
-                                <div class="list-item-meta">
-                                    <div class="list-item-meta-field">
-                                        <p class="list-item-label">직군</p>
-                                        <div class="list-item-icon">
-                                            <svg viewBox="0 0 24 24" fill="currentColor" height="16" role="img" width="16">
-                                                <path clip-rule="evenodd" d="M20.49 5.51a1.4 1.4 0 0 1 0 1.98l-11 11a1.4 1.4 0 0 1-1.98 0l-4-4a1.4 1.4 0 0 1 1.98-1.98l3.01 3.01L18.51 5.51a1.4 1.4 0 0 1 1.98 0" fill-rule="evenodd"></path>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                    <div class="list-item-meta-field">
-                                        <p class="list-item-label">숙련도</p>
-                                        <div class="list-item-icon">
-                                            <svg viewBox="0 0 24 24" fill="currentColor" height="16" role="img" width="16">
-                                                <path clip-rule="evenodd" d="M20.49 5.51a1.4 1.4 0 0 1 0 1.98l-11 11a1.4 1.4 0 0 1-1.98 0l-4-4a1.4 1.4 0 0 1 1.98-1.98l3.01 3.01L18.51 5.51a1.4 1.4 0 0 1 1.98 0" fill-rule="evenodd"></path>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                    <div class="list-item-meta-field">
-                                        <p class="list-item-label">규모</p>
-                                        <div class="list-item-icon">
-                                            <svg viewBox="0 0 24 24" fill="currentColor" height="16" role="img" width="16">
-                                                <path clip-rule="evenodd" d="M20.49 5.51a1.4 1.4 0 0 1 0 1.98l-11 11a1.4 1.4 0 0 1-1.98 0l-4-4a1.4 1.4 0 0 1 1.98-1.98l3.01 3.01L18.51 5.51a1.4 1.4 0 0 1 1.98 0" fill-rule="evenodd"></path>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                    <div class="list-item-meta-field">
-                                        <p class="list-item-label">근무 방식</p>
-                                        <div class="list-item-icon">
-                                            <svg viewBox="0 0 24 24" fill="currentColor" height="16" role="img" width="16">
-                                                <path clip-rule="evenodd" d="M20.49 5.51a1.4 1.4 0 0 1 0 1.98l-11 11a1.4 1.4 0 0 1-1.98 0l-4-4a1.4 1.4 0 0 1 1.98-1.98l3.01 3.01L18.51 5.51a1.4 1.4 0 0 1 1.98 0" fill-rule="evenodd"></path>
-                                            </svg><svg aria-label="icon" color="foregrounds.semantic.brand.primary" fill="currentColor" height="16" role="img" width="16"><use href="#check-thick-outline"></use></svg>
-                                        </div>
-                                    </div>
-                                </div>
-                            </button>
-                        </div>
-                        <div class="list-item">
-                            <button class="list-item-btn">
-                                <div class="list-item-header">
-                                    <div class="list-item-thumb">
-                                        <img src="https://www.rocketpunch.com/_next/image?url=https%3A%2F%2Fimage.rocketpunch.com%2Fcompany_profile%2F210280%2F2025%2F09%2F09%2Flogo_1757380047672.jpg&w=64&q=75" alt="">
-                                    </div>
-                                    <div class="list-item-content">
-                                        <p class="list-item-title">애니포인트미디어</p>
-                                        <p class="list-item-subtitle">SDK 개발자 (Kotlin Multiplatform)</p>
-                                        <p class="list-item-description">크로스 플랫폼 광고 SDK 개발로 전문성을 쌓아갈 개발자 모집</p>
-                                    </div>
-                                </div>
-                                <div class="list-item-meta">
-                                    <div class="list-item-meta-field">
-                                        <p class="list-item-label">직군</p>
-                                        <div class="list-item-icon">
-                                            <svg viewBox="0 0 24 24" fill="currentColor" height="16" role="img" width="16">
-                                                <path clip-rule="evenodd" d="M20.49 5.51a1.4 1.4 0 0 1 0 1.98l-11 11a1.4 1.4 0 0 1-1.98 0l-4-4a1.4 1.4 0 0 1 1.98-1.98l3.01 3.01L18.51 5.51a1.4 1.4 0 0 1 1.98 0" fill-rule="evenodd"></path>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                    <div class="list-item-meta-field">
-                                        <p class="list-item-label">숙련도</p>
-                                        <div class="list-item-icon">
-                                            <svg viewBox="0 0 24 24" fill="currentColor" height="16" role="img" width="16">
-                                                <path clip-rule="evenodd" d="M20.49 5.51a1.4 1.4 0 0 1 0 1.98l-11 11a1.4 1.4 0 0 1-1.98 0l-4-4a1.4 1.4 0 0 1 1.98-1.98l3.01 3.01L18.51 5.51a1.4 1.4 0 0 1 1.98 0" fill-rule="evenodd"></path>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                    <div class="list-item-meta-field">
-                                        <p class="list-item-label">규모</p>
-                                        <div class="list-item-icon">
-                                            <svg viewBox="0 0 24 24" fill="currentColor" height="16" role="img" width="16">
-                                                <path clip-rule="evenodd" d="M20.49 5.51a1.4 1.4 0 0 1 0 1.98l-11 11a1.4 1.4 0 0 1-1.98 0l-4-4a1.4 1.4 0 0 1 1.98-1.98l3.01 3.01L18.51 5.51a1.4 1.4 0 0 1 1.98 0" fill-rule="evenodd"></path>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                    <div class="list-item-meta-field">
-                                        <p class="list-item-label">근무 방식</p>
-                                        <div class="list-item-icon">
-                                            <svg viewBox="0 0 24 24" fill="currentColor" height="16" role="img" width="16">
-                                                <path clip-rule="evenodd" d="M20.49 5.51a1.4 1.4 0 0 1 0 1.98l-11 11a1.4 1.4 0 0 1-1.98 0l-4-4a1.4 1.4 0 0 1 1.98-1.98l3.01 3.01L18.51 5.51a1.4 1.4 0 0 1 1.98 0" fill-rule="evenodd"></path>
-                                            </svg><svg aria-label="icon" color="foregrounds.semantic.brand.primary" fill="currentColor" height="16" role="img" width="16"><use href="#check-thick-outline"></use></svg>
-                                        </div>
-                                    </div>
-                                </div>
-                            </button>
-                        </div>
-                        <div class="list-item">
-                            <button class="list-item-btn">
-                                <div class="list-item-header">
-                                    <div class="list-item-thumb">
-                                        <img src="https://www.rocketpunch.com/_next/image?url=https%3A%2F%2Fimage.rocketpunch.com%2Fcompany_profile%2F210280%2F2025%2F09%2F09%2Flogo_1757380047672.jpg&w=64&q=75" alt="">
-                                    </div>
-                                    <div class="list-item-content">
-                                        <p class="list-item-title">애니포인트미디어</p>
-                                        <p class="list-item-subtitle">SDK 개발자 (Kotlin Multiplatform)</p>
-                                        <p class="list-item-description">크로스 플랫폼 광고 SDK 개발로 전문성을 쌓아갈 개발자 모집</p>
-                                    </div>
-                                </div>
-                                <div class="list-item-meta">
-                                    <div class="list-item-meta-field">
-                                        <p class="list-item-label">직군</p>
-                                        <div class="list-item-icon">
-                                            <svg viewBox="0 0 24 24" fill="currentColor" height="16" role="img" width="16">
-                                                <path clip-rule="evenodd" d="M20.49 5.51a1.4 1.4 0 0 1 0 1.98l-11 11a1.4 1.4 0 0 1-1.98 0l-4-4a1.4 1.4 0 0 1 1.98-1.98l3.01 3.01L18.51 5.51a1.4 1.4 0 0 1 1.98 0" fill-rule="evenodd"></path>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                    <div class="list-item-meta-field">
-                                        <p class="list-item-label">숙련도</p>
-                                        <div class="list-item-icon">
-                                            <svg viewBox="0 0 24 24" fill="currentColor" height="16" role="img" width="16">
-                                                <path clip-rule="evenodd" d="M20.49 5.51a1.4 1.4 0 0 1 0 1.98l-11 11a1.4 1.4 0 0 1-1.98 0l-4-4a1.4 1.4 0 0 1 1.98-1.98l3.01 3.01L18.51 5.51a1.4 1.4 0 0 1 1.98 0" fill-rule="evenodd"></path>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                    <div class="list-item-meta-field">
-                                        <p class="list-item-label">규모</p>
-                                        <div class="list-item-icon">
-                                            <svg viewBox="0 0 24 24" fill="currentColor" height="16" role="img" width="16">
-                                                <path clip-rule="evenodd" d="M20.49 5.51a1.4 1.4 0 0 1 0 1.98l-11 11a1.4 1.4 0 0 1-1.98 0l-4-4a1.4 1.4 0 0 1 1.98-1.98l3.01 3.01L18.51 5.51a1.4 1.4 0 0 1 1.98 0" fill-rule="evenodd"></path>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                    <div class="list-item-meta-field">
-                                        <p class="list-item-label">근무 방식</p>
-                                        <div class="list-item-icon">
-                                            <svg viewBox="0 0 24 24" fill="currentColor" height="16" role="img" width="16">
-                                                <path clip-rule="evenodd" d="M20.49 5.51a1.4 1.4 0 0 1 0 1.98l-11 11a1.4 1.4 0 0 1-1.98 0l-4-4a1.4 1.4 0 0 1 1.98-1.98l3.01 3.01L18.51 5.51a1.4 1.4 0 0 1 1.98 0" fill-rule="evenodd"></path>
-                                            </svg><svg aria-label="icon" color="foregrounds.semantic.brand.primary" fill="currentColor" height="16" role="img" width="16"><use href="#check-thick-outline"></use></svg>
-                                        </div>
-                                    </div>
-                                </div>
-                            </button>
-                        </div>
-                        <div class="list-item">
-                            <button class="list-item-btn">
-                                <div class="list-item-header">
-                                    <div class="list-item-thumb">
-                                        <img src="https://www.rocketpunch.com/_next/image?url=https%3A%2F%2Fimage.rocketpunch.com%2Fcompany_profile%2F210280%2F2025%2F09%2F09%2Flogo_1757380047672.jpg&w=64&q=75" alt="">
-                                    </div>
-                                    <div class="list-item-content">
-                                        <p class="list-item-title">애니포인트미디어</p>
-                                        <p class="list-item-subtitle">SDK 개발자 (Kotlin Multiplatform)</p>
-                                        <p class="list-item-description">크로스 플랫폼 광고 SDK 개발로 전문성을 쌓아갈 개발자 모집</p>
-                                    </div>
-                                </div>
-                                <div class="list-item-meta">
-                                    <div class="list-item-meta-field">
-                                        <p class="list-item-label">직군</p>
-                                        <div class="list-item-icon">
-                                            <svg viewBox="0 0 24 24" fill="currentColor" height="16" role="img" width="16">
-                                                <path clip-rule="evenodd" d="M20.49 5.51a1.4 1.4 0 0 1 0 1.98l-11 11a1.4 1.4 0 0 1-1.98 0l-4-4a1.4 1.4 0 0 1 1.98-1.98l3.01 3.01L18.51 5.51a1.4 1.4 0 0 1 1.98 0" fill-rule="evenodd"></path>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                    <div class="list-item-meta-field">
-                                        <p class="list-item-label">숙련도</p>
-                                        <div class="list-item-icon">
-                                            <svg viewBox="0 0 24 24" fill="currentColor" height="16" role="img" width="16">
-                                                <path clip-rule="evenodd" d="M20.49 5.51a1.4 1.4 0 0 1 0 1.98l-11 11a1.4 1.4 0 0 1-1.98 0l-4-4a1.4 1.4 0 0 1 1.98-1.98l3.01 3.01L18.51 5.51a1.4 1.4 0 0 1 1.98 0" fill-rule="evenodd"></path>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                    <div class="list-item-meta-field">
-                                        <p class="list-item-label">규모</p>
-                                        <div class="list-item-icon">
-                                            <svg viewBox="0 0 24 24" fill="currentColor" height="16" role="img" width="16">
-                                                <path clip-rule="evenodd" d="M20.49 5.51a1.4 1.4 0 0 1 0 1.98l-11 11a1.4 1.4 0 0 1-1.98 0l-4-4a1.4 1.4 0 0 1 1.98-1.98l3.01 3.01L18.51 5.51a1.4 1.4 0 0 1 1.98 0" fill-rule="evenodd"></path>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                    <div class="list-item-meta-field">
-                                        <p class="list-item-label">근무 방식</p>
-                                        <div class="list-item-icon">
-                                            <svg viewBox="0 0 24 24" fill="currentColor" height="16" role="img" width="16">
-                                                <path clip-rule="evenodd" d="M20.49 5.51a1.4 1.4 0 0 1 0 1.98l-11 11a1.4 1.4 0 0 1-1.98 0l-4-4a1.4 1.4 0 0 1 1.98-1.98l3.01 3.01L18.51 5.51a1.4 1.4 0 0 1 1.98 0" fill-rule="evenodd"></path>
-                                            </svg><svg aria-label="icon" color="foregrounds.semantic.brand.primary" fill="currentColor" height="16" role="img" width="16"><use href="#check-thick-outline"></use></svg>
-                                        </div>
-                                    </div>
-                                </div>
-                            </button>
-                        </div>
-                        <div class="list-item">
-                            <button class="list-item-btn">
-                                <div class="list-item-header">
-                                    <div class="list-item-thumb">
-                                        <img src="https://www.rocketpunch.com/_next/image?url=https%3A%2F%2Fimage.rocketpunch.com%2Fcompany_profile%2F210280%2F2025%2F09%2F09%2Flogo_1757380047672.jpg&w=64&q=75" alt="">
-                                    </div>
-                                    <div class="list-item-content">
-                                        <p class="list-item-title">애니포인트미디어</p>
-                                        <p class="list-item-subtitle">SDK 개발자 (Kotlin Multiplatform)</p>
-                                        <p class="list-item-description">크로스 플랫폼 광고 SDK 개발로 전문성을 쌓아갈 개발자 모집</p>
-                                    </div>
-                                </div>
-                                <div class="list-item-meta">
-                                    <div class="list-item-meta-field">
-                                        <p class="list-item-label">직군</p>
-                                        <div class="list-item-icon">
-                                            <svg viewBox="0 0 24 24" fill="currentColor" height="16" role="img" width="16">
-                                                <path clip-rule="evenodd" d="M20.49 5.51a1.4 1.4 0 0 1 0 1.98l-11 11a1.4 1.4 0 0 1-1.98 0l-4-4a1.4 1.4 0 0 1 1.98-1.98l3.01 3.01L18.51 5.51a1.4 1.4 0 0 1 1.98 0" fill-rule="evenodd"></path>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                    <div class="list-item-meta-field">
-                                        <p class="list-item-label">숙련도</p>
-                                        <div class="list-item-icon">
-                                            <svg viewBox="0 0 24 24" fill="currentColor" height="16" role="img" width="16">
-                                                <path clip-rule="evenodd" d="M20.49 5.51a1.4 1.4 0 0 1 0 1.98l-11 11a1.4 1.4 0 0 1-1.98 0l-4-4a1.4 1.4 0 0 1 1.98-1.98l3.01 3.01L18.51 5.51a1.4 1.4 0 0 1 1.98 0" fill-rule="evenodd"></path>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                    <div class="list-item-meta-field">
-                                        <p class="list-item-label">규모</p>
-                                        <div class="list-item-icon">
-                                            <svg viewBox="0 0 24 24" fill="currentColor" height="16" role="img" width="16">
-                                                <path clip-rule="evenodd" d="M20.49 5.51a1.4 1.4 0 0 1 0 1.98l-11 11a1.4 1.4 0 0 1-1.98 0l-4-4a1.4 1.4 0 0 1 1.98-1.98l3.01 3.01L18.51 5.51a1.4 1.4 0 0 1 1.98 0" fill-rule="evenodd"></path>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                    <div class="list-item-meta-field">
-                                        <p class="list-item-label">근무 방식</p>
-                                        <div class="list-item-icon">
-                                            <svg viewBox="0 0 24 24" fill="currentColor" height="16" role="img" width="16">
-                                                <path clip-rule="evenodd" d="M20.49 5.51a1.4 1.4 0 0 1 0 1.98l-11 11a1.4 1.4 0 0 1-1.98 0l-4-4a1.4 1.4 0 0 1 1.98-1.98l3.01 3.01L18.51 5.51a1.4 1.4 0 0 1 1.98 0" fill-rule="evenodd"></path>
-                                            </svg><svg aria-label="icon" color="foregrounds.semantic.brand.primary" fill="currentColor" height="16" role="img" width="16"><use href="#check-thick-outline"></use></svg>
-                                        </div>
-                                    </div>
-                                </div>
-                            </button>
-                        </div>
-                        <div class="list-item">
-                            <button class="list-item-btn">
-                                <div class="list-item-header">
-                                    <div class="list-item-thumb">
-                                        <img src="https://www.rocketpunch.com/_next/image?url=https%3A%2F%2Fimage.rocketpunch.com%2Fcompany_profile%2F210280%2F2025%2F09%2F09%2Flogo_1757380047672.jpg&w=64&q=75" alt="">
-                                    </div>
-                                    <div class="list-item-content">
-                                        <p class="list-item-title">애니포인트미디어</p>
-                                        <p class="list-item-subtitle">SDK 개발자 (Kotlin Multiplatform)</p>
-                                        <p class="list-item-description">크로스 플랫폼 광고 SDK 개발로 전문성을 쌓아갈 개발자 모집</p>
-                                    </div>
-                                </div>
-                                <div class="list-item-meta">
-                                    <div class="list-item-meta-field">
-                                        <p class="list-item-label">직군</p>
-                                        <div class="list-item-icon">
-                                            <svg viewBox="0 0 24 24" fill="currentColor" height="16" role="img" width="16">
-                                                <path clip-rule="evenodd" d="M20.49 5.51a1.4 1.4 0 0 1 0 1.98l-11 11a1.4 1.4 0 0 1-1.98 0l-4-4a1.4 1.4 0 0 1 1.98-1.98l3.01 3.01L18.51 5.51a1.4 1.4 0 0 1 1.98 0" fill-rule="evenodd"></path>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                    <div class="list-item-meta-field">
-                                        <p class="list-item-label">숙련도</p>
-                                        <div class="list-item-icon">
-                                            <svg viewBox="0 0 24 24" fill="currentColor" height="16" role="img" width="16">
-                                                <path clip-rule="evenodd" d="M20.49 5.51a1.4 1.4 0 0 1 0 1.98l-11 11a1.4 1.4 0 0 1-1.98 0l-4-4a1.4 1.4 0 0 1 1.98-1.98l3.01 3.01L18.51 5.51a1.4 1.4 0 0 1 1.98 0" fill-rule="evenodd"></path>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                    <div class="list-item-meta-field">
-                                        <p class="list-item-label">규모</p>
-                                        <div class="list-item-icon">
-                                            <svg viewBox="0 0 24 24" fill="currentColor" height="16" role="img" width="16">
-                                                <path clip-rule="evenodd" d="M20.49 5.51a1.4 1.4 0 0 1 0 1.98l-11 11a1.4 1.4 0 0 1-1.98 0l-4-4a1.4 1.4 0 0 1 1.98-1.98l3.01 3.01L18.51 5.51a1.4 1.4 0 0 1 1.98 0" fill-rule="evenodd"></path>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                    <div class="list-item-meta-field">
-                                        <p class="list-item-label">근무 방식</p>
-                                        <div class="list-item-icon">
-                                            <svg viewBox="0 0 24 24" fill="currentColor" height="16" role="img" width="16">
-                                                <path clip-rule="evenodd" d="M20.49 5.51a1.4 1.4 0 0 1 0 1.98l-11 11a1.4 1.4 0 0 1-1.98 0l-4-4a1.4 1.4 0 0 1 1.98-1.98l3.01 3.01L18.51 5.51a1.4 1.4 0 0 1 1.98 0" fill-rule="evenodd"></path>
-                                            </svg><svg aria-label="icon" color="foregrounds.semantic.brand.primary" fill="currentColor" height="16" role="img" width="16"><use href="#check-thick-outline"></use></svg>
-                                        </div>
-                                    </div>
-                                </div>
-                            </button>
-                        </div>
-                        <div class="list-item">
-                            <button class="list-item-btn">
-                                <div class="list-item-header">
-                                    <div class="list-item-thumb">
-                                        <img src="https://www.rocketpunch.com/_next/image?url=https%3A%2F%2Fimage.rocketpunch.com%2Fcompany_profile%2F210280%2F2025%2F09%2F09%2Flogo_1757380047672.jpg&w=64&q=75" alt="">
-                                    </div>
-                                    <div class="list-item-content">
-                                        <p class="list-item-title">애니포인트미디어</p>
-                                        <p class="list-item-subtitle">SDK 개발자 (Kotlin Multiplatform)</p>
-                                        <p class="list-item-description">크로스 플랫폼 광고 SDK 개발로 전문성을 쌓아갈 개발자 모집</p>
-                                    </div>
-                                </div>
-                                <div class="list-item-meta">
-                                    <div class="list-item-meta-field">
-                                        <p class="list-item-label">직군</p>
-                                        <div class="list-item-icon">
-                                            <svg viewBox="0 0 24 24" fill="currentColor" height="16" role="img" width="16">
-                                                <path clip-rule="evenodd" d="M20.49 5.51a1.4 1.4 0 0 1 0 1.98l-11 11a1.4 1.4 0 0 1-1.98 0l-4-4a1.4 1.4 0 0 1 1.98-1.98l3.01 3.01L18.51 5.51a1.4 1.4 0 0 1 1.98 0" fill-rule="evenodd"></path>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                    <div class="list-item-meta-field">
-                                        <p class="list-item-label">숙련도</p>
-                                        <div class="list-item-icon">
-                                            <svg viewBox="0 0 24 24" fill="currentColor" height="16" role="img" width="16">
-                                                <path clip-rule="evenodd" d="M20.49 5.51a1.4 1.4 0 0 1 0 1.98l-11 11a1.4 1.4 0 0 1-1.98 0l-4-4a1.4 1.4 0 0 1 1.98-1.98l3.01 3.01L18.51 5.51a1.4 1.4 0 0 1 1.98 0" fill-rule="evenodd"></path>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                    <div class="list-item-meta-field">
-                                        <p class="list-item-label">규모</p>
-                                        <div class="list-item-icon">
-                                            <svg viewBox="0 0 24 24" fill="currentColor" height="16" role="img" width="16">
-                                                <path clip-rule="evenodd" d="M20.49 5.51a1.4 1.4 0 0 1 0 1.98l-11 11a1.4 1.4 0 0 1-1.98 0l-4-4a1.4 1.4 0 0 1 1.98-1.98l3.01 3.01L18.51 5.51a1.4 1.4 0 0 1 1.98 0" fill-rule="evenodd"></path>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                    <div class="list-item-meta-field">
-                                        <p class="list-item-label">근무 방식</p>
-                                        <div class="list-item-icon">
-                                            <svg viewBox="0 0 24 24" fill="currentColor" height="16" role="img" width="16">
-                                                <path clip-rule="evenodd" d="M20.49 5.51a1.4 1.4 0 0 1 0 1.98l-11 11a1.4 1.4 0 0 1-1.98 0l-4-4a1.4 1.4 0 0 1 1.98-1.98l3.01 3.01L18.51 5.51a1.4 1.4 0 0 1 1.98 0" fill-rule="evenodd"></path>
-                                            </svg><svg aria-label="icon" color="foregrounds.semantic.brand.primary" fill="currentColor" height="16" role="img" width="16"><use href="#check-thick-outline"></use></svg>
-                                        </div>
-                                    </div>
-                                </div>
-                            </button>
-                        </div>
-                        <div class="list-item">
-                            <button class="list-item-btn">
-                                <div class="list-item-header">
-                                    <div class="list-item-thumb">
-                                        <img src="https://www.rocketpunch.com/_next/image?url=https%3A%2F%2Fimage.rocketpunch.com%2Fcompany_profile%2F210280%2F2025%2F09%2F09%2Flogo_1757380047672.jpg&w=64&q=75" alt="">
-                                    </div>
-                                    <div class="list-item-content">
-                                        <p class="list-item-title">애니포인트미디어</p>
-                                        <p class="list-item-subtitle">SDK 개발자 (Kotlin Multiplatform)</p>
-                                        <p class="list-item-description">크로스 플랫폼 광고 SDK 개발로 전문성을 쌓아갈 개발자 모집</p>
-                                    </div>
-                                </div>
-                                <div class="list-item-meta">
-                                    <div class="list-item-meta-field">
-                                        <p class="list-item-label">직군</p>
-                                        <div class="list-item-icon">
-                                            <svg viewBox="0 0 24 24" fill="currentColor" height="16" role="img" width="16">
-                                                <path clip-rule="evenodd" d="M20.49 5.51a1.4 1.4 0 0 1 0 1.98l-11 11a1.4 1.4 0 0 1-1.98 0l-4-4a1.4 1.4 0 0 1 1.98-1.98l3.01 3.01L18.51 5.51a1.4 1.4 0 0 1 1.98 0" fill-rule="evenodd"></path>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                    <div class="list-item-meta-field">
-                                        <p class="list-item-label">숙련도</p>
-                                        <div class="list-item-icon">
-                                            <svg viewBox="0 0 24 24" fill="currentColor" height="16" role="img" width="16">
-                                                <path clip-rule="evenodd" d="M20.49 5.51a1.4 1.4 0 0 1 0 1.98l-11 11a1.4 1.4 0 0 1-1.98 0l-4-4a1.4 1.4 0 0 1 1.98-1.98l3.01 3.01L18.51 5.51a1.4 1.4 0 0 1 1.98 0" fill-rule="evenodd"></path>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                    <div class="list-item-meta-field">
-                                        <p class="list-item-label">규모</p>
-                                        <div class="list-item-icon">
-                                            <svg viewBox="0 0 24 24" fill="currentColor" height="16" role="img" width="16">
-                                                <path clip-rule="evenodd" d="M20.49 5.51a1.4 1.4 0 0 1 0 1.98l-11 11a1.4 1.4 0 0 1-1.98 0l-4-4a1.4 1.4 0 0 1 1.98-1.98l3.01 3.01L18.51 5.51a1.4 1.4 0 0 1 1.98 0" fill-rule="evenodd"></path>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                    <div class="list-item-meta-field">
-                                        <p class="list-item-label">근무 방식</p>
-                                        <div class="list-item-icon">
-                                            <svg viewBox="0 0 24 24" fill="currentColor" height="16" role="img" width="16">
-                                                <path clip-rule="evenodd" d="M20.49 5.51a1.4 1.4 0 0 1 0 1.98l-11 11a1.4 1.4 0 0 1-1.98 0l-4-4a1.4 1.4 0 0 1 1.98-1.98l3.01 3.01L18.51 5.51a1.4 1.4 0 0 1 1.98 0" fill-rule="evenodd"></path>
-                                            </svg><svg aria-label="icon" color="foregrounds.semantic.brand.primary" fill="currentColor" height="16" role="img" width="16"><use href="#check-thick-outline"></use></svg>
-                                        </div>
-                                    </div>
-                                </div>
-                            </button>
-                        </div>
-                        <div class="list-item">
-                            <button class="list-item-btn">
-                                <div class="list-item-header">
-                                    <div class="list-item-thumb">
-                                        <img src="https://www.rocketpunch.com/_next/image?url=https%3A%2F%2Fimage.rocketpunch.com%2Fcompany_profile%2F210280%2F2025%2F09%2F09%2Flogo_1757380047672.jpg&w=64&q=75" alt="">
-                                    </div>
-                                    <div class="list-item-content">
-                                        <p class="list-item-title">애니포인트미디어</p>
-                                        <p class="list-item-subtitle">SDK 개발자 (Kotlin Multiplatform)</p>
-                                        <p class="list-item-description">크로스 플랫폼 광고 SDK 개발로 전문성을 쌓아갈 개발자 모집</p>
-                                    </div>
-                                </div>
-                                <div class="list-item-meta">
-                                    <div class="list-item-meta-field">
-                                        <p class="list-item-label">직군</p>
-                                        <div class="list-item-icon">
-                                            <svg viewBox="0 0 24 24" fill="currentColor" height="16" role="img" width="16">
-                                                <path clip-rule="evenodd" d="M20.49 5.51a1.4 1.4 0 0 1 0 1.98l-11 11a1.4 1.4 0 0 1-1.98 0l-4-4a1.4 1.4 0 0 1 1.98-1.98l3.01 3.01L18.51 5.51a1.4 1.4 0 0 1 1.98 0" fill-rule="evenodd"></path>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                    <div class="list-item-meta-field">
-                                        <p class="list-item-label">숙련도</p>
-                                        <div class="list-item-icon">
-                                            <svg viewBox="0 0 24 24" fill="currentColor" height="16" role="img" width="16">
-                                                <path clip-rule="evenodd" d="M20.49 5.51a1.4 1.4 0 0 1 0 1.98l-11 11a1.4 1.4 0 0 1-1.98 0l-4-4a1.4 1.4 0 0 1 1.98-1.98l3.01 3.01L18.51 5.51a1.4 1.4 0 0 1 1.98 0" fill-rule="evenodd"></path>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                    <div class="list-item-meta-field">
-                                        <p class="list-item-label">규모</p>
-                                        <div class="list-item-icon">
-                                            <svg viewBox="0 0 24 24" fill="currentColor" height="16" role="img" width="16">
-                                                <path clip-rule="evenodd" d="M20.49 5.51a1.4 1.4 0 0 1 0 1.98l-11 11a1.4 1.4 0 0 1-1.98 0l-4-4a1.4 1.4 0 0 1 1.98-1.98l3.01 3.01L18.51 5.51a1.4 1.4 0 0 1 1.98 0" fill-rule="evenodd"></path>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                    <div class="list-item-meta-field">
-                                        <p class="list-item-label">근무 방식</p>
-                                        <div class="list-item-icon">
-                                            <svg viewBox="0 0 24 24" fill="currentColor" height="16" role="img" width="16">
-                                                <path clip-rule="evenodd" d="M20.49 5.51a1.4 1.4 0 0 1 0 1.98l-11 11a1.4 1.4 0 0 1-1.98 0l-4-4a1.4 1.4 0 0 1 1.98-1.98l3.01 3.01L18.51 5.51a1.4 1.4 0 0 1 1.98 0" fill-rule="evenodd"></path>
-                                            </svg><svg aria-label="icon" color="foregrounds.semantic.brand.primary" fill="currentColor" height="16" role="img" width="16"><use href="#check-thick-outline"></use></svg>
-                                        </div>
-                                    </div>
-                                </div>
-                            </button>
-                        </div>
-                        
-                        <!-- 데이터 없을때 -->
-                        <!-- <div class="no-data">
-                            <strong>조건에 맞는 채용공고가 없습니다.</strong>
-                            <p>조건을 변경하여 다시 검색해 보세요.</p>
-                        </div> -->
+                        <!-- </div> -->
                     </div>
                 </div>
-                <div class="content-detail">
-                    <div class="content-detail-header">
-                        <button class="detail-arrow-btn">
-                            <svg fill="currentColor" height="20" role="img" width="20">
-                                <path clip-rule="evenodd" d="M11.566 5.435a.8.8 0 0 0-1.132 0l-6 6a.8.8 0 0 0 0 1.13l6 6a.8.8 0 1 0 1.132-1.13L6.93 12.8H19a.8.8 0 1 0 0-1.6H6.931l4.635-4.634a.8.8 0 0 0 0-1.131" fill-rule="evenodd"></path>
-                            </svg>
-                            <p>목록</p>
-                        </button>
-                    </div>
-                    <div class="content-detail-body">
-                        <button class="list-item-header">
-                            <div class="list-item-thumb">
-                                <img src="https://www.rocketpunch.com/_next/image?url=https%3A%2F%2Fimage.rocketpunch.com%2Fcompany_profile%2F210280%2F2025%2F09%2F09%2Flogo_1757380047672.jpg&amp;w=64&amp;q=75" alt="">
+                <div class="content-container">
+                    <div class="content-main">
+                        <div class="sort-options">
+                            <div class="sort-options-item">
+                                <button class="sort-btn active">적합순</button>
                             </div>
-                            <div class="list-item-content">
-                                <p class="list-item-title">애니포인트미디어</p>
-                                <ul class="profile-stats">
-                                    <li class="profile-stat-item">팔로워 <i class="num">47</i></li>
-                                    <li class="profile-stat-item">채용공고 <i class="num">3</i></li>
+                            <div class="sort-options-item">
+                                <button class="sort-btn">인기순</button>
+                            </div>
+                            <div class="sort-options-item">
+                                <button class="sort-btn">최신순</button>
+                            </div>
+                            <div class="sort-options-item">
+                                <button class="sort-btn">규모순</button>
+                            </div>
+                        </div>
+                        <div class="list-container">
+                            <!-- 데이터 없을때 -->
+                            <div class="no-data">
+                                <p class="title">조건에 맞는 채용공고가 없습니다.</p>
+                                <p class="description">조건을 변경하여 다시 검색해 보세요.</p>
+                            </div>
+
+                            <div class="list-item">
+                                <button class="list-item-btn">
+                                    <div class="list-item-header">
+                                        <div class="list-item-thumb">
+                                            <img src="https://www.rocketpunch.com/_next/image?url=https%3A%2F%2Fimage.rocketpunch.com%2Fcompany_profile%2F210280%2F2025%2F09%2F09%2Flogo_1757380047672.jpg&w=64&q=75" alt="">
+                                        </div>
+                                        <div class="list-item-content">
+                                            <p class="list-item-title">애니포인트미디어</p>
+                                            <p class="list-item-subtitle">SDK 개발자 (Kotlin Multiplatform)</p>
+                                            <p class="list-item-description">크로스 플랫폼 광고 SDK 개발로 전문성을 쌓아갈 개발자 모집</p>
+                                        </div>
+                                    </div>
+                                    <div class="list-item-meta">
+                                        <div class="list-item-meta-field">
+                                            <p class="list-item-label">직군</p>
+                                            <div class="list-item-icon">
+                                                <svg viewBox="0 0 24 24" fill="currentColor" height="16" role="img" width="16">
+                                                    <path clip-rule="evenodd" d="M20.49 5.51a1.4 1.4 0 0 1 0 1.98l-11 11a1.4 1.4 0 0 1-1.98 0l-4-4a1.4 1.4 0 0 1 1.98-1.98l3.01 3.01L18.51 5.51a1.4 1.4 0 0 1 1.98 0" fill-rule="evenodd"></path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="list-item-meta-field">
+                                            <p class="list-item-label">숙련도</p>
+                                            <div class="list-item-icon">
+                                                <svg viewBox="0 0 24 24" fill="currentColor" height="16" role="img" width="16">
+                                                    <path clip-rule="evenodd" d="M20.49 5.51a1.4 1.4 0 0 1 0 1.98l-11 11a1.4 1.4 0 0 1-1.98 0l-4-4a1.4 1.4 0 0 1 1.98-1.98l3.01 3.01L18.51 5.51a1.4 1.4 0 0 1 1.98 0" fill-rule="evenodd"></path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="list-item-meta-field">
+                                            <p class="list-item-label">규모</p>
+                                            <div class="list-item-icon">
+                                                <svg viewBox="0 0 24 24" fill="currentColor" height="16" role="img" width="16">
+                                                    <path clip-rule="evenodd" d="M20.49 5.51a1.4 1.4 0 0 1 0 1.98l-11 11a1.4 1.4 0 0 1-1.98 0l-4-4a1.4 1.4 0 0 1 1.98-1.98l3.01 3.01L18.51 5.51a1.4 1.4 0 0 1 1.98 0" fill-rule="evenodd"></path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="list-item-meta-field">
+                                            <p class="list-item-label">근무 방식</p>
+                                            <div class="list-item-icon">
+                                                <svg viewBox="0 0 24 24" fill="currentColor" height="16" role="img" width="16">
+                                                    <path clip-rule="evenodd" d="M20.49 5.51a1.4 1.4 0 0 1 0 1.98l-11 11a1.4 1.4 0 0 1-1.98 0l-4-4a1.4 1.4 0 0 1 1.98-1.98l3.01 3.01L18.51 5.51a1.4 1.4 0 0 1 1.98 0" fill-rule="evenodd"></path>
+                                                </svg><svg aria-label="icon" color="foregrounds.semantic.brand.primary" fill="currentColor" height="16" role="img" width="16"><use href="#check-thick-outline"></use></svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </button>
+                            </div>
+                            <div class="list-item">
+                                <button class="list-item-btn">
+                                    <div class="list-item-header">
+                                        <div class="list-item-thumb">
+                                            <img src="https://www.rocketpunch.com/_next/image?url=https%3A%2F%2Fimage.rocketpunch.com%2Fcompany_profile%2F210280%2F2025%2F09%2F09%2Flogo_1757380047672.jpg&w=64&q=75" alt="">
+                                        </div>
+                                        <div class="list-item-content">
+                                            <p class="list-item-title">애니포인트미디어</p>
+                                            <p class="list-item-subtitle">SDK 개발자 (Kotlin Multiplatform)</p>
+                                            <p class="list-item-description">크로스 플랫폼 광고 SDK 개발로 전문성을 쌓아갈 개발자 모집</p>
+                                        </div>
+                                    </div>
+                                    <div class="list-item-meta">
+                                        <div class="list-item-meta-field">
+                                            <p class="list-item-label">직군</p>
+                                            <div class="list-item-icon">
+                                                <svg viewBox="0 0 24 24" fill="currentColor" height="16" role="img" width="16">
+                                                    <path clip-rule="evenodd" d="M20.49 5.51a1.4 1.4 0 0 1 0 1.98l-11 11a1.4 1.4 0 0 1-1.98 0l-4-4a1.4 1.4 0 0 1 1.98-1.98l3.01 3.01L18.51 5.51a1.4 1.4 0 0 1 1.98 0" fill-rule="evenodd"></path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="list-item-meta-field">
+                                            <p class="list-item-label">숙련도</p>
+                                            <div class="list-item-icon">
+                                                <svg viewBox="0 0 24 24" fill="currentColor" height="16" role="img" width="16">
+                                                    <path clip-rule="evenodd" d="M20.49 5.51a1.4 1.4 0 0 1 0 1.98l-11 11a1.4 1.4 0 0 1-1.98 0l-4-4a1.4 1.4 0 0 1 1.98-1.98l3.01 3.01L18.51 5.51a1.4 1.4 0 0 1 1.98 0" fill-rule="evenodd"></path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="list-item-meta-field">
+                                            <p class="list-item-label">규모</p>
+                                            <div class="list-item-icon">
+                                                <svg viewBox="0 0 24 24" fill="currentColor" height="16" role="img" width="16">
+                                                    <path clip-rule="evenodd" d="M20.49 5.51a1.4 1.4 0 0 1 0 1.98l-11 11a1.4 1.4 0 0 1-1.98 0l-4-4a1.4 1.4 0 0 1 1.98-1.98l3.01 3.01L18.51 5.51a1.4 1.4 0 0 1 1.98 0" fill-rule="evenodd"></path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="list-item-meta-field">
+                                            <p class="list-item-label">근무 방식</p>
+                                            <div class="list-item-icon">
+                                                <svg viewBox="0 0 24 24" fill="currentColor" height="16" role="img" width="16">
+                                                    <path clip-rule="evenodd" d="M20.49 5.51a1.4 1.4 0 0 1 0 1.98l-11 11a1.4 1.4 0 0 1-1.98 0l-4-4a1.4 1.4 0 0 1 1.98-1.98l3.01 3.01L18.51 5.51a1.4 1.4 0 0 1 1.98 0" fill-rule="evenodd"></path>
+                                                </svg><svg aria-label="icon" color="foregrounds.semantic.brand.primary" fill="currentColor" height="16" role="img" width="16"><use href="#check-thick-outline"></use></svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </button>
+                            </div>
+                            <div class="list-item">
+                                <button class="list-item-btn">
+                                    <div class="list-item-header">
+                                        <div class="list-item-thumb">
+                                            <img src="https://www.rocketpunch.com/_next/image?url=https%3A%2F%2Fimage.rocketpunch.com%2Fcompany_profile%2F210280%2F2025%2F09%2F09%2Flogo_1757380047672.jpg&w=64&q=75" alt="">
+                                        </div>
+                                        <div class="list-item-content">
+                                            <p class="list-item-title">애니포인트미디어</p>
+                                            <p class="list-item-subtitle">SDK 개발자 (Kotlin Multiplatform)</p>
+                                            <p class="list-item-description">크로스 플랫폼 광고 SDK 개발로 전문성을 쌓아갈 개발자 모집</p>
+                                        </div>
+                                    </div>
+                                    <div class="list-item-meta">
+                                        <div class="list-item-meta-field">
+                                            <p class="list-item-label">직군</p>
+                                            <div class="list-item-icon">
+                                                <svg viewBox="0 0 24 24" fill="currentColor" height="16" role="img" width="16">
+                                                    <path clip-rule="evenodd" d="M20.49 5.51a1.4 1.4 0 0 1 0 1.98l-11 11a1.4 1.4 0 0 1-1.98 0l-4-4a1.4 1.4 0 0 1 1.98-1.98l3.01 3.01L18.51 5.51a1.4 1.4 0 0 1 1.98 0" fill-rule="evenodd"></path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="list-item-meta-field">
+                                            <p class="list-item-label">숙련도</p>
+                                            <div class="list-item-icon">
+                                                <svg viewBox="0 0 24 24" fill="currentColor" height="16" role="img" width="16">
+                                                    <path clip-rule="evenodd" d="M20.49 5.51a1.4 1.4 0 0 1 0 1.98l-11 11a1.4 1.4 0 0 1-1.98 0l-4-4a1.4 1.4 0 0 1 1.98-1.98l3.01 3.01L18.51 5.51a1.4 1.4 0 0 1 1.98 0" fill-rule="evenodd"></path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="list-item-meta-field">
+                                            <p class="list-item-label">규모</p>
+                                            <div class="list-item-icon">
+                                                <svg viewBox="0 0 24 24" fill="currentColor" height="16" role="img" width="16">
+                                                    <path clip-rule="evenodd" d="M20.49 5.51a1.4 1.4 0 0 1 0 1.98l-11 11a1.4 1.4 0 0 1-1.98 0l-4-4a1.4 1.4 0 0 1 1.98-1.98l3.01 3.01L18.51 5.51a1.4 1.4 0 0 1 1.98 0" fill-rule="evenodd"></path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="list-item-meta-field">
+                                            <p class="list-item-label">근무 방식</p>
+                                            <div class="list-item-icon">
+                                                <svg viewBox="0 0 24 24" fill="currentColor" height="16" role="img" width="16">
+                                                    <path clip-rule="evenodd" d="M20.49 5.51a1.4 1.4 0 0 1 0 1.98l-11 11a1.4 1.4 0 0 1-1.98 0l-4-4a1.4 1.4 0 0 1 1.98-1.98l3.01 3.01L18.51 5.51a1.4 1.4 0 0 1 1.98 0" fill-rule="evenodd"></path>
+                                                </svg><svg aria-label="icon" color="foregrounds.semantic.brand.primary" fill="currentColor" height="16" role="img" width="16"><use href="#check-thick-outline"></use></svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </button>
+                            </div>
+                            <div class="list-item">
+                                <button class="list-item-btn">
+                                    <div class="list-item-header">
+                                        <div class="list-item-thumb">
+                                            <img src="https://www.rocketpunch.com/_next/image?url=https%3A%2F%2Fimage.rocketpunch.com%2Fcompany_profile%2F210280%2F2025%2F09%2F09%2Flogo_1757380047672.jpg&w=64&q=75" alt="">
+                                        </div>
+                                        <div class="list-item-content">
+                                            <p class="list-item-title">애니포인트미디어</p>
+                                            <p class="list-item-subtitle">SDK 개발자 (Kotlin Multiplatform)</p>
+                                            <p class="list-item-description">크로스 플랫폼 광고 SDK 개발로 전문성을 쌓아갈 개발자 모집</p>
+                                        </div>
+                                    </div>
+                                    <div class="list-item-meta">
+                                        <div class="list-item-meta-field">
+                                            <p class="list-item-label">직군</p>
+                                            <div class="list-item-icon">
+                                                <svg viewBox="0 0 24 24" fill="currentColor" height="16" role="img" width="16">
+                                                    <path clip-rule="evenodd" d="M20.49 5.51a1.4 1.4 0 0 1 0 1.98l-11 11a1.4 1.4 0 0 1-1.98 0l-4-4a1.4 1.4 0 0 1 1.98-1.98l3.01 3.01L18.51 5.51a1.4 1.4 0 0 1 1.98 0" fill-rule="evenodd"></path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="list-item-meta-field">
+                                            <p class="list-item-label">숙련도</p>
+                                            <div class="list-item-icon">
+                                                <svg viewBox="0 0 24 24" fill="currentColor" height="16" role="img" width="16">
+                                                    <path clip-rule="evenodd" d="M20.49 5.51a1.4 1.4 0 0 1 0 1.98l-11 11a1.4 1.4 0 0 1-1.98 0l-4-4a1.4 1.4 0 0 1 1.98-1.98l3.01 3.01L18.51 5.51a1.4 1.4 0 0 1 1.98 0" fill-rule="evenodd"></path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="list-item-meta-field">
+                                            <p class="list-item-label">규모</p>
+                                            <div class="list-item-icon">
+                                                <svg viewBox="0 0 24 24" fill="currentColor" height="16" role="img" width="16">
+                                                    <path clip-rule="evenodd" d="M20.49 5.51a1.4 1.4 0 0 1 0 1.98l-11 11a1.4 1.4 0 0 1-1.98 0l-4-4a1.4 1.4 0 0 1 1.98-1.98l3.01 3.01L18.51 5.51a1.4 1.4 0 0 1 1.98 0" fill-rule="evenodd"></path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="list-item-meta-field">
+                                            <p class="list-item-label">근무 방식</p>
+                                            <div class="list-item-icon">
+                                                <svg viewBox="0 0 24 24" fill="currentColor" height="16" role="img" width="16">
+                                                    <path clip-rule="evenodd" d="M20.49 5.51a1.4 1.4 0 0 1 0 1.98l-11 11a1.4 1.4 0 0 1-1.98 0l-4-4a1.4 1.4 0 0 1 1.98-1.98l3.01 3.01L18.51 5.51a1.4 1.4 0 0 1 1.98 0" fill-rule="evenodd"></path>
+                                                </svg><svg aria-label="icon" color="foregrounds.semantic.brand.primary" fill="currentColor" height="16" role="img" width="16"><use href="#check-thick-outline"></use></svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </button>
+                            </div>
+                            <div class="list-item">
+                                <button class="list-item-btn">
+                                    <div class="list-item-header">
+                                        <div class="list-item-thumb">
+                                            <img src="https://www.rocketpunch.com/_next/image?url=https%3A%2F%2Fimage.rocketpunch.com%2Fcompany_profile%2F210280%2F2025%2F09%2F09%2Flogo_1757380047672.jpg&w=64&q=75" alt="">
+                                        </div>
+                                        <div class="list-item-content">
+                                            <p class="list-item-title">애니포인트미디어</p>
+                                            <p class="list-item-subtitle">SDK 개발자 (Kotlin Multiplatform)</p>
+                                            <p class="list-item-description">크로스 플랫폼 광고 SDK 개발로 전문성을 쌓아갈 개발자 모집</p>
+                                        </div>
+                                    </div>
+                                    <div class="list-item-meta">
+                                        <div class="list-item-meta-field">
+                                            <p class="list-item-label">직군</p>
+                                            <div class="list-item-icon">
+                                                <svg viewBox="0 0 24 24" fill="currentColor" height="16" role="img" width="16">
+                                                    <path clip-rule="evenodd" d="M20.49 5.51a1.4 1.4 0 0 1 0 1.98l-11 11a1.4 1.4 0 0 1-1.98 0l-4-4a1.4 1.4 0 0 1 1.98-1.98l3.01 3.01L18.51 5.51a1.4 1.4 0 0 1 1.98 0" fill-rule="evenodd"></path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="list-item-meta-field">
+                                            <p class="list-item-label">숙련도</p>
+                                            <div class="list-item-icon">
+                                                <svg viewBox="0 0 24 24" fill="currentColor" height="16" role="img" width="16">
+                                                    <path clip-rule="evenodd" d="M20.49 5.51a1.4 1.4 0 0 1 0 1.98l-11 11a1.4 1.4 0 0 1-1.98 0l-4-4a1.4 1.4 0 0 1 1.98-1.98l3.01 3.01L18.51 5.51a1.4 1.4 0 0 1 1.98 0" fill-rule="evenodd"></path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="list-item-meta-field">
+                                            <p class="list-item-label">규모</p>
+                                            <div class="list-item-icon">
+                                                <svg viewBox="0 0 24 24" fill="currentColor" height="16" role="img" width="16">
+                                                    <path clip-rule="evenodd" d="M20.49 5.51a1.4 1.4 0 0 1 0 1.98l-11 11a1.4 1.4 0 0 1-1.98 0l-4-4a1.4 1.4 0 0 1 1.98-1.98l3.01 3.01L18.51 5.51a1.4 1.4 0 0 1 1.98 0" fill-rule="evenodd"></path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="list-item-meta-field">
+                                            <p class="list-item-label">근무 방식</p>
+                                            <div class="list-item-icon">
+                                                <svg viewBox="0 0 24 24" fill="currentColor" height="16" role="img" width="16">
+                                                    <path clip-rule="evenodd" d="M20.49 5.51a1.4 1.4 0 0 1 0 1.98l-11 11a1.4 1.4 0 0 1-1.98 0l-4-4a1.4 1.4 0 0 1 1.98-1.98l3.01 3.01L18.51 5.51a1.4 1.4 0 0 1 1.98 0" fill-rule="evenodd"></path>
+                                                </svg><svg aria-label="icon" color="foregrounds.semantic.brand.primary" fill="currentColor" height="16" role="img" width="16"><use href="#check-thick-outline"></use></svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </button>
+                            </div>
+                            <div class="list-item">
+                                <button class="list-item-btn">
+                                    <div class="list-item-header">
+                                        <div class="list-item-thumb">
+                                            <img src="https://www.rocketpunch.com/_next/image?url=https%3A%2F%2Fimage.rocketpunch.com%2Fcompany_profile%2F210280%2F2025%2F09%2F09%2Flogo_1757380047672.jpg&w=64&q=75" alt="">
+                                        </div>
+                                        <div class="list-item-content">
+                                            <p class="list-item-title">애니포인트미디어</p>
+                                            <p class="list-item-subtitle">SDK 개발자 (Kotlin Multiplatform)</p>
+                                            <p class="list-item-description">크로스 플랫폼 광고 SDK 개발로 전문성을 쌓아갈 개발자 모집</p>
+                                        </div>
+                                    </div>
+                                    <div class="list-item-meta">
+                                        <div class="list-item-meta-field">
+                                            <p class="list-item-label">직군</p>
+                                            <div class="list-item-icon">
+                                                <svg viewBox="0 0 24 24" fill="currentColor" height="16" role="img" width="16">
+                                                    <path clip-rule="evenodd" d="M20.49 5.51a1.4 1.4 0 0 1 0 1.98l-11 11a1.4 1.4 0 0 1-1.98 0l-4-4a1.4 1.4 0 0 1 1.98-1.98l3.01 3.01L18.51 5.51a1.4 1.4 0 0 1 1.98 0" fill-rule="evenodd"></path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="list-item-meta-field">
+                                            <p class="list-item-label">숙련도</p>
+                                            <div class="list-item-icon">
+                                                <svg viewBox="0 0 24 24" fill="currentColor" height="16" role="img" width="16">
+                                                    <path clip-rule="evenodd" d="M20.49 5.51a1.4 1.4 0 0 1 0 1.98l-11 11a1.4 1.4 0 0 1-1.98 0l-4-4a1.4 1.4 0 0 1 1.98-1.98l3.01 3.01L18.51 5.51a1.4 1.4 0 0 1 1.98 0" fill-rule="evenodd"></path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="list-item-meta-field">
+                                            <p class="list-item-label">규모</p>
+                                            <div class="list-item-icon">
+                                                <svg viewBox="0 0 24 24" fill="currentColor" height="16" role="img" width="16">
+                                                    <path clip-rule="evenodd" d="M20.49 5.51a1.4 1.4 0 0 1 0 1.98l-11 11a1.4 1.4 0 0 1-1.98 0l-4-4a1.4 1.4 0 0 1 1.98-1.98l3.01 3.01L18.51 5.51a1.4 1.4 0 0 1 1.98 0" fill-rule="evenodd"></path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="list-item-meta-field">
+                                            <p class="list-item-label">근무 방식</p>
+                                            <div class="list-item-icon">
+                                                <svg viewBox="0 0 24 24" fill="currentColor" height="16" role="img" width="16">
+                                                    <path clip-rule="evenodd" d="M20.49 5.51a1.4 1.4 0 0 1 0 1.98l-11 11a1.4 1.4 0 0 1-1.98 0l-4-4a1.4 1.4 0 0 1 1.98-1.98l3.01 3.01L18.51 5.51a1.4 1.4 0 0 1 1.98 0" fill-rule="evenodd"></path>
+                                                </svg><svg aria-label="icon" color="foregrounds.semantic.brand.primary" fill="currentColor" height="16" role="img" width="16"><use href="#check-thick-outline"></use></svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </button>
+                            </div>
+                            <div class="list-item">
+                                <button class="list-item-btn">
+                                    <div class="list-item-header">
+                                        <div class="list-item-thumb">
+                                            <img src="https://www.rocketpunch.com/_next/image?url=https%3A%2F%2Fimage.rocketpunch.com%2Fcompany_profile%2F210280%2F2025%2F09%2F09%2Flogo_1757380047672.jpg&w=64&q=75" alt="">
+                                        </div>
+                                        <div class="list-item-content">
+                                            <p class="list-item-title">애니포인트미디어</p>
+                                            <p class="list-item-subtitle">SDK 개발자 (Kotlin Multiplatform)</p>
+                                            <p class="list-item-description">크로스 플랫폼 광고 SDK 개발로 전문성을 쌓아갈 개발자 모집</p>
+                                        </div>
+                                    </div>
+                                    <div class="list-item-meta">
+                                        <div class="list-item-meta-field">
+                                            <p class="list-item-label">직군</p>
+                                            <div class="list-item-icon">
+                                                <svg viewBox="0 0 24 24" fill="currentColor" height="16" role="img" width="16">
+                                                    <path clip-rule="evenodd" d="M20.49 5.51a1.4 1.4 0 0 1 0 1.98l-11 11a1.4 1.4 0 0 1-1.98 0l-4-4a1.4 1.4 0 0 1 1.98-1.98l3.01 3.01L18.51 5.51a1.4 1.4 0 0 1 1.98 0" fill-rule="evenodd"></path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="list-item-meta-field">
+                                            <p class="list-item-label">숙련도</p>
+                                            <div class="list-item-icon">
+                                                <svg viewBox="0 0 24 24" fill="currentColor" height="16" role="img" width="16">
+                                                    <path clip-rule="evenodd" d="M20.49 5.51a1.4 1.4 0 0 1 0 1.98l-11 11a1.4 1.4 0 0 1-1.98 0l-4-4a1.4 1.4 0 0 1 1.98-1.98l3.01 3.01L18.51 5.51a1.4 1.4 0 0 1 1.98 0" fill-rule="evenodd"></path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="list-item-meta-field">
+                                            <p class="list-item-label">규모</p>
+                                            <div class="list-item-icon">
+                                                <svg viewBox="0 0 24 24" fill="currentColor" height="16" role="img" width="16">
+                                                    <path clip-rule="evenodd" d="M20.49 5.51a1.4 1.4 0 0 1 0 1.98l-11 11a1.4 1.4 0 0 1-1.98 0l-4-4a1.4 1.4 0 0 1 1.98-1.98l3.01 3.01L18.51 5.51a1.4 1.4 0 0 1 1.98 0" fill-rule="evenodd"></path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="list-item-meta-field">
+                                            <p class="list-item-label">근무 방식</p>
+                                            <div class="list-item-icon">
+                                                <svg viewBox="0 0 24 24" fill="currentColor" height="16" role="img" width="16">
+                                                    <path clip-rule="evenodd" d="M20.49 5.51a1.4 1.4 0 0 1 0 1.98l-11 11a1.4 1.4 0 0 1-1.98 0l-4-4a1.4 1.4 0 0 1 1.98-1.98l3.01 3.01L18.51 5.51a1.4 1.4 0 0 1 1.98 0" fill-rule="evenodd"></path>
+                                                </svg><svg aria-label="icon" color="foregrounds.semantic.brand.primary" fill="currentColor" height="16" role="img" width="16"><use href="#check-thick-outline"></use></svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </button>
+                            </div>
+                            <div class="list-item">
+                                <button class="list-item-btn">
+                                    <div class="list-item-header">
+                                        <div class="list-item-thumb">
+                                            <img src="https://www.rocketpunch.com/_next/image?url=https%3A%2F%2Fimage.rocketpunch.com%2Fcompany_profile%2F210280%2F2025%2F09%2F09%2Flogo_1757380047672.jpg&w=64&q=75" alt="">
+                                        </div>
+                                        <div class="list-item-content">
+                                            <p class="list-item-title">애니포인트미디어</p>
+                                            <p class="list-item-subtitle">SDK 개발자 (Kotlin Multiplatform)</p>
+                                            <p class="list-item-description">크로스 플랫폼 광고 SDK 개발로 전문성을 쌓아갈 개발자 모집</p>
+                                        </div>
+                                    </div>
+                                    <div class="list-item-meta">
+                                        <div class="list-item-meta-field">
+                                            <p class="list-item-label">직군</p>
+                                            <div class="list-item-icon">
+                                                <svg viewBox="0 0 24 24" fill="currentColor" height="16" role="img" width="16">
+                                                    <path clip-rule="evenodd" d="M20.49 5.51a1.4 1.4 0 0 1 0 1.98l-11 11a1.4 1.4 0 0 1-1.98 0l-4-4a1.4 1.4 0 0 1 1.98-1.98l3.01 3.01L18.51 5.51a1.4 1.4 0 0 1 1.98 0" fill-rule="evenodd"></path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="list-item-meta-field">
+                                            <p class="list-item-label">숙련도</p>
+                                            <div class="list-item-icon">
+                                                <svg viewBox="0 0 24 24" fill="currentColor" height="16" role="img" width="16">
+                                                    <path clip-rule="evenodd" d="M20.49 5.51a1.4 1.4 0 0 1 0 1.98l-11 11a1.4 1.4 0 0 1-1.98 0l-4-4a1.4 1.4 0 0 1 1.98-1.98l3.01 3.01L18.51 5.51a1.4 1.4 0 0 1 1.98 0" fill-rule="evenodd"></path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="list-item-meta-field">
+                                            <p class="list-item-label">규모</p>
+                                            <div class="list-item-icon">
+                                                <svg viewBox="0 0 24 24" fill="currentColor" height="16" role="img" width="16">
+                                                    <path clip-rule="evenodd" d="M20.49 5.51a1.4 1.4 0 0 1 0 1.98l-11 11a1.4 1.4 0 0 1-1.98 0l-4-4a1.4 1.4 0 0 1 1.98-1.98l3.01 3.01L18.51 5.51a1.4 1.4 0 0 1 1.98 0" fill-rule="evenodd"></path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="list-item-meta-field">
+                                            <p class="list-item-label">근무 방식</p>
+                                            <div class="list-item-icon">
+                                                <svg viewBox="0 0 24 24" fill="currentColor" height="16" role="img" width="16">
+                                                    <path clip-rule="evenodd" d="M20.49 5.51a1.4 1.4 0 0 1 0 1.98l-11 11a1.4 1.4 0 0 1-1.98 0l-4-4a1.4 1.4 0 0 1 1.98-1.98l3.01 3.01L18.51 5.51a1.4 1.4 0 0 1 1.98 0" fill-rule="evenodd"></path>
+                                                </svg><svg aria-label="icon" color="foregrounds.semantic.brand.primary" fill="currentColor" height="16" role="img" width="16"><use href="#check-thick-outline"></use></svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </button>
+                            </div>
+                            <div class="list-item">
+                                <button class="list-item-btn">
+                                    <div class="list-item-header">
+                                        <div class="list-item-thumb">
+                                            <img src="https://www.rocketpunch.com/_next/image?url=https%3A%2F%2Fimage.rocketpunch.com%2Fcompany_profile%2F210280%2F2025%2F09%2F09%2Flogo_1757380047672.jpg&w=64&q=75" alt="">
+                                        </div>
+                                        <div class="list-item-content">
+                                            <p class="list-item-title">애니포인트미디어</p>
+                                            <p class="list-item-subtitle">SDK 개발자 (Kotlin Multiplatform)</p>
+                                            <p class="list-item-description">크로스 플랫폼 광고 SDK 개발로 전문성을 쌓아갈 개발자 모집</p>
+                                        </div>
+                                    </div>
+                                    <div class="list-item-meta">
+                                        <div class="list-item-meta-field">
+                                            <p class="list-item-label">직군</p>
+                                            <div class="list-item-icon">
+                                                <svg viewBox="0 0 24 24" fill="currentColor" height="16" role="img" width="16">
+                                                    <path clip-rule="evenodd" d="M20.49 5.51a1.4 1.4 0 0 1 0 1.98l-11 11a1.4 1.4 0 0 1-1.98 0l-4-4a1.4 1.4 0 0 1 1.98-1.98l3.01 3.01L18.51 5.51a1.4 1.4 0 0 1 1.98 0" fill-rule="evenodd"></path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="list-item-meta-field">
+                                            <p class="list-item-label">숙련도</p>
+                                            <div class="list-item-icon">
+                                                <svg viewBox="0 0 24 24" fill="currentColor" height="16" role="img" width="16">
+                                                    <path clip-rule="evenodd" d="M20.49 5.51a1.4 1.4 0 0 1 0 1.98l-11 11a1.4 1.4 0 0 1-1.98 0l-4-4a1.4 1.4 0 0 1 1.98-1.98l3.01 3.01L18.51 5.51a1.4 1.4 0 0 1 1.98 0" fill-rule="evenodd"></path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="list-item-meta-field">
+                                            <p class="list-item-label">규모</p>
+                                            <div class="list-item-icon">
+                                                <svg viewBox="0 0 24 24" fill="currentColor" height="16" role="img" width="16">
+                                                    <path clip-rule="evenodd" d="M20.49 5.51a1.4 1.4 0 0 1 0 1.98l-11 11a1.4 1.4 0 0 1-1.98 0l-4-4a1.4 1.4 0 0 1 1.98-1.98l3.01 3.01L18.51 5.51a1.4 1.4 0 0 1 1.98 0" fill-rule="evenodd"></path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="list-item-meta-field">
+                                            <p class="list-item-label">근무 방식</p>
+                                            <div class="list-item-icon">
+                                                <svg viewBox="0 0 24 24" fill="currentColor" height="16" role="img" width="16">
+                                                    <path clip-rule="evenodd" d="M20.49 5.51a1.4 1.4 0 0 1 0 1.98l-11 11a1.4 1.4 0 0 1-1.98 0l-4-4a1.4 1.4 0 0 1 1.98-1.98l3.01 3.01L18.51 5.51a1.4 1.4 0 0 1 1.98 0" fill-rule="evenodd"></path>
+                                                </svg><svg aria-label="icon" color="foregrounds.semantic.brand.primary" fill="currentColor" height="16" role="img" width="16"><use href="#check-thick-outline"></use></svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-detail">
+                        <div class="content-detail-header">
+                            <button class="detail-arrow-btn">
+                                <svg fill="currentColor" height="20" role="img" width="20">
+                                    <path clip-rule="evenodd" d="M11.566 5.435a.8.8 0 0 0-1.132 0l-6 6a.8.8 0 0 0 0 1.13l6 6a.8.8 0 1 0 1.132-1.13L6.93 12.8H19a.8.8 0 1 0 0-1.6H6.931l4.635-4.634a.8.8 0 0 0 0-1.131" fill-rule="evenodd"></path>
+                                </svg>
+                                <p>목록</p>
+                            </button>
+                        </div>
+                        <div class="content-detail-body">
+                            <button class="list-item-header">
+                                <div class="list-item-thumb">
+                                    <img src="https://www.rocketpunch.com/_next/image?url=https%3A%2F%2Fimage.rocketpunch.com%2Fcompany_profile%2F210280%2F2025%2F09%2F09%2Flogo_1757380047672.jpg&amp;w=64&amp;q=75" alt="">
+                                </div>
+                                <div class="list-item-content">
+                                    <p class="list-item-title">애니포인트미디어</p>
+                                    <ul class="profile-stats">
+                                        <li class="profile-stat-item">팔로워 <i class="num">47</i></li>
+                                        <li class="profile-stat-item">채용공고 <i class="num">3</i></li>
+                                    </ul>
+                                </div>
+                            </button>
+                            
+                            <div class="detail-content">
+                                <div class="detail-header">
+                                    <strong class="detail-title">SDK 개발자 (Kotlin Multiplatform)</strong>
+                                    <p class="detail-subtitle">크로스 플랫폼 광고 SDK 개발로 전문성을 쌓아갈 개발자 모집</p>
+                                </div>
+
+                                <div class="detail-actions">
+                                    <!-- popup-trigger 클래스가 있으면 열림 -->
+                                    <button class="detail-action-btn detail-apply-btn popup-trigger" data-target="#popup1">간편 지원하기</button>
+                                    <button class="detail-action-btn detail-save-btn">저장함</button>
+                                    <button class="detail-action-btn detail-share-btn">공유하기</button>
+                                </div>
+
+                                <ul class="detail-meta">
+                                    <li class="detail-meta-item">
+                                        <p class="meta-label">직군</p>
+                                        <p class="meta-value">SW 개발</p>
+                                    </li>
+                                    <li class="detail-meta-item">
+                                        <p class="meta-label">숙련도</p>
+                                        <p class="meta-value">주니어, 신입</p>
+                                    </li>
+                                    <li class="detail-meta-item">
+                                        <p class="meta-label">고용형태</p>
+                                        <p class="meta-value">정규직</p>
+                                    </li>
+                                    <li class="detail-meta-item">
+                                        <p class="meta-label">근무방식</p>
+                                        <p class="meta-value">상시 출근</p>
+                                    </li>
                                 </ul>
-                            </div>
-                        </button>
-                        
-                        <div class="detail-content">
-                            <div class="detail-header">
-                                <strong class="detail-title">SDK 개발자 (Kotlin Multiplatform)</strong>
-                                <p class="detail-subtitle">크로스 플랫폼 광고 SDK 개발로 전문성을 쌓아갈 개발자 모집</p>
-                            </div>
 
-                            <div class="detail-actions">
-                                <!-- popup-trigger 클래스가 있으면 열림 -->
-                                <button class="detail-action-btn detail-apply-btn popup-trigger" data-target="#popup1">간편 지원하기</button>
-                                <button class="detail-action-btn detail-save-btn">저장함</button>
-                                <button class="detail-action-btn detail-share-btn">공유하기</button>
-                            </div>
+                                <div class="deadline-info">
+                                    <p class="deadline-remain">지원 마감까지 18일 남음</p>
+                                    <p class="deadline-description">2025년 9월 30일까지 지원할 수 있습니다.</p>
+                                </div>
 
-                            <ul class="detail-meta">
-                                <li class="detail-meta-item">
-                                    <p class="meta-label">직군</p>
-                                    <p class="meta-value">SW 개발</p>
-                                </li>
-                                <li class="detail-meta-item">
-                                    <p class="meta-label">숙련도</p>
-                                    <p class="meta-value">주니어, 신입</p>
-                                </li>
-                                <li class="detail-meta-item">
-                                    <p class="meta-label">고용형태</p>
-                                    <p class="meta-value">정규직</p>
-                                </li>
-                                <li class="detail-meta-item">
-                                    <p class="meta-label">근무방식</p>
-                                    <p class="meta-value">상시 출근</p>
-                                </li>
-                            </ul>
-
-                            <div class="deadline-info">
-                                <p class="deadline-remain">지원 마감까지 18일 남음</p>
-                                <p class="deadline-description">2025년 9월 30일까지 지원할 수 있습니다.</p>
-                            </div>
-
-                            <div class="detail-description">
-                                <div class="detail-item">
-                                    <p class="detail-item-title">직무소개</p>
-                                    <p class="detail-item-content">글로벌 CTV 광고 플랫폼을 선도하는 애니포인트 미디어에서 Kotlin Multiplatform을 활용한 크로스 플랫폼 광고 SDK 개발을 담당하실 개발자를 모집합니다.
-                                        20+ 국가에서 사용되는 SDK 개발 경험을 쌓으며 전문성을 키워나가세요.</p>
-                                </div>
-                                <div class="detail-item">
-                                    <p class="detail-item-title">주요업무</p>
-                                    <p class="detail-item-content">- Kotlin Multiplatform을 활용한 광고 SDK(Javascript, iOS, Android) 개발 및 유지 보수
-                                        - SDK 통합 가이드 작성 및 지원
-                                    </p>
-                                </div>
-                                <div class="detail-item">
-                                    <p class="detail-item-title">자격요건</p>
-                                    <p class="detail-item-content">- 관련 분야에서 1년 이상 3년 이하의 실무 경력을 보유하신 분
-                                        - 전문학사 이상의 학력을 보유하신 분(학력, 전공, 자격증 및 외국어는 별도 제한 없음)
-                                        - 다양한 환경, 플랫폼에서 새로운 기술을 습득하는 데 적극적이며, 성장에 대한 의지가 강한 분
-                                        - 문제 해결을 위해 논리적으로 사고하며 적극적으로 협업할 수 있는 분
-                                        - 빠르게 변화하는 트렌드와 새로운 기술에 대해 열린 마음으로 도전하는 것을 즐기는 분
-                                    </p>
-                                </div>
-                                <div class="detail-item">
-                                    <p class="detail-item-title">우대사항</p>
-                                    <p class="detail-item-content">- 컴퓨터공학, 소프트웨어 공학 등 관련 학과 우대
-                                        - 하나의 기술에만 매몰되지 않고 새로운 기술을 배우는 데 두려움이 없는 사람
-                                        - 유연한 사고와 방식으로 팀원 또는 타팀과 원활한 커뮤니케이션이 가능한 분
-                                    </p>
-                                </div>
-                                <div class="detail-item">
-                                    <p class="detail-item-title">복지 및 근무환경</p>
-                                    <p class="detail-item-content">- 시차출근제 (07:00~10:00 중 자율출근), 기본 근무시간 8H
-                                        - 자유복장, 개인별 캐비닛 제공, 요청 장비/사무용품 지급
-                                        - 자유로운 연차 사용 (1일, 0.5일, 0.25일 단위), 연차 선사용 제도
-                                    </p>
-                                </div>
-                                <div class="detail-item">
-                                    <p class="detail-item-title">진행절차</p>
-                                    <p class="detail-item-content">- 서류평가 → 코딩테스트(프로그래머스) → 1차 면접(팀장) → 2차 면접(본부장) → 채용 확정
-                                        - 이력서 제출 필요
-                                    </p>
-                                </div>
-                                <div class="detail-item">
-                                    <p class="detail-item-title">참고사항</p>
-                                    <p class="detail-item-content">근무지 : 서울 강남구 테헤란로87길 21 6층</p>
+                                <div class="detail-description">
+                                    <div class="detail-item">
+                                        <p class="detail-item-title">직무소개</p>
+                                        <p class="detail-item-content">글로벌 CTV 광고 플랫폼을 선도하는 애니포인트 미디어에서 Kotlin Multiplatform을 활용한 크로스 플랫폼 광고 SDK 개발을 담당하실 개발자를 모집합니다.
+                                            20+ 국가에서 사용되는 SDK 개발 경험을 쌓으며 전문성을 키워나가세요.</p>
+                                    </div>
+                                    <div class="detail-item">
+                                        <p class="detail-item-title">주요업무</p>
+                                        <p class="detail-item-content">- Kotlin Multiplatform을 활용한 광고 SDK(Javascript, iOS, Android) 개발 및 유지 보수
+                                            - SDK 통합 가이드 작성 및 지원
+                                        </p>
+                                    </div>
+                                    <div class="detail-item">
+                                        <p class="detail-item-title">자격요건</p>
+                                        <p class="detail-item-content">- 관련 분야에서 1년 이상 3년 이하의 실무 경력을 보유하신 분
+                                            - 전문학사 이상의 학력을 보유하신 분(학력, 전공, 자격증 및 외국어는 별도 제한 없음)
+                                            - 다양한 환경, 플랫폼에서 새로운 기술을 습득하는 데 적극적이며, 성장에 대한 의지가 강한 분
+                                            - 문제 해결을 위해 논리적으로 사고하며 적극적으로 협업할 수 있는 분
+                                            - 빠르게 변화하는 트렌드와 새로운 기술에 대해 열린 마음으로 도전하는 것을 즐기는 분
+                                        </p>
+                                    </div>
+                                    <div class="detail-item">
+                                        <p class="detail-item-title">우대사항</p>
+                                        <p class="detail-item-content">- 컴퓨터공학, 소프트웨어 공학 등 관련 학과 우대
+                                            - 하나의 기술에만 매몰되지 않고 새로운 기술을 배우는 데 두려움이 없는 사람
+                                            - 유연한 사고와 방식으로 팀원 또는 타팀과 원활한 커뮤니케이션이 가능한 분
+                                        </p>
+                                    </div>
+                                    <div class="detail-item">
+                                        <p class="detail-item-title">복지 및 근무환경</p>
+                                        <p class="detail-item-content">- 시차출근제 (07:00~10:00 중 자율출근), 기본 근무시간 8H
+                                            - 자유복장, 개인별 캐비닛 제공, 요청 장비/사무용품 지급
+                                            - 자유로운 연차 사용 (1일, 0.5일, 0.25일 단위), 연차 선사용 제도
+                                        </p>
+                                    </div>
+                                    <div class="detail-item">
+                                        <p class="detail-item-title">진행절차</p>
+                                        <p class="detail-item-content">- 서류평가 → 코딩테스트(프로그래머스) → 1차 면접(팀장) → 2차 면접(본부장) → 채용 확정
+                                            - 이력서 제출 필요
+                                        </p>
+                                    </div>
+                                    <div class="detail-item">
+                                        <p class="detail-item-title">참고사항</p>
+                                        <p class="detail-item-content">근무지 : 서울 강남구 테헤란로87길 21 6층</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="content-side active">
-                    <div class="content-side-top">
-                        <div class="ad-banner">
-                            <img src="/static/images/experience/ad_bg_img.jpg" alt="">
-                        </div>
-                        <div class="ad-banner">
-                            <img src="/static/images/experience/ad_bg_img.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="content-side-bottom">
-                        <div class="ad-banner">
-                            <div class="ad-content">
-                                <p class="ad-text">기업 담당자이신가요?</p>
-                                <strong class="ad-text">콕에 공고를 올려보세요.</strong>
-                                <p class="ad-text">콕을 통한 간편 지원은 물론<br/>자사 채용 페이지 홍보도 가능합니다.</p>
+                    <div class="content-side active">
+                        <div class="content-side-top">
+                            <div class="ad-banner">
+                                <img src="/static/images/experience/ad_bg_img.jpg" alt="">
                             </div>
+                            <div class="ad-banner">
+                                <img src="/static/images/experience/ad_bg_img.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="content-side-bottom">
+                            <div class="ad-banner">
+                                <div class="ad-content">
+                                    <p class="ad-text">기업 담당자이신가요?</p>
+                                    <strong class="ad-text">콕에 공고를 올려보세요.</strong>
+                                    <p class="ad-text">콕을 통한 간편 지원은 물론<br/>자사 채용 페이지 홍보도 가능합니다.</p>
+                                </div>
 
-                            <div class="ad-action">
-                                <button class="ad-btn">게시</button>
+                                <div class="ad-action">
+                                    <button class="ad-btn">게시</button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </main>
+        </main>
+    </div>
 
     <!-- toast - red -->
     <div id="toast-red" class="toast-warning">

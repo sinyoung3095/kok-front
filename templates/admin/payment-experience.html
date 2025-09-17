@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>콕(KOK) 관리자</title>
     <link href="../../static/images/member/kok_favicon.png" rel="icon" type="image/x-icon">
-    <link rel="stylesheet" href="../../static/css/admin/experience.css">
+    <link rel="stylesheet" href="../../static/css/admin/payment.css">
 </head>
 <body>
     <div id="kok">
@@ -48,7 +48,7 @@
                                 </div>
                             </a>
                             <!-- 리스트가 보이는 상태 ul class="menu-sub-list collapse show" -->
-                            <ul class="menu-sub-list collapse" id="menu-6109064136799700f1ebced6">
+                            <ul class="menu-sub-list collapse" id="">
                                 <li class="submenu menu-item">
                                     <!-- 클릭 한 부분 active -->
                                     <a href="" class="kok-link">
@@ -65,7 +65,7 @@
                             </ul>
                         </li>
                         <li class="menu menu-item d-flex flex-column">
-                            <a href="" class="menu-btn d-flex w-100 current" id="menu-experience">
+                            <a href="" class="menu-btn d-flex w-100" id="menu-experience">
                                 <svg fill="rgb(255, 255, 255)" height="24" role="img" width="24" stroke="black" stroke-width="1.5">
                                     <path d="M11 4.85c-2.195-1.022-5.52-1.565-8.633.979A1 1 0 0 0 2 6.603V19a1 1 0 0 0 1.633.774c2.736-2.237 5.734-1.31 7.367-.255zm2 14.669c1.633-1.056 4.63-1.982 7.367.255A1 1 0 0 0 22 19V6.603a1 1 0 0 0-.367-.774C18.52 3.285 15.195 3.828 13 4.849z"></path>
                                 </svg>
@@ -89,7 +89,7 @@
                                     <i class="mdi mdi-chevron-right"></i>
                                 </div>
                             </a>
-                            <ul class="menu-sub-list collapse" id="menu-6284cdfecf9f6d001b046f3a">
+                            <ul class="menu-sub-list collapse" id="">
                                 <li class="submenu menu-item">
                                     <a href="" class="kok-link">
                                         - 
@@ -105,16 +105,16 @@
                             </ul>
                         </li>
                         <li class="menu menu-item d-flex flex-column">
-                            <a class="menu-btn d-flex w-100" id="menu-payment">
+                            <a class="menu-btn d-flex w-100 current" id="menu-payment">
                                 <svg fill="" height="24" role="img" width="24">
                                     <path clip-rule="evenodd" d="M2.2 7A2.8 2.8 0 0 1 5 4.2h14A2.8 2.8 0 0 1 21.8 7v5a.8.8 0 1 1-1.6 0V9.8H3.8V17A1.2 1.2 0 0 0 5 18.2h6a.8.8 0 0 1 0 1.6H5A2.8 2.8 0 0 1 2.2 17zm1.6 1.2h16.4V7A1.2 1.2 0 0 0 19 5.8H5A1.2 1.2 0 0 0 3.8 7zM6.2 13a.8.8 0 0 1 .8-.8h5a.8.8 0 0 1 0 1.6H7a.8.8 0 0 1-.8-.8M18 14.2a.8.8 0 0 1 .8.8v2.2H21a.8.8 0 0 1 0 1.6h-2.2V21a.8.8 0 0 1-1.6 0v-2.2H15a.8.8 0 1 1 0-1.6h2.2V15a.8.8 0 0 1 .8-.8" fill-rule="evenodd"></path>
                                 </svg>
                                 <span class="menu-name">결제</span>      
                                 <div class="icon-wrapper flex-grow-1 text-right">
-                                    <i class="mdi mdi-chevron-right"></i>
+                                    <i class="mdi mdi-chevron-down"></i>
                                 </div>                         
                             </a>
-                            <ul class="menu-sub-list collapse" id="">
+                            <ul class="menu-sub-list collapse show" id="">
                                 <li class="submenu menu-item">
                                     <a href="" class="kok-link">
                                         - 
@@ -122,7 +122,7 @@
                                     </a>
                                 </li>
                                 <li class="submenu menu-item">
-                                    <a href="" class="kok-link">
+                                    <a href="" class="kok-link active">
                                         - 
                                         체험비
                                     </a>
@@ -177,19 +177,48 @@
             </div>
             <div class="page ana-user-index wide-page">
                 <div class="page-header">
-                    <div class="page-title">체험공고</div>
+                    <div class="page-title">결제 - 체험비</div>
                     <div class="page-subtitle"></div>
                 </div>
                 <div class="page-body">
+                    <div class="amount-section">
+                        <div class="amount-box form-info-box">
+                            <div class="revenue-box">
+                                <div class="row">
+                                    <div class="col-auto title-col">
+                                        <span class="badge-label text-primary icon-label">
+                                            <i class="mdi mdi-check"></i>
+                                        </span>
+                                        <span class="badge-label">결제승인</span>
+                                    </div>
+                                    <div class="col text-right amount-col">
+                                        <span class="span-amount">200,000</span>
+                                        <span class="amount-unit">원</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="amount-box amount-value-box">
+                            <div class="cancel-box">
+                                <div class="row">
+                                    <div class="col-auto title-col">
+                                        <span class="badge-label text-danger icon-label">
+                                            <i class="mdi mdi-close"></i>
+                                        </span>
+                                        <span class="badge-label">결제취소</span>
+                                    </div>
+                                    <div class="col text-right amount-col">
+                                        <span class="span-amount">100,000</span>
+                                        <span class="amount-unit">원</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="page-content">
                         <div class="table-layout white-panel">
                             <div class="filter-section">
                                 <div class="row">
-                                    <div class="col-auto">
-                                        <span class="member-count">총
-                                            <span class="count-amount">n</span>건
-                                        </span>
-                                    </div>
                                     <!-- PG 선택, 결제방식선택, 결제상태선택 버튼 -->
                                     <!-- <div class="col-auto"></div> -->
                                     <div class="col-auto"></div>
@@ -199,7 +228,7 @@
                                     <div class="col-auto">
                                         <div class="filter-wrapper filter-search ml-1">
                                             <div class="input-group">
-                                                <input class="form-control flex-grow-1" type="text" placeholder="기업명/모집상태/직군" value="">
+                                                <input class="form-control flex-grow-1" type="text" placeholder="회원명/회원ID/기업명/결제상태" value="">
                                                 <div class="input-group-append">
                                                     <button class="btn btn-search">
                                                         <span class="comp-icon icon-magnify" id="icons/ico-search.svg">
@@ -218,39 +247,73 @@
                                 <table class="table grey-header-table w-100 member-table">
                                     <thead>
                                         <tr>
-                                            <th class="td-name">기업명</th>
-                                            <th class="td-main-title">체험공고 제목</th>
-                                            <th class="td-sub-title">체험공고 부제목</th>
-                                            <th class="td-status">모집상태</th>
-                                            <th class="td-date">모집 종료일</th>                                           
-                                            <th class="td-job">직군</th>
-                                            <th class="td-action">상세</th>
+                                            <th class="td-name">회원명</th>
+                                            <th class="td-id">회원ID (이메일)</th>
+                                            <th class="td-start">기업명</th>
+                                            <th class="td-end">체험공고 제목</th>       
+                                            <th class="td-status">지원상태</th>                                     
+                                            <th class="td-pay">결제금액</th>
                                         </tr>
                                     </thead>
                                     <tbody class="">
                                         <tr>
                                             <td class="td-name">
+                                                <p>정희준</p>
+                                            </td>
+                                            <td class="td-id">
+                                                <p>test01@gmail.com</p>
+                                            </td>
+                                            <td class="td-start">
                                                 <p>코리아IT</p>
                                             </td>
-                                            <td class="td-main-title">
+                                            <td class="td-end">
                                                 <p>SW 개발 백엔드 체험</p>
-                                            </td>
-                                            <td class="td-sub-title">
-                                                <p>AWS 클라우드를 활용한 풀스택 & 자동화 실무 개발</p>
-                                            </td>
-                                            <td class="td-status">
-                                                <p>모집중</p>
-                                            </td>
-                                            <td class="td-date">
-                                                <p>2025/09/19</p>
                                             </td>  
-                                            <td class="td-job">
-                                                <p>SW 개발</p>
+                                            <td class="td-status">
+                                                <p>서류 접수</p>
+                                            </td>  
+                                            <td class="td-pay">
+                                                <p>100,000</p>
                                             </td>
-                                            <td class="td-action text-center">
-                                                <div class="action-btn">
-                                                    <i class="mdi mdi-chevron-right"></i>
-                                                </div>
+                                        </tr>
+                                        <tr>
+                                            <td class="td-name">
+                                                <p>정희준</p>
+                                            </td>
+                                            <td class="td-id">
+                                                <p>test01@gmail.com</p>
+                                            </td>
+                                            <td class="td-start">
+                                                <p>코리아IT</p>
+                                            </td>
+                                            <td class="td-end">
+                                                <p>SW 개발 백엔드 체험</p>
+                                            </td>  
+                                            <td class="td-status">
+                                                <p>합격</p>
+                                            </td>  
+                                            <td class="td-pay">
+                                                <p>100,000</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="td-name">
+                                                <p>정희준</p>
+                                            </td>
+                                            <td class="td-id">
+                                                <p>test01@gmail.com</p>
+                                            </td>
+                                            <td class="td-start">
+                                                <p>코리아IT</p>
+                                            </td>
+                                            <td class="td-end">
+                                                <p>SW 개발 백엔드 체험</p>
+                                            </td>  
+                                            <td class="td-status">
+                                                <p>불합격</p>
+                                            </td>  
+                                            <td class="td-pay">
+                                                <p>100,000</p>
                                             </td>
                                         </tr>
                                     </tbody>
@@ -290,155 +353,9 @@
                         </div>
                     </div>
                 </div>
-                <!-- 체험공고 상세 모달 창 -->
-                <div class="modal fade member-modal" style="display: none;">
-                    <div class="modal-dialog modal-lg">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <div class="modal-title">
-                                    SW 개발 백엔드 체험
-                                    <span class="badge-label text-danger font-weight-bold ml-2">코리아IT</span>
-                                </div>
-                                <button class="close">
-                                    <i class="mdi mdi-close"></i>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <div class="divider">
-                                    <div class="tab-view">
-                                        <div class="tab-view-header"></div>
-                                        <div class="tab-view-body">
-                                            <div style="display: block;">
-                                                <div class="tab-inner tab-detail">
-                                                    <div class="info-layout detail-info">
-                                                        <div class="info-title justify-content-between">
-                                                            <div class="flex-left d-flex">
-                                                                <div class="title">체험공고 상세정보</div>
-                                                            </div>
-                                                            <div class="flex-right"></div>
-                                                        </div>
-                                                        <table class="info-table w-100">
-                                                            <tbody>
-                                                                <tr>
-                                                                    <th>모집 시작일</th>
-                                                                    <td>2025/09/16</td>
-                                                                    <th>모집 종료일</th>
-                                                                    <td>2025/09/19</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <th>체험 시작일</th>
-                                                                    <td>2025/09/29</td>
-                                                                    <th>체험 종료일</th>
-                                                                    <td>2025/10/03</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <th>체험공고 제목</th>
-                                                                    <td colspan="3">SW 개발 백엔드 체험</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <th>체험공고 부제목</th>
-                                                                    <td colspan="3">AWS 클라우드를 활용한 풀스택 & 자동화 실무 개발</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <th>직무소개</th>
-                                                                    <td colspan="3">-</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <th>주요업무</th>
-                                                                    <td colspan="3">-</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <th>참고사항</th>
-                                                                    <td colspan="3">-</td>
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
-                                                    <!-- 신청자 내역 -->
-                                                    <div class="info-layout detail-info">
-                                                        <div class="info-title justify-content-between">
-                                                            <div class="flex-left d-flex">
-                                                                <div class="title">신청자 내역</div>
-                                                            </div>
-                                                            <div class="flex-right"></div>
-                                                        </div>
-                                                        <div class="d-table w-100">
-                                                            <table class="info-table">
-                                                                <thead>
-                                                                    <tr>
-                                                                        <th class="middle">이름</th>
-                                                                        <th class="middle">이메일</th>
-                                                                        <th class="middle">전화번호</th>
-                                                                        <th class="middle" style="text-align: center;">지원상태</th>
-                                                                    </tr>
-                                                                </thead>
-                                                                <tbody>
-                                                                    <tr>
-                                                                        <td>정희준</td>
-                                                                        <td>test01@gmail.com</td>
-                                                                        <td>010-1234-5678</td>
-                                                                        <td style="text-align: center;">합격</td>
-                                                                    </tr>                                                                   
-                                                                    <tr>
-                                                                        <td>정희준</td>
-                                                                        <td>test01@gmail.com</td>
-                                                                        <td>010-1234-5678</td>
-                                                                        <td style="text-align: center;">서류 접수</td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>정희준</td>
-                                                                        <td>test01@gmail.com</td>
-                                                                        <td>010-1234-5678</td>
-                                                                        <td style="text-align: center;">불합격</td>
-                                                                    </tr>  
-                                                                </tbody>
-                                                            </table>
-                                                        </div>                             
-                                                    </div>
-                                                    <!-- 체험 회원 평가 -->
-                                                    <div class="info-layout detail-info">
-                                                        <div class="info-title justify-content-between">
-                                                            <div class="flex-left d-flex">
-                                                                <div class="title">체험 회원 평가</div>
-                                                            </div>
-                                                            <div class="flex-right"></div>
-                                                        </div>
-                                                        <table class="info-table w-100">
-                                                            <tbody>
-                                                                <tr>
-                                                                    <th>이름</th>
-                                                                    <td>정희준</td>
-                                                                    <th>회원ID (이메일)</th>
-                                                                    <td>test01@gmail.com</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <th>전화번호</th>
-                                                                    <td>010-1234-5678</td>
-                                                                    <th>평가점수</th>
-                                                                    <td>4.2</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <th>총 평</th>
-                                                                    <td colspan="4">-</td>
-                                                                </tr>                                                               
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button class="btn-close btn btn-outline-filter">닫기</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
 </body>
-<script src="../../static/js/admin/experience/event.js"></script>
+<script src="../../static/js/admin/payment/event.js"></script>
 </html>

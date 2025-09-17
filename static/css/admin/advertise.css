@@ -88,8 +88,9 @@ dl, ol, ul {
 }
 
 table {
+    border-collapse: collapse; 
+    border-spacing: 0; 
     table-layout: fixed;
-    border-collapse: collapse;
 }
 
 th {
@@ -278,6 +279,10 @@ button:not(:disabled) {
     color: #fe657e !important;
 }
 
+.text-success {
+    color: #40c8bc !important;
+}
+
 .ml-1, .mr-1, .mx-1 {
     margin-right: .25rem !important;
 }
@@ -399,6 +404,14 @@ button:not(:disabled) {
 
 .mdi-menu-left:before {
     content: "\F035E";
+}
+
+.mdi-check:before {
+    content: "\F012C";
+}
+
+.mdi-timer-sand:before {
+    content: "\F051F";
 }
 
 body #kok {
@@ -857,7 +870,105 @@ body #kok {
     width: 100%;
 }
 
-/* 일반회원 목록 시작 */
+.amount-section {
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 20px;
+    position: relative;
+    width: 100%;
+    border-radius: 8px;
+    display: flex;
+}
+
+.amount-section .amount-box {
+    display: inline-block;
+    height: 100%;
+    vertical-align: top;
+    width: 33%;
+    border-right: 1px solid rgb(237, 237, 237);
+    padding: 26px 35px;
+}
+
+.amount-section .amount-box .title-col {
+    min-width: 150px;
+}
+
+.amount-section .amount-box .col, .amount-section .amount-box .col-auto {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.col-auto {
+    max-width: 100%;
+    width: auto;
+    flex: 0 0 auto;
+    position: relative;
+}
+ 
+.amount-section .amount-box span.badge-label {
+    color: rgb(86, 98, 106);
+    display: inline-block;
+    font-size: 16px;
+    letter-spacing: -0.5px;
+    vertical-align: middle;
+    padding: 0px;
+    border-radius: 4px;
+}
+
+.badge-label.text-primary {
+    background-color: rgba(80, 124, 243, 0.07);
+    background-image: radial-gradient(rgba(241, 245, 254, 0.35), rgba(80, 124, 243, 0.07));
+    color: rgb(80, 124, 243) !important;
+}
+
+.badge-label.text-wait {
+    background-color: rgba(64, 200, 188, .07);
+    background-image: radial-gradient(rgba(240, 251, 250, .349), rgba(64, 200, 188, .07));
+    color: #40c8bc! important;
+}
+
+.amount-section .amount-box span.icon-label {
+    height: 38px;
+    line-height: 18px;
+    margin-right: 14px;
+    text-align: center;
+    vertical-align: middle;
+    width: 38px;
+    padding: 0px;
+}
+
+.amount-section .amount-box span.icon-label i.mdi {
+    font-size: 20px;
+    line-height: 38px;
+}
+
+.amount-section .amount-box span.badge-label {
+    color: rgb(86, 98, 106);
+    display: inline-block;
+    font-size: 16px;
+    letter-spacing: -0.5px;
+    vertical-align: middle;
+    padding: 0px;
+}
+
+.amount-section .amount-box:nth-child(3n) {
+    border-right: 0px;
+}
+
+.amount-section .amount-box span.span-amount {
+    color: rgb(41, 41, 41);
+    font-size: 24px;
+    font-weight: 700;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.amount-section .amount-box span.amount-unit {
+    font-size: 19px;
+    font-weight: 700;
+    margin-left: 3px;
+    vertical-align: middle;
+}
+
 .page-content {
     min-width: 1000px;
 }
@@ -1158,11 +1269,6 @@ button.btn .comp-icon {
     background-color: #f7fafc;
 }
 
-.page-content .table-layout table.member-table td.td-name {
-    max-width: 400px;
-    min-width: 200px;
-}
-
 .badge {
     border-radius: .25rem;
     display: inline-block;
@@ -1195,30 +1301,13 @@ button.btn .comp-icon {
     background-image: radial-gradient(hsla(210, 9%, 93%, .371), rgba(78, 93, 108, .102));
 }
 
-.page-content .table-layout table.member-table td.td-name .member-id {
-    color: #8b9298;
-    font-size: 12px;
-    margin-top: 4px;
-}
-
-.page-content .table-layout table.member-table td.td-name .member-id:before {
-    background-color: #292929;
-    border-radius: 2px;
-    color: #fff;
-    content: "ID";
-    font-size: 10px;
-    font-weight: 700;
-    margin-right: 5px;
-    padding: 2px 2px 1px;
-}
-
 .page-content .table-layout table.member-table td.td-amount {
     color: #507cf3;
     max-width: 180px;
     white-space: nowrap;
 }
 
-.page-content .table-layout table.member-table td.td-email, td.td-phone, td.td-profile, td.td-job {
+.page-content .table-layout table.member-table td.td-name, td.td-main-title, td.td-sub-title, td.td-start, td.td-end, td.td-status {
     color: #292929;
     font-size: 13px;
     text-align: center;
@@ -1310,7 +1399,7 @@ button.btn .comp-icon {
     font-weight: 700;
 }
 
-/* 일반회원 상세 모달창 */
+/* 상세 모달창 */
 .fade {
     transition: opacity .15s linear;
 }
@@ -1599,8 +1688,27 @@ button.btn.btn-outline-filter {
     margin: 0;
 }
 
-.modal.member-modal .modal-footer button.btn-close {
-    color: #56626a;
+.modal.member-modal .modal-footer button.btn-apply {
+    color: #507cf3;
+    border-color: #507cf3;
+    padding: 9px 20px;
+}
+
+.modal.member-modal .modal-footer button.btn-apply:hover {
+    color: #fff;
+    background-color: #507cf3;
+    padding: 9px 20px;
+}
+
+.modal.member-modal .modal-footer button.btn-reject {
+    color: #fe657e;
+    border-color: #fe657e;
+    padding: 9px 20px;
+}
+
+.modal.member-modal .modal-footer button.btn-reject:hover {
+    color: #fff;
+    background-color: #fe657e;
     padding: 9px 20px;
 }
 
