@@ -28,57 +28,6 @@ sideMenuButtons.forEach((menu) => {
     });
 });
 
-// 회원 상세 모달
-actionButtons.forEach((actionButton) => {
-    actionButton.addEventListener("click", () => {
-        modal.style.display = "block";
-        setTimeout(() => {
-            modal.classList.add("show");
-            modal.style.background = "rgba(0,0,0,0.5)";
-            document.body.classList.add("modal-open");
-        }, 100);
-    });
-});
-
-closeButtons.forEach((closeButton) => {
-    closeButton.addEventListener("click", () => {
-        modal.classList.remove("show");
-        document.body.classList.remove("modal-open");
-        setTimeout(() => {
-            modal.style.display = "none";
-        }, 100);
-    });
-});
-
-modal.addEventListener("click", (e) => {
-    if (e.target === modal) {
-        modal.classList.remove("show");
-        document.body.classList.remove("modal-open");
-        setTimeout(() => {
-            modal.style.display = "none";
-        }, 100);
-    }
-});
-
-closeFooterButton.addEventListener("click", () => {
-    modal.classList.remove("show");
-    document.body.classList.remove("modal-open");
-    setTimeout(() => {
-        modal.style.display = "none";
-    }, 100);
-});
-
-// 버튼 그룹 (1주, 2주, 1개월)
-if (btnGroup) {
-    const buttons = btnGroup.querySelectorAll("button");
-    buttons.forEach((button) => {
-        button.addEventListener("click", () => {
-            buttons.forEach((btn) => btn.classList.remove("active"));
-            button.classList.add("active");
-        });
-    });
-}
-
 // 관리자 이메일 토글
 userMenuWrapper.addEventListener("click", () => {
     userMenuContent.classList.toggle("show");
