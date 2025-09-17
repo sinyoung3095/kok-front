@@ -10,7 +10,7 @@
 
 /* 프로필 */
 /* profile-card */
-.side-content .profile-card {
+.side-wrapper .profile-card {
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -23,7 +23,7 @@ a.member-name {
     line-height: 28px;
 }
 
-.side-content .stats-list {
+.side-wrappernt .stats-list {
     padding: 0;
 }
 
@@ -53,10 +53,6 @@ a.member-name {
     font-size: 16px;
     font-weight: 500;
     line-height: 24px;
-}
-
-.main-content {
-    width: 662px;
 }
 
 /* 리스트 */
@@ -221,8 +217,16 @@ a.member-name {
     padding: 0;
 }
 
-.main-content .profile-card + .content-section .content-box:first-child {
+.main-wrapper {
+    width: 662px;
+}
+
+.main-wrapper .profile-card + .content-section .content-box:first-child {
     border-radius: 0 0 12px 12px;
+}
+
+.side-wrapper {
+    width: 320px;
 }
 
 .content-box + .content-box {
@@ -235,10 +239,6 @@ a.member-name {
     font-size: 18px;
     line-height: 26px;
     font-weight: 600;
-}
-
-.side-content {
-    width: 320px;
 }
 
 .search-container + .content-box {
