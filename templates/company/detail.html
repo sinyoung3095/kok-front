@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>kok</title>
-    <link rel="stylesheet" href="../../static/css/mypage/page.css">
+    <link rel="shorcut icon" href="../../static/images/member/kok_favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="../../static/css/reset.css">
     <link rel="stylesheet" href="../../static/font/font.css">
+    <link rel="stylesheet" href="../../static/css/mypage/page.css">
     <link rel="stylesheet" href="../../static/css/company/detail.css">
+    <title>kok</title>
 </head>
 <body>
     <div style="background-color: #f5f6fa;">
@@ -20,8 +21,8 @@
                 </div>
             </div>
             <div class="content">
-                <div class="content-1 main-content">
-                    <div class="content-2">
+                <div class="main-content">
+                    <div class="profile-card">
                         <div class="content-3">
                             <div class="content-4">
                                 <div class="content-5">
@@ -29,7 +30,7 @@
                                 </div>
                                 <div class="content-6">
                                     <div class="content-7">
-                                        <p class="content-8">로켓펀치</p>
+                                        <p class="member-name">로켓펀치</p>
                                     </div>
                                     <p class="content-9">포털/인터넷/콘텐츠</p>
                                 </div>
@@ -54,8 +55,8 @@
                             </div>
                         </div>
                         <div class="content-17">
-                            <div class="content-18">
-                                <button class="content-19 first active">
+                            <div class="tab-container">
+                                <button class="btn-tab active">
                                     <p class="content-20">기업 홈</p>
                                 </button>
                             </div>
@@ -77,8 +78,20 @@
                             </ul>
                         </div>
                         <div class="content-box">
-                            <p class="content-title">채용 공고 &#40;<span>20</span>&#41;</p>
+                            <p class="content-title">체험/인턴 공고 &#40;<span>20</span>&#41;</p>
 
+                            <div class="sort-options">
+                                <div class="sort-options-item">
+                                    <button class="sort-btn active">전체</button>
+                                </div>
+                                <div class="sort-options-item">
+                                    <button class="sort-btn">체험</button>
+                                </div>
+                                <div class="sort-options-item">
+                                    <button class="sort-btn">인턴</button>
+                                </div>
+                            </div>
+                            
                             <div class="search-container">
                                 <div class="search-box">
                                     <div class="search-input">
@@ -293,11 +306,13 @@
                                         <path clip-rule="evenodd" d="M6.434 9.435a.8.8 0 0 1 1.132 0L12 13.869l4.434-4.434a.8.8 0 1 1 1.132 1.13l-5 5a.8.8 0 0 1-1.132 0l-5-5a.8.8 0 0 1 0-1.13" fill-rule="evenodd"></path>
                                     </svg>
                                 </button>
-                                <button class="page-item">1</button>
-                                <button class="page-item">2</button>
-                                <button class="page-item">3</button>
-                                <button class="page-item">4</button>
-                                <button class="page-item">5</button>
+                                <div class="page-list">
+                                    <button class="page-item active">1</button>
+                                    <button class="page-item">2</button>
+                                    <button class="page-item">3</button>
+                                    <button class="page-item">4</button>
+                                    <button class="page-item">5</button>
+                                </div>
                                 <button class="page-item next">
                                     <svg viewBox="0 0 24 24" aria-label="icon" fill="#12131466" height="20" role="img" width="20">
                                         <path clip-rule="evenodd" d="M6.434 9.435a.8.8 0 0 1 1.132 0L12 13.869l4.434-4.434a.8.8 0 1 1 1.132 1.13l-5 5a.8.8 0 0 1-1.132 0l-5-5a.8.8 0 0 1 0-1.13" fill-rule="evenodd"></path>
@@ -415,10 +430,10 @@
                 </div>
                 <p class="toast-text">000님을 팔로우했습니다.</p>
             </div>
-            <p class="toast-subText">소식 알림 및 게시물 추천 빈도가 줄어듭니다.</p>
+            <p class="toast-subText">관련 소식을 받아볼 수 있습니다.</p>
         </div>
     </div>
 
-    <script src="../../static/js/company/event.js"></script>
+    <script src="../../static/js/company/detail/event.js"></script>
 </body>
 </html>
