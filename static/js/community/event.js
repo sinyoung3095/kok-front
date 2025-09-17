@@ -35,11 +35,17 @@ cancle.addEventListener("click", (e) => {
 
 // 글쓰기
 const write = document.getElementById("write");
+const m_write = document.getElementsByClassName("hide-1")[0];
 const setting = document.getElementsByClassName("setting")[0];
 const close = document.getElementById("close");
 const text = document.getElementById("text");
 const count = document.getElementById("count");
+
 write.addEventListener("click", (e) => {
+    setting.style.display = "flex";
+});
+
+m_write.addEventListener("click", (e) => {
     setting.style.display = "flex";
 });
 
