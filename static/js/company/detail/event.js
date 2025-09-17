@@ -165,26 +165,31 @@ function followToastFn() {
     if (followBtns) {
         followBtns.forEach((btn) => {
             btn.addEventListener("click", () => {
-                console.log("asdasdasd");
-
                 if (showingToast) return; // 토스트 떠 있으면 무시
 
-                const textBox = followToast.querySelector("p");
+                const textBox = followToast.querySelector(".toast-text");
+                const subTextBox = followToast.querySelector(".toast-subText");
 
                 if (!saved) {
                     saved = true;
-                    if (textBox)
+                    if (textBox) {
                         textBox.textContent = "000님을 팔로우했습니다.";
-                    btn.textContent = "팔로우중";
-                    btn.classList.add("btn-default");
-                    btn.classList.remove("btn-primary");
+                        subTextBox.textContent =
+                            "관련 소식을 받아볼 수 있습니다.";
+                        btn.textContent = "팔로우중";
+                        btn.classList.add("btn-default");
+                        btn.classList.remove("btn-primary");
+                    }
                 } else {
                     saved = false;
-                    if (textBox)
+                    if (textBox) {
                         textBox.textContent = "000님을 팔로우 취소했습니다.";
-                    btn.textContent = "팔로우";
-                    btn.classList.remove("btn-default");
-                    btn.classList.add("btn-primary");
+                        subTextBox.textContent =
+                            "소식 알림 및 게시물 추천 빈도가 줄어듭니다.";
+                        btn.textContent = "팔로우";
+                        btn.classList.remove("btn-default");
+                        btn.classList.add("btn-primary");
+                    }
                 }
 
                 // 토스트 띄우기
@@ -200,3 +205,31 @@ function followToastFn() {
     }
 }
 followToastFn();
+
+// 전체, 체험, 인턴 - 필터 버튼 클릭 시 active 클래스 토글
+function sortBtnFn() {
+    const sortBtns = document.querySelectorAll(".sort-options .sort-btn");
+
+    if (!sortBtns) return;
+
+    sortBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+            sortBtns.forEach((b) => b.classList.remove("active"));
+            btn.classList.add("active");
+        });
+    });
+}
+sortBtnFn();
+
+function pagenation() {
+    const pageItems = document.querySelectorAll(".page-list .page-item");
+
+    pageItems.forEach((btn) => {
+        btn.addEventListener("click", () => {
+            pageItems.forEach((item) => item.classList.remove("active"));
+
+            btn.classList.add("active");
+        });
+    });
+}
+pagenation();
