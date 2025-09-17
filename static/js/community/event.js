@@ -50,3 +50,17 @@ close.addEventListener("click", (e) => {
 text.addEventListener("keyup", (e) => {
     count.innerText = text.value.length;
 });
+
+// 댓글
+const down = document.getElementById("down");
+const detail = document.getElementsByClassName("reply")[0];
+const replys = document.getElementsByClassName("replys");
+
+replys.forEach((reply) => {
+    reply.addEventListener("click", (e) => {
+        detail.style.display = "flex";
+    });
+});
+down.addEventListener("click", (e) => {
+    detail.style.display = "none";
+});
