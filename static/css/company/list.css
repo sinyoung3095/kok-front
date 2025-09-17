@@ -1,3 +1,13 @@
+/* 버튼 */
+.btn-primary {
+    color: #fff;
+    background-color: #0aa5ff;
+}
+
+.btn-default {
+    background-color: rgba(86, 105, 143, 0.0600);
+}
+
 /* 프로필 */
 /* profile-card */
 .side-content .profile-card {
@@ -155,15 +165,7 @@ a.member-name {
     display: flex;
 }
 
-.content {
-    flex-direction: row;
-    width: 100%;
-    display: flex;
-    max-width: 1000px;
-    gap: 16px;
-    display: flex;
-}
-
+/* no-data */
 .no-data {
     padding: 30px 20px;
     display: flex;
@@ -195,6 +197,16 @@ a.member-name {
     margin-top: 16px;
 }
 
+/* content */
+.content {
+    flex-direction: row;
+    width: 100%;
+    display: flex;
+    max-width: 1000px;
+    gap: 16px;
+    display: flex;
+}
+
 .content-box {
     display: flex;
     flex-direction: column;
@@ -205,7 +217,7 @@ a.member-name {
     overflow: hidden;
 }
 
-.content-box.ad-box {
+.content-box.pd-0 {
     padding: 0;
 }
 
@@ -227,10 +239,6 @@ a.member-name {
 
 .side-content {
     width: 320px;
-}
-
-.content-box .list-container {
-    margin: 0 -25px;
 }
 
 .search-container + .content-box {
