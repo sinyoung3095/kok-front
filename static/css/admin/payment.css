@@ -88,6 +88,7 @@ dl, ol, ul {
 }
 
 table {
+    table-layout: fixed;
     border-collapse: collapse;
 }
 
@@ -1358,4 +1359,12 @@ button.btn .comp-icon {
 .kok-pagination-wrapper .des .highlight {
     color: #181c32;
     font-weight: 700;
+}
+
+table td > p {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
 }
