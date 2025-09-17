@@ -349,7 +349,7 @@ input.pro-input{
     display: none;
 }
 
-input.name{
+body input.name.not-allowed{
     opacity: .5;
     cursor: not-allowed;
     pointer-events: none;
@@ -373,6 +373,11 @@ input.name{
     display: flex;
     margin-block-start: 0px;
     margin-block-end: 8px;
+}
+
+input.name{
+    opacity: 1.0;
+    cursor: auto;
 }
 
 p.explain{
@@ -486,4 +491,43 @@ button.save-button{
     flex-shrink: 0;
     height: 32px;
     display: inline-flex;
+}
+
+button.img-up{
+    padding-inline: 10px;
+    outline-style: none;
+    transition-property: color, box-shadow;
+    transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+    transition-duration: .15s;
+    box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000, 0 0 #0000, 0 1px 2px 0 #0000000d;
+    white-space: nowrap;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.42857;
+    background-color: #ffffff;
+    border-color: #e5e5e5;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 8px;
+    gap: 6px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    height: 32px;
+    display: inline-flex;
+    margin-block-start: 0px;
+    margin-block-end: 12px;
+}
+
+button.img-up:hover{
+    background-color: #f5f5f5;
+}
+
+svg.img-up-svg{
+    width: 16px;
+    height: 16px;
+}
+
+div.img-up-btn-wrap{
+    display: none;
 }

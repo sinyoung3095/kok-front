@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../../static/css/enterprise-console/console-profile.css">
+    <link rel="stylesheet" href="../../static/css/enterprise-console/console-experience-application.css">
     <link rel="stylesheet" href="../../static/css/enterprise-console/console-sidebar.css">
     <link rel="stylesheet" href="../../static/css/enterprise-console/console-header.css">
     <link rel="stylesheet" href="../../static/css/reset.css">
@@ -214,104 +214,156 @@
                 <div class="home-wrap-2">
                     <div class="home-wrap-inner">
                         <div class="home-wrap-inner-2">
+                            <div class="back-back">
+                                <button class="back-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="back-svg"><path d="m12 19-7-7 7-7"></path><path d="M19 12H5"></path></svg>
+                                    뒤로가기
+                                </button>
+                            </div>
                             <div class="home-top">
                                 <div>
-                                    <h1 class="top-h1">기업 프로필 관리</h1>
-                                    <p class="top-p">플랫폼에 노출될 기업 정보를 관리하세요</p>
+                                    <h1 class="top-h1">test님의 지원서</h1>
+                                    <p class="top-p">지원한 공고 제목 들어갈 자리</p>
                                 </div>
-                            </div>  
-                            <div class="profile-main">
-                                <div class="profile-main-inner">
-                                    <div class="profile-main-inner-2">
-                                        <div class="profile-head">
-                                            <div class="profile-head-inner">
-                                                <div>
-                                                    <div class="head-text-main">기본 정보</div>
-                                                    <div class="head-text-sub">기업의 기본 정보를 입력하세요</div>
-                                                </div>
-                                                <div class="button-wrap">
-                                                    <button class="cancle" style="display: none;" id="cancle-btn">취소</button>
-                                                    <button class="edit-profile" id="edit-btn">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="edit-icon"><path d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.375 2.625a1 1 0 0 1 3 3l-9.013 9.014a2 2 0 0 1-.853.505l-2.873.84a.5.5 0 0 1-.62-.62l.84-2.873a2 2 0 0 1 .506-.852z"></path></svg>
-                                                        편집
-                                                    </button>
+                            </div>
+                            <div class="application-main">
+                                <div class="left-area">
+                                    <div class="cards">
+                                        <div class="card-top">
+                                            <div class="card-top-texts">
+                                                <div class="card-top-texts2">
+                                                    <div class="card-top-text-main">지원자 정보</div>
+                                                    <div class="card-top-text-sub"></div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="profile-content">
-                                            <div class="contents">
-                                                <label for="" class="profile-label">배경 이미지</label>
-                                                <div class="img-wrap">
-                                                    <div class="back-wrap">
-                                                        <div class="back-img-div">
-                                                            <img src="" alt="" class="back-img">
+                                        <div class="card-content">
+                                            <div class="info-wrap">
+                                                <div class="info-line">
+                                                    <div>
+                                                        <label for="" class="info-key">이름</label>
+                                                        <div class="info-value">test</div>
+                                                    </div>
+                                                    <div>
+                                                        <label for="" class="info-key">전화번호</label>
+                                                        <div class="info-value">01012345678</div>
+                                                    </div>
+                                                </div>
+                                                <div class="info-line">
+                                                    <div>
+                                                        <label for="" class="info-key">이메일</label>
+                                                        <div class="info-value">test@gmail.com</div>
+                                                    </div>
+                                                    <div>
+                                                        <label for="" class="info-key">직군</label>
+                                                        <div class="info-value">SW 개발</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="wrapper-1">
+                                        <div class="wrapper-2">
+                                            <div class="cards">
+                                                <div class="card-top">
+                                                    <div class="card-top-texts">
+                                                        <div class="card-top-texts2">
+                                                            <div class="card-top-text-main">이력서</div>
+                                                            <div class="card-top-text-sub">선택 항목, URL 허용</div>
                                                         </div>
                                                     </div>
-                                                    <div class="img-up-btn-wrap">
-                                                        <button class="img-up" id="back-file-btn">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="img-up-svg"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" x2="12" y1="3" y2="15"></line></svg>
-                                                            이미지 변경
+                                                </div>
+                                                <div class="card-content">
+                                                    <!-- 이력서일 경우 -->
+                                                    <div class="application">
+                                                        <div class="application-title">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="appli-svg"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                                                            <div class="appli-title-text">
+                                                                <p class="appli-title-p">이력서</p>
+                                                            </div>
+                                                        </div>
+                                                        <button class="yeolgi">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link h-3 w-3"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>
+                                                            다운로드
                                                         </button>
                                                     </div>
-                                                    <input type="file" class="back-input">
-                                                </div>
-                                            </div>
-                                            <div class="contents">
-                                                <label for="" class="profile-label">프로필 이미지</label>
-                                                <div class="img-wrap">
-                                                    <div class="pro-wrap">
-                                                        <img src="" alt="" class="profile-img">
-                                                    </div>
-                                                    <div class="img-up-btn-wrap">
-                                                        <button class="img-up" id="prof-file-btn">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="img-up-svg"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" x2="12" y1="3" y2="15"></line></svg>
-                                                            이미지 변경
+                                                    <!-- 이력서일 경우 -->
+
+                                                    <!-- URL일 경우 -->
+                                                    <div class="application">
+                                                        <div class="application-title">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="appli-svg"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                                                            <div class="appli-title-text">
+                                                                <p class="appli-title-p">URL</p>
+                                                            </div>
+                                                        </div>
+                                                        <button class="yeolgi">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link h-3 w-3"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>
+                                                            이동
                                                         </button>
                                                     </div>
-                                                    <input type="file" class="pro-input">
+                                                    <!-- URL일 경우 -->
                                                 </div>
                                             </div>
-                                            <div class="contents">
-                                                <label for="" class="profile-label">기업명</label>
-                                                <input type="text" class="name" value="기업 이름" disabled>
-                                                <p class="explain">기업을 찾기 쉽도록 회사명이나 운영 중인 서비스 이름을 사용하세요 / 예: 비바리퍼블리카(토스)</p>
-                                            </div>
-                                            <div class="contents">
-                                                <label for="" class="profile-label">프로필 URL</label>
-                                                <input type="text" class="name" value="1234kokgogo" disabled>
-                                                <p class="explain">http://kok/(여기에 url이 오도록)</p>
-                                                <p class="explain" style="display: none;" id="explain-hide1">영문, 숫자, 언더스코어(_), 하이픈(-)만 사용 가능</p>
-                                                <p class="explain" style="display: none;" id="explain-hide2">프로필 URL의 잦은 변경은 추천하지 않습니다</p>
-                                            </div>
-                                            <div class="contents">
-                                                <label for="" class="profile-label">홈페이지 URL</label>
-                                                <input type="text" class="name" value="https://kok.com" disabled>
-                                                <p class="explain">홈페이지나 기업 sns 등의 링크</p>
-                                            </div>
-                                            <div class="contents">
-                                                <label for="" class="profile-label">산업 분야</label>
-                                                <div class="category">
-                                                    <button class="category-button">
-                                                        <span class="selected">IT/웹/통신</span>
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="down-svg" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
-                                                    </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="right-area">
+                                    <div class="cards">
+                                        <div class="card-top">
+                                            <div class="card-top-texts">
+                                                <div class="card-top-texts2">
+                                                    <div class="card-top-text-main">진행 상태</div>
+                                                    <div class="card-top-text-sub"></div>
                                                 </div>
-                                                <p class="explain">기업이 속한 산업분야를 선택해주세요</p>
                                             </div>
-                                            <div class="contents">
-                                                <label for="" class="profile-label">기업 규모</label>
-                                                <div class="category">
-                                                    <button class="category-button">
-                                                        <span class="selected">매우 작은 규모(30명 이하)</span>
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="down-svg" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
-                                                    </button>
+                                        </div>
+                                        <div class="card-content">
+                                            <div class="yoso">
+                                                <label for="" class="info-key">지원 일시</label>
+                                                <div class="datetime-applicate">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="datetime-svg"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                                                    <p class="datetime">2025-09-15 오후 2:07:27</p>
                                                 </div>
-                                                <p class="explain">기업의 규모를 선택해주세요</p>
                                             </div>
-                                            <div class="contents">
-                                                <label for="" class="profile-label">대표자명</label>
-                                                <input type="text" class="name" value="홍길동" disabled>
-                                                <p class="explain">대표자명을 입력하세요</p>
+                                            <div class="yoso">
+                                                <label for="" class="info-key">상태 변경</label>
+                                                <button class="status-button">
+                                                    <span class="status-button-span">서류 검토 중</span>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="down-svg" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
+                                                    <div class="job">
+                                                        <div class="job-1">
+                                                            <div class="job-2">
+                                                                <div class="job-3">
+                                                                    <div class="job-5">
+                                                                        <p class="job-6">서류 검토 중</p>
+                                                                    </div>
+                                                                    <div class="setting-31">
+                                                                        <svg aria-label="icon" color="foregrounds.neutral.tertiary" fill="currentColor" height="24" role="img" width="24">
+                                                                            <path clip-rule="evenodd" d="M20.066 5.935a.8.8 0 0 1 0 1.13l-11 11a.8.8 0 0 1-1.131 0l-4-4a.8.8 0 0 1 1.13-1.13L8.5 16.369 18.935 5.935a.8.8 0 0 1 1.13 0" fill-rule="evenodd"></path>
+                                                                        </svg>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="job-3">
+                                                                    <div class="job-5">
+                                                                        <p class="job-6">합격</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="job-3">
+                                                                    <div class="job-5">
+                                                                        <p class="job-6">불합격</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </div>
+                                            <div class="yoso">
+                                                <label for="" class="info-key">현재 상태</label>
+                                                <div class="status-mark">
+                                                    <span class="status-mark-span">서류 검토 중</span>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -323,7 +375,17 @@
             </div>
         </main>
     </div>
+    <div class="darkback" id="drkb" style="display: none;"></div>
+    <div class="sure" id="squa" style="display: none;">
+        <div class="sure-title">
+            <h2 class="sure-h2">test님의 지원서를 '합격' 상태로 변경하시겠습니까?</h2>
+            <p class="sure-p">진행 상태 변경이 바로 적용됩니다.</p>
+        </div>
+        <div class="sure-buttons">
+            <button class="sure-no">취소</button>
+            <button class="sure-yes">진행 상태 변경</button>
+        </div>
+    </div>
 </body>
-<script src="../../static/js/console/sidebar/event.js"></script>
-<script src="../../static/js/console/profile/event.js"></script>
+<script src="../../static/js/console/application/event.js"></script>
 </html>
