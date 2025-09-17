@@ -90,6 +90,7 @@ dl, ol, ul {
 table {
     border-collapse: collapse; 
     border-spacing: 0; 
+    table-layout: fixed;
 }
 
 th {
@@ -1164,4 +1165,12 @@ body #kok {
 .kok-pagination-wrapper .des .highlight {
     color: #181c32;
     font-weight: 700;
+}
+
+table td > p {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
 }
