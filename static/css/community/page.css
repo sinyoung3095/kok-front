@@ -29,7 +29,7 @@ div {
     display: block;
     unicode-bidi: isolate;
 }
-.main{
+.main-0{
     padding: 12px;
     justify-content: center;
     align-self: stretch;
@@ -1359,7 +1359,7 @@ border-radius: 8px;
     cursor: pointer;
 }
 @media (max-width: 1023px) {
-    .main{
+    .main-0{
        padding: 0;}
     .post{
         border-radius: 0;
