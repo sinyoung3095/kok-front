@@ -864,6 +864,32 @@
     font-weight: 500;
 }  
 
+.sidebar-service-wrap {
+    align-items: center;
+    border-radius: 8px;
+    cursor: pointer;
+    gap: 12px;
+    width: 100%;
+    padding: 12px;
+    display: flex;
+}
+
+.sidebar-service {
+    flex-direction: column;
+    flex: 1 0 0;
+    display: flex;
+}
+
+.sidebar-service-text {
+    user-select: none;
+    color: rgba(18,19,20,1);
+    letter-spacing: -.28px;
+    font-family: "PretendardVariable","PretendardVariable Fallback";
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+}  
+
 /* 설정 모달창 */
 .sidebar-setting-modal {
     z-index: 1001;
