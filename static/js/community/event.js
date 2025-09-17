@@ -40,6 +40,7 @@ const setting = document.getElementsByClassName("setting")[0];
 const close = document.getElementById("close");
 const text = document.getElementById("text");
 const count = document.getElementById("count");
+const etc = document.getElementsByClassName("etc")[0];
 
 write.addEventListener("click", (e) => {
     setting.style.display = "flex";
@@ -47,10 +48,14 @@ write.addEventListener("click", (e) => {
 
 m_write.addEventListener("click", (e) => {
     setting.style.display = "flex";
+    m_write.style.display = "none";
 });
 
 close.addEventListener("click", (e) => {
     setting.style.display = "none";
+    if (etc.style.display === "none !important") {
+        m_write.style.display = "flex";
+    }
 });
 
 text.addEventListener("keyup", (e) => {

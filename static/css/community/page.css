@@ -199,6 +199,7 @@ div {
     flex-direction: column;
     width: 100%;
     display: flex;
+    margin-bottom: 6px;
 }
 .post-17{
     align-items: flex-start;
@@ -718,18 +719,7 @@ border-radius: 8px;
     font-weight: 500;
     color: #ffffff;
 }
-@media (max-width: 1023px) {
-    .etc{
-    display: none !important;
-    }
-    .hide-1{
-        right: 20px;
-        bottom: 20px;
-        position: fixed;
-        display: flex !important;
-        z-index: 100000
-    }
-}
+
 .report-1{
     position: absolute;
     width: 100px;
@@ -1362,6 +1352,12 @@ border-radius: 8px;
     gap: 6px;
     display: flex;
 }
+.mobile{
+    display: none;
+    padding: 8px;
+    gap: 4px;
+    cursor: pointer;
+}
 @media (max-width: 1023px) {
     .main{
        padding: 0;}
@@ -1391,5 +1387,47 @@ border-radius: 8px;
     }  
     .setting-20 {
         margin-right: auto;
+    }
+    .etc{
+    display: none !important;
+    }
+    .hide-1{
+        right: 20px;
+        bottom: 20px;
+        position: fixed;
+        display: flex ;
+        z-index: 100000
+    }
+    .reply-contain{
+        background-color: grey;
+        width: 100%;
+        display: block;        
+        overflow-y: auto;
+        height: 100%;
+        gap: 8px;
+    }
+    .reply-left{
+        width: 100%;
+        border-radius: 12px;
+        display: block;  
+        margin-bottom: 16px; 
+    }
+    .reply-right{
+        width: 100%;
+        border-radius: 12px;
+        display: block;   
+    }
+    .reply-3{
+        margin-bottom: 50px;
+    }
+    .reply-14{
+    position: absolute;
+    top: 50px;
+    }
+    .mobile{
+        display: flex;
+    }
+    #down{
+        display: none;
     }
 }
