@@ -3,7 +3,6 @@ const icons = document.querySelectorAll(".icon-wrapper i");
 const modal = document.querySelector(".member-modal");
 const actionButtons = document.querySelectorAll(".action-btn");
 const closeButtons = document.querySelectorAll(".close");
-const closeFooterButton = document.querySelector(".btn-close");
 const userMenuWrapper = document.querySelector(".user-menu-wrapper");
 const userMenuContent = document.querySelector(".user-menu-content");
 const pageNums = document.querySelectorAll(".page-num");
@@ -57,14 +56,6 @@ modal.addEventListener("click", (e) => {
             modal.style.display = "none";
         }, 100);
     }
-});
-
-closeFooterButton.addEventListener("click", () => {
-    modal.classList.remove("show");
-    document.body.classList.remove("modal-open");
-    setTimeout(() => {
-        modal.style.display = "none";
-    }, 100);
 });
 
 // 관리자 이메일 토글
