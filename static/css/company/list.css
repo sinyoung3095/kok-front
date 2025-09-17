@@ -194,14 +194,14 @@ a.member-name {
 }
 
 /* content */
-.content {
+/* .content {
     flex-direction: row;
     width: 100%;
     display: flex;
     max-width: 1000px;
     gap: 16px;
     display: flex;
-}
+} */
 
 .content-box {
     display: flex;
