@@ -66,6 +66,7 @@ text.addEventListener("keyup", (e) => {
 const down = document.getElementById("down");
 const detail = document.getElementsByClassName("reply")[0];
 const replys = document.getElementsByClassName("replys");
+const back = document.getElementById("back");
 
 replys.forEach((reply) => {
     reply.addEventListener("click", (e) => {
@@ -73,5 +74,9 @@ replys.forEach((reply) => {
     });
 });
 down.addEventListener("click", (e) => {
+    detail.style.display = "none";
+});
+
+back.addEventListener("click", (e) => {
     detail.style.display = "none";
 });

@@ -143,11 +143,12 @@ function popupFn() {
             if (parentPopup && !parentPopup.hasAttribute("data-sticky")) {
                 parentPopup.classList.remove("active");
             }
-
+            console.log(popup);
             // 해당 팝업 열기
             if (popup) {
                 popup.classList.add("active");
             }
+            console.log(popup);
         });
     });
 
