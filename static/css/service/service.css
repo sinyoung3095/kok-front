@@ -35,6 +35,7 @@ body {
     display: flex;
 }
 
+/* 배너 이미지 */
 .banner-row {
     padding-top: 12px;
     flex-direction: column;
@@ -64,6 +65,7 @@ body {
     /* height: auto; */
 }
 
+/* 내용 */
 .content-panel {
     align-items: flex-start;
     border: 1px solid rgba(255,255,255,0.0000);
@@ -72,6 +74,7 @@ body {
     max-width: 1000px;
     flex: 1 0 0;
     display: flex;
+    border-radius: 12px;
 }
 
 .panel-inner {
@@ -92,7 +95,7 @@ body {
 
 .content-stack {
     flex-direction: column;
-    padding: 125px 0 20px 70px;
+    padding: 125px 130px 20px 130px;
     gap: 20px;
     width: 100%;
     display: flex;
@@ -100,11 +103,11 @@ body {
 
 .copy-block {
     align-items: self-start;
-    margin-left: 60px;
-    margin-bottom: 40px;
+    margin-bottom: 80px;
     width: 690px;
 }
 
+/* 내용 - 타이틀 */
 .copy-title-container {
     display: flex;
     white-space: pre-wrap;
@@ -112,7 +115,7 @@ body {
 
 .copy-title {
     font-weight: 700;
-    font-size: 27px;
+    font-size: 32px;
     padding-bottom: 20px;
 }
 
@@ -120,22 +123,25 @@ body {
     text-align: left;
     font-weight: 600;
     padding-bottom: 7px;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .copy-content-container {
     margin-top: 20px;
-    gap: 10px;
+    gap: 50px;
     display: grid;
+}
+
+.copy-content-wrap {
+    display: flex;
 }
 
 .copy-content {
     align-items: self-start;
-    margin-left: 60px;
-    margin-bottom: 40px;
-    width: 690px;
+    padding: 13px 0 10px 0;
 }
 
+/* 내용 - 본문 */
 .copy-subtitle02 {
     text-align: left;
     font-weight: 600;
@@ -145,8 +151,44 @@ body {
 
 .copy-description {
     text-align: left;
-    font-weight: 400;
+    font-weight: 500;
     max-width: 800px;
+    color: #484949;
+}
+
+/* 사이드 이미지 */
+.copy-side-image {
+    margin-left: 25px;
+}
+
+.side-image {
+    width: 470px;
+    height: auto;
+    border: 1px solid rgba(24,37,61,0.0600);
+    border-radius: 12px;
+}
+
+.copy-side-image.left-side {
+    margin-left: 0px;
+    margin-right: 25px;
+}
+
+/* 마무리 문구 */
+.closing-message {
+    margin: 90px -60px 30px 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.closing-text {
+    font-size: 22px;
+    font-weight: 600;
+    padding: 22px 2px 0px 0;
+    color: #aee1ff;
+}
+
+.closing-icon {
+    height: 53px;
 }
 
 /* 기본: PC */
