@@ -1688,8 +1688,27 @@ button.btn.btn-outline-filter {
     margin: 0;
 }
 
-.modal.member-modal .modal-footer button.btn-close {
-    color: #56626a;
+.modal.member-modal .modal-footer button.btn-apply {
+    color: #507cf3;
+    border-color: #507cf3;
+    padding: 9px 20px;
+}
+
+.modal.member-modal .modal-footer button.btn-apply:hover {
+    color: #fff;
+    background-color: #507cf3;
+    padding: 9px 20px;
+}
+
+.modal.member-modal .modal-footer button.btn-reject {
+    color: #fe657e;
+    border-color: #fe657e;
+    padding: 9px 20px;
+}
+
+.modal.member-modal .modal-footer button.btn-reject:hover {
+    color: #fff;
+    background-color: #fe657e;
     padding: 9px 20px;
 }
 
@@ -1702,9 +1721,8 @@ button.btn.btn-outline-filter {
 }
 
 table td > p {
+    white-space: nowrap;  
     overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
     text-overflow: ellipsis;
 }
