@@ -4,6 +4,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const buttonWrap = document.querySelector(".button-wrap");
     const explainHide1 = document.getElementById("explain-hide1");
     const explainHide2 = document.getElementById("explain-hide2");
+    const nameInputs = document.querySelectorAll(".name");
+    const imgUpBtns = document.querySelectorAll(".img-up-btn-wrap");
+    const categoryBtns = document.querySelectorAll(".category-button");
+    const checkIcon = document.querySelector(".setting-31");
     let saveBtn = null;
 
     editBtn.addEventListener("click", function () {
@@ -14,6 +18,19 @@ document.addEventListener("DOMContentLoaded", function () {
         // p태그 보이기
         explainHide1.style.display = "block";
         explainHide2.style.display = "block";
+        // not-allowed 삭제
+        nameInputs.forEach((nameInput) => {
+            nameInput.classList.remove("not-allowed");
+            nameInput.disabled = false;
+        });
+        // 이미지 업로드 버튼 보이기
+        imgUpBtns.forEach((imgupbtn) => {
+            imgupbtn.style.display = "";
+        });
+        // 카테고리
+        categoryBtns.forEach((cateBtn) => {
+            cateBtn.classList.remove("not-allowed");
+        });
 
         // 저장 버튼 만들기
         if (!saveBtn) {
@@ -39,6 +56,75 @@ document.addEventListener("DOMContentLoaded", function () {
                 explainHide2.style.display = "none";
                 // 편집 버튼 보이기
                 editBtn.style.display = "";
+                // not-allowed 추가
+                nameInputs.forEach((nameInput) => {
+                    nameInput.classList.add("not-allowed");
+                    nameInput.disabled = true;
+                });
+                // 이미지 업로드 버튼 숨기기
+                imgUpBtns.forEach((imgupbtn) => {
+                    imgupbtn.style.display = "none";
+                });
+                // 카테고리
+                categoryBtns.forEach((cateBtn) => {
+                    cateBtn.classList.add("not-allowed");
+                });
+            });
+
+            categoryBtns.forEach((cateBtn) => {
+                const jobItems = cateBtn.querySelectorAll(".job-3");
+                cateBtn.addEventListener("click", function (e) {
+                    const jobElem = cateBtn.querySelector(".job");
+                    if (jobElem) {
+                        jobElem.style.display = "block";
+                    }
+                    e.stopPropagation();
+                });
+
+                jobItems.forEach((item) => {
+                    item.addEventListener("click", (e) => {
+                        e.stopPropagation();
+
+                        // 체크마크 이동
+                        // if (checkIcon.parentNode)
+                        //     checkIcon.parentNode.removeChild(checkIcon);
+                        // item.appendChild(checkIcon);
+
+                        // 선택 강조
+                        jobItems.forEach((j) => j.classList.remove("selected"));
+                        item.classList.add("selected");
+
+                        console.log(item);
+
+                        // span 업데이트
+                        const text = item.querySelector(".job-6").innerText;
+                        const selectedSpan =
+                            cateBtn.querySelector("span.selected");
+
+                        console.log(cateBtn);
+                        console.log(selectedSpan);
+
+                        // console.log(selectedSpan);
+                        if (selectedSpan) {
+                            selectedSpan.innerText = text;
+                        }
+                    });
+                });
+            });
+
+            // jobElem 영역 밖 클릭 시 jobElem 숨김
+            document.addEventListener("click", function (e) {
+                categoryBtns.forEach((cateBtn) => {
+                    const jobElem = cateBtn.querySelector(".job");
+                    if (jobElem && jobElem.style.display === "block") {
+                        if (
+                            !jobElem.contains(e.target) &&
+                            !cateBtn.contains(e.target)
+                        ) {
+                            jobElem.style.display = "";
+                        }
+                    }
+                });
             });
         }
     });

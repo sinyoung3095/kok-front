@@ -45,3 +45,22 @@ pageItemNums.forEach((pageItemNum) => {
         pageItemNum.parentElement.classList.add("active");
     });
 });
+
+// 신고 게시글 상세 모달
+const rows = document.querySelectorAll(".post-detail");
+const modal = document.querySelector(".post-modal-background");
+const modalContent = document.querySelector(".post-modal-wrap1");
+
+rows.forEach((row) => {
+    row.addEventListener("click", () => {
+        modal.style.display = "flex";
+    });
+});
+
+modal.addEventListener("click", () => {
+    modal.style.display = "none";
+});
+
+modalContent.addEventListener("click", (e) => {
+    e.stopPropagation();
+});
