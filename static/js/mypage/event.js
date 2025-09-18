@@ -276,3 +276,11 @@ function dropdownFn() {
     // });
 }
 dropdownFn();
+
+const replys = document.getElementsByClassName("reply-btn");
+const modal = document.getElementsByClassName("reply")[0];
+replys.forEach((reply) => {
+    reply.addEventListener("click", (e) => {
+        modal.style.display = "flex";
+    });
+});
