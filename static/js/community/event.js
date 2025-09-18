@@ -49,7 +49,20 @@ const down = document.getElementById("down");
 const detail = document.getElementsByClassName("reply")[0];
 const replys = document.getElementsByClassName("replys");
 const back = document.getElementById("back");
-
+// 좋아요
+const hearts = document.getElementsByClassName("heart");
+hearts.forEach((heart) => {
+    heart.addEventListener("click", (e) => {
+        console.log(heart.getAttribute("fill"));
+        if (heart.getAttribute("fill") === "white") {
+            heart.setAttribute("fill", "black");
+            heart.setAttribute("color", "white");
+        } else {
+            heart.setAttribute("fill", "currentColor");
+            heart.setAttribute("color", "red");
+        }
+    });
+});
 replys.forEach((reply) => {
     reply.addEventListener("click", (e) => {
         detail.style.display = "flex";
