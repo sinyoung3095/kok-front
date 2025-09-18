@@ -188,7 +188,7 @@ function popupFn() {
     });
 
     // 팝업 닫기 버튼
-    const popupRemoves = document.querySelectorAll(".popup-remove");
+    const popupRemoves = document.querySelectorAll(".popup-close");
     popupRemoves.forEach((closeBtn) => {
         closeBtn.addEventListener("click", () => {
             const popup = closeBtn.closest(".popup-container");
