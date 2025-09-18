@@ -3,509 +3,257 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>kok</title>
+    <title>마이페이지</title>
     <link rel="stylesheet" href="../../static/css/mypage/page.css">
     <link rel="stylesheet" href="../../static/css/reset.css">
     <link rel="stylesheet" href="../../static/font/font.css">
+    <link rel="stylesheet" href="../../static/css/main-page/login-header.css">
+    <link rel="shorcut icon" href="../../static/images/member/kok_favicon.png" type="image/x-icon">
 </head>
 <body>
-    <div style="background-color: grey;">
-        <div class="main">
-            <div class="main-1">
-                <div class="main-2">
-                    <input type="file" style="display: none;">
-                    <div class="main-3">
-                        <img alt="user-banner-image" loading="lazy" width="1000" height="200" decoding="async" data-nimg="1" class="main-4" src="/static/images/mypage/banner.jpg" style="color: transparent;">  
-                        <div class="main-5">
-                            <div>
-                                <label for="background" class="label">                                                      
-                                    <button class="main-6">
-                                        <span class="main-7">배경 이미지 편집</span>                                  
-                                    </button>
-                                </label> 
-                                <input id="background" type="file" style="display: none;"> 
+    <div id="main-content" class="main-content" style="height: 100%;">
+        <main class="main">    
+            <div class="main-0">
+                <div class="main-1">
+                    <div class="main-2">
+                        <input type="file" style="display: none;">
+                        <div class="main-3">
+                            <img alt="user-banner-image" loading="lazy" width="1000" height="200" decoding="async" data-nimg="1" class="main-4" src="/static/images/mypage/banner.jpg" style="color: transparent;">  
+                            <div class="main-5">
+                                <div>
+                                    <label for="background" class="label">                                                      
+                                        <button class="main-6">
+                                            <span class="main-7">배경 이미지 편집</span>                                  
+                                        </button>
+                                    </label> 
+                                    <input id="background" type="file" style="display: none;"> 
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="content">
-                <div class="content-1">
-                    <div class="content-2">
-                        <div class="content-3">
-                            <div class="content-4">
-                                <div class="content-5">
-                                    <img alt="image" draggable="false" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" srcset="" src="../../static/images/mypage/default.webp" style="color: transparent; border-radius: 999px; cursor: pointer; max-height: 60px; max-width: 60px; min-height: 60px; min-width: 60px; object-fit: contain;">
-                                </div>
-                                <div class="content-6">
-                                    <div class="content-7">
-                                        <p class="content-8">지원자</p>
+                <div class="content">
+                    <div class="content-1">
+                        <div class="content-2">
+                            <div class="content-3">
+                                <div class="content-4">
+                                    <div class="content-5">
+                                        <img alt="image" draggable="false" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" srcset="" src="../../static/images/mypage/default.webp" style="color: transparent; border-radius: 999px; cursor: pointer; max-height: 60px; max-width: 60px; min-height: 60px; min-width: 60px; object-fit: contain;">
                                     </div>
-                                    <p class="content-9">SW개발자</p>
+                                    <div class="content-6">
+                                        <div class="content-7">
+                                            <p class="content-8">지원자</p>
+                                        </div>
+                                        <p class="content-9">SW개발자</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="content-10">
-                                <a href="">
+                                <div class="content-10">
+                                    <a href="">
+                                        <div class="content-11">
+                                            <p class="content-12">게시물</p>
+                                            <p class="content-13">0</p>
+                                        </div>
+                                    </a>
                                     <div class="content-11">
-                                        <p class="content-12">게시물</p>
+                                        <p class="content-12">팔로잉</p>
                                         <p class="content-13">0</p>
                                     </div>
-                                </a>
-                                <div class="content-11">
-                                    <p class="content-12">팔로잉</p>
-                                    <p class="content-13">0</p>
                                 </div>
-                            </div>
-                            <div class="content-14">
-                                <button class="set content-15" type="button" >
-                                    <span class="content-16">프로필 편집</span>
-                                </button>
-                                <button class="content-15" type="button">
-                                    <span class="content-16">프로필 공유</span>
-                                </button>
-                            </div>
-                            <!-- 프로필 편집 -->
-                            <div class="setting">
-                                <div class="setting-1">
-                                    <div class="setting-2">
-                                        <div class="setting-3">
-                                            <div class="setting-4">
-                                                <div class="setting-5"></div>
-                                                <div class="setting-6">
-                                                    <div class="setting-7">프로필 편집</div>
-                                                    <div class="setting-8">전체 공개</div>
-                                                </div>
-                                                <div class="setting-9">
-                                                <button class="setting-10">
-                                                    <div class="setting-11">
-                                                        <svg id="close" aria-label="icon" color="foregrounds.neutral.primary" fill="currentColor" height="20" role="img" width="20">
-                                                            <path clip-rule="evenodd" d="M6.434 6.435a.8.8 0 0 1 1.132 0L12 10.869l4.434-4.434a.8.8 0 1 1 1.132 1.13L13.13 12l4.435 4.435a.8.8 0 1 1-1.132 1.13L12 13.133l-4.434 4.434a.8.8 0 0 1-1.132-1.131L10.87 12 6.434 7.566a.8.8 0 0 1 0-1.131" fill-rule="evenodd"></path>
-                                                        </svg>
+                                <div class="content-14">
+                                    <button class="set content-15" type="button" >
+                                        <span class="content-16">프로필 편집</span>
+                                    </button>
+                                    <button class="content-15" type="button">
+                                        <span class="content-16">프로필 공유</span>
+                                    </button>
+                                </div>
+                                <!-- 프로필 편집 -->
+                                <div class="setting">
+                                    <div class="setting-1">
+                                        <div class="setting-2">
+                                            <div class="setting-3">
+                                                <div class="setting-4">
+                                                    <div class="setting-5"></div>
+                                                    <div class="setting-6">
+                                                        <div class="setting-7">프로필 편집</div>
+                                                        <div class="setting-8">전체 공개</div>
                                                     </div>
-                                                </button>
-                                            </div>
-                                            </div>
-                                        </div>
-                                        <div class="setting-12">
-                                            <div class="setting-13">
-                                                <div class="setting-14">
-                                                    <div class="setting-15">
-                                                        <input type="file" style="display: none;">
-                                                        <img alt="image" draggable="false" loading="lazy" width="80" height="80" decoding="async" data-nimg="1" src="../../static/images/mypage/default.webp" style="color: transparent; border-radius: 999px; cursor: pointer; max-height: 80px; max-width: 80px; min-height: 80px; min-width: 80px; object-fit: contain;">
-                                                        <div class="setting-16">
-                                                            <bytton class="setting-17">
-                                                                <div class="setting-18">
-                                                                    <svg aria-label="icon" color="white" fill="currentColor" height="21" role="img" width="21" style="margin-top: 0px; margin-left: -3px;margin-right: -1px; margin-bottom: 0px;" >
-                                                                        <path clip-rule="evenodd" d="M15.727 3.141a1.8 1.8 0 0 1 2.546 0l2.585 2.586a1.8 1.8 0 0 1 0 2.546l-12 12a1.8 1.8 0 0 1-1.272.527H5A1.8 1.8 0 0 1 3.2 19v-2.586c0-.477.19-.935.527-1.273zm1.414 1.132a.2.2 0 0 0-.282 0L15.13 6 18 8.869l1.727-1.728a.2.2 0 0 0 0-.282zM16.87 10 14 7.131l-9.141 9.142a.2.2 0 0 0-.06.141V19c0 .11.09.2.2.2h2.587a.2.2 0 0 0 .141-.058z" fill-rule="evenodd"></path>
-                                                                    </svg>
-                                                                </div>
-                                                            </bytton>
-                                                        </div>
-                                                        <div class="profile">
-                                                            <div class="profile-1">
-                                                                <div class="profile-2">
-                                                                    <div class="profile-3">
-                                                                        <div class="profile-4">
-                                                                            <svg aria-label="icon" color="foregrounds.neutral.primary" fill="currentColor" height="24" role="img" width="24">
-                                                                                <path d="M19 2.2H5C3.45 2.2 2.2 3.45 2.2 5v14c0 1.55 1.25 2.8 2.8 2.8h14c1.55 0 2.8-1.25 2.8-2.8V5c0-1.55-1.25-2.8-2.8-2.8m-14 18c-.66 0-1.2-.54-1.2-1.2v-5.17c1.83.11 3.56.59 5.11 1.37a14.8 14.8 0 0 0-2.92 5h-1zM20.2 19c0 .66-.54 1.2-1.2 1.2H7.7c.69-1.76 1.74-3.33 3.07-4.63l.46-.43c2.33-2.08 5.41-3.34 8.78-3.34h.2V19zm0-8.8H20c-3.81 0-7.29 1.44-9.91 3.81a14.9 14.9 0 0 0-6.29-1.79V5c0-.66.54-1.2 1.2-1.2h14c.66 0 1.2.54 1.2 1.2zM9.96 8.636c-.31-.22-.67-.29-.91-.29s-.6.07-.91.29c-.35.25-.59.66-.59 1.21s.24.96.59 1.21c.31.22.67.29.91.29s.6-.07.91-.29c.35-.25.59-.66.59-1.21s-.24-.96-.59-1.21"></path>
-                                                                            </svg>
-                                                                        </div>
-                                                                        <div class="profile-5">
-                                                                            <p class="profile-6">프로필 이미지 변경</p>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="profile-3">
-                                                                        <div class="profile-4">
-                                                                            <svg aria-label="icon" color="foregrounds.neutral.primary" fill="currentColor" height="24" role="img" width="24">
-                                                                                <path clip-rule="evenodd" d="M8.284 6.2H4a.8.8 0 1 0 0 1.6h1.2V18A2.8 2.8 0 0 0 8 20.8h8a2.8 2.8 0 0 0 2.8-2.8V7.8H20a.8.8 0 0 0 0-1.6h-4.284a3.801 3.801 0 0 0-7.432 0m1.666 0h4.1a2.2 2.2 0 0 0-4.1 0m7.25 1.6H6.8V18A1.2 1.2 0 0 0 8 19.2h8a1.2 1.2 0 0 0 1.2-1.2z" fill-rule="evenodd"></path>
-                                                                            </svg>
-                                                                        </div>
-                                                                        <div class="profile-5">
-                                                                            <p class="profile-6">프로필 삭제</p>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="setting-19">
-                                                        <div class="setting-20">
-                                                            <div class="setting-21">
-                                                                <div class="setting-22">표시될 이름</div>
-                                                            </div>
-                                                            <div class="setting-23">
-                                                                <div class="setting-24">
-                                                                    <input type="text" placeholder="표시될 이름을 입력해주세요." class="" value="김신영"  style="cursor: pointer;">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="setting-25">
-                                                            <div class="setting-26">
-                                                                <div class="setting-27">직군</div>
-                                                            </div>
-                                                            <div class="setting-28">
-                                                                <div class="setting-29">
-                                                                    <div class="setting-30">
-                                                                        <input type="" placeholder="직군을 선택해주세요." readonly="" class="" value="SW 개발" style="cursor: pointer;">
-                                                                    </div>
-                                                                </div>
-                                                                <div class="setting-31">
-                                                                    <svg id="list" aria-label="icon" color="foregrounds.neutral.tertiary" fill="currentColor" height="24" role="img" width="24">
-                                                                        <path clip-rule="evenodd" d="M6.434 9.435a.8.8 0 0 1 1.132 0L12 13.869l4.434-4.434a.8.8 0 1 1 1.132 1.13l-5 5a.8.8 0 0 1-1.132 0l-5-5a.8.8 0 0 1 0-1.13" fill-rule="evenodd"></path>
-                                                                    </svg>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="job">
-                                                            <div class="job-1">
-                                                                <div class="job-2">
-                                                                    <div class="job-3">
-                                                                        <div class="job-5">
-                                                                            <p class="job-6">SW 개발</p>
-                                                                        </div>
-                                                                        <div class="setting-31">
-                                                                            <svg aria-label="icon" color="foregrounds.neutral.tertiary" fill="currentColor" height="24" role="img" width="24">
-                                                                                <path clip-rule="evenodd" d="M20.066 5.935a.8.8 0 0 1 0 1.13l-11 11a.8.8 0 0 1-1.131 0l-4-4a.8.8 0 0 1 1.13-1.13L8.5 16.369 18.935 5.935a.8.8 0 0 1 1.13 0" fill-rule="evenodd"></path>
-                                                                            </svg>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="job-3">
-                                                                        <div class="job-5">
-                                                                            <p class="job-6">데이터/AI</p>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="job-3">
-                                                                        <div class="job-5">
-                                                                            <p class="job-6">기획/전략</p>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="job-3">
-                                                                        <div class="job-5">
-                                                                            <p class="job-6">디자인/UX</p>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="job-3">
-                                                                        <div class="job-5">
-                                                                            <p class="job-6">마케팅/PR</p>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="job-3">
-                                                                        <div class="job-5">
-                                                                            <p class="job-6">경영/운영</p>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="setting-32">
-                                                        <div class="setting-33">
-                                                            <div class="setting-34">소개</div>
-                                                        </div>
-                                                        <div class="setting-35">
-                                                            <div class="setting-36">
-                                                                <textarea maxlength="300" placeholder="직무, 관심사, 경험 중심으로 나를 표현해 보세요." class="setting-37"></textarea>
-                                                            </div>
-                                                        </div>
-                                                        <div class="setting-38">
-                                                            <div class="setting-39">최대 300자까지 입력할 수 있습니다.</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="setting-40">
-                                                    <button class="setting-41">
-                                                        <span class="setting-42">완료</span>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="content-17">
-                            <div class="content-18">
-                                <div class="content-19 first active">
-                                    <p class="content-20 first active">내 게시물</p>
-                                </div>
-                                <div class="content-19 second">
-                                    <p class="content-20 second">저장한 공고</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- 게시글 -->
-                    <div class="post-1 active">                    
-                        <div class="post-2">
-                            <!-- 게시물이 없을 때 -->
-                            <div class="post-3">                        
-                                <div class="post-13" style="padding-left: 0; justify-content: center; display: flex;">
-                                    <div class="post-14" style="margin: 0 auto;">
-                                        <div class="post-15">
-                                            <div class="post-8">
-                                                <span>내 게시물이 없습니다.</span>
-                                            </div>
-                                        </div>
-                                        <div class="post-9" style="margin: 0 auto;">
-                                            <p class="post-10">게시물을 작성해 주세요.</p>
-                                        </div>
-                                    </div>
-                                    <div class="post-17">
-                                        <div class="post-18">
-                                            <div class="post-19">
-                                                <!-- 작성 버튼 -->
-                                                <div class="content-14" style="width: 200px; margin: 0 auto;">
-                                                    <button class="set content-15" type="button" >
-                                                        <span class="content-16">작성하러 가기</span>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- 첫게시글 -->
-                            <div class="post-3">
-                                <div class="post-4">
-                                    <div>
-                                        <img alt="image" draggable="false" loading="lazy" width="40" height="40" decoding="async" data-nimg="1" src="../../static/images/mypage/default.webp" style="color: transparent; border-radius: 999px; cursor: pointer; max-height: 40px; max-width: 40px; min-height: 40px; min-width: 40px; object-fit: contain;">
-                                    </div>
-                                    <div class="post-5">
-                                        <div class="post-6">
-                                            <div class="post-7">
-                                                <div>
-                                                    <p class="post-8">지원자</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="post-9">
-                                            <p class="post-10">SW개발자</p>
-                                            <p class="post-10">11분 전</p>
-                                        </div>
-                                    </div>
-                                    <!-- 삭제 버튼 -->
-                                    <div class="remove">
-                                        <button class="post-23" style="width: 50px; color: black; font-size: 15px; font-weight: 500;">
-                                            <span class="ai_center d_flex jc_center us_none white-space_nowrap p_0px_3px textStyle_Body.BodyS_Bold">삭제</span>
-                                        </button>
-                                    </div>
-                                </div>
-                                <div class="post-13">
-                                    <div class="post-14">
-                                        <div class="post-15">
-                                            <div class="post-16">
-                                                <span>테스트용 글 확인</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- 이미지파일 -->
-                                    <div class="file">
-                                        <div class="file-1">
-                                            <div class="file-2">
-                                                <!-- 이전 버튼 -->
-                                                <div class="file-3">
-                                                    <button class="file-4">
-                                                        <div class="file-5">
-                                                            <svg aria-label="icon" color="foregrounds.neutral.secondary" fill="currentColor" height="25" role="img" width="16" style="margin-right: 4px; margin-left: -4;">
-                                                                <path clip-rule="evenodd" d="M14.566 6.435a.8.8 0 0 1 0 1.13L10.13 12l4.435 4.435a.8.8 0 1 1-1.132 1.13l-5-5a.8.8 0 0 1 0-1.13l5-5a.8.8 0 0 1 1.132 0" fill-rule="evenodd"></path>
+                                                    <div class="setting-9">
+                                                    <button class="setting-10">
+                                                        <div class="setting-11">
+                                                            <svg id="close" aria-label="icon" color="foregrounds.neutral.primary" fill="currentColor" height="20" role="img" width="20">
+                                                                <path clip-rule="evenodd" d="M6.434 6.435a.8.8 0 0 1 1.132 0L12 10.869l4.434-4.434a.8.8 0 1 1 1.132 1.13L13.13 12l4.435 4.435a.8.8 0 1 1-1.132 1.13L12 13.133l-4.434 4.434a.8.8 0 0 1-1.132-1.131L10.87 12 6.434 7.566a.8.8 0 0 1 0-1.131" fill-rule="evenodd"></path>
                                                             </svg>
                                                         </div>
                                                     </button>
                                                 </div>
-                                                <!-- 다음 버튼 -->
-                                                <div class="file-6">
-                                                    <button class="file-7">
-                                                        <div class="file-8">
-                                                            <svg aria-label="icon" color="foregrounds.neutral.secondary" fill="currentColor" height="25" role="img" width="16" style="margin-right: 4px; margin-left: -4;">
-                                                                <path clip-rule="evenodd" d="M9.434 6.435a.8.8 0 0 1 1.132 0l5 5a.8.8 0 0 1 0 1.13l-5 5a.8.8 0 1 1-1.132-1.13L13.87 12 9.434 7.566a.8.8 0 0 1 0-1.131" fill-rule="evenodd"></path>
-                                                            </svg>
+                                                </div>
+                                            </div>
+                                            <div class="setting-12">
+                                                <div class="setting-13">
+                                                    <div class="setting-14">
+                                                        <div class="setting-15">
+                                                            <input type="file" style="display: none;">
+                                                            <img alt="image" draggable="false" loading="lazy" width="80" height="80" decoding="async" data-nimg="1" src="../../static/images/mypage/default.webp" style="color: transparent; border-radius: 999px; cursor: pointer; max-height: 80px; max-width: 80px; min-height: 80px; min-width: 80px; object-fit: contain;">
+                                                            <div class="setting-16">
+                                                                <bytton class="setting-17">
+                                                                    <div class="setting-18">
+                                                                        <svg aria-label="icon" color="white" fill="currentColor" height="21" role="img" width="21" style="margin-top: 0px; margin-left: -3px;margin-right: -1px; margin-bottom: 0px;" >
+                                                                            <path clip-rule="evenodd" d="M15.727 3.141a1.8 1.8 0 0 1 2.546 0l2.585 2.586a1.8 1.8 0 0 1 0 2.546l-12 12a1.8 1.8 0 0 1-1.272.527H5A1.8 1.8 0 0 1 3.2 19v-2.586c0-.477.19-.935.527-1.273zm1.414 1.132a.2.2 0 0 0-.282 0L15.13 6 18 8.869l1.727-1.728a.2.2 0 0 0 0-.282zM16.87 10 14 7.131l-9.141 9.142a.2.2 0 0 0-.06.141V19c0 .11.09.2.2.2h2.587a.2.2 0 0 0 .141-.058z" fill-rule="evenodd"></path>
+                                                                        </svg>
+                                                                    </div>
+                                                                </bytton>
+                                                            </div>
+                                                            <div class="profile">
+                                                                <div class="profile-1">
+                                                                    <div class="profile-2">
+                                                                        <div class="profile-3">
+                                                                            <div class="profile-4">
+                                                                                <svg aria-label="icon" color="foregrounds.neutral.primary" fill="currentColor" height="24" role="img" width="24">
+                                                                                    <path d="M19 2.2H5C3.45 2.2 2.2 3.45 2.2 5v14c0 1.55 1.25 2.8 2.8 2.8h14c1.55 0 2.8-1.25 2.8-2.8V5c0-1.55-1.25-2.8-2.8-2.8m-14 18c-.66 0-1.2-.54-1.2-1.2v-5.17c1.83.11 3.56.59 5.11 1.37a14.8 14.8 0 0 0-2.92 5h-1zM20.2 19c0 .66-.54 1.2-1.2 1.2H7.7c.69-1.76 1.74-3.33 3.07-4.63l.46-.43c2.33-2.08 5.41-3.34 8.78-3.34h.2V19zm0-8.8H20c-3.81 0-7.29 1.44-9.91 3.81a14.9 14.9 0 0 0-6.29-1.79V5c0-.66.54-1.2 1.2-1.2h14c.66 0 1.2.54 1.2 1.2zM9.96 8.636c-.31-.22-.67-.29-.91-.29s-.6.07-.91.29c-.35.25-.59.66-.59 1.21s.24.96.59 1.21c.31.22.67.29.91.29s.6-.07.91-.29c.35-.25.59-.66.59-1.21s-.24-.96-.59-1.21"></path>
+                                                                                </svg>
+                                                                            </div>
+                                                                            <div class="profile-5">
+                                                                                <p class="profile-6">프로필 이미지 변경</p>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="profile-3">
+                                                                            <div class="profile-4">
+                                                                                <svg aria-label="icon" color="foregrounds.neutral.primary" fill="currentColor" height="24" role="img" width="24">
+                                                                                    <path clip-rule="evenodd" d="M8.284 6.2H4a.8.8 0 1 0 0 1.6h1.2V18A2.8 2.8 0 0 0 8 20.8h8a2.8 2.8 0 0 0 2.8-2.8V7.8H20a.8.8 0 0 0 0-1.6h-4.284a3.801 3.801 0 0 0-7.432 0m1.666 0h4.1a2.2 2.2 0 0 0-4.1 0m7.25 1.6H6.8V18A1.2 1.2 0 0 0 8 19.2h8a1.2 1.2 0 0 0 1.2-1.2z" fill-rule="evenodd"></path>
+                                                                                </svg>
+                                                                            </div>
+                                                                            <div class="profile-5">
+                                                                                <p class="profile-6">프로필 삭제</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
                                                         </div>
-                                                    </button>
+                                                        <div class="setting-19">
+                                                            <div class="setting-20">
+                                                                <div class="setting-21">
+                                                                    <div class="setting-22">표시될 이름</div>
+                                                                </div>
+                                                                <div class="setting-23">
+                                                                    <div class="setting-24">
+                                                                        <input type="text" placeholder="표시될 이름을 입력해주세요." class="" value="김신영"  style="cursor: pointer;">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="setting-25">
+                                                                <div class="setting-26">
+                                                                    <div class="setting-27">직군</div>
+                                                                </div>
+                                                                <div class="setting-28">
+                                                                    <div class="setting-29">
+                                                                        <div class="setting-30">
+                                                                            <input type="" placeholder="직군을 선택해주세요." readonly="" class="" value="SW 개발" style="cursor: pointer;">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="setting-31">
+                                                                        <svg id="list" aria-label="icon" color="foregrounds.neutral.tertiary" fill="currentColor" height="24" role="img" width="24">
+                                                                            <path clip-rule="evenodd" d="M6.434 9.435a.8.8 0 0 1 1.132 0L12 13.869l4.434-4.434a.8.8 0 1 1 1.132 1.13l-5 5a.8.8 0 0 1-1.132 0l-5-5a.8.8 0 0 1 0-1.13" fill-rule="evenodd"></path>
+                                                                        </svg>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="job">
+                                                                <div class="job-1">
+                                                                    <div class="job-2">
+                                                                        <div class="job-3">
+                                                                            <div class="job-5">
+                                                                                <p class="job-6">SW 개발</p>
+                                                                            </div>
+                                                                            <div class="setting-31">
+                                                                                <svg aria-label="icon" color="foregrounds.neutral.tertiary" fill="currentColor" height="24" role="img" width="24">
+                                                                                    <path clip-rule="evenodd" d="M20.066 5.935a.8.8 0 0 1 0 1.13l-11 11a.8.8 0 0 1-1.131 0l-4-4a.8.8 0 0 1 1.13-1.13L8.5 16.369 18.935 5.935a.8.8 0 0 1 1.13 0" fill-rule="evenodd"></path>
+                                                                                </svg>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="job-3">
+                                                                            <div class="job-5">
+                                                                                <p class="job-6">데이터/AI</p>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="job-3">
+                                                                            <div class="job-5">
+                                                                                <p class="job-6">기획/전략</p>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="job-3">
+                                                                            <div class="job-5">
+                                                                                <p class="job-6">디자인/UX</p>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="job-3">
+                                                                            <div class="job-5">
+                                                                                <p class="job-6">마케팅/PR</p>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="job-3">
+                                                                            <div class="job-5">
+                                                                                <p class="job-6">경영/운영</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="setting-32">
+                                                            <div class="setting-33">
+                                                                <div class="setting-34">소개</div>
+                                                            </div>
+                                                            <div class="setting-35">
+                                                                <div class="setting-36">
+                                                                    <textarea maxlength="300" placeholder="직무, 관심사, 경험 중심으로 나를 표현해 보세요." class="setting-37"></textarea>
+                                                                </div>
+                                                            </div>
+                                                            <div class="setting-38">
+                                                                <div class="setting-39">최대 300자까지 입력할 수 있습니다.</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="setting-40">
+                                                        <button class="setting-41">
+                                                            <span class="setting-42">완료</span>
+                                                        </button>
+                                                    </div>
                                                 </div>
-                                                <!-- 이미모음 -->
-                                                <div class="file-9">
-                                                    <!-- 이미지들 -->
-                                                    <div class="file-10">
-                                                        <img class="img" alt="첨부 이미지 1" draggable="false" loading="eager" width="0" height="0" decoding="async" data-nimg="1" class="bd_1px_solid bd-c_strokes.surface.standard bdr_8px" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" src="../../static/images/mypage/IMG_4127_2025_09_11T05_25_47_988Z.webp" style="color: transparent; height: 320px; object-fit: cover; width: auto;">
-                                                    </div>
-                                                    <div class="file-10">
-                                                        <img class="img" alt="첨부 이미지 1" draggable="false" loading="eager" width="0" height="0" decoding="async" data-nimg="1" class="bd_1px_solid bd-c_strokes.surface.standard bdr_8px" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" src="../../static/images/mypage/2.webp" style="color: transparent; height: 320px; object-fit: cover; width: auto;">
-                                                    </div>
-                                                    <div class="file-10">
-                                                        <img class="img" alt="첨부 이미지 1" draggable="false" loading="eager" width="0" height="0" decoding="async" data-nimg="1" class="bd_1px_solid bd-c_strokes.surface.standard bdr_8px" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" src="../../static/images/mypage/3.webp" style="color: transparent; height: 320px; object-fit: cover; width: auto;">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="post-17">
-                                        <div class="post-18">
-                                            <div class="post-19">
-                                                <!-- 좋아요 -->
-                                                <button class="post-20">
-                                                    <div class="post-21">
-                                                        <svg class="icons" aria-label="icon" color="foregrounds.neutral.primary" fill="currentColor" height="20" role="img" width="20">
-                                                            <path d="M20.397 9.444a4.473 4.473 0 0 0-4.074-4.608l-.22-.013a3.65 3.65 0 0 0-2.889 1.286l-1.217 1.434-1.22-1.433a3.66 3.66 0 0 0-2.88-1.287l-.22.013a4.47 4.47 0 0 0-4.075 4.608l.001.054c0 2.298 1.56 3.764 3.81 5.72l.756.662.913.816c.908.865 1.878 1.7 2.868 2.47q.023.01.05.01a.1.1 0 0 0 .047-.01 38 38 0 0 0 2.944-2.534l.845-.756.785-.686c2.138-1.855 3.775-3.388 3.775-5.692zm1.599.054c0 3.147-2.3 5.142-4.328 6.902l-.77.673-.802.716a39 39 0 0 1-3.151 2.707l-.108.065c-.256.14-.544.215-.837.215l-.125-.004a1.7 1.7 0 0 1-.712-.211l-.109-.065a39 39 0 0 1-3.057-2.623l-.893-.798-.741-.649c-2.076-1.805-4.222-3.67-4.354-6.638l-.005-.29a6.07 6.07 0 0 1 1.42-4.116l.2-.225a6.07 6.07 0 0 1 4.21-1.933 5.26 5.26 0 0 1 4.162 1.849 5.3 5.3 0 0 1 1.606-1.274l.267-.128a5.25 5.25 0 0 1 2.296-.447 6.073 6.073 0 0 1 5.83 6.274"></path>
-                                                        </svg>
-                                                    </div>
-                                                    <div style="margin-left: 5px;">
-                                                        <p class="post-22">0</p>
-                                                    </div>
-                                                </button>
-                                                <!-- 댓글 -->
-                                                <button class="post-20">
-                                                    <div class="post-21">
-                                                        <svg class="icons" aria-label="icon" color="foregrounds.neutral.primary" fill="currentColor" height="20" role="img" width="20">
-                                                            <path clip-rule="evenodd" d="M2.2 6.8a3.6 3.6 0 0 1 3.6-3.6h12.4a3.6 3.6 0 0 1 3.6 3.6v8.4a3.6 3.6 0 0 1-3.6 3.6h-3.372a1.2 1.2 0 0 0-.848.352l-1.868 1.867c-1.075 1.075-2.912.314-2.912-1.206 0-.56-.454-1.013-1.013-1.013H5.8a3.6 3.6 0 0 1-3.6-3.6zm3.6-2a2 2 0 0 0-2 2v8.4a2 2 0 0 0 2 2h2.387a2.61 2.61 0 0 1 2.613 2.613c0 .035.008.05.015.06a.1.1 0 0 0 .05.038q.038.014.063.008a.1.1 0 0 0 .053-.031l1.867-1.868a2.8 2.8 0 0 1 1.98-.82H18.2a2 2 0 0 0 2-2V6.8a2 2 0 0 0-2-2z" fill-rule="evenodd"></path>
-                                                        </svg>
-                                                    </div>
-                                                    <div style="margin-left: 5px;">
-                                                        <p class="post-22">0</p>
-                                                    </div>
-                                                </button>
-                                                <!-- 수정 -->
-                                                <button class="post-20">
-                                                    <div class="post-21">
-                                                        <svg class="icons" aria-label="icon" color="foregrounds.neutral.primary" fill="currentColor" height="20" role="img" width="20">
-                                                            <path clip-rule="evenodd" d="M2.2 5A2.8 2.8 0 0 1 5 2.2h7a.8.8 0 0 1 0 1.6H5A1.2 1.2 0 0 0 3.8 5v14A1.2 1.2 0 0 0 5 20.2h14a1.2 1.2 0 0 0 1.2-1.2v-6a.8.8 0 1 1 1.6 0v6a2.8 2.8 0 0 1-2.8 2.8H5A2.8 2.8 0 0 1 2.2 19zm14.527-1.858a1.8 1.8 0 0 1 2.546 0l1.585 1.585a1.8 1.8 0 0 1 0 2.546l-8 8a1.8 1.8 0 0 1-1.272.527H10A1.8 1.8 0 0 1 8.2 14v-1.586c0-.477.19-.935.527-1.272zm1.414 1.131a.2.2 0 0 0-.282 0L16.13 6 18 7.87l1.727-1.727a.2.2 0 0 0 0-.283zM16.87 9 15 7.132l-5.141 5.141a.2.2 0 0 0-.059.141V14c0 .11.09.2.2.2h1.586a.2.2 0 0 0 .141-.058z" fill-rule="evenodd"></path>                                                    </svg>
-                                                    </div>
-                                                    <div style="margin-left: 5px;">
-                                                        <p class="post-22">수정</p>
-                                                    </div>
-                                                </button>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="post-3">
-                                <div class="post-4">
-                                    <div>
-                                        <img alt="image" draggable="false" loading="lazy" width="40" height="40" decoding="async" data-nimg="1" src="../../static/images/default.webp" style="color: transparent; border-radius: 999px; cursor: pointer; max-height: 40px; max-width: 40px; min-height: 40px; min-width: 40px; object-fit: contain;">
+                            <div class="content-17">
+                                <div class="content-18">
+                                    <div class="content-19 first active">
+                                        <p class="content-20 first active">내 게시물</p>
                                     </div>
-                                    <div class="post-5">
-                                        <div class="post-6">
-                                            <div class="post-7">
-                                                <div>
-                                                    <p class="post-8">지원자</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="post-9">
-                                            <p class="post-10">SW개발자</p>
-                                            <p class="post-10">11분 전</p>
-                                        </div>
+                                    <div class="content-19 second">
+                                        <p class="content-20 second">저장한 공고</p>
                                     </div>
-                                    <!-- 삭제 버튼 -->
-                                    <div class="remove">
-                                        <button class="post-23" style="width: 50px; color: black; font-size: 15px; font-weight: 500;">
-                                            <span class="ai_center d_flex jc_center us_none white-space_nowrap p_0px_3px textStyle_Body.BodyS_Bold">삭제</span>
-                                        </button>
-                                    </div>
-                                </div>
-                                <div class="post-13">
-                                    <div class="post-14">
-                                        <div class="post-15">
-                                            <div class="post-16">
-                                                <span>테스트용 글 확인</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="post-17">
-                                        <div class="post-18">
-                                            <div class="post-19">
-                                                <!-- 좋아요 -->
-                                                <button class="post-20">
-                                                    <div class="post-21">
-                                                        <svg class="icons" aria-label="icon" color="red" fill="currentColor" height="20" role="img" width="20">
-                                                            <path d="M17.668 16.4c2.028-1.76 4.328-3.755 4.328-6.902a6.07 6.07 0 0 0-5.831-6.274 5.25 5.25 0 0 0-2.296.447l-.267.128a5.3 5.3 0 0 0-1.606 1.274 5.26 5.26 0 0 0-4.161-1.85 6.07 6.07 0 0 0-4.211 1.934l-.2.225a6.07 6.07 0 0 0-1.42 4.116l.005.29c.132 2.968 2.278 4.833 4.353 6.637v.001l.742.65.893.797a39 39 0 0 0 3.057 2.623l.109.065c.22.12.462.193.712.21l.125.005c.293 0 .58-.075.837-.215l.108-.065a39 39 0 0 0 3.151-2.707l.802-.716z"></path>
-                                                        </svg>
-                                                    </div>
-                                                    <div style="margin-left: 5px;">
-                                                        <p class="post-22">0</p>
-                                                    </div>
-                                                </button>
-                                                <!-- 댓글 -->
-                                                <button class="post-20">
-                                                    <div class="post-21">
-                                                        <svg class="icons" aria-label="icon" color="foregrounds.neutral.primary" fill="currentColor" height="20" role="img" width="20">
-                                                            <path clip-rule="evenodd" d="M2.2 6.8a3.6 3.6 0 0 1 3.6-3.6h12.4a3.6 3.6 0 0 1 3.6 3.6v8.4a3.6 3.6 0 0 1-3.6 3.6h-3.372a1.2 1.2 0 0 0-.848.352l-1.868 1.867c-1.075 1.075-2.912.314-2.912-1.206 0-.56-.454-1.013-1.013-1.013H5.8a3.6 3.6 0 0 1-3.6-3.6zm3.6-2a2 2 0 0 0-2 2v8.4a2 2 0 0 0 2 2h2.387a2.61 2.61 0 0 1 2.613 2.613c0 .035.008.05.015.06a.1.1 0 0 0 .05.038q.038.014.063.008a.1.1 0 0 0 .053-.031l1.867-1.868a2.8 2.8 0 0 1 1.98-.82H18.2a2 2 0 0 0 2-2V6.8a2 2 0 0 0-2-2z" fill-rule="evenodd"></path>
-                                                        </svg>
-                                                    </div>
-                                                    <div style="margin-left: 5px;">
-                                                        <p class="post-22">0</p>
-                                                    </div>
-                                                </button>
-                                                <!-- 수정 -->
-                                                <button class="post-20">
-                                                    <div class="post-21">
-                                                        <svg class="icons" aria-label="icon" color="foregrounds.neutral.primary" fill="currentColor" height="20" role="img" width="20">
-                                                            <path clip-rule="evenodd" d="M2.2 5A2.8 2.8 0 0 1 5 2.2h7a.8.8 0 0 1 0 1.6H5A1.2 1.2 0 0 0 3.8 5v14A1.2 1.2 0 0 0 5 20.2h14a1.2 1.2 0 0 0 1.2-1.2v-6a.8.8 0 1 1 1.6 0v6a2.8 2.8 0 0 1-2.8 2.8H5A2.8 2.8 0 0 1 2.2 19zm14.527-1.858a1.8 1.8 0 0 1 2.546 0l1.585 1.585a1.8 1.8 0 0 1 0 2.546l-8 8a1.8 1.8 0 0 1-1.272.527H10A1.8 1.8 0 0 1 8.2 14v-1.586c0-.477.19-.935.527-1.272zm1.414 1.131a.2.2 0 0 0-.282 0L16.13 6 18 7.87l1.727-1.727a.2.2 0 0 0 0-.283zM16.87 9 15 7.132l-5.141 5.141a.2.2 0 0 0-.059.141V14c0 .11.09.2.2.2h1.586a.2.2 0 0 0 .141-.058z" fill-rule="evenodd"></path>
-                                                        </svg>
-                                                    </div>
-                                                    <div style="margin-left: 5px;">
-                                                        <p class="post-22">수정</p>
-                                                    </div>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- 삭제 모달 -->
-                            <div class="del">
-                                <div class="del-1">
-                                    <div class="del-2">
-                                        <div class="del-3">
-                                            <div class="del-4">
-                                                <svg aria-label="icon" color="foregrounds.neutral.primary" fill="currentColor" height="40px" role="img" width="40px">
-                                                    <path clip-rule="evenodd" d="M8.284 6.2H4a.8.8 0 1 0 0 1.6h1.2V18A2.8 2.8 0 0 0 8 20.8h8a2.8 2.8 0 0 0 2.8-2.8V7.8H20a.8.8 0 0 0 0-1.6h-4.284a3.801 3.801 0 0 0-7.432 0m1.666 0h4.1a2.2 2.2 0 0 0-4.1 0m7.25 1.6H6.8V18A1.2 1.2 0 0 0 8 19.2h8a1.2 1.2 0 0 0 1.2-1.2z" fill-rule="evenodd"></path>
-                                                </svg>
-                                            </div>
-                                            <div class="del-5">
-                                                <p class="del-6">게시물을 삭제하시겠습니까?</p>
-                                                <div class="del-7">
-                                                    <p class="del-8">삭제된 게시물은 다시 복구할 수 없으며, 게시물에서 발생한 다른 사용자의 좋아요, 댓글도 함께 삭제됩니다.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="del-9">
-                                            <button class="del-10"><span class="del-11">삭제하기</span></button>
-                                            <button class="del-12"><span class="del-11">닫기</span></button>
-                                        </div>
+                                    <div class="content-19 third">
+                                        <p class="content-20 third">결제 내역</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- 저장한 공고 -->
-                    <div class="post-1">
-                        <div class="post-2" style="align-items: start;">
-                            <div style="display: flex;">
-                                <div class="content-14 list" style="width: 65px; margin-left: 10px; margin-top: 10px; display: inline-block">
-                                    <button class="content-15 notice active" type="button" style=" border-radius: 10px;" >
-                                        <span class="content-16">체험 공고</span>
-                                    </button>
-                                </div>
-                                <div class="content-14 list" style="width: 65px; margin-left: 10px; margin-top: 10px; display: inline-block;">
-                                    <button class="content-15 notice" type="button" style=" border-radius: 10px;">
-                                        <span class="content-16">고용 공고</span>
-                                    </button>
-                                </div>
-                            </div>
-                            <!-- 체험 공고 -->
-                            <div id="experience" style="display: contents;">
-                                <!-- 저장한 체험 공고가 없을 때 -->
+                        <!-- 게시글 -->
+                        <div class="post-1 active">                    
+                            <div class="post-2">
+                                <!-- 게시물이 없을 때 -->
                                 <div class="post-3">                        
                                     <div class="post-13" style="padding-left: 0; justify-content: center; display: flex;">
                                         <div class="post-14" style="margin: 0 auto;">
-                                            <div class="post-15" >
-                                                <div class="post-8" style="margin: 0 auto;">
-                                                    <span>아직 저장한 체험 공고가 없습니다.</span>
+                                            <div class="post-15">
+                                                <div class="post-8">
+                                                    <span>내 게시물이 없습니다.</span>
                                                 </div>
                                             </div>
                                             <div class="post-9" style="margin: 0 auto;">
-                                                <p class="post-10">관심 있는 체험 공고를 찾아 저장하면 이곳에서 모아볼 수 있습니다.</p>
+                                                <p class="post-10">게시물을 작성해 주세요.</p>
                                             </div>
                                         </div>
                                         <div class="post-17">
@@ -514,7 +262,7 @@
                                                     <!-- 작성 버튼 -->
                                                     <div class="content-14" style="width: 200px; margin: 0 auto;">
                                                         <button class="set content-15" type="button" >
-                                                            <span class="content-16">체험 공고 둘러보기</span>
+                                                            <span class="content-16">작성하러 가기</span>
                                                         </button>
                                                     </div>
                                                 </div>
@@ -522,512 +270,607 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!-- 공고들 -->
+                                <!-- 첫게시글 -->
                                 <div class="post-3">
                                     <div class="post-4">
                                         <div>
-                                            <img alt="image" draggable="false" loading="lazy" width="40" height="40" decoding="async" data-nimg="1" src="../../static/images/mypage/logo_1757380047672.webp" style="color: transparent; border-radius: 999px; cursor: pointer; max-height: 40px; max-width: 40px; min-height: 40px; min-width: 40px; object-fit: contain;">
+                                            <img alt="image" draggable="false" loading="lazy" width="40" height="40" decoding="async" data-nimg="1" src="../../static/images/mypage/default.webp" style="color: transparent; border-radius: 999px; cursor: pointer; max-height: 40px; max-width: 40px; min-height: 40px; min-width: 40px; object-fit: contain;">
                                         </div>
                                         <div class="post-5">
-                                            <div class="post-9">
-                                                <p class="post-10">애니포인트 미디어</p>
-                                            </div>
                                             <div class="post-6">
                                                 <div class="post-7">
                                                     <div>
-                                                        <p class="post-8">주니어 백엔드 개발자</p>
+                                                        <p class="post-8">지원자</p>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="post-9">
-                                                <p class="post-10">백엔드 개발 체험자를 모집합니다.</p>
+                                                <p class="post-10">SW개발자</p>
+                                                <p class="post-10">11분 전</p>
                                             </div>
                                         </div>
-                                        <!-- 취소버튼 -->
-                                        <div>
-                                            <button class="post-23">
-                                                <span class="ai_center d_flex jc_center us_none white-space_nowrap p_0px_3px textStyle_Body.BodyS_Bold">저장 취소</span>
+                                        <!-- 삭제 버튼 -->
+                                        <div class="remove">
+                                            <button class="post-23" style="width: 50px; color: black; font-size: 15px; font-weight: 500;">
+                                                <span class="ai_center d_flex jc_center us_none white-space_nowrap p_0px_3px textStyle_Body.BodyS_Bold">삭제</span>
                                             </button>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="post-3">
-                                    <div class="post-4">
-                                        <div>
-                                            <img alt="image" draggable="false" loading="lazy" width="40" height="40" decoding="async" data-nimg="1" src="../../static/images/mypage/logo_1757380047672.webp" style="color: transparent; border-radius: 999px; cursor: pointer; max-height: 40px; max-width: 40px; min-height: 40px; min-width: 40px; object-fit: contain;">
-                                        </div>
-                                        <div class="post-5">
-                                            <div class="post-9">
-                                                <p class="post-10">애니포인트 미디어</p>
+                                    <div class="post-13">
+                                        <div class="post-14">
+                                            <div class="post-15">
+                                                <div class="post-16">
+                                                    <span>테스트용 글 확인</span>
+                                                </div>
                                             </div>
-                                            <div class="post-6">
-                                                <div class="post-7">
-                                                    <div>
-                                                        <p class="post-8">주니어 백엔드 개발자</p>
+                                        </div>
+                                        <!-- 이미지파일 -->
+                                        <div class="file">
+                                            <div class="file-1">
+                                                <div class="file-2">
+                                                    <!-- 이전 버튼 -->
+                                                    <div class="file-3">
+                                                        <button class="file-4">
+                                                            <div class="file-5">
+                                                                <svg aria-label="icon" color="foregrounds.neutral.secondary" fill="currentColor" height="25" role="img" width="16" style="margin-right: 4px; margin-left: -4;">
+                                                                    <path clip-rule="evenodd" d="M14.566 6.435a.8.8 0 0 1 0 1.13L10.13 12l4.435 4.435a.8.8 0 1 1-1.132 1.13l-5-5a.8.8 0 0 1 0-1.13l5-5a.8.8 0 0 1 1.132 0" fill-rule="evenodd"></path>
+                                                                </svg>
+                                                            </div>
+                                                        </button>
+                                                    </div>
+                                                    <!-- 다음 버튼 -->
+                                                    <div class="file-6">
+                                                        <button class="file-7">
+                                                            <div class="file-8">
+                                                                <svg aria-label="icon" color="foregrounds.neutral.secondary" fill="currentColor" height="25" role="img" width="16" style="margin-right: 4px; margin-left: -4;">
+                                                                    <path clip-rule="evenodd" d="M9.434 6.435a.8.8 0 0 1 1.132 0l5 5a.8.8 0 0 1 0 1.13l-5 5a.8.8 0 1 1-1.132-1.13L13.87 12 9.434 7.566a.8.8 0 0 1 0-1.131" fill-rule="evenodd"></path>
+                                                                </svg>
+                                                            </div>
+                                                        </button>
+                                                    </div>
+                                                    <!-- 이미모음 -->
+                                                    <div class="file-9">
+                                                        <!-- 이미지들 -->
+                                                        <div class="file-10">
+                                                            <img class="img" alt="첨부 이미지 1" draggable="false" loading="eager" width="0" height="0" decoding="async" data-nimg="1" class="bd_1px_solid bd-c_strokes.surface.standard bdr_8px" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" src="../../static/images/mypage/IMG_4127_2025_09_11T05_25_47_988Z.webp" style="color: transparent; height: 320px; object-fit: cover; width: auto;">
+                                                        </div>
+                                                        <div class="file-10">
+                                                            <img class="img" alt="첨부 이미지 1" draggable="false" loading="eager" width="0" height="0" decoding="async" data-nimg="1" class="bd_1px_solid bd-c_strokes.surface.standard bdr_8px" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" src="../../static/images/mypage/2.webp" style="color: transparent; height: 320px; object-fit: cover; width: auto;">
+                                                        </div>
+                                                        <div class="file-10">
+                                                            <img class="img" alt="첨부 이미지 1" draggable="false" loading="eager" width="0" height="0" decoding="async" data-nimg="1" class="bd_1px_solid bd-c_strokes.surface.standard bdr_8px" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" src="../../static/images/mypage/3.webp" style="color: transparent; height: 320px; object-fit: cover; width: auto;">
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="post-9">
-                                                <p class="post-10">백엔드 개발 체험자를 모집합니다.</p>
-                                            </div>
-                                        </div>
-                                        <!-- 취소버튼 -->
-                                        <div>
-                                            <button class="post-23">
-                                                <span class="ai_center d_flex jc_center us_none white-space_nowrap p_0px_3px textStyle_Body.BodyS_Bold">저장 취소</span>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="post-3">
-                                    <div class="post-4">
-                                        <div>
-                                            <img alt="image" draggable="false" loading="lazy" width="40" height="40" decoding="async" data-nimg="1" src="../../static/images/mypage/logo_1757380047672.webp" style="color: transparent; border-radius: 999px; cursor: pointer; max-height: 40px; max-width: 40px; min-height: 40px; min-width: 40px; object-fit: contain;">
-                                        </div>
-                                        <div class="post-5">
-                                            <div class="post-9">
-                                                <p class="post-10">애니포인트 미디어</p>
-                                            </div>
-                                            <div class="post-6">
-                                                <div class="post-7">
-                                                    <div>
-                                                        <p class="post-8">주니어 백엔드 개발자</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="post-9">
-                                                <p class="post-10">백엔드 개발 체험자를 모집합니다.</p>
-                                            </div>
-                                        </div>
-                                        <!-- 취소버튼 -->
-                                        <div>
-                                            <button class="post-23">
-                                                <span class="ai_center d_flex jc_center us_none white-space_nowrap p_0px_3px textStyle_Body.BodyS_Bold">저장 취소</span>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- 고용 공고 -->
-                            <div id="employ" style="display: none;">
-                                <!-- 저장한 고용 공고가 없을 때 -->
-                                <div  class="post-3">                        
-                                    <div class="post-13" style="padding-left: 0; justify-content: center; display: flex;">
-                                        <div class="post-14" style="margin: 0 auto;">
-                                            <div class="post-15" >
-                                                <div class="post-8" style="margin: 0 auto;">
-                                                    <span>아직 저장한 고용 공고가 없습니다.</span>
-                                                </div>
-                                            </div>
-                                            <div class="post-9" style="margin: 0 auto;">
-                                                <p class="post-10">관심 있는 고용 공고를 찾아 저장하면 이곳에서 모아볼 수 있습니다.</p>
                                             </div>
                                         </div>
                                         <div class="post-17">
                                             <div class="post-18">
                                                 <div class="post-19">
-                                                    <!-- 작성 버튼 -->
-                                                    <div class="content-14" style="width: 200px; margin: 0 auto;">
-                                                        <button class="set content-15" type="button" >
-                                                            <span class="content-16">고용 공고 둘러보기</span>
-                                                        </button>
-                                                    </div>
+                                                    <!-- 좋아요 -->
+                                                    <button class="post-20">
+                                                        <div class="post-21">
+                                                            <svg class="icons" aria-label="icon" color="foregrounds.neutral.primary" fill="currentColor" height="20" role="img" width="20">
+                                                                <path d="M20.397 9.444a4.473 4.473 0 0 0-4.074-4.608l-.22-.013a3.65 3.65 0 0 0-2.889 1.286l-1.217 1.434-1.22-1.433a3.66 3.66 0 0 0-2.88-1.287l-.22.013a4.47 4.47 0 0 0-4.075 4.608l.001.054c0 2.298 1.56 3.764 3.81 5.72l.756.662.913.816c.908.865 1.878 1.7 2.868 2.47q.023.01.05.01a.1.1 0 0 0 .047-.01 38 38 0 0 0 2.944-2.534l.845-.756.785-.686c2.138-1.855 3.775-3.388 3.775-5.692zm1.599.054c0 3.147-2.3 5.142-4.328 6.902l-.77.673-.802.716a39 39 0 0 1-3.151 2.707l-.108.065c-.256.14-.544.215-.837.215l-.125-.004a1.7 1.7 0 0 1-.712-.211l-.109-.065a39 39 0 0 1-3.057-2.623l-.893-.798-.741-.649c-2.076-1.805-4.222-3.67-4.354-6.638l-.005-.29a6.07 6.07 0 0 1 1.42-4.116l.2-.225a6.07 6.07 0 0 1 4.21-1.933 5.26 5.26 0 0 1 4.162 1.849 5.3 5.3 0 0 1 1.606-1.274l.267-.128a5.25 5.25 0 0 1 2.296-.447 6.073 6.073 0 0 1 5.83 6.274"></path>
+                                                            </svg>
+                                                        </div>
+                                                        <div style="margin-left: 5px;">
+                                                            <p class="post-22">0</p>
+                                                        </div>
+                                                    </button>
+                                                    <!-- 댓글 -->
+                                                    <button class="post-20 ">
+                                                        <div class="post-21">
+                                                            <svg class="icons" aria-label="icon" color="foregrounds.neutral.primary" fill="currentColor" height="20" role="img" width="20">
+                                                                <path clip-rule="evenodd" d="M2.2 6.8a3.6 3.6 0 0 1 3.6-3.6h12.4a3.6 3.6 0 0 1 3.6 3.6v8.4a3.6 3.6 0 0 1-3.6 3.6h-3.372a1.2 1.2 0 0 0-.848.352l-1.868 1.867c-1.075 1.075-2.912.314-2.912-1.206 0-.56-.454-1.013-1.013-1.013H5.8a3.6 3.6 0 0 1-3.6-3.6zm3.6-2a2 2 0 0 0-2 2v8.4a2 2 0 0 0 2 2h2.387a2.61 2.61 0 0 1 2.613 2.613c0 .035.008.05.015.06a.1.1 0 0 0 .05.038q.038.014.063.008a.1.1 0 0 0 .053-.031l1.867-1.868a2.8 2.8 0 0 1 1.98-.82H18.2a2 2 0 0 0 2-2V6.8a2 2 0 0 0-2-2z" fill-rule="evenodd"></path>
+                                                            </svg>
+                                                        </div>
+                                                        <div style="margin-left: 5px;">
+                                                            <p class="post-22">0</p>
+                                                        </div>
+                                                    </button>
+                                                    <!-- 수정 -->
+                                                    <button class="post-20 reply-btn">
+                                                        <div class="post-21">
+                                                            <svg class="icons" aria-label="icon" color="foregrounds.neutral.primary" fill="currentColor" height="20" role="img" width="20">
+                                                                <path clip-rule="evenodd" d="M2.2 5A2.8 2.8 0 0 1 5 2.2h7a.8.8 0 0 1 0 1.6H5A1.2 1.2 0 0 0 3.8 5v14A1.2 1.2 0 0 0 5 20.2h14a1.2 1.2 0 0 0 1.2-1.2v-6a.8.8 0 1 1 1.6 0v6a2.8 2.8 0 0 1-2.8 2.8H5A2.8 2.8 0 0 1 2.2 19zm14.527-1.858a1.8 1.8 0 0 1 2.546 0l1.585 1.585a1.8 1.8 0 0 1 0 2.546l-8 8a1.8 1.8 0 0 1-1.272.527H10A1.8 1.8 0 0 1 8.2 14v-1.586c0-.477.19-.935.527-1.272zm1.414 1.131a.2.2 0 0 0-.282 0L16.13 6 18 7.87l1.727-1.727a.2.2 0 0 0 0-.283zM16.87 9 15 7.132l-5.141 5.141a.2.2 0 0 0-.059.141V14c0 .11.09.2.2.2h1.586a.2.2 0 0 0 .141-.058z" fill-rule="evenodd"></path>                                                    </svg>
+                                                        </div>
+                                                        <div style="margin-left: 5px;">
+                                                            <p class="post-22">수정</p>
+                                                        </div>
+                                                    </button>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- 공고들 -->
-                                <div class="post-3">
-                                    <div class="post-4">
-                                        <div>
-                                            <img alt="image" draggable="false" loading="lazy" width="40" height="40" decoding="async" data-nimg="1" src="../../static/images/mypage/logo_1757380047672.webp" style="color: transparent; border-radius: 999px; cursor: pointer; max-height: 40px; max-width: 40px; min-height: 40px; min-width: 40px; object-fit: contain;">
-                                        </div>
-                                        <div class="post-5">
-                                            <div class="post-9">
-                                                <p class="post-10">애니포인트 미디어</p>
-                                            </div>
-                                            <div class="post-6">
-                                                <div class="post-7">
-                                                    <div>
-                                                        <p class="post-8">주니어 백엔드 개발자</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="post-9">
-                                                <p class="post-10">주니어 백엔드 개발자를 모집합니다.</p>
-                                            </div>
-                                        </div>
-                                        <!-- 취소버튼 -->
-                                        <div>
-                                            <button class="post-23">
-                                                <span class="ai_center d_flex jc_center us_none white-space_nowrap p_0px_3px textStyle_Body.BodyS_Bold">저장 취소</span>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="post-3">
-                                    <div class="post-4">
-                                        <div>
-                                            <img alt="image" draggable="false" loading="lazy" width="40" height="40" decoding="async" data-nimg="1" src="../../static/images/mypage/logo_1757380047672.webp" style="color: transparent; border-radius: 999px; cursor: pointer; max-height: 40px; max-width: 40px; min-height: 40px; min-width: 40px; object-fit: contain;">
-                                        </div>
-                                        <div class="post-5">
-                                            <div class="post-9">
-                                                <p class="post-10">애니포인트 미디어</p>
-                                            </div>
-                                            <div class="post-6">
-                                                <div class="post-7">
-                                                    <div>
-                                                        <p class="post-8">주니어 백엔드 개발자</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="post-9">
-                                                <p class="post-10">주니어 백엔드 개발자를 모집합니다.</p>
-                                            </div>
-                                        </div>
-                                        <!-- 취소버튼 -->
-                                        <div>
-                                            <button class="post-23">
-                                                <span class="ai_center d_flex jc_center us_none white-space_nowrap p_0px_3px textStyle_Body.BodyS_Bold">저장 취소</span>
-                                            </button>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="post-3">
                                     <div class="post-4">
                                         <div>
-                                            <img alt="image" draggable="false" loading="lazy" width="40" height="40" decoding="async" data-nimg="1" src="../../static/images/mypage/logo_1757380047672.webp" style="color: transparent; border-radius: 999px; cursor: pointer; max-height: 40px; max-width: 40px; min-height: 40px; min-width: 40px; object-fit: contain;">
+                                            <img alt="image" draggable="false" loading="lazy" width="40" height="40" decoding="async" data-nimg="1" src="../../static/images/default.webp" style="color: transparent; border-radius: 999px; cursor: pointer; max-height: 40px; max-width: 40px; min-height: 40px; min-width: 40px; object-fit: contain;">
                                         </div>
                                         <div class="post-5">
-                                            <div class="post-9">
-                                                <p class="post-10">애니포인트 미디어</p>
-                                            </div>
                                             <div class="post-6">
                                                 <div class="post-7">
                                                     <div>
-                                                        <p class="post-8">주니어 백엔드 개발자</p>
+                                                        <p class="post-8">지원자</p>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="post-9">
-                                                <p class="post-10">주니어 백엔드 개발자를 모집합니다.</p>
+                                                <p class="post-10">SW개발자</p>
+                                                <p class="post-10">11분 전</p>
                                             </div>
                                         </div>
-                                        <!-- 취소버튼 -->
-                                        <div>
-                                            <button class="post-23">
-                                                <span class="ai_center d_flex jc_center us_none white-space_nowrap p_0px_3px textStyle_Body.BodyS_Bold">저장 취소</span>
+                                        <!-- 삭제 버튼 -->
+                                        <div class="remove">
+                                            <button class="post-23" style="width: 50px; color: black; font-size: 15px; font-weight: 500;">
+                                                <span class="ai_center d_flex jc_center us_none white-space_nowrap p_0px_3px textStyle_Body.BodyS_Bold">삭제</span>
                                             </button>
+                                        </div>
+                                    </div>
+                                    <div class="post-13">
+                                        <div class="post-14">
+                                            <div class="post-15">
+                                                <div class="post-16">
+                                                    <span>테스트용 글 확인</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="post-17">
+                                            <div class="post-18">
+                                                <div class="post-19">
+                                                    <!-- 좋아요 -->
+                                                    <button class="post-20">
+                                                        <div class="post-21">
+                                                            <svg class="icons" aria-label="icon" color="red" fill="currentColor" height="20" role="img" width="20">
+                                                                <path d="M17.668 16.4c2.028-1.76 4.328-3.755 4.328-6.902a6.07 6.07 0 0 0-5.831-6.274 5.25 5.25 0 0 0-2.296.447l-.267.128a5.3 5.3 0 0 0-1.606 1.274 5.26 5.26 0 0 0-4.161-1.85 6.07 6.07 0 0 0-4.211 1.934l-.2.225a6.07 6.07 0 0 0-1.42 4.116l.005.29c.132 2.968 2.278 4.833 4.353 6.637v.001l.742.65.893.797a39 39 0 0 0 3.057 2.623l.109.065c.22.12.462.193.712.21l.125.005c.293 0 .58-.075.837-.215l.108-.065a39 39 0 0 0 3.151-2.707l.802-.716z"></path>
+                                                            </svg>
+                                                        </div>
+                                                        <div style="margin-left: 5px;">
+                                                            <p class="post-22">0</p>
+                                                        </div>
+                                                    </button>
+                                                    <!-- 댓글 -->
+                                                    <button class="post-20">
+                                                        <div class="post-21">
+                                                            <svg class="icons" aria-label="icon" color="foregrounds.neutral.primary" fill="currentColor" height="20" role="img" width="20">
+                                                                <path clip-rule="evenodd" d="M2.2 6.8a3.6 3.6 0 0 1 3.6-3.6h12.4a3.6 3.6 0 0 1 3.6 3.6v8.4a3.6 3.6 0 0 1-3.6 3.6h-3.372a1.2 1.2 0 0 0-.848.352l-1.868 1.867c-1.075 1.075-2.912.314-2.912-1.206 0-.56-.454-1.013-1.013-1.013H5.8a3.6 3.6 0 0 1-3.6-3.6zm3.6-2a2 2 0 0 0-2 2v8.4a2 2 0 0 0 2 2h2.387a2.61 2.61 0 0 1 2.613 2.613c0 .035.008.05.015.06a.1.1 0 0 0 .05.038q.038.014.063.008a.1.1 0 0 0 .053-.031l1.867-1.868a2.8 2.8 0 0 1 1.98-.82H18.2a2 2 0 0 0 2-2V6.8a2 2 0 0 0-2-2z" fill-rule="evenodd"></path>
+                                                            </svg>
+                                                        </div>
+                                                        <div style="margin-left: 5px;">
+                                                            <p class="post-22">0</p>
+                                                        </div>
+                                                    </button>
+                                                    <!-- 수정 -->
+                                                    <button class="post-20 reply-btn">
+                                                        <div class="post-21">
+                                                            <svg class="icons" aria-label="icon" color="foregrounds.neutral.primary" fill="currentColor" height="20" role="img" width="20">
+                                                                <path clip-rule="evenodd" d="M2.2 5A2.8 2.8 0 0 1 5 2.2h7a.8.8 0 0 1 0 1.6H5A1.2 1.2 0 0 0 3.8 5v14A1.2 1.2 0 0 0 5 20.2h14a1.2 1.2 0 0 0 1.2-1.2v-6a.8.8 0 1 1 1.6 0v6a2.8 2.8 0 0 1-2.8 2.8H5A2.8 2.8 0 0 1 2.2 19zm14.527-1.858a1.8 1.8 0 0 1 2.546 0l1.585 1.585a1.8 1.8 0 0 1 0 2.546l-8 8a1.8 1.8 0 0 1-1.272.527H10A1.8 1.8 0 0 1 8.2 14v-1.586c0-.477.19-.935.527-1.272zm1.414 1.131a.2.2 0 0 0-.282 0L16.13 6 18 7.87l1.727-1.727a.2.2 0 0 0 0-.283zM16.87 9 15 7.132l-5.141 5.141a.2.2 0 0 0-.059.141V14c0 .11.09.2.2.2h1.586a.2.2 0 0 0 .141-.058z" fill-rule="evenodd"></path>
+                                                            </svg>
+                                                        </div>
+                                                        <div style="margin-left: 5px;">
+                                                            <p class="post-22">수정</p>
+                                                        </div>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 삭제 모달 -->
+                                <div class="del">
+                                    <div class="del-1">
+                                        <div class="del-2">
+                                            <div class="del-3">
+                                                <div class="del-4">
+                                                    <svg aria-label="icon" color="foregrounds.neutral.primary" fill="currentColor" height="40px" role="img" width="40px">
+                                                        <path clip-rule="evenodd" d="M8.284 6.2H4a.8.8 0 1 0 0 1.6h1.2V18A2.8 2.8 0 0 0 8 20.8h8a2.8 2.8 0 0 0 2.8-2.8V7.8H20a.8.8 0 0 0 0-1.6h-4.284a3.801 3.801 0 0 0-7.432 0m1.666 0h4.1a2.2 2.2 0 0 0-4.1 0m7.25 1.6H6.8V18A1.2 1.2 0 0 0 8 19.2h8a1.2 1.2 0 0 0 1.2-1.2z" fill-rule="evenodd"></path>
+                                                    </svg>
+                                                </div>
+                                                <div class="del-5">
+                                                    <p class="del-6">게시물을 삭제하시겠습니까?</p>
+                                                    <div class="del-7">
+                                                        <p class="del-8">삭제된 게시물은 다시 복구할 수 없으며, 게시물에서 발생한 다른 사용자의 좋아요, 댓글도 함께 삭제됩니다.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="del-9">
+                                                <button class="del-10"><span class="del-11">삭제하기</span></button>
+                                                <button class="del-12"><span class="del-11">닫기</span></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 저장한 공고 -->
+                        <div class="post-1">
+                            <div class="post-2" style="align-items: start;">
+                                <div style="display: flex;">
+                                    <div class="content-14 list" style="width: 65px; margin-left: 10px; margin-top: 10px; display: inline-block">
+                                        <button class="content-15 notice active" type="button" style=" border-radius: 10px;" >
+                                            <span class="content-16">체험 공고</span>
+                                        </button>
+                                    </div>
+                                    <div class="content-14 list" style="width: 65px; margin-left: 10px; margin-top: 10px; display: inline-block;">
+                                        <button class="content-15 notice" type="button" style=" border-radius: 10px;">
+                                            <span class="content-16">고용 공고</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <!-- 체험 공고 -->
+                                <div id="experience" style="display: contents;">
+                                    <!-- 저장한 체험 공고가 없을 때 -->
+                                    <div class="post-3">                        
+                                        <div class="post-13" style="padding-left: 0; justify-content: center; display: flex;">
+                                            <div class="post-14" style="margin: 0 auto;">
+                                                <div class="post-15" >
+                                                    <div class="post-8" style="margin: 0 auto;">
+                                                        <span>아직 저장한 체험 공고가 없습니다.</span>
+                                                    </div>
+                                                </div>
+                                                <div class="post-9" style="margin: 0 auto;">
+                                                    <p class="post-10">관심 있는 체험 공고를 찾아 저장하면 이곳에서 모아볼 수 있습니다.</p>
+                                                </div>
+                                            </div>
+                                            <div class="post-17">
+                                                <div class="post-18">
+                                                    <div class="post-19">
+                                                        <!-- 작성 버튼 -->
+                                                        <div class="content-14" style="width: 200px; margin: 0 auto;">
+                                                            <button class="set content-15" type="button" >
+                                                                <span class="content-16">체험 공고 둘러보기</span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 공고들 -->
+                                    <div class="post-3">
+                                        <div class="post-4">
+                                            <div>
+                                                <img alt="image" draggable="false" loading="lazy" width="40" height="40" decoding="async" data-nimg="1" src="../../static/images/mypage/logo_1757380047672.webp" style="color: transparent; border-radius: 999px; cursor: pointer; max-height: 40px; max-width: 40px; min-height: 40px; min-width: 40px; object-fit: contain;">
+                                            </div>
+                                            <div class="post-5">
+                                                <div class="post-9">
+                                                    <p class="post-10">애니포인트 미디어</p>
+                                                </div>
+                                                <div class="post-6">
+                                                    <div class="post-7">
+                                                        <div>
+                                                            <p class="post-8">주니어 백엔드 개발자</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="post-9">
+                                                    <p class="post-10">백엔드 개발 체험자를 모집합니다.</p>
+                                                </div>
+                                            </div>
+                                            <!-- 취소버튼 -->
+                                            <div>
+                                                <button class="post-23">
+                                                    <span class="ai_center d_flex jc_center us_none white-space_nowrap p_0px_3px textStyle_Body.BodyS_Bold">저장 취소</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="post-3">
+                                        <div class="post-4">
+                                            <div>
+                                                <img alt="image" draggable="false" loading="lazy" width="40" height="40" decoding="async" data-nimg="1" src="../../static/images/mypage/logo_1757380047672.webp" style="color: transparent; border-radius: 999px; cursor: pointer; max-height: 40px; max-width: 40px; min-height: 40px; min-width: 40px; object-fit: contain;">
+                                            </div>
+                                            <div class="post-5">
+                                                <div class="post-9">
+                                                    <p class="post-10">애니포인트 미디어</p>
+                                                </div>
+                                                <div class="post-6">
+                                                    <div class="post-7">
+                                                        <div>
+                                                            <p class="post-8">주니어 백엔드 개발자</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="post-9">
+                                                    <p class="post-10">백엔드 개발 체험자를 모집합니다.</p>
+                                                </div>
+                                            </div>
+                                            <!-- 취소버튼 -->
+                                            <div>
+                                                <button class="post-23">
+                                                    <span class="ai_center d_flex jc_center us_none white-space_nowrap p_0px_3px textStyle_Body.BodyS_Bold">저장 취소</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="post-3">
+                                        <div class="post-4">
+                                            <div>
+                                                <img alt="image" draggable="false" loading="lazy" width="40" height="40" decoding="async" data-nimg="1" src="../../static/images/mypage/logo_1757380047672.webp" style="color: transparent; border-radius: 999px; cursor: pointer; max-height: 40px; max-width: 40px; min-height: 40px; min-width: 40px; object-fit: contain;">
+                                            </div>
+                                            <div class="post-5">
+                                                <div class="post-9">
+                                                    <p class="post-10">애니포인트 미디어</p>
+                                                </div>
+                                                <div class="post-6">
+                                                    <div class="post-7">
+                                                        <div>
+                                                            <p class="post-8">주니어 백엔드 개발자</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="post-9">
+                                                    <p class="post-10">백엔드 개발 체험자를 모집합니다.</p>
+                                                </div>
+                                            </div>
+                                            <!-- 취소버튼 -->
+                                            <div>
+                                                <button class="post-23">
+                                                    <span class="ai_center d_flex jc_center us_none white-space_nowrap p_0px_3px textStyle_Body.BodyS_Bold">저장 취소</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 고용 공고 -->
+                                <div id="employ" style="display: none;">
+                                    <!-- 저장한 고용 공고가 없을 때 -->
+                                    <div  class="post-3">                        
+                                        <div class="post-13" style="padding-left: 0; justify-content: center; display: flex;">
+                                            <div class="post-14" style="margin: 0 auto;">
+                                                <div class="post-15" >
+                                                    <div class="post-8" style="margin: 0 auto;">
+                                                        <span>아직 저장한 고용 공고가 없습니다.</span>
+                                                    </div>
+                                                </div>
+                                                <div class="post-9" style="margin: 0 auto;">
+                                                    <p class="post-10">관심 있는 고용 공고를 찾아 저장하면 이곳에서 모아볼 수 있습니다.</p>
+                                                </div>
+                                            </div>
+                                            <div class="post-17">
+                                                <div class="post-18">
+                                                    <div class="post-19">
+                                                        <!-- 고용으로 가기 버튼 -->
+                                                        <div class="content-14" style="width: 200px; margin: 0 auto;">
+                                                            <button class="set content-15" type="button" >
+                                                                <span class="content-16">고용 공고 둘러보기</span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 공고들 -->
+                                    <div class="post-3">
+                                        <div class="post-4">
+                                            <div>
+                                                <img alt="image" draggable="false" loading="lazy" width="40" height="40" decoding="async" data-nimg="1" src="../../static/images/mypage/logo_1757380047672.webp" style="color: transparent; border-radius: 999px; cursor: pointer; max-height: 40px; max-width: 40px; min-height: 40px; min-width: 40px; object-fit: contain;">
+                                            </div>
+                                            <div class="post-5">
+                                                <div class="post-9">
+                                                    <p class="post-10">애니포인트 미디어</p>
+                                                </div>
+                                                <div class="post-6">
+                                                    <div class="post-7">
+                                                        <div>
+                                                            <p class="post-8">주니어 백엔드 개발자</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="post-9">
+                                                    <p class="post-10">주니어 백엔드 개발자를 모집합니다.</p>
+                                                </div>
+                                            </div>
+                                            <!-- 취소버튼 -->
+                                            <div>
+                                                <button class="post-23">
+                                                    <span class="ai_center d_flex jc_center us_none white-space_nowrap p_0px_3px textStyle_Body.BodyS_Bold">저장 취소</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="post-3">
+                                        <div class="post-4">
+                                            <div>
+                                                <img alt="image" draggable="false" loading="lazy" width="40" height="40" decoding="async" data-nimg="1" src="../../static/images/mypage/logo_1757380047672.webp" style="color: transparent; border-radius: 999px; cursor: pointer; max-height: 40px; max-width: 40px; min-height: 40px; min-width: 40px; object-fit: contain;">
+                                            </div>
+                                            <div class="post-5">
+                                                <div class="post-9">
+                                                    <p class="post-10">애니포인트 미디어</p>
+                                                </div>
+                                                <div class="post-6">
+                                                    <div class="post-7">
+                                                        <div>
+                                                            <p class="post-8">주니어 백엔드 개발자</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="post-9">
+                                                    <p class="post-10">주니어 백엔드 개발자를 모집합니다.</p>
+                                                </div>
+                                            </div>
+                                            <!-- 취소버튼 -->
+                                            <div>
+                                                <button class="post-23">
+                                                    <span class="ai_center d_flex jc_center us_none white-space_nowrap p_0px_3px textStyle_Body.BodyS_Bold">저장 취소</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="post-3">
+                                        <div class="post-4">
+                                            <div>
+                                                <img alt="image" draggable="false" loading="lazy" width="40" height="40" decoding="async" data-nimg="1" src="../../static/images/mypage/logo_1757380047672.webp" style="color: transparent; border-radius: 999px; cursor: pointer; max-height: 40px; max-width: 40px; min-height: 40px; min-width: 40px; object-fit: contain;">
+                                            </div>
+                                            <div class="post-5">
+                                                <div class="post-9">
+                                                    <p class="post-10">애니포인트 미디어</p>
+                                                </div>
+                                                <div class="post-6">
+                                                    <div class="post-7">
+                                                        <div>
+                                                            <p class="post-8">주니어 백엔드 개발자</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="post-9">
+                                                    <p class="post-10">주니어 백엔드 개발자를 모집합니다.</p>
+                                                </div>
+                                            </div>
+                                            <!-- 취소버튼 -->
+                                            <div>
+                                                <button class="post-23">
+                                                    <span class="ai_center d_flex jc_center us_none white-space_nowrap p_0px_3px textStyle_Body.BodyS_Bold">저장 취소</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 결제내역 -->
+                        <div class="post-1">
+                            <div class="post-2" style="align-items: start;">
+                                <div id="experience" style="display: contents;">
+                                    <!-- 결제 내역이 없을 때 -->
+                                    <!-- <div class="post-3">                        
+                                        <div class="post-13" style="padding-left: 0; justify-content: center; display: flex;">
+                                            <div class="post-14" style="margin: 0 auto;">
+                                                <div class="post-15" >
+                                                    <div class="post-8" style="margin: 0 auto;">
+                                                        <span>결제 내역이 없습니다.</span>
+                                                    </div>
+                                                </div>
+                                                <div class="post-9" style="margin: 0 auto;">
+                                                    <p class="post-10">체험 신청을 해보세요.</p>
+                                                </div>
+                                            </div>
+                                            <div class="post-17">
+                                                <div class="post-18">
+                                                    <div class="post-19">
+                                                        <div class="content-14" style="width: 200px; margin: 0 auto;">
+                                                            <button class="set content-15" type="button" >
+                                                                <span class="content-16">체험 공고 둘러보기</span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> -->
+                                    <!-- 결제 내역이 있을 때 -->
+                                    <div class="payment">
+                                        <table class="payment-1">
+                                            <!-- 목록 -->
+                                            <thead>
+                                                <tr>
+                                                    <th class="payment-2">기업명</th>
+                                                    <th class="payment-2">체험공고 제목</th>       
+                                                    <th class="payment-2">지원상태</th>                                     
+                                                    <th class="payment-2">비고</th>
+                                                </tr>
+                                            </thead>
+                                            <!-- 결제 내역들 -->
+                                            <tbody class="">
+                                                <tr>
+                                                    <td class="payment-3">
+                                                        <p>코리아IT</p>
+                                                    </td>
+                                                    <td class="payment-3">
+                                                        <p>SW 개발 백엔드 체험</p>
+                                                    </td>  
+                                                    <td class="payment-3">
+                                                        <p>서류 접수</p>
+                                                    </td>  
+                                                    <td class="payment-3">
+                                                        <div>
+                                                            <button class="post-23 retract-triger">
+                                                                <span class="ai_center d_flex jc_center us_none white-space_nowrap p_0px_3px textStyle_Body.BodyS_Bold">지원 취소</span>
+                                                            </button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="payment-3">
+                                                        <p>코리아IT</p>
+                                                    </td>
+                                                    <td class="payment-3">
+                                                        <p>SW 개발 백엔드 체험</p>
+                                                    </td>  
+                                                    <td class="payment-3">
+                                                        <p>합격</p>
+                                                    </td>  
+                                                    <td class="payment-3">
+                                                        <p>-</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="payment-3">
+                                                        <p>코리아IT</p>
+                                                    </td>
+                                                    <td class="payment-3">
+                                                        <p>SW 개발 백엔드 체험</p>
+                                                    </td>  
+                                                    <td class="payment-3">
+                                                        <p>불합격</p>
+                                                    </td>  
+                                                    <td class="payment-3">
+                                                        <p>환불</p>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="retract">
+                                        <div class="retract-1">
+                                            <div class="retract-2">
+                                                <div class="retract-3">
+                                                    <div class="retract-4">
+                                                        <svg aria-label="icon" color="foregrounds.neutral.primary" fill="currentColor" height="40px" role="img" width="40px">
+                                                            <path clip-rule="evenodd" d="M8.284 6.2H4a.8.8 0 1 0 0 1.6h1.2V18A2.8 2.8 0 0 0 8 20.8h8a2.8 2.8 0 0 0 2.8-2.8V7.8H20a.8.8 0 0 0 0-1.6h-4.284a3.801 3.801 0 0 0-7.432 0m1.666 0h4.1a2.2 2.2 0 0 0-4.1 0m7.25 1.6H6.8V18A1.2 1.2 0 0 0 8 19.2h8a1.2 1.2 0 0 0 1.2-1.2z" fill-rule="evenodd"></path>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="retract-5">
+                                                        <p class="retract-6">지원을 취소하시겠습니까?</p>
+                                                        <div class="retract-7">
+                                                            <p class="retract-8">지원 취소시 체험비용이 환불됩니다.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="retract-9">
+                                                    <button class="retract-10"><span class="retract-11">취소하기</span></button>
+                                                    <button class="retract-12"><span class="retract-11">닫기</span></button>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="etc">
-                    <!-- 보관함 -->
-                    <div class="etc-1">
-                        <div class="etc-2">
-                            <div class="etc-3">
-                                <div class="etc-4">
-                                    <div class="etc-5">
-                                        <p class="etc-6">보관함</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="etc-7">
-                            <div class="etc-8">
-                                <p class="etc-9">보관함을 채워보세요.</p>
-                                <p class="etc-10">나를 더 잘 소개할 수 있는 파일/URL을 등록하세요.
-    공고에 빠르게 지원하거나, 다른 기업으로부터 제안을 받아볼 수도 있습니다.</p>
-                            </div>
-                            <button class="etc-11 popup-trigger" data-target="#dropdown1">
-                                <span class="etc-12">등록하기</span>
-                            </button>
-                            <div style="height: 0;">
-                                <div class="popup-action line">
-                                    <div id="dropdown1" class="option-menu">
-                                        <ul class="option-list">
-                                            <li class="option-item">
-                                                <button class="option-btn dropdown-trigger" data-target="#popup3">
-                                                    <div>
-                                                        <svg fill="currentColor" height="24" role="img" width="24">
-                                                            <path clip-rule="evenodd" d="M5 4.8A1.2 1.2 0 0 0 3.8 6v12A1.2 1.2 0 0 0 5 19.2h14a1.2 1.2 0 0 0 1.2-1.2V9A1.2 1.2 0 0 0 19 7.8h-5.93a2.8 2.8 0 0 1-2.33-1.247l-.812-1.218A1.2 1.2 0 0 0 8.93 4.8zM2.2 6A2.8 2.8 0 0 1 5 3.2h3.93a2.8 2.8 0 0 1 2.33 1.247l.812 1.219a1.2 1.2 0 0 0 .998.534H19A2.8 2.8 0 0 1 21.8 9v9a2.8 2.8 0 0 1-2.8 2.8H5A2.8 2.8 0 0 1 2.2 18z" fill-rule="evenodd"></path>
-                                                        </svg>
-                                                    </div>
-                                                    <p>파일 추가하기</p>
-                                                </button>
-                                            </li>
-                                            <li class="option-item">
-                                                <button class="option-btn dropdown-trigger" data-target="#popup4">
-                                                    <div>
-                                                        <svg fill="currentColor" height="24" role="img" width="24">
-                                                            <path clip-rule="evenodd" d="M12.141 5.07a4.8 4.8 0 1 1 6.788 6.789l-1.414 1.414a.8.8 0 1 1-1.131-1.131l1.414-1.415a3.2 3.2 0 0 0-4.526-4.525l-1.414 1.414a.8.8 0 0 1-1.131-1.131zm3.253 3.536a.8.8 0 0 1 0 1.131l-5.657 5.657a.8.8 0 0 1-1.132-1.131l5.657-5.657a.8.8 0 0 1 1.132 0m-7.778 2.121a.8.8 0 0 1 0 1.132L6.2 13.273a3.2 3.2 0 0 0 4.526 4.525l1.414-1.414a.8.8 0 0 1 1.131 1.131l-1.414 1.415a4.8 4.8 0 0 1-6.788-6.788l1.414-1.415a.8.8 0 0 1 1.132 0" fill-rule="evenodd"></path>
-                                                        </svg>
-                                                    </div>
-                                                    <p>URL 추가하기</p>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <!-- popup - 이력서등록 -->
-                                <!-- data-sticky="true" 남아야 하는 팝업일때 붙임 -->
-                                <div id="popup3" class="popup-container pop-center" data-sticky="true">
-                                    <div class="popup-inner">
-                                        <div class="popup-header">
-                                            <strong class="popup-title">보관함 등록</strong>
-                                            <button class="popup-close popup-library-close">닫기</button>
-                                        </div>
-                                        <form action="">
-                                            <div class="popup-body">
-                                                <div class="form-list form-grid">
-                                                    <div class="form-item flex-1-1">
-                                                        <label class="form-label" for="type-input">유형<span class="must">*</span></label>
-                                                        <div class="form-field form-field-dropdown">
-                                                            <input type="text" id="type-input" class="dropdown-trigger" data-target="#dropdown2" placeholder="선택 또는 입력" readonly>
-
-                                                            <div id="dropdown2" class="option-menu">
-                                                                <ul class="option-list">
-                                                                    <li class="option-item option-input">
-                                                                        <button type="button" class="option-btn">
-                                                                            <svg aria-label="icon" color="foregrounds.neutral.primary" fill="currentColor" height="24" role="img" width="24">
-                                                                                <path clip-rule="evenodd" d="M12 4.2a.8.8 0 0 1 .8.8v6.2H19a.8.8 0 0 1 0 1.6h-6.2V19a.8.8 0 0 1-1.6 0v-6.2H5a.8.8 0 0 1 0-1.6h6.2V5a.8.8 0 0 1 .8-.8" fill-rule="evenodd"></path>
-                                                                            </svg>
-                                                                            <p>직접 입력</p>
-                                                                        </button>
-                                                                    </li>
-                                                                    <li class="option-item">
-                                                                        <button type="button" class="option-btn">
-                                                                            <p>이력서</p>
-                                                                        </button>
-                                                                    </li>
-                                                                    <li class="option-item">
-                                                                        <button type="button" class="option-btn">
-                                                                            <p>포트폴리오</p>
-                                                                        </button>
-                                                                    </li>
-                                                                    <li class="option-item">
-                                                                        <button type="button" class="option-btn">
-                                                                            <p>자기소개서</p>
-                                                                        </button>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="form-item flex-3">
-                                                        <label class="form-label" for="file-input">파일<span class="must">*</span></label>
-                                                        <div class="form-field">
-                                                            <!-- 실제 파일 input은 숨김 -->
-                                                            <input type="file" id="file-input" hidden>
-                                                            <!-- 파일명이 표시될 커스텀 영역 -->
-                                                            <label for="file-input" class="form-file-label">파일</label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="popup-action">
-                                                <button id="pop-apply" class="pop-btn btn-primary">등록하기</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-
-                                <!-- popup - url추가 -->
-                                <!-- data-sticky="true" 남아야 하는 팝업일때 붙임 -->
-                                <div id="popup4" class="popup-container pop-center" data-sticky="true">
-                                    <div class="popup-inner">
-                                        <div class="popup-header">
-                                            <strong class="popup-title">보관함 등록</strong>
-                                            <button class="popup-close popup-library-close">닫기</button>
-                                        </div>
-                                        <form action="">
-                                            <div class="popup-body">
-                                                <div class="form-list form-grid">
-                                                    <div class="form-item flex-1-1">
-                                                        <label class="form-label" for="type-input">유형<span class="must">*</span></label>
-                                                        <div class="form-field form-field-dropdown">
-                                                            <input type="text" id="type-input" class="dropdown-trigger" data-target="#dropdown3" placeholder="선택 또는 입력" readonly>
-
-                                                            <div id="dropdown3" class="option-menu">
-                                                                <ul class="option-list">
-                                                                    <li class="option-item option-input">
-                                                                        <button type="button" class="option-btn">
-                                                                            <svg aria-label="icon" color="foregrounds.neutral.primary" fill="currentColor" height="24" role="img" width="24">
-                                                                                <path clip-rule="evenodd" d="M12 4.2a.8.8 0 0 1 .8.8v6.2H19a.8.8 0 0 1 0 1.6h-6.2V19a.8.8 0 0 1-1.6 0v-6.2H5a.8.8 0 0 1 0-1.6h6.2V5a.8.8 0 0 1 .8-.8" fill-rule="evenodd"></path>
-                                                                            </svg>
-                                                                            <p>직접 입력</p>
-                                                                        </button>
-                                                                    </li>
-                                                                    <li class="option-item">
-                                                                        <button type="button" class="option-btn">
-                                                                            <p>이력서</p>
-                                                                        </button>
-                                                                    </li>
-                                                                    <li class="option-item">
-                                                                        <button type="button" class="option-btn">
-                                                                            <p>포트폴리오</p>
-                                                                        </button>
-                                                                    </li>
-                                                                    <li class="option-item">
-                                                                        <button type="button" class="option-btn">
-                                                                            <p>자기소개서</p>
-                                                                        </button>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="form-item flex-3">
-                                                        <label class="form-label" for="file-input">URL<span class="must">*</span></label>
-                                                        <div class="form-field">
-                                                            <input type="text" id="url-input" placeholder="URL">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="popup-action">
-                                                <button id="pop-apply" class="pop-btn btn-primary">등록하기</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-
-                                <!-- popup - 닫기 메세지 -->
-                                <div id="popup5" class="popup-container pop-center pop-default">
-                                    <div class="popup-inner">
-                                        <div class="popup-body">
-                                            <div class="popup-title-box">
-                                                <strong class="popup-title">변경사항이 저장되지 않았습니다.</strong>
-                                                <p class="popup-sub-title">지금 나가면 변경사항이 반영되지 않습니다.<br/>그래도 나가시겠습니까?</p>
-                                            </div>
-                                        </div>
-                                        <div class="popup-action popup-btn-row">
-                                            <button id="" class="pop-btn btn-primary popup-all-close">저장하지 않고 나가기</button>
-                                            <button id="" class="pop-btn btn-default">계속 작성하기</button>
+                    <div class="etc">
+                        <!-- 보관함 -->
+                        <div class="etc-1">
+                            <div class="etc-2">
+                                <div class="etc-3">
+                                    <div class="etc-4">
+                                        <div class="etc-5">
+                                            <p class="etc-6">보관함</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <!-- 보관함 저장시 -->
-                    <div class="etc-1">
-                        <div class="etc-2">
-                            <div class="etc-3">
-                                <div class="etc-4">
-                                    <div class="etc-5">
-                                        <p class="etc-6">보관함</p>
-                                    </div>
+                            <div class="etc-7">
+                                <div class="etc-8">
+                                    <p class="etc-9">보관함을 채워보세요.</p>
+                                    <p class="etc-10">나를 더 잘 소개할 수 있는 파일/URL을 등록하세요.
+        공고에 빠르게 지원하거나, 다른 기업으로부터 제안을 받아볼 수도 있습니다.</p>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="etc-7" style="margin:0 auto;">
-                            <div class="etc-8">
-                                <ul class="form-list file-list form-row">
-                                    <li class="form-item">
-                                        <div class="file-container">
-                                            <div class="file-icon">
-                                                <img src="../../static/images/experience/list/icon_file_excel.svg" alt="">
-                                            </div>
-                                            <div class="file-info">
-                                                <p class="file-label">포트폴리오</p>
-                                                <span class="file-name">파일이름.xlsx</span>
-                                            </div>
-                                        </div>
-                                        <div class="btn-check-container">
-                                            <div class="radio-box">
-                                                <label for="check1" class="icon-radio">
-                                                    <input type="radio" name="radio" id="check1">
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="form-item">
-                                        <div class="file-container">
-                                            <div class="file-icon">
-                                                <img src="../../static/images/experience/list/icon_file_default.svg" alt="">
-                                            </div>
-                                            <div class="file-info">
-                                                <p class="file-label">포트폴리오 url</p>
-                                                <span class="file-name url">https://shopping.naver.com/ns/home</span>
-                                            </div>
-                                        </div>
-                                        <div class="btn-check-container">
-                                            <div class="radio-box">
-                                                <label for="check2" class="icon-radio">
-                                                    <input type="radio" name="radio" id="check2">
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="form-item">
-                                        <div class="file-container">
-                                            <div class="file-icon">
-                                                <img src="../../static/images/experience/list/icon_file_pdf.svg" alt="">
-                                            </div>
-                                            <div class="file-info">
-                                                <p class="file-label">포트폴리오</p>
-                                                <span class="file-name">파일이름.pdf</span>
-                                            </div>
-                                        </div>
-                                        <div class="btn-check-container">
-                                            <div class="radio-box">
-                                                <label for="check3" class="icon-radio">
-                                                    <input type="radio" name="radio" id="check3">
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="form-item">
-                                        <div class="file-container">
-                                            <div class="file-icon">
-                                                <img src="../../static/images/experience/list/icon_file_ppt.svg" alt="">
-                                            </div>
-                                            <div class="file-info">
-                                                <p class="file-label">포트폴리오</p>
-                                                <span class="file-name">파일이름.ppt</span>
-                                            </div>
-                                        </div>
-                                        <div class="btn-check-container">
-                                            <div class="radio-box">
-                                                <label for="check4" class="icon-radio">
-                                                    <input type="radio" name="radio" id="check4">
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="form-item">
-                                        <div class="file-container">
-                                            <div class="file-icon">
-                                                <img src="../../static/images/experience/list/icon_file_docx.svg" alt="">
-                                            </div>
-                                            <div class="file-info">
-                                                <p class="file-label">포트폴리오</p>
-                                                <span class="file-name">파일이름.docx</span>
-                                            </div>
-                                        </div>
-                                        <div class="btn-check-container">
-                                            <div class="radio-box">
-                                                <label for="check5" class="icon-radio">
-                                                    <input type="radio" name="radio" id="check5">
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div>
-                                <button class="etc-11 popup-trigger" data-target="#dropdown1" >
-                                    <span class="etc-12">등록하기</span>
-                                </button>
                                 <button class="etc-11 popup-trigger" data-target="#dropdown1">
-                                    <span class="etc-12">수정하기</span>
+                                    <span class="etc-12">등록하기</span>
                                 </button>
                                 <div style="height: 0;">
                                     <div class="popup-action line">
@@ -1198,15 +1041,551 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="etc-13">
-                        <div class="etc-14">
-                            <img alt="XRPL 해커톤 SEOUL 2025 참가자 모집" decoding="async" data-nimg="fill" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" src="../../static/images/mypage/banner.jpg" style="position: absolute; height: 150px; width: 100%; inset: 0px; object-fit: cover; color: transparent; border-radius: 12px;">
+                        <!-- 보관함 저장시 -->
+                        <div class="etc-1">
+                            <div class="etc-2">
+                                <div class="etc-3">
+                                    <div class="etc-4">
+                                        <div class="etc-5">
+                                            <p class="etc-6">보관함</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="etc-7" style="margin:0 auto;">
+                                <div class="etc-8">
+                                    <ul class="form-list file-list form-row">
+                                        <li class="form-item">
+                                            <div class="file-container">
+                                                <div class="file-icon">
+                                                    <img src="../../static/images/experience/icon_file_excel.svg" alt="">
+                                                </div>
+                                                <div class="file-info">
+                                                    <p class="file-label">포트폴리오</p>
+                                                    <span class="file-name">파일이름.xlsx</span>
+                                                </div>
+                                            </div>
+                                            <div class="btn-check-container">
+                                                <div class="radio-box">
+                                                    <label for="check1" class="icon-radio">
+                                                        <input type="radio" name="radio" id="check1">
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="form-item">
+                                            <div class="file-container">
+                                                <div class="file-icon">
+                                                    <img src="../../static/images/experience/icon_file_default.svg" alt="">
+                                                </div>
+                                                <div class="file-info">
+                                                    <p class="file-label">포트폴리오 url</p>
+                                                    <span class="file-name url">https://shopping.naver.com/ns/home</span>
+                                                </div>
+                                            </div>
+                                            <div class="btn-check-container">
+                                                <div class="radio-box">
+                                                    <label for="check2" class="icon-radio">
+                                                        <input type="radio" name="radio" id="check2">
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="form-item">
+                                            <div class="file-container">
+                                                <div class="file-icon">
+                                                    <img src="../../static/images/experience/icon_file_pdf.svg" alt="">
+                                                </div>
+                                                <div class="file-info">
+                                                    <p class="file-label">포트폴리오</p>
+                                                    <span class="file-name">파일이름.pdf</span>
+                                                </div>
+                                            </div>
+                                            <div class="btn-check-container">
+                                                <div class="radio-box">
+                                                    <label for="check3" class="icon-radio">
+                                                        <input type="radio" name="radio" id="check3">
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="form-item">
+                                            <div class="file-container">
+                                                <div class="file-icon">
+                                                    <img src="../../static/images/experience/icon_file_ppt.svg" alt="">
+                                                </div>
+                                                <div class="file-info">
+                                                    <p class="file-label">포트폴리오</p>
+                                                    <span class="file-name">파일이름.ppt</span>
+                                                </div>
+                                            </div>
+                                            <div class="btn-check-container">
+                                                <div class="radio-box">
+                                                    <label for="check4" class="icon-radio">
+                                                        <input type="radio" name="radio" id="check4">
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="form-item">
+                                            <div class="file-container">
+                                                <div class="file-icon">
+                                                    <img src="../../static/images/experience/icon_file_docx.svg" alt="">
+                                                </div>
+                                                <div class="file-info">
+                                                    <p class="file-label">포트폴리오</p>
+                                                    <span class="file-name">파일이름.docx</span>
+                                                </div>
+                                            </div>
+                                            <div class="btn-check-container">
+                                                <div class="radio-box">
+                                                    <label for="check5" class="icon-radio">
+                                                        <input type="radio" name="radio" id="check5">
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <button class="etc-11 popup-trigger" data-target="#dropdown2" >
+                                        <span class="etc-12">등록하기</span>
+                                    </button>
+                                    <button class="etc-11" >
+                                        <span class="etc-12">삭제하기</span>
+                                    </button>
+                                    <div style="height: 0;">
+                                        <div class="popup-action line">
+                                            <div id="dropdown2" class="option-menu">
+                                                <ul class="option-list">
+                                                    <li class="option-item">
+                                                        <button class="option-btn dropdown-trigger" data-target="#popup3">
+                                                            <div>
+                                                                <svg fill="currentColor" height="24" role="img" width="24">
+                                                                    <path clip-rule="evenodd" d="M5 4.8A1.2 1.2 0 0 0 3.8 6v12A1.2 1.2 0 0 0 5 19.2h14a1.2 1.2 0 0 0 1.2-1.2V9A1.2 1.2 0 0 0 19 7.8h-5.93a2.8 2.8 0 0 1-2.33-1.247l-.812-1.218A1.2 1.2 0 0 0 8.93 4.8zM2.2 6A2.8 2.8 0 0 1 5 3.2h3.93a2.8 2.8 0 0 1 2.33 1.247l.812 1.219a1.2 1.2 0 0 0 .998.534H19A2.8 2.8 0 0 1 21.8 9v9a2.8 2.8 0 0 1-2.8 2.8H5A2.8 2.8 0 0 1 2.2 18z" fill-rule="evenodd"></path>
+                                                                </svg>
+                                                            </div>
+                                                            <p>파일 추가하기</p>
+                                                        </button>
+                                                    </li>
+                                                    <li class="option-item">
+                                                        <button class="option-btn dropdown-trigger" data-target="#popup4">
+                                                            <div>
+                                                                <svg fill="currentColor" height="24" role="img" width="24">
+                                                                    <path clip-rule="evenodd" d="M12.141 5.07a4.8 4.8 0 1 1 6.788 6.789l-1.414 1.414a.8.8 0 1 1-1.131-1.131l1.414-1.415a3.2 3.2 0 0 0-4.526-4.525l-1.414 1.414a.8.8 0 0 1-1.131-1.131zm3.253 3.536a.8.8 0 0 1 0 1.131l-5.657 5.657a.8.8 0 0 1-1.132-1.131l5.657-5.657a.8.8 0 0 1 1.132 0m-7.778 2.121a.8.8 0 0 1 0 1.132L6.2 13.273a3.2 3.2 0 0 0 4.526 4.525l1.414-1.414a.8.8 0 0 1 1.131 1.131l-1.414 1.415a4.8 4.8 0 0 1-6.788-6.788l1.414-1.415a.8.8 0 0 1 1.132 0" fill-rule="evenodd"></path>
+                                                                </svg>
+                                                            </div>
+                                                            <p>URL 추가하기</p>
+                                                        </button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <!-- popup - 이력서등록 -->
+                                        <!-- data-sticky="true" 남아야 하는 팝업일때 붙임 -->
+                                        <div id="popup4" class="popup-container pop-center" data-sticky="true">
+                                            <div class="popup-inner">
+                                                <div class="popup-header">
+                                                    <strong class="popup-title">보관함 등록</strong>
+                                                    <button class="popup-close popup-library-close">닫기</button>
+                                                </div>
+                                                <form action="">
+                                                    <div class="popup-body">
+                                                        <div class="form-list form-grid">
+                                                            <div class="form-item flex-1-1">
+                                                                <label class="form-label" for="type-input">유형<span class="must">*</span></label>
+                                                                <div class="form-field form-field-dropdown">
+                                                                    <input type="text" id="type-input" class="dropdown-trigger" data-target="#dropdown2" placeholder="선택 또는 입력" readonly>
+
+                                                                    <div id="dropdown2" class="option-menu">
+                                                                        <ul class="option-list">
+                                                                            <li class="option-item option-input">
+                                                                                <button type="button" class="option-btn">
+                                                                                    <svg aria-label="icon" color="foregrounds.neutral.primary" fill="currentColor" height="24" role="img" width="24">
+                                                                                        <path clip-rule="evenodd" d="M12 4.2a.8.8 0 0 1 .8.8v6.2H19a.8.8 0 0 1 0 1.6h-6.2V19a.8.8 0 0 1-1.6 0v-6.2H5a.8.8 0 0 1 0-1.6h6.2V5a.8.8 0 0 1 .8-.8" fill-rule="evenodd"></path>
+                                                                                    </svg>
+                                                                                    <p>직접 입력</p>
+                                                                                </button>
+                                                                            </li>
+                                                                            <li class="option-item">
+                                                                                <button type="button" class="option-btn">
+                                                                                    <p>이력서</p>
+                                                                                </button>
+                                                                            </li>
+                                                                            <li class="option-item">
+                                                                                <button type="button" class="option-btn">
+                                                                                    <p>포트폴리오</p>
+                                                                                </button>
+                                                                            </li>
+                                                                            <li class="option-item">
+                                                                                <button type="button" class="option-btn">
+                                                                                    <p>자기소개서</p>
+                                                                                </button>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-item flex-3">
+                                                                <label class="form-label" for="file-input">파일<span class="must">*</span></label>
+                                                                <div class="form-field">
+                                                                    <!-- 실제 파일 input은 숨김 -->
+                                                                    <input type="file" id="file-input" hidden>
+                                                                    <!-- 파일명이 표시될 커스텀 영역 -->
+                                                                    <label for="file-input" class="form-file-label">파일</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="popup-action">
+                                                        <button id="pop-apply" class="pop-btn btn-primary">등록하기</button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+
+                                        <!-- popup - url추가 -->
+                                        <!-- data-sticky="true" 남아야 하는 팝업일때 붙임 -->
+                                        <div id="popup5" class="popup-container pop-center" data-sticky="true">
+                                            <div class="popup-inner">
+                                                <div class="popup-header">
+                                                    <strong class="popup-title">보관함 등록</strong>
+                                                    <button class="popup-close popup-library-close">닫기</button>
+                                                </div>
+                                                <form action="">
+                                                    <div class="popup-body">
+                                                        <div class="form-list form-grid">
+                                                            <div class="form-item flex-1-1">
+                                                                <label class="form-label" for="type-input">유형<span class="must">*</span></label>
+                                                                <div class="form-field form-field-dropdown">
+                                                                    <input type="text" id="type-input" class="dropdown-trigger" data-target="#dropdown3" placeholder="선택 또는 입력" readonly>
+
+                                                                    <div id="dropdown3" class="option-menu">
+                                                                        <ul class="option-list">
+                                                                            <li class="option-item option-input">
+                                                                                <button type="button" class="option-btn">
+                                                                                    <svg aria-label="icon" color="foregrounds.neutral.primary" fill="currentColor" height="24" role="img" width="24">
+                                                                                        <path clip-rule="evenodd" d="M12 4.2a.8.8 0 0 1 .8.8v6.2H19a.8.8 0 0 1 0 1.6h-6.2V19a.8.8 0 0 1-1.6 0v-6.2H5a.8.8 0 0 1 0-1.6h6.2V5a.8.8 0 0 1 .8-.8" fill-rule="evenodd"></path>
+                                                                                    </svg>
+                                                                                    <p>직접 입력</p>
+                                                                                </button>
+                                                                            </li>
+                                                                            <li class="option-item">
+                                                                                <button type="button" class="option-btn">
+                                                                                    <p>이력서</p>
+                                                                                </button>
+                                                                            </li>
+                                                                            <li class="option-item">
+                                                                                <button type="button" class="option-btn">
+                                                                                    <p>포트폴리오</p>
+                                                                                </button>
+                                                                            </li>
+                                                                            <li class="option-item">
+                                                                                <button type="button" class="option-btn">
+                                                                                    <p>자기소개서</p>
+                                                                                </button>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-item flex-3">
+                                                                <label class="form-label" for="file-input">URL<span class="must">*</span></label>
+                                                                <div class="form-field">
+                                                                    <input type="text" id="url-input" placeholder="URL">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="popup-action">
+                                                        <button id="pop-apply" class="pop-btn btn-primary">등록하기</button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+
+                                        <!-- popup - 닫기 메세지 -->
+                                        <div id="popup6" class="popup-container pop-center pop-default">
+                                            <div class="popup-inner">
+                                                <div class="popup-body">
+                                                    <div class="popup-title-box">
+                                                        <strong class="popup-title">변경사항이 저장되지 않았습니다.</strong>
+                                                        <p class="popup-sub-title">지금 나가면 변경사항이 반영되지 않습니다.<br/>그래도 나가시겠습니까?</p>
+                                                    </div>
+                                                </div>
+                                                <div class="popup-action popup-btn-row">
+                                                    <button id="" class="pop-btn btn-primary popup-all-close">저장하지 않고 나가기</button>
+                                                    <button id="" class="pop-btn btn-default">계속 작성하기</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>                
+                        <div class="etc-13">
+                            <div class="etc-14">
+                                <img alt="XRPL 해커톤 SEOUL 2025 참가자 모집" decoding="async" data-nimg="fill" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" src="../../static/images/mypage/banner.jpg" style="position: absolute; height: 150px; width: 100%; inset: 0px; object-fit: cover; color: transparent; border-radius: 12px;">
+                            </div>
+                        </div>                
+                    </div>
                 </div>
             </div>
-        </div>
+            <!-- 댓글창 모달 -->
+            <div class="reply">
+                <div class="reply-contain">
+                    <!-- 게시글 상세 -->
+                    <div class="reply-left">                                            
+                        <div id="back" class="mobile">
+                            <svg class="icons" aria-label="icon" color="foregrounds.neutral.primary" fill="currentColor" height="20" role="img" width="20">
+                                <path clip-rule="evenodd" d="M11.566 5.435a.8.8 0 0 0-1.132 0l-6 6a.8.8 0 0 0 0 1.13l6 6a.8.8 0 1 0 1.132-1.13L6.93 12.8H19a.8.8 0 1 0 0-1.6H6.931l4.635-4.634a.8.8 0 0 0 0-1.131" fill-rule="evenodd"></path>
+                            </svg>                                         
+                            <div  class="reply-5">
+                                <span class="reply-6">뒤로가기</span>
+                            </div>                                                
+                        </div> 
+                        <!-- 좌측상단 -->
+                        <div class="post-9">
+                            <div>
+                                <img alt="image" draggable="false" loading="lazy" width="40" height="40" decoding="async" data-nimg="1" src="../../static/images/mypage/default.webp" style="color: transparent; border-radius: 999px; cursor: pointer; max-height: 40px; max-width: 40px; min-height: 40px; min-width: 40px; object-fit: contain;">
+                            </div>
+                            <div class="post-10">
+                                <div class="post-11">
+                                    <div class="post-12">
+                                        <div>
+                                            <p class="post-13">지원자</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="post-14">
+                                    <p class="post-15">SW개발자</p>
+                                    <p class="post-15">11분 전</p>
+                                </div>
+                            </div>
+                            <!-- 신고 버튼 -->
+                            <div class="report">
+                                <button class="post-28" style="width: 70px; color: #e0e0e0; font-size: 15px; font-weight: 500;">
+                                    <svg class="btn" aria-label="icon" color="foregrounds.neutral.tertiary" fill="currentColor" height="20" role="img" width="20" >
+                                        <path clip-rule="evenodd" d="M12 10.5c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5m0-4c.83 0 1.5-.67 1.5-1.5s-.67-1.5-1.5-1.5-1.5.67-1.5 1.5.67 1.5 1.5 1.5m0 11c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5" fill-rule="evenodd"></path></symbol><symbol id="paper-fold-text-outline" viewBox="0 0 24 24"><path clip-rule="evenodd" d="M7 3.8A1.2 1.2 0 0 0 5.8 5v8a.8.8 0 0 1-1.6 0V5A2.8 2.8 0 0 1 7 2.2h12A2.8 2.8 0 0 1 21.8 5v13a4.15 4.15 0 0 1-.75 2.343c-.6.83-1.59 1.457-3.05 1.457H6a4.15 4.15 0 0 1-2.342-.75C2.827 20.45 2.2 19.46 2.2 18v-2a.8.8 0 0 1 .8-.8h12a.8.8 0 0 1 .8.8v2c0 .94.373 1.45.792 1.751.46.331 1.036.45 1.408.45.94 0 1.449-.374 1.75-.793A2.55 2.55 0 0 0 20.2 18V5A1.2 1.2 0 0 0 19 3.8zm7.827 16.4c-.384-.563-.627-1.29-.627-2.2v-1.2H3.8V18c0 .94.373 1.45.792 1.751.46.331 1.036.45 1.408.45zM8.2 7a.8.8 0 0 1 .8-.8h8a.8.8 0 0 1 0 1.6H9a.8.8 0 0 1-.8-.8m0 4a.8.8 0 0 1 .8-.8h4a.8.8 0 0 1 0 1.6H9a.8.8 0 0 1-.8-.8" fill-rule="evenodd"></path>
+                                    </svg>
+                                    <div class="report-1">
+                                        <div class="report-2">
+                                            <div class="report-3">
+                                                <div class="report-4">
+                                                    <div class="report-5">
+                                                        <p class="report-6">게시물 신고</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="post-16">
+                            <div class="post-17">
+                                <div class="post-18">
+                                    <div class="post-19">
+                                        <span>테스트용 글 확인</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 이미지파일 -->
+                            <div class="file">
+                                <div class="file-1">
+                                    <div class="file-2">
+                                        <!-- 이전 버튼 -->
+                                        <div class="file-3">
+                                            <button class="file-4">
+                                                <div class="file-5">
+                                                    <svg aria-label="icon" color="foregrounds.neutral.secondary" fill="currentColor" height="25" role="img" width="16" style="margin-right: 4px; margin-left: -4;">
+                                                        <path clip-rule="evenodd" d="M14.566 6.435a.8.8 0 0 1 0 1.13L10.13 12l4.435 4.435a.8.8 0 1 1-1.132 1.13l-5-5a.8.8 0 0 1 0-1.13l5-5a.8.8 0 0 1 1.132 0" fill-rule="evenodd"></path>
+                                                    </svg>
+                                                </div>
+                                            </button>
+                                        </div>
+                                        <!-- 다음 버튼 -->
+                                        <div class="file-6">
+                                            <button class="file-7">
+                                                <div class="file-8">
+                                                    <svg aria-label="icon" color="foregrounds.neutral.secondary" fill="currentColor" height="25" role="img" width="16" style="margin-right: 4px; margin-left: -4;">
+                                                        <path clip-rule="evenodd" d="M9.434 6.435a.8.8 0 0 1 1.132 0l5 5a.8.8 0 0 1 0 1.13l-5 5a.8.8 0 1 1-1.132-1.13L13.87 12 9.434 7.566a.8.8 0 0 1 0-1.131" fill-rule="evenodd"></path>
+                                                    </svg>
+                                                </div>
+                                            </button>
+                                        </div>
+                                        <!-- 이미모음 -->
+                                        <div class="file-9">
+                                            <!-- 이미지들 -->
+                                            <div class="file-10">
+                                                <img class="img" alt="첨부 이미지 1" draggable="false" loading="eager" width="0" height="0" decoding="async" data-nimg="1" class="bd_1px_solid bd-c_strokes.surface.standard bdr_8px" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" src="../../static/images/mypage/IMG_4127_2025_09_11T05_25_47_988Z.webp" style="color: transparent; height: 320px; object-fit: cover; width: auto;">
+                                            </div>
+                                            <div class="file-10">
+                                                <img class="img" alt="첨부 이미지 1" draggable="false" loading="eager" width="0" height="0" decoding="async" data-nimg="1" class="bd_1px_solid bd-c_strokes.surface.standard bdr_8px" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" src="../../static/images/mypage/2.webp" style="color: transparent; height: 320px; object-fit: cover; width: auto;">
+                                            </div>
+                                            <div class="file-10">
+                                                <img class="img" alt="첨부 이미지 1" draggable="false" loading="eager" width="0" height="0" decoding="async" data-nimg="1" class="bd_1px_solid bd-c_strokes.surface.standard bdr_8px" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" src="../../static/images/mypage/3.webp" style="color: transparent; height: 320px; object-fit: cover; width: auto;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="post-20">
+                                <div class="post-21">
+                                    <div class="post-22">
+                                        <!-- 좋아요 -->
+                                        <button class="post-23">
+                                            <div class="post-24">
+                                                <svg class="icons" aria-label="icon" color="foregrounds.neutral.primary" fill="currentColor" height="20" role="img" width="20">
+                                                    <path d="M20.397 9.444a4.473 4.473 0 0 0-4.074-4.608l-.22-.013a3.65 3.65 0 0 0-2.889 1.286l-1.217 1.434-1.22-1.433a3.66 3.66 0 0 0-2.88-1.287l-.22.013a4.47 4.47 0 0 0-4.075 4.608l.001.054c0 2.298 1.56 3.764 3.81 5.72l.756.662.913.816c.908.865 1.878 1.7 2.868 2.47q.023.01.05.01a.1.1 0 0 0 .047-.01 38 38 0 0 0 2.944-2.534l.845-.756.785-.686c2.138-1.855 3.775-3.388 3.775-5.692zm1.599.054c0 3.147-2.3 5.142-4.328 6.902l-.77.673-.802.716a39 39 0 0 1-3.151 2.707l-.108.065c-.256.14-.544.215-.837.215l-.125-.004a1.7 1.7 0 0 1-.712-.211l-.109-.065a39 39 0 0 1-3.057-2.623l-.893-.798-.741-.649c-2.076-1.805-4.222-3.67-4.354-6.638l-.005-.29a6.07 6.07 0 0 1 1.42-4.116l.2-.225a6.07 6.07 0 0 1 4.21-1.933 5.26 5.26 0 0 1 4.162 1.849 5.3 5.3 0 0 1 1.606-1.274l.267-.128a5.25 5.25 0 0 1 2.296-.447 6.073 6.073 0 0 1 5.83 6.274"></path>
+                                                </svg>
+                                            </div>
+                                            <div style="margin-left: 5px;">
+                                                <p class="post-25">0</p>
+                                            </div>
+                                        </button>                                           
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 상세보기 우측 -->
+                    <div class="reply-right">
+                        <div class="reply-2">
+                            <!-- 댓글 상단 -->
+                            <div class="reply-3">
+                                <div class="reply-4">
+                                    <div class="reply-5">
+                                        <span class="reply-6">댓글</span>
+                                        <span class="reply-6">0</span>
+                                    </div>
+                                    <div class="leply-7">
+                                        <button id="down" class="leply-8">
+                                            <p class="leply-9">닫기</p>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 댓글 메인 -->
+                            <div class="reply-10">
+                                <!-- 댓글이 없을 때 -->
+                                <!-- <div class="reply-11">
+                                    <div class="reply-12">
+                                        <div class="reply-13">
+                                            <p class="post-13">아직 댓글이 없습니다.</p>
+                                            <p class="post-15">게시물에 첫 번째 댓글을 남겨보세요.</p>
+                                        </div>
+                                    </div>
+                                    <div style="height: 0px;"></div>
+                                </div> -->
+                                <!-- 댓글 모음 -->
+                                <div class="post-8" style="padding: 8px; border-bottom:none; gap:5px;">
+                                    <div class="post-9">
+                                        <div>
+                                            <img alt="image" draggable="false" loading="lazy" width="25" height="25" decoding="async" data-nimg="1" src="../../static/images/mypage/default.webp" style="color: transparent; border-radius: 999px; cursor: pointer; max-height: 25px; max-width: 40px; min-height: 40px; min-width: 40px; object-fit: contain;">
+                                        </div>
+                                        <div class="post-10">
+                                            <div class="post-11">
+                                                <div class="post-12">
+                                                    <div>
+                                                        <p class="post-13" style="font-size: 14px;">지원자</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="post-14">
+                                                <p class="post-15" style="font-size: 14px;">SW개발자</p>
+                                                <p class="post-15" style="font-size: 14px;">11분 전</p>
+                                            </div>                                            
+                                        </div>
+                                        <div class="delete">
+                                            <button class="post-28" style="width: 70px; color: #e0e0e0; font-size: 15px; font-weight: 500;">
+                                                <svg class="delbtn" aria-label="icon" color="foregrounds.neutral.tertiary" fill="currentColor" height="20" role="img" width="20" >
+                                                    <path clip-rule="evenodd" d="M12 10.5c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5m0-4c.83 0 1.5-.67 1.5-1.5s-.67-1.5-1.5-1.5-1.5.67-1.5 1.5.67 1.5 1.5 1.5m0 11c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5" fill-rule="evenodd"></path></symbol><symbol id="paper-fold-text-outline" viewBox="0 0 24 24"><path clip-rule="evenodd" d="M7 3.8A1.2 1.2 0 0 0 5.8 5v8a.8.8 0 0 1-1.6 0V5A2.8 2.8 0 0 1 7 2.2h12A2.8 2.8 0 0 1 21.8 5v13a4.15 4.15 0 0 1-.75 2.343c-.6.83-1.59 1.457-3.05 1.457H6a4.15 4.15 0 0 1-2.342-.75C2.827 20.45 2.2 19.46 2.2 18v-2a.8.8 0 0 1 .8-.8h12a.8.8 0 0 1 .8.8v2c0 .94.373 1.45.792 1.751.46.331 1.036.45 1.408.45.94 0 1.449-.374 1.75-.793A2.55 2.55 0 0 0 20.2 18V5A1.2 1.2 0 0 0 19 3.8zm7.827 16.4c-.384-.563-.627-1.29-.627-2.2v-1.2H3.8V18c0 .94.373 1.45.792 1.751.46.331 1.036.45 1.408.45zM8.2 7a.8.8 0 0 1 .8-.8h8a.8.8 0 0 1 0 1.6H9a.8.8 0 0 1-.8-.8m0 4a.8.8 0 0 1 .8-.8h4a.8.8 0 0 1 0 1.6H9a.8.8 0 0 1-.8-.8" fill-rule="evenodd"></path>
+                                                </svg>
+                                                <div class="delbtn-1">
+                                                    <div class="report-2">
+                                                        <div class="report-3">
+                                                            <div class="report-4">
+                                                                <div class="report-5">
+                                                                    <p class="report-6">댓글 삭제</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="post-16" style="gap: 8px;">
+                                        <div class="post-17">
+                                            <div class="post-18">
+                                                <div class="post-19" style="font-size: 14px; white-space: normal;">
+                                                    <span>테스트용 글 확인</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="post-20">
+                                            <div class="post-21">
+                                                <div class="post-22">
+                                                    <button class="post-23">
+                                                        <div class="post-24">
+                                                            <svg class="icons" aria-label="icon" color="red" fill="currentColor" height="20" role="img" width="20">
+                                                                <path d="M17.668 16.4c2.028-1.76 4.328-3.755 4.328-6.902a6.07 6.07 0 0 0-5.831-6.274 5.25 5.25 0 0 0-2.296.447l-.267.128a5.3 5.3 0 0 0-1.606 1.274 5.26 5.26 0 0 0-4.161-1.85 6.07 6.07 0 0 0-4.211 1.934l-.2.225a6.07 6.07 0 0 0-1.42 4.116l.005.29c.132 2.968 2.278 4.833 4.353 6.637v.001l.742.65.893.797a39 39 0 0 0 3.057 2.623l.109.065c.22.12.462.193.712.21l.125.005c.293 0 .58-.075.837-.215l.108-.065a39 39 0 0 0 3.151-2.707l.802-.716z"></path>
+                                                            </svg>
+                                                        </div>
+                                                        <div style="margin-left: 5px;">
+                                                            <p class="post-25">0</p>
+                                                        </div>
+                                                    </button>                                                 
+                                                </div>
+                                            </div>
+                                        </div>                                   
+                                     </div>
+                                </div>
+                            </div>
+                            <!-- 댓글창 -->
+                            <div class="reply-14">
+                                <div class="reply-15">
+                                    <div class="reply-16">
+                                        <div class="reply-17">
+                                            <textarea maxlength="2000" placeholder="댓글을 남겨보세요." rows="1" class="reply-18"></textarea>
+                                            <svg aria-label="icon" color="foregrounds.neutral.secondary" fill="currentColor" height="24" role="img" width="24">
+                                                <path clip-rule="evenodd" d="M9.434 6.435a.8.8 0 0 1 1.132 0l5 5a.8.8 0 0 1 0 1.13l-5 5a.8.8 0 1 1-1.132-1.13L13.87 12 9.434 7.566a.8.8 0 0 1 0-1.131" fill-rule="evenodd"></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 댓글 삭제모달 -->
+                            <div class="del">
+                                <div class="del-1">
+                                    <div class="del-2">
+                                        <div class="del-3">
+                                            <div class="del-4">
+                                                <svg aria-label="icon" color="foregrounds.neutral.primary" fill="currentColor" height="40px" role="img" width="40px">
+                                                    <path clip-rule="evenodd" d="M8.284 6.2H4a.8.8 0 1 0 0 1.6h1.2V18A2.8 2.8 0 0 0 8 20.8h8a2.8 2.8 0 0 0 2.8-2.8V7.8H20a.8.8 0 0 0 0-1.6h-4.284a3.801 3.801 0 0 0-7.432 0m1.666 0h4.1a2.2 2.2 0 0 0-4.1 0m7.25 1.6H6.8V18A1.2 1.2 0 0 0 8 19.2h8a1.2 1.2 0 0 0 1.2-1.2z" fill-rule="evenodd"></path>
+                                                </svg>
+                                            </div>
+                                            <div class="del-5">
+                                                <p class="del-6">댓글을 삭제하시겠습니까?</p>
+                                                <div class="del-7">
+                                                    <p class="del-8">삭제된 댓글은 다시 복구할 수 없으며, 게시물에서 발생한 다른 사용자의 좋아요, 댓글도 함께 삭제됩니다.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="del-9">
+                                            <button class="del-10"><span class="del-11">삭제하기</span></button>
+                                            <button class="del-12"><span class="del-11">닫기</span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
     </div>
 </body>
 <script src="../../static/js/mypage/event.js"></script>
