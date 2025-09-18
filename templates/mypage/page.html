@@ -241,7 +241,7 @@
                             </div>
                         </div>
                         <!-- 게시글 -->
-                        <div class="post-1">                    
+                        <div class="post-1 active">                    
                             <div class="post-2">
                                 <!-- 게시물이 없을 때 -->
                                 <div class="post-3">                        
@@ -732,11 +732,11 @@
                             </div>
                         </div>
                         <!-- 결제내역 -->
-                        <div class="post-1 active">
+                        <div class="post-1">
                             <div class="post-2" style="align-items: start;">
                                 <div id="experience" style="display: contents;">
                                     <!-- 결제 내역이 없을 때 -->
-                                    <div class="post-3">                        
+                                    <!-- <div class="post-3">                        
                                         <div class="post-13" style="padding-left: 0; justify-content: center; display: flex;">
                                             <div class="post-14" style="margin: 0 auto;">
                                                 <div class="post-15" >
@@ -751,7 +751,6 @@
                                             <div class="post-17">
                                                 <div class="post-18">
                                                     <div class="post-19">
-                                                        <!-- 체험으로 가기 버튼 -->
                                                         <div class="content-14" style="width: 200px; margin: 0 auto;">
                                                             <button class="set content-15" type="button" >
                                                                 <span class="content-16">체험 공고 둘러보기</span>
@@ -761,80 +760,90 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <!-- 결제 내역들 -->
-                                    <div class="post-3">
-                                        <div class="post-4">                    
-                                            <div class="post-5" style="flex-direction: row;flex: none;">
-                                                <div class="post-6">
-                                                    <div class="post-7">
+                                    </div> -->
+                                    <!-- 결제 내역이 있을 때 -->
+                                    <div class="payment">
+                                        <table class="payment-1">
+                                            <!-- 목록 -->
+                                            <thead>
+                                                <tr>
+                                                    <th class="payment-2">기업명</th>
+                                                    <th class="payment-2">체험공고 제목</th>       
+                                                    <th class="payment-2">지원상태</th>                                     
+                                                    <th class="payment-2">비고</th>
+                                                </tr>
+                                            </thead>
+                                            <!-- 결제 내역들 -->
+                                            <tbody class="">
+                                                <tr>
+                                                    <td class="payment-3">
+                                                        <p>코리아IT</p>
+                                                    </td>
+                                                    <td class="payment-3">
+                                                        <p>SW 개발 백엔드 체험</p>
+                                                    </td>  
+                                                    <td class="payment-3">
+                                                        <p>서류 접수</p>
+                                                    </td>  
+                                                    <td class="payment-3">
                                                         <div>
-                                                            <p class="post-8">체험 공고 제목</p>
+                                                            <button class="post-23 retract-triger">
+                                                                <span class="ai_center d_flex jc_center us_none white-space_nowrap p_0px_3px textStyle_Body.BodyS_Bold">지원 취소</span>
+                                                            </button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="payment-3">
+                                                        <p>코리아IT</p>
+                                                    </td>
+                                                    <td class="payment-3">
+                                                        <p>SW 개발 백엔드 체험</p>
+                                                    </td>  
+                                                    <td class="payment-3">
+                                                        <p>합격</p>
+                                                    </td>  
+                                                    <td class="payment-3">
+                                                        <p>-</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="payment-3">
+                                                        <p>코리아IT</p>
+                                                    </td>
+                                                    <td class="payment-3">
+                                                        <p>SW 개발 백엔드 체험</p>
+                                                    </td>  
+                                                    <td class="payment-3">
+                                                        <p>불합격</p>
+                                                    </td>  
+                                                    <td class="payment-3">
+                                                        <p>환불</p>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="retract">
+                                        <div class="retract-1">
+                                            <div class="retract-2">
+                                                <div class="retract-3">
+                                                    <div class="retract-4">
+                                                        <svg aria-label="icon" color="foregrounds.neutral.primary" fill="currentColor" height="40px" role="img" width="40px">
+                                                            <path clip-rule="evenodd" d="M8.284 6.2H4a.8.8 0 1 0 0 1.6h1.2V18A2.8 2.8 0 0 0 8 20.8h8a2.8 2.8 0 0 0 2.8-2.8V7.8H20a.8.8 0 0 0 0-1.6h-4.284a3.801 3.801 0 0 0-7.432 0m1.666 0h4.1a2.2 2.2 0 0 0-4.1 0m7.25 1.6H6.8V18A1.2 1.2 0 0 0 8 19.2h8a1.2 1.2 0 0 0 1.2-1.2z" fill-rule="evenodd"></path>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="retract-5">
+                                                        <p class="retract-6">지원을 취소하시겠습니까?</p>
+                                                        <div class="retract-7">
+                                                            <p class="retract-8">지원 취소시 체험비용이 환불됩니다.</p>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="post-9">
-                                                    <p class="post-10">신청일</p>
+                                                <div class="retract-9">
+                                                    <button class="retract-10"><span class="retract-11">취소하기</span></button>
+                                                    <button class="retract-12"><span class="retract-11">닫기</span></button>
                                                 </div>
-                                                <div class="post-9">
-                                                    <p class="post-10">합격</p>
-                                                </div>
-                                            </div>
-                                            <!-- 취소버튼 -->
-                                            <div>
-                                                <button class="post-23">
-                                                    <span class="ai_center d_flex jc_center us_none white-space_nowrap p_0px_3px textStyle_Body.BodyS_Bold">저장 취소</span>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="post-3">
-                                        <div class="post-4">                    
-                                            <div class="post-5" style="flex-direction: row;flex: none;">
-                                                <div class="post-6">
-                                                    <div class="post-7">
-                                                        <div>
-                                                            <p class="post-8">체험 공고 제목</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="post-9">
-                                                    <p class="post-10">신청일</p>
-                                                </div>
-                                                <div class="post-9">
-                                                    <p class="post-10">합격</p>
-                                                </div>
-                                            </div>
-                                            <!-- 취소버튼 -->
-                                            <div>
-                                                <button class="post-23">
-                                                    <span class="ai_center d_flex jc_center us_none white-space_nowrap p_0px_3px textStyle_Body.BodyS_Bold">저장 취소</span>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="post-3">
-                                        <div class="post-4">                    
-                                            <div class="post-5" style="flex-direction: row;flex: none;">
-                                                <div class="post-6">
-                                                    <div class="post-7">
-                                                        <div>
-                                                            <p class="post-8">체험 공고 제목</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="post-9">
-                                                    <p class="post-10">신청일</p>
-                                                </div>
-                                                <div class="post-9">
-                                                    <p class="post-10">합격</p>
-                                                </div>
-                                            </div>
-                                            <!-- 취소버튼 -->
-                                            <div>
-                                                <button class="post-23">
-                                                    <span class="ai_center d_flex jc_center us_none white-space_nowrap p_0px_3px textStyle_Body.BodyS_Bold">저장 취소</span>
-                                                </button>
                                             </div>
                                         </div>
                                     </div>

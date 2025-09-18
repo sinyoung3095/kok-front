@@ -1725,3 +1725,149 @@ border-radius: 8px;
     background-color: #0aa5ff;
     color: #fff;
 }
+
+table {
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+.payment{
+    padding: 0 16px;
+}
+
+.payment-1{
+    font-size: .9rem;
+    color: #212529;
+    width: 100% !important;
+}
+.payment-2{
+    box-shadow: inset 0 -2px 0 #f5f5f5;
+    padding: 16px 30px;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+}
+.payment-3{
+    
+    color: #292929;
+    font-size: 13px;
+    text-align: center;
+    white-space: nowrap;
+    border-bottom: 1px solid #ededed;
+    padding: 18px 12px;
+}
+.retract{
+    z-index: 1001;
+    opacity: 1;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.3200);
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    display: none;
+    top: 0;
+    left: 0;
+    overscroll-behavior: none;
+}
+.retract-1{
+    opacity: 1;
+    transform: none;
+    border-radius: 20px;
+    box-shadow: 0px 4px 20px 0px rgba(24,37,61,0.0600);
+    background: #ffffff;
+}
+.retract-2{
+    flex-direction: column;
+    width: 360px;
+    display: flex;
+}
+.retract-3{
+    align-items: center;
+    padding: 32px 16px 16px;
+    gap: 16px;
+}
+.retract-4{
+    margin: 0 auto;
+    border-radius: 0px;
+    height: 40px;
+    padding: 0px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: rgba(18,19,20,1);
+}
+.retract-5{
+    flex-direction: column;
+    align-items: center;
+    padding-inline: 8px;
+    gap: 8px;
+    display: flex;
+}
+.retract-6{
+    text-align: center;
+    white-space: pre-line;
+    color: rgba(18,19,20,1);
+    letter-spacing: -.48px;
+    font-family: "PretendardVariable","PretendardVariable Fallback";
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 34px;
+}
+.retract-7{
+    padding: 0 8px;
+    gap: 12px;
+    width: 100%;
+    display: flex;
+}
+.retract-8{
+    text-align: center;
+    white-space: pre-line;
+    color: rgba(18,19,20,1);
+    letter-spacing: 0;
+    font-family: "PretendardVariable","PretendardVariable Fallback";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+}
+.retract-9{
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 16px;
+    gap: 8px;
+    display: flex;
+}
+.retract-10{
+    background-color: rgba(18,19,20,1);
+    justify-content: center;
+    align-items: center;
+    padding: 0 16px;
+    max-height: 56px;
+    color: #ffffff;
+    min-height: 56px;
+    display: inline-flex;
+    border-radius: 999px;
+    cursor: pointer;
+    width: 100%;
+    outline: var(--borders-none);
+}
+.retract-11{
+    letter-spacing: -.32px;
+    font-family: "PretendardVariable","PretendardVariable Fallback";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+}
+.retract-12{
+    background-color: rgba(86,105,143,0.0600);
+    justify-content: center;
+    align-items: center;
+    padding: 0 16px;
+    max-height: 56px;
+    color: rgba(18,19,20,1);
+    min-height: 56px;
+    display: inline-flex;
+    border-radius: 999px;
+    cursor: pointer;
+    width: 100%;
+    outline: var(--borders-none);
+}

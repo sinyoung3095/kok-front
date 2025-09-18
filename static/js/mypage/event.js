@@ -1,6 +1,7 @@
 HTMLCollection.prototype.forEach = Array.prototype.forEach;
 const first = document.getElementsByClassName("first");
 const second = document.getElementsByClassName("second");
+const third = document.getElementsByClassName("third");
 const list = document.getElementsByClassName("post-1");
 const close = document.getElementById("close");
 const setting = document.getElementsByClassName("setting")[0];
@@ -55,8 +56,12 @@ first.forEach((item) => {
         second.forEach((sec) => {
             sec.classList.remove("active");
         });
+        third.forEach((fir) => {
+            fir.classList.remove("active");
+        });
         list[0].classList.add("active");
         list[1].classList.remove("active");
+        list[2].classList.remove("active");
     });
 });
 // 게시물 삭제 버튼
@@ -76,8 +81,12 @@ second.forEach((item) => {
         first.forEach((fir) => {
             fir.classList.remove("active");
         });
+        third.forEach((fir) => {
+            fir.classList.remove("active");
+        });
         list[1].classList.add("active");
         list[0].classList.remove("active");
+        list[2].classList.remove("active");
     });
 });
 let count = 0;
@@ -102,6 +111,32 @@ lists.forEach((list) => {
             employ.style.display = "contents";
         }
     });
+});
+// 결제 내역
+third.forEach((item) => {
+    item.addEventListener("click", (e) => {
+        item.classList.add("active");
+        first.forEach((fir) => {
+            fir.classList.remove("active");
+        });
+        second.forEach((fir) => {
+            fir.classList.remove("active");
+        });
+        list[1].classList.remove("active");
+        list[0].classList.remove("active");
+        list[2].classList.add("active");
+    });
+});
+// 지원 취소
+const btn = document.getElementsByClassName("retract-triger")[0];
+const retract = document.getElementsByClassName("retract")[0];
+const retractClose = document.getElementsByClassName("retract-12")[0];
+
+btn.addEventListener("click", (e) => {
+    retract.style.display = "flex";
+});
+retractClose.addEventListener("click", (e) => {
+    retract.style.display = "none";
 });
 // 팝업
 function popupFn() {
