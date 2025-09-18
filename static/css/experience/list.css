@@ -39,13 +39,7 @@
     border: none;
 }
 
-.search-item:first-child .search-input {
-    background-color: transparent;
-    padding: 0;
-}
-
-.search-item:last-child .dropdown-menu,
-.search-item:nth-last-child(2) .dropdown-menu {
+.search-item:last-child .dropdown-menu {
     right: -20px;
     left: auto;
 }
@@ -291,11 +285,6 @@
     padding: 0;
 }
 
-.content-box.pd-0 .ad-banner {
-    max-width: 100%;
-    max-height: 150px;
-}
-
 .content-main {
     flex: 1;
 }
@@ -457,7 +446,6 @@
 }
 
 .ad-banner {
-    position: relative;
     max-width: 287px;
     max-height: 143px;
     background-color: #eee;
@@ -474,31 +462,6 @@
 
 .ad-banner:not(:first-child) {
     margin-top: 20px;
-}
-
-.ad-text-box {
-    position: absolute;
-    top: 0;
-    z-index: 999;
-    color: #fff;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-}
-
-.ad-text-box .title {
-    font-weight: 600;
-    letter-spacing: -.4px;
-    font-size: 20px;
-    line-height: 28px;
-}
-
-.ad-text-box .desc {
-    letter-spacing: -.24px;
-    font-size: 12px;
-    line-height: 18px;
-    font-weight: 400;
 }
 
 .ad-content {
@@ -528,15 +491,6 @@
     border-radius: 999px;
     color: #fff;
     background-color: rgba(18,19,20,1);
-}
-
-.ad-inquiry-btn {
-    letter-spacing: -.24px;
-    color: rgba(18,19,20,0.6000);
-    font-size: 12px;
-    line-height: 18px;
-    margin-top: 16px;
-    text-align: right;
 }
 
 /* no-data */

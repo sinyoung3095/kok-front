@@ -126,18 +126,9 @@ function keywordInputValidate() {
     const keywordInput = document.querySelector("#keyword-input");
     const toast = document.querySelector("#toast-red");
     const deleteBtn = document.querySelector(".keyword-delete");
-    const resetBtn = document.querySelector(".btn-reset");
 
     if (!keywordInput) return;
 
-    // 공통 인풋 초기화 함수
-    function clearInput() {
-        keywordInput.value = "";
-        if (deleteBtn) deleteBtn.style.display = "none";
-        keywordInput.focus();
-    }
-
-    // 글자수 체크
     function checkKeywordLength() {
         if (keywordInput && toast) {
             if (keywordInput.value.length > 50) {
@@ -172,19 +163,19 @@ function keywordInputValidate() {
     deleteBtn.style.display = "none";
 
     keywordInput.addEventListener("input", () => {
-        deleteBtn.style.display =
-            keywordInput.value.trim() !== "" ? "inline-block" : "none";
+        if (keywordInput.value.trim() !== "") {
+            deleteBtn.style.display = "inline-block"; // 보이게
+        } else {
+            deleteBtn.style.display = "none"; // 숨기기
+        }
     });
 
-    // 삭제 버튼 클릭 시
-    if (deleteBtn) {
-        deleteBtn.addEventListener("click", clearInput);
-    }
-
-    // resetBtn 클릭 시
-    if (resetBtn) {
-        resetBtn.addEventListener("click", clearInput);
-    }
+    // 삭제 버튼 클릭 시 인풋 비우고 버튼 숨기기
+    deleteBtn.addEventListener("click", () => {
+        keywordInput.value = "";
+        deleteBtn.style.display = "none";
+        keywordInput.focus(); // 다시 입력할 수 있게 포커스 주기
+    });
 }
 keywordInputValidate();
 
