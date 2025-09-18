@@ -152,6 +152,7 @@ function keywordInputValidate() {
 }
 keywordInputValidate();
 
+// 토스트 팝업 - 팔로우
 function followToastFn() {
     const followBtns = document.querySelectorAll(".btn-follow");
     const followToast = document.querySelector("#toast-follow");
@@ -221,6 +222,7 @@ function sortBtnFn() {
 }
 sortBtnFn();
 
+// 페이지네이션
 function pagenation() {
     const pageItems = document.querySelectorAll(".page-list .page-item");
 

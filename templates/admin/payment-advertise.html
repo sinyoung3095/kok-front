@@ -118,7 +118,7 @@
                                 <li class="submenu menu-item">
                                     <a href="" class="kok-link active">
                                         - 
-                                        광고
+                                        광고비
                                     </a>
                                 </li>
                                 <li class="submenu menu-item">
@@ -219,11 +219,64 @@
                         <div class="table-layout white-panel">
                             <div class="filter-section">
                                 <div class="row">
-                                    <!-- PG 선택, 결제방식선택, 결제상태선택 버튼 -->
-                                    <!-- <div class="col-auto"></div> -->
-                                    <div class="col-auto"></div>
-                                    <div class="col-auto"></div>
-                                    <div class="col-auto"></div>
+                                    <div class="col-auto">
+                                        <div class="filter-wrapper filter-pg" id="filter-pg">
+                                            <div class="kok-pop-checkbox">
+                                                <button class="kok-pop-checkbox-filter-btn btn btn-outline-filter" id="btn-filter-pg">
+                                                    광고상태
+                                                    <i class="mdi mdi-menu-down"></i>
+                                                </button>
+                                                <div class="kok-pop-menu">
+                                                    <div class="kok-pop-menu-back"></div>
+                                                    <div class="kok-pop-menu-context" style="top: 0px; bottom: unset; left: -10px; right: unset; transform: scale(0.9, 0.9) translate3d(0px, 0px, 0px);">
+                                                        <ul class="list-wrapper list-unstyled">
+                                                            <li class="text-center font-weight-bold">광고상태</li>
+                                                            <li class="list-item row"></li>
+                                                            <li class="list-item">
+                                                                <div class="row">
+                                                                    <div class="col">
+                                                                        <div class="kok-check d-flex align-items-center undefined" style="cursor: pointer;">
+                                                                            <div class="kok-check-box " tabindex="0" style="width: 20px; height: 20px;">
+                                                                                <i class="mdi mdi-check" style="display: none;"></i>
+                                                                            </div>
+                                                                            <div class="kok-check-content flex-grow-1">진행중</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li class="list-item">
+                                                                <div class="row">
+                                                                    <div class="col">
+                                                                        <div class="kok-check d-flex align-items-center undefined" style="cursor: pointer;">
+                                                                            <div class="kok-check-box " tabindex="0" style="width: 20px; height: 20px;">
+                                                                                <i class="mdi mdi-check" style="display: none;"></i>
+                                                                            </div>
+                                                                            <div class="kok-check-content flex-grow-1">대기중</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li class="list-item">
+                                                                <div class="row">
+                                                                    <div class="col">
+                                                                        <div class="kok-check d-flex align-items-center undefined" style="cursor: pointer;">
+                                                                            <div class="kok-check-box " tabindex="0" style="width: 20px; height: 20px;">
+                                                                                <i class="mdi mdi-check" style="display: none;"></i>
+                                                                            </div>
+                                                                            <div class="kok-check-content flex-grow-1">완료</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li class="list-item mt-2">
+                                                                <button class="btn btn-outline-primary btn-sm">확인</button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <div class="col text-right"></div>                                   
                                     <div class="col-auto">
                                         <div class="filter-wrapper filter-search ml-1">
@@ -304,10 +357,10 @@
                                                 <p>test01@gmail.com</p>
                                             </td>
                                             <td class="td-start">
-                                                <p>2025/09/07</p>
+                                                <p>2025/09/27</p>
                                             </td>
                                             <td class="td-end">
-                                                <p>2025/09/16</p>
+                                                <p>2025/10/06</p>
                                             </td>  
                                             <td class="td-status">
                                                 <p>대기중</p>
@@ -315,27 +368,7 @@
                                             <td class="td-pay">
                                                 <p>500,000</p>
                                             </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="td-name">
-                                                <p>코리아IT</p>
-                                            </td>
-                                            <td class="td-id">
-                                                <p>test01@gmail.com</p>
-                                            </td>
-                                            <td class="td-start">
-                                                <p>2025/09/07</p>
-                                            </td>
-                                            <td class="td-end">
-                                                <p>2025/09/16</p>
-                                            </td>  
-                                            <td class="td-status">
-                                                <p>거절</p>
-                                            </td>  
-                                            <td class="td-pay">
-                                                <p>500,000</p>
-                                            </td>
-                                        </tr>
+                                        </tr>                                      
                                     </tbody>
                                 </table>
                             </div>

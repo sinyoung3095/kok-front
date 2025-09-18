@@ -1019,16 +1019,28 @@ body #kok {
     cursor: pointer;
 }
 
-.order-update-btn, .banner-delete-btn {
+.order-update-btn {
     background-color: #fff;
-    color: #525f7f;
+    color: #507cf3;
     border: 1px solid;
     border-radius: 4px;
 }
 
-.order-update-btn:hover, .banner-delete-btn:hover {
+.banner-delete-btn {
+    background-color: #fff;
+    color: #fe657e;
+    border: 1px solid;
+    border-radius: 4px;
+}
+
+.order-update-btn:hover {
     color: #fff;
-    background-color: #0aa5ff;
+    background-color: #507cf3;
+}
+
+.banner-delete-btn:hover {
+    color: #fff;
+    background-color: #fe657e;
 }
 
 .dropdown-menu.show {
@@ -1168,9 +1180,8 @@ body #kok {
 }
 
 table td > p {
+    white-space: nowrap;  
     overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
     text-overflow: ellipsis;
 }
