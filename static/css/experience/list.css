@@ -569,18 +569,31 @@
 
 /* 상세 페이지 */
 .content-detail {
-    display: none;
-    opacity: 0;
-    flex: 2.3;
-    border-left: 1px solid rgba(24,37,61,0.0600);
-    transform: translateX(50px);
-    transition: opacity 0.3s ease, transform 0.3s ease;
+  flex: 0;
+  border-left: 1px solid rgba(24,37,61,0.06);
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateX(50px);
+  transition: max-height 0.4s ease, opacity 0.3s ease, transform 0.3s ease;
 }
 
 .content-detail.active {
-    display: block;
+    flex: 2.3;
+    max-height: 1000px;
     opacity: 1;
     transform: translateX(0);
+}
+
+.content-detail-inner {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.15s ease;
+}
+
+.content-detail-inner.active {
+    display: block;
+    opacity: 1;
 }
 
 .content-detail-header {
@@ -1260,6 +1273,11 @@ button.list-item-header .list-item-title {
     overflow: hidden;
 }
 
+.profile-card .btn-write, 
+.profile-card .btn-login {
+    width: 100%;
+}
+
 .side-wrapper .profile-card {
     display: flex;
     flex-direction: column;
@@ -1286,6 +1304,29 @@ a.member-name {
     line-height: 20px
 }
 
+.profile-message {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 8px 0;
+}
+
+.profile-message .title {
+    color: rgba(18,19,20,1);
+    letter-spacing: -.48px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 34px;
+}
+
+.profile-message .desc {
+    color: rgba(18,19,20,0.6000);
+    letter-spacing: -.28px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
 .profile-info {
     display: flex;
     flex-direction: column;
@@ -1303,7 +1344,8 @@ a.member-name {
     -webkit-box-orient: vertical;
 }
 
-.btn-write {
+.profile-card .btn-write,
+.profile-card .btn-login {
     border-radius: 999px;
     height: 56px;
     letter-spacing: -.32px;
@@ -1754,6 +1796,10 @@ input:-internal-autofill-selected {
 
     .content-side {
         display: none !important;
+    }
+
+    .content-detail-inner {
+        opacity: 1;
     }
 
     .list-container {

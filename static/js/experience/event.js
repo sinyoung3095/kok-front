@@ -193,32 +193,43 @@ function layoutDetail() {
 
     listItemBtns.forEach((btn) => {
         btn.addEventListener("click", () => {
+            contentDetail.classList.add("active");
             contentSide.style.display = "none";
-            contentDetail.style.display = "block";
-            requestAnimationFrame(() => {
-                contentDetail.classList.add("active");
-            });
-            listItemMetas.forEach((meta) => {
-                meta.style.display = "none";
-            });
+
+            // 껍데기 애니메이션 끝난 뒤 내용 보여주기
+            contentDetail.addEventListener(
+                "transitionend",
+                () => {
+                    if (contentDetail.classList.contains("active")) {
+                        contentDetail
+                            .querySelector(".content-detail-inner")
+                            .classList.add("active");
+                    }
+                },
+                { once: true }
+            );
 
             if (window.matchMedia("(max-width: 1023px)").matches) {
                 contentMain.style.display = "none";
                 searchContainer.style.display = "none";
             }
         });
+
+        detailArrowBtn.addEventListener("click", () => {
+            // 내용 먼저 숨김
+            contentDetail
+                .querySelector(".content-detail-inner")
+                .classList.remove("active");
+            contentDetail.classList.remove("active");
+        });
     });
 
     detailArrowBtn.addEventListener("click", () => {
-        contentDetail.style.display = "none";
         contentSide.style.display = "flex";
-        requestAnimationFrame(() => {
-            contentSide.classList.add("active");
-        });
-
-        listItemMetas.forEach((meta) => {
-            meta.style.display = "flex";
-        });
+        contentDetail
+            .querySelector(".content-detail-inner")
+            .classList.remove("active");
+        contentDetail.classList.remove("active");
 
         if (window.matchMedia("(max-width: 1023px)").matches) {
             contentMain.style.display = "";
