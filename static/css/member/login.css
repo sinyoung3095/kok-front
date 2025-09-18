@@ -19,7 +19,7 @@ button {
 }
 
 
-div.login-page {
+.login-page {
 	align-items: center;
 	background: #f5f6fa;
 	display: flex;
@@ -29,7 +29,7 @@ div.login-page {
 	width: 100%;
 }
 
-div.login-container {
+.login-container {
 	align-items: center;
 	height: 100%;
 	gap: 20px;
@@ -41,7 +41,7 @@ div.login-container {
 }
 
 /* 좌측 이미지 */
-div.image-container {
+.image-container {
 	position: relative;
 	height: 100%;
 	border-radius: 12px;
@@ -50,14 +50,14 @@ div.image-container {
 	width: 100%;
 }
 
-div.logo-pos {
+.logo-pos {
 	position: absolute;
 	transform: translateX(-50%);
 	left: 8%;
 	top: 40px;
 }
 
-div.logo-container {
+.logo-container {
 	display: inline-flex;
 	color: rgba(18, 19, 20, 1);
 	align-items: center;
@@ -66,7 +66,7 @@ div.logo-container {
 }
 
 /* 우측 입력창 */
-div.right-side {
+.right-side {
 	flex-direction: column;
 	align-items: center;
 	height: 100%;
@@ -75,7 +75,7 @@ div.right-side {
 	justify-content: center;
 }
 
-div.input-container {
+.input-container {
 	gap: 30px;
 	max-width: 384px;
 	flex-direction: column;
@@ -99,7 +99,7 @@ div.input-container {
 	transition: .3s ease-out;
 }
 
-div.login-title {
+.login-title {
 	align-items: flex-start;
 	flex-direction: column;
 	gap: 20px;
@@ -107,7 +107,7 @@ div.login-title {
 	width: 100%;
 }
 
-div.title-content {
+.title-content {
 	letter-spacing: -.64px;
 	font-family: "PretendardVariable", "PretendardVariable Fallback";
 	font-size: 32px;
@@ -117,7 +117,7 @@ div.title-content {
 	color: rgba(18, 19, 20, 1);
 }
 
-div.input-content-container {
+.input-content-container {
 	gap: 28px;
 	align-items: flex-start;
 	flex-direction: column;
@@ -126,23 +126,23 @@ div.input-content-container {
 }
 
 /* 일반회원/기업회원 선택 버튼 */
-div.select-container {
+.select-container {
 	display: inline-flex;
 	gap: 6px;
 	align-items: center;
 }
 
-div.select-login-type {
+.select-login-type {
 	background: rgba(86, 105, 143, 0.0600);
 	color: rgba(18, 19, 20, 1);
 }	/* 선택 */
 
-div.unselected {
+.unselected {
     background: none;
     color: rgb(111 111 111 / 60%);
 }	/* 미선택 */
 
-div.general-member {
+.general-member {
 	cursor: pointer;
 	height: 40px;
 	border-radius: 8px;
@@ -169,7 +169,7 @@ p.general-p {
 	width: fit-content;
 }
 
-div.company-member {
+.company-member {
 	cursor: pointer;
 	height: 40px;
 	border-radius: 8px;
@@ -680,4 +680,17 @@ div.company-member {
     .mob {
         display: block;
     }
+	body {
+    	background: #f5f6fa;
+		overflow-y: visible;
+    }
+    #main-content {
+        background: #f5f6fa;
+    }
+	.login-container {
+		height: 850px;
+	}
+	.input-container.member {
+		transform: translateY(0);
+	}
 }

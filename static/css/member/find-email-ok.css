@@ -168,5 +168,12 @@ ol, ul {
     .mob {
         display: block;
     }
+    body {
+        background: #f5f6fa;
+    }
+    #main-content {
+        padding-top: 120px;
+        background: #f5f6fa;
+    }
 }
 
