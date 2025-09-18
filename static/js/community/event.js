@@ -1,9 +1,15 @@
 HTMLCollection.prototype.forEach = Array.prototype.forEach;
 
 const report = document.getElementsByClassName("report-1");
-const btn = document.getElementsByClassName("post-28");
-const modal = document.getElementsByClassName("report-7")[0];
+const btn = document.getElementsByClassName("btn");
+const modals = document.getElementsByClassName("report-7")[0];
 const cancle = document.getElementsByClassName("report-19")[0];
+// 글쓰기
+const hide = document.getElementsByClassName("hide-1")[0];
+const popup = document.getElementById("post-write-popup");
+if (popup.style.display === "none") {
+    hide.style.display = "flex";
+}
 
 // 각 버튼에 클릭 이벤트 추가
 btn.forEach((bt, i) => {
@@ -12,54 +18,30 @@ btn.forEach((bt, i) => {
             report[i].style.display === "none" ||
             report[i].style.display === ""
         ) {
-            report[i].style.display = "flex";
+            if (bt === e.target) {
+                report[i].style.display = "flex";
+            } else {
+                report[i].style.display = "none";
+            }
         } else {
             report[i].style.display = "none";
         }
     });
 });
-// 신고하기
-report.forEach((bt, i) => {
-    bt.addEventListener("click", (e) => {
-        report.forEach((re) => {
-            re.style.display = "none";
-        });
 
-        modal.style.display = "flex";
+// 신고하기
+report.forEach((but) => {
+    but.addEventListener("click", (e) => {
+        report.forEach((rep) => {
+            rep.style.display = "none";
+        });
+        modals.style.display = "flex";
     });
 });
+
 // 신고하기 끄기
 cancle.addEventListener("click", (e) => {
-    modal.style.display = "none";
-});
-
-// 글쓰기
-const write = document.getElementById("write");
-const m_write = document.getElementsByClassName("hide-1")[0];
-const setting = document.getElementsByClassName("setting")[0];
-const close = document.getElementById("close");
-const text = document.getElementById("text");
-const count = document.getElementById("count");
-const etc = document.getElementsByClassName("etc")[0];
-
-write.addEventListener("click", (e) => {
-    setting.style.display = "flex";
-});
-
-m_write.addEventListener("click", (e) => {
-    setting.style.display = "flex";
-    m_write.style.display = "none";
-});
-
-close.addEventListener("click", (e) => {
-    setting.style.display = "none";
-    if (etc.style.display === "none !important") {
-        m_write.style.display = "flex";
-    }
-});
-
-text.addEventListener("keyup", (e) => {
-    count.innerText = text.value.length;
+    modals.style.display = "none";
 });
 
 // 댓글
@@ -79,4 +61,42 @@ down.addEventListener("click", (e) => {
 
 back.addEventListener("click", (e) => {
     detail.style.display = "none";
+});
+// 댓글 삭제
+const delet = document.getElementsByClassName("report-1");
+const del = document.getElementsByClassName("del")[0];
+const delbtn = document.getElementsByClassName("delbtn");
+const delreport = document.getElementsByClassName("delbtn-1");
+
+// 샌드위치 버튼 작동
+delbtn.forEach((bt, i) => {
+    bt.addEventListener("click", (e) => {
+        if (
+            delreport[i].style.display === "none" ||
+            delreport[i].style.display === ""
+        ) {
+            if (bt === e.target) {
+                delreport[i].style.display = "flex";
+            } else {
+                delreport[i].style.display = "none";
+            }
+        } else {
+            delreport[i].style.display = "none";
+        }
+    });
+});
+
+// 삭제 버튼 클릭시 경고창
+delreport.forEach((but) => {
+    but.addEventListener("click", (e) => {
+        delreport.forEach((rep) => {
+            rep.style.display = "none";
+        });
+        del.style.display = "flex";
+    });
+});
+
+const dlecancle = document.getElementsByClassName("del-12")[0];
+dlecancle.addEventListener("click", (e) => {
+    del.style.display = "none";
 });
