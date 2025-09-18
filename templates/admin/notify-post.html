@@ -6,6 +6,8 @@
     <title>콕(KOK) 관리자</title>
     <link href="../../static/images/member/kok_favicon.png" rel="icon" type="image/x-icon">
     <link rel="stylesheet" href="../../static/css/admin/notify-post.css">
+    <link rel="stylesheet" href="../../static/css/reset.css">
+    <link rel="stylesheet" href="../../static/font/font.css">
 </head>
 <body>
     <div id="kok">
@@ -185,7 +187,7 @@
                         <div class="table-wrapper border-top">
                             <table class="table table-notice">
                                 <tbody>
-                                    <tr class="">
+                                    <tr class="post-detail">
                                         <td class="td-date text-grey">2025/09/16</td>
                                         <td class="td-title">
                                             <span class="notice-text">
@@ -194,7 +196,7 @@
                                         </td>
                                         <td class="td-writer">test01@gmail.com</td>
                                     </tr>
-                                    <tr class="">
+                                    <tr class="post-detail">
                                         <td class="td-date text-grey">2025/09/16</td>
                                         <td class="td-title">
                                             <span class="notice-text">
@@ -203,7 +205,7 @@
                                         </td>
                                         <td class="td-writer">test01@gmail.com</td>
                                     </tr>
-                                    <tr class="">
+                                    <tr class="post-detail">
                                         <td class="td-date text-grey">2025/09/16</td>
                                         <td class="td-title">
                                             <span class="notice-text">
@@ -237,6 +239,59 @@
                             </ul>
                             <div class="pagination-desc"></div>
                         </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 신고 게시글 상세 모달 -->
+    <div class="post-modal-background">
+        <div class="post-modal-wrap1">
+            <div class="post-modal-wrap2">
+                <div class="post-modal-wrap3">
+                    <div class="post-modal-wrap4">
+                        <div class="post-modal-top">
+                            <div>
+                                <img alt="image" width="40" height="40" srcset="" src="../../static/images/main-page/image.png" style="color: transparent; border-radius: 999px; cursor: pointer; max-height: 40px; max-width: 40px; min-height: 40px; min-width: 40px; object-fit: contain;">
+                            </div>
+                            <div class="post-modal-top-section">
+                                <div class="post-modal-top-name">
+                                    <div class="post-modal-name-wrap">
+                                        <div>
+                                            <p class="post-modal-name-text">정희준</p>
+                                        </div>
+                                    </div>                                   
+                                </div>
+                                <div class="post-modal-info">
+                                    <p class="post-modal-job">test01@gmail.com</p> <!-- 작성자ID (이메일) -->
+                                    <p class="post-modal-center">·</p>
+                                    <p class="post-modal-time">2025/09/16</p> <!-- 작성날짜 -->
+                                </div>
+                            </div>
+                            <div>
+                                <button class="post-modal-top-button">
+                                    <div class="post-modal-top-icon">
+                                        <p class="post-modal-delete">삭제하기</p>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="post-modal-middle">
+                            <div class="post-modal-body-wrap">
+                                <div class="post-modal-body">
+                                    <div class="post-modal-text">
+                                        <span>제 GitHub 프로젝트 중 별 400개를 받은 프로젝트가 나왔습니다! 여기까지 오는데 정말 많은 격려와 응원해주셔서 감사합니다. ㅠㅠ<br></span>
+                                    </div>
+                                </div>
+                                <div class="post-modal-file-wrap">
+                                    <div class="post-modal-file">
+                                        <img alt="" width="0" height="0" sizes="100vw" srcset="" src="../../static/images/mypage/IMG_4127_2025_09_11T05_25_47_988Z.webp" style="color: transparent; border-radius: 8px; height: auto; width: 100%;">
+                                        <img alt="" width="0" height="0" sizes="100vw" srcset="" src="../../static/images/mypage/1.webp" style="color: transparent; border-radius: 8px; height: auto; width: 100%;">
+                                        <img alt="" width="0" height="0" sizes="100vw" srcset="" src="../../static/images/mypage/2.webp" style="color: transparent; border-radius: 8px; height: auto; width: 100%;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
