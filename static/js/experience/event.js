@@ -24,6 +24,9 @@ function searchDropdownFn() {
     // 드롭다운 열기/닫기, 전체 선택, 적용 버튼 이벤트
     dropdown.forEach((box) => {
         const dropdownOpenBtns = box.querySelectorAll(".dropdown-open-btn");
+        const dropdownOpenTextBtns = box.querySelectorAll(
+            ".dropdown-open-btn:not(.circle)"
+        );
         const dropdownBtns = box.querySelectorAll(".dropdown-btn");
         const selectAllBtn = box.querySelector(".select-all-btn");
         const applyBtn = box.querySelector(".apply-btn");
@@ -72,13 +75,15 @@ function searchDropdownFn() {
 
             // 선택된 옵션에 따라 드롭다운 열기 버튼 텍스트 변경
             if (count === 0) {
-                dropdownOpenBtns.forEach((btn) => (btn.textContent = "전체"));
+                dropdownOpenTextBtns.forEach(
+                    (btn) => (btn.textContent = "전체")
+                );
             } else if (count === 1) {
-                dropdownOpenBtns.forEach(
+                dropdownOpenTextBtns.forEach(
                     (btn) => (btn.textContent = firstText)
                 );
             } else {
-                dropdownOpenBtns.forEach(
+                dropdownOpenTextBtns.forEach(
                     (btn) =>
                         (btn.textContent = `${firstText} 외 ${count - 1} 개`)
                 );
@@ -121,9 +126,18 @@ function keywordInputValidate() {
     const keywordInput = document.querySelector("#keyword-input");
     const toast = document.querySelector("#toast-red");
     const deleteBtn = document.querySelector(".keyword-delete");
+    const resetBtn = document.querySelector(".btn-reset");
 
     if (!keywordInput) return;
 
+    // 공통 인풋 초기화 함수
+    function clearInput() {
+        keywordInput.value = "";
+        if (deleteBtn) deleteBtn.style.display = "none";
+        keywordInput.focus();
+    }
+
+    // 글자수 체크
     function checkKeywordLength() {
         if (keywordInput && toast) {
             if (keywordInput.value.length > 50) {
@@ -158,19 +172,19 @@ function keywordInputValidate() {
     deleteBtn.style.display = "none";
 
     keywordInput.addEventListener("input", () => {
-        if (keywordInput.value.trim() !== "") {
-            deleteBtn.style.display = "inline-block"; // 보이게
-        } else {
-            deleteBtn.style.display = "none"; // 숨기기
-        }
+        deleteBtn.style.display =
+            keywordInput.value.trim() !== "" ? "inline-block" : "none";
     });
 
-    // 삭제 버튼 클릭 시 인풋 비우고 버튼 숨기기
-    deleteBtn.addEventListener("click", () => {
-        keywordInput.value = "";
-        deleteBtn.style.display = "none";
-        keywordInput.focus(); // 다시 입력할 수 있게 포커스 주기
-    });
+    // 삭제 버튼 클릭 시
+    if (deleteBtn) {
+        deleteBtn.addEventListener("click", clearInput);
+    }
+
+    // resetBtn 클릭 시
+    if (resetBtn) {
+        resetBtn.addEventListener("click", clearInput);
+    }
 }
 keywordInputValidate();
 
@@ -183,6 +197,8 @@ function layoutDetail() {
     const listItemMetas = document.querySelectorAll(".list-item-meta");
     const contentMain = document.querySelector(".content-main");
     const searchContainer = document.querySelector(".search-container");
+
+    if (!contentDetail) return;
 
     listItemBtns.forEach((btn) => {
         btn.addEventListener("click", () => {
@@ -431,12 +447,18 @@ dropdownFn();
 
 // 보관함 유효성 검사 - 파일 추가
 function checkPopupLibrary() {
-    const applyBtn = document.querySelector("#popup3 #pop-apply");
-    const form = document.querySelector("#popup3 form");
+    const applyBtn = document.querySelector("#resume-upload-popup #pop-apply");
+    const form = document.querySelector("#resume-upload-popup form");
     const libraryToast = document.querySelector("#toast-library");
-    const typeInput = document.querySelector("#popup3 #type-input");
-    const fileInput = document.querySelector("#popup3 #file-input");
-    const fileLabel = document.querySelector("#popup3 .form-file-label");
+    const typeInput = document.querySelector(
+        "#resume-upload-popup #type-input"
+    );
+    const fileInput = document.querySelector(
+        "#resume-upload-popup #file-input"
+    );
+    const fileLabel = document.querySelector(
+        "#resume-upload-popup .form-file-label"
+    );
 
     if (!applyBtn || !form) return;
 
@@ -467,7 +489,9 @@ function checkPopupLibrary() {
     // 버튼 클릭일 때만 검사
     applyBtn.addEventListener("click", () => {
         if (!validate()) return;
-        document.getElementById("popup3").classList.remove("active");
+        document
+            .getElementById("resume-upload-popup")
+            .classList.remove("active");
 
         // 초기화
         if (typeInput) typeInput.value = "";
@@ -479,13 +503,14 @@ checkPopupLibrary();
 
 // 보관함 유효성 검사 - url 추가
 function checkPopupLibraryUrl() {
-    const applyBtn = document.querySelector("#popup4 #pop-apply");
-    const form = document.querySelector("#popup4 form");
+    const applyBtn = document.querySelector("#url-upload-popup #pop-apply");
+    const form = document.querySelector("#url-upload-popup form");
     const libraryToast = document.querySelector("#toast-library");
-    const toastSubText = libraryToast.querySelector(".toast-subText");
-    const typeInput = document.querySelector("#popup4 #type-input");
-    const urlInput = document.querySelector("#popup4 #url-input");
-    if (!applyBtn || !form) return;
+    const toastSubText = libraryToast?.querySelector(".toast-subText");
+    const typeInput = document.querySelector("#url-upload-popup #type-input");
+    const urlInput = document.querySelector("#url-upload-popup #url-input");
+
+    if (!applyBtn || !form || !libraryToast || !toastSubText) return;
 
     // 유효성 검사
     const validate = () => {
@@ -518,7 +543,7 @@ function checkPopupLibraryUrl() {
         if (!validate()) return;
 
         // 팝업 닫기
-        document.getElementById("popup4").classList.remove("active");
+        document.getElementById("url-upload-popup").classList.remove("active");
 
         // 초기화
         if (typeInput) typeInput.value = "";
@@ -530,8 +555,8 @@ checkPopupLibraryUrl();
 // 보관함 닫기 공통: 닫기 클릭시 확인 팝업 띄우기
 function popupLibraryClose(popupId, inputSelectors) {
     const popup = document.getElementById(popupId);
-    const closeBtn = popup.querySelector(".popup-library-close");
-    const popup5 = document.getElementById("popup5");
+    const closeBtn = popup?.querySelector(".popup-library-close");
+    const messagePopup = document.getElementById("message-popup");
 
     if (!popup || !closeBtn) return;
 
@@ -552,23 +577,23 @@ function popupLibraryClose(popupId, inputSelectors) {
         });
 
         if (hasValue) {
-            // 값이 하나라도 있으면 확인 팝업(#popup5) 열기
-            popup5.classList.add("active");
+            // 값이 하나라도 있으면 확인 팝업(#messagePopup) 열기
+            messagePopup.classList.add("active");
         } else {
             // 값이 없으면 그냥 닫기
             popup.classList.remove("active");
         }
     });
 }
-popupLibraryClose("popup3", ["#type-input", "#file-input"]);
-popupLibraryClose("popup4", ["#type-input", "#url-input"]);
+popupLibraryClose("resume-upload-popup", ["#type-input", "#file-input"]);
+popupLibraryClose("url-upload-popup", ["#type-input", "#url-input"]);
 
 // 이력서 팝업 이전 버튼 클릭시
 function setupPopupPrev() {
-    const prevBtn = document.querySelector("#popup2 .popup-prev");
-    const popup1 = document.getElementById("popup1");
-    const popup2 = document.getElementById("popup2");
-    if (!prevBtn || !popup1 || !popup2) return;
+    const prevBtn = document.querySelector("#resumeCheckPopup .popup-prev");
+    const quickApplyPopup = document.getElementById("quick-apply-popup");
+    const resumeCheckPopup = document.getElementById("resume-check-popup");
+    if (!prevBtn || !quickApplyPopup || !resumeCheckPopup) return;
 
     // 혹시 모를 제출 방지
     prevBtn.type = "button";
@@ -583,15 +608,15 @@ function setupPopupPrev() {
             .forEach((m) => m.classList.remove("active"));
 
         // 팝업 전환
-        popup2.classList.remove("active");
-        popup1.classList.add("active");
+        resumeCheckPopup.classList.remove("active");
+        quickApplyPopup.classList.add("active");
     });
 }
 setupPopupPrev();
 
 // 간편지원하기 팝업
-function checkPopup1() {
-    const popup = document.getElementById("popup1");
+function quickApplyPopupFn() {
+    const popup = document.getElementById("quick-apply-popup");
     if (!popup) return;
 
     const submitBtn = popup.querySelector(".popup-action .btn-primary");
@@ -608,7 +633,7 @@ function checkPopup1() {
         const name = popup.querySelector("#name-input");
         const email = popup.querySelector("#email-input");
         const phone = popup.querySelector("#phone-input");
-        const resume = popup.querySelector("#resume-value"); // ← 팝업2에서 채워줄 값
+        const resume = popup.querySelector("#resume-value");
 
         // 이름을 입력안했을때
         if (!name.value.trim()) {
@@ -697,21 +722,25 @@ function checkPopup1() {
         popup.classList.remove("active");
     });
 }
-checkPopup1();
+quickApplyPopupFn();
 
 // 이력서선택 팝업
-function setPopup2() {
-    var popup2Box = document.getElementById("popup2");
-    var popup1Box = document.getElementById("popup1");
-    if (!popup2Box || !popup1Box) return;
+function resumeCheckPopupFn() {
+    var resumeCheckPopupBox = document.getElementById("resumeCheckPopup");
+    var quickApplyPopupBox = document.getElementById("quickApplyPopup");
+    if (!resumeCheckPopupBox || !quickApplyPopupBox) return;
 
-    var doneBtn = popup2Box.querySelector("#file-select-btn");
-    var allRadiobox = popup2Box.querySelectorAll('input[type="radio"]');
+    var doneBtn = resumeCheckPopupBox.querySelector("#file-select-btn");
+    var allRadiobox = resumeCheckPopupBox.querySelectorAll(
+        'input[type="radio"]'
+    );
     if (!doneBtn) return;
 
     // 체크 - 버튼 활성/비활성
     function updateDoneBtn() {
-        var anyChecked = popup2Box.querySelector('input[type="radio"]:checked');
+        var anyChecked = resumeCheckPopupBox.querySelector(
+            'input[type="radio"]:checked'
+        );
         doneBtn.disabled = !anyChecked;
     }
     for (var i = 0; i < allRadiobox.length; i++) {
@@ -719,12 +748,12 @@ function setPopup2() {
     }
     updateDoneBtn();
 
-    // 선택 완료 클릭하면 popup1에 값 넣기
+    // 선택 완료 클릭하면 quickApplyPopup에 값 넣기
     doneBtn.addEventListener("click", function (e) {
         e.preventDefault();
         e.stopPropagation();
 
-        var checkedBoxes = popup2Box.querySelectorAll(
+        var checkedBoxes = resumeCheckPopupBox.querySelectorAll(
             'input[type="radio"]:checked'
         );
         if (!checkedBoxes || checkedBoxes.length === 0) return;
@@ -742,8 +771,8 @@ function setPopup2() {
         var joinedValue = nameList.join(", ");
 
         // 숨김 input(#resume-value)에 값 저장
-        var formPopup1 = popup1Box.querySelector("form");
-        var resumeInput = popup1Box.querySelector("#resume-value");
+        var formPopup1 = quickApplyPopupBox.querySelector("form");
+        var resumeInput = quickApplyPopupBox.querySelector("#resume-value");
         if (!resumeInput) {
             resumeInput = document.createElement("input");
             resumeInput.type = "hidden";
@@ -754,14 +783,14 @@ function setPopup2() {
         resumeInput.value = joinedValue;
 
         // 표시용 버튼 텍스트 변경
-        var fileButton = popup1Box.querySelector(".file-btn");
+        var fileButton = quickApplyPopupBox.querySelector(".file-btn");
         if (fileButton) {
             fileButton.textContent = nameList[0];
         }
 
         // 팝업 전환
-        popup2Box.classList.remove("active");
-        popup1Box.classList.add("active");
+        resumeCheckPopupBox.classList.remove("active");
+        quickApplyPopupBox.classList.add("active");
 
         // 다음 열 때 초기화
         for (var k = 0; k < checkedBoxes.length; k++) {
@@ -770,11 +799,12 @@ function setPopup2() {
         updateDoneBtn();
     });
 }
-setPopup2();
+resumeCheckPopupFn();
 
 // 팝업 전체 닫기
 function popAllClose() {
-    const popupAllCloses = document.querySelector(".popup-all-close");
+    const popupAllCloses = document.querySelectorAll(".popup-all-close");
+
     if (!popupAllCloses) return;
 
     function closeAllPopups() {
@@ -783,6 +813,229 @@ function popAllClose() {
             .forEach((popup) => popup.classList.remove("active"));
     }
 
-    popupAllCloses.addEventListener("click", closeAllPopups);
+    popupAllCloses.forEach((pop) => {
+        pop.addEventListener("click", closeAllPopups);
+    });
 }
 popAllClose();
+
+// 토스트 팝업 - 팔로우
+function followToastFn() {
+    const followBtns = document.querySelectorAll(".btn-follow");
+    const followToast = document.querySelector("#toast-follow");
+
+    if (!followBtns.length) return;
+
+    let saved = false; // 저장 상태
+    let showingToast = false; // 연타방지
+
+    followBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+            if (showingToast) return; // 토스트 떠 있으면 무시
+
+            const textBox = followToast.querySelector(".toast-text");
+            const subTextBox = followToast.querySelector(".toast-subText");
+
+            if (!saved) {
+                saved = true;
+                if (textBox && subTextBox) {
+                    textBox.textContent = "000님을 팔로우했습니다.";
+                    subTextBox.textContent = "관련 소식을 받아볼 수 있습니다.";
+                }
+                // 👉 모든 버튼 상태를 동시에 변경
+                followBtns.forEach((b) => {
+                    b.textContent = "팔로우중";
+                    b.classList.add("btn-default");
+                    b.classList.remove("btn-primary");
+                });
+            } else {
+                saved = false;
+                if (textBox && subTextBox) {
+                    textBox.textContent = "000님을 팔로우 취소했습니다.";
+                    subTextBox.textContent =
+                        "소식 알림 및 게시물 추천 빈도가 줄어듭니다.";
+                }
+                followBtns.forEach((b) => {
+                    b.textContent = "팔로우";
+                    b.classList.remove("btn-default");
+                    b.classList.add("btn-primary");
+                });
+            }
+
+            // 토스트 띄우기
+            followToast.classList.add("show");
+            showingToast = true;
+
+            setTimeout(() => {
+                followToast.classList.remove("show");
+                showingToast = false;
+            }, 2000);
+        });
+    });
+}
+followToastFn();
+
+// 페이지네이션
+function pagenation() {
+    const pageItems = document.querySelectorAll(".page-list .page-item");
+
+    pageItems.forEach((btn) => {
+        btn.addEventListener("click", () => {
+            pageItems.forEach((item) => item.classList.remove("active"));
+
+            btn.classList.add("active");
+        });
+    });
+}
+pagenation();
+
+// 파일 이미지 업로드
+function fileUploadFn() {
+    const addPhotoBtn = document.querySelector("#btn-add-photo");
+    const previewInner = document.querySelector(".popup-preview-inner");
+
+    if (!addPhotoBtn || !previewInner) return;
+
+    addPhotoBtn.addEventListener("change", (e) => {
+        const files = Array.from(e.target.files);
+
+        // 현재 썸네일 수 확인
+        const existingThumbs =
+            previewInner.querySelectorAll(".preview-item").length;
+
+        if (existingThumbs + files.length > 8) {
+            alert("사진은 최대 8장까지 첨부할 수 있습니다.");
+            return;
+        }
+
+        files.forEach((file) => {
+            if (!file.type.startsWith("image/")) return;
+
+            const reader = new FileReader();
+            reader.readAsDataURL(file);
+
+            reader.onload = (event) => {
+                const imageSrc = event.target.result;
+
+                // 썸네일 요소 한 번에 생성
+                const item = document.createElement("div");
+                item.className = "preview-item";
+                item.innerHTML = `
+                    <span>
+                        <img src="${imageSrc}" alt="${file.name}">
+                    </span>
+                    <button class="preview-remove-btn" type="button">
+                        <svg viewBox="0 0 24 24" aria-label="icon" fill="currentColor" height="16" role="img" width="16">
+                            <path clip-rule="evenodd"
+                                d="M6.434 6.435a.8.8 0 0 1 1.132 0L12 10.869l4.434-4.434a.8.8 0 1 1 1.132 1.13L13.13 12l4.435 4.435a.8.8 0 1 1-1.132 1.13L12 13.133l-4.434 4.434a.8.8 0 0 1-1.132-1.131L10.87 12 6.434 7.566a.8.8 0 0 1 0-1.131"
+                                fill-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                `;
+
+                previewInner.appendChild(item);
+
+                // 삭제 버튼 이벤트
+                const cancelBtn = item.querySelector(".preview-remove-btn");
+                cancelBtn.addEventListener("click", () => {
+                    item.remove();
+                });
+            };
+        });
+
+        // 같은 파일 다시 선택 가능하게 초기화
+        e.target.value = "";
+    });
+}
+fileUploadFn();
+
+// 게시글 글자수 카운트
+function numCountFn() {
+    const textarea = document.querySelector(".popup-input textarea");
+    if (!textarea) return;
+
+    const currentNum = document.querySelector(".current-num");
+    const maxLength = Number(document.querySelector(".max-num").innerText);
+
+    textarea.addEventListener("keyup", (e) => {
+        const result = textarea.value.length;
+        if (textarea.value.length > maxLength) {
+            textarea.value = textarea.value.slice(0, maxLength);
+        }
+        currentNum.innerText = `${result}`;
+    });
+}
+numCountFn();
+
+// 게시글 글쓰기 버튼 활성화
+function writeBtnActiveFn() {
+    const textarea = document.querySelector(".popup-textarea");
+    const writeBtn = document.querySelector(".pop-btn-write");
+    const previewInner = document.querySelector(".popup-preview-inner");
+    const toast = document.querySelector("#toast-white");
+    const popupWriteCloseBtn = document.querySelector(".popup-write-close");
+    const messagePopup = document.getElementById("message-popup2");
+
+    if (!textarea || !writeBtn) return;
+
+    // 버튼 활성/비활성 토글
+    function toggleBtn() {
+        const textLength = textarea.value.trim().length;
+        const imageCount = previewInner
+            ? previewInner.querySelectorAll(".preview-item").length
+            : 0;
+
+        if (textLength > 0 || imageCount > 0) {
+            writeBtn.removeAttribute("disabled");
+        } else {
+            writeBtn.setAttribute("disabled", "true");
+        }
+    }
+
+    // 글 입력 시 검사
+    textarea.addEventListener("input", toggleBtn);
+
+    // DOM 변경 감지 (이미지 추가/삭제 시 검사)
+    if (previewInner) {
+        const observer = new MutationObserver(toggleBtn);
+        observer.observe(previewInner, { childList: true });
+    }
+
+    // 버튼 클릭 시 최종 조건 확인
+    writeBtn.addEventListener("click", (e) => {
+        const textLength = textarea.value.trim().length;
+        const imageCount = previewInner
+            ? previewInner.querySelectorAll(".preview-item").length
+            : 0;
+
+        if (textLength < 10 && imageCount === 0) {
+            e.preventDefault();
+            toast.classList.add("show");
+            setTimeout(() => toast.classList.remove("show"), 2000);
+        } else {
+            // 조건 충족 → 팝업 닫기
+            const popup = writeBtn.closest(".popup-container");
+            if (popup) {
+                popup.classList.remove("active");
+            }
+        }
+    });
+
+    popupWriteCloseBtn.addEventListener("click", (e) => {
+        const textLength = textarea.value.trim().length;
+        const imageCount = previewInner
+            ? previewInner.querySelectorAll(".preview-item").length
+            : 0;
+
+        if (textLength === 0 && imageCount === 0) {
+            const popup = popupWriteCloseBtn.closest(".popup-container");
+            if (popup) popup.classList.remove("active");
+        } else {
+            messagePopup.classList.add("active");
+        }
+    });
+
+    // 초기 상태
+    toggleBtn();
+}
+writeBtnActiveFn();

@@ -35,7 +35,7 @@
                                 </div>
                                 <input type="text" id="keyword-input" placeholder="기업명, 직무명, 기술스택, 담당 업무">
                                 <button type="button" class="keyword-delete">
-                                    <svg aria-label="icon" color="foregrounds.neutral.tertiary" fill="currentColor" height="24" role="img" width="24">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" height="24" role="img" width="24">
                                         <path clip-rule="evenodd" d="M6.434 6.435a.8.8 0 0 1 1.132 0L12 10.869l4.434-4.434a.8.8 0 1 1 1.132 1.13L13.13 12l4.435 4.435a.8.8 0 1 1-1.132 1.13L12 13.133l-4.434 4.434a.8.8 0 0 1-1.132-1.131L10.87 12 6.434 7.566a.8.8 0 0 1 0-1.131" fill-rule="evenodd"></path>
                                     </svg>
                                 </button>
@@ -745,7 +745,7 @@
 
                                 <div class="detail-actions">
                                     <!-- popup-trigger 클래스가 있으면 열림 -->
-                                    <button class="detail-action-btn detail-apply-btn popup-trigger" data-target="#popup1">간편 지원하기</button>
+                                    <button class="detail-action-btn detail-apply-btn popup-trigger" data-target="#quick-apply-popup">간편 지원하기</button>
                                     <button class="detail-action-btn detail-save-btn">저장함</button>
                                     <button class="detail-action-btn detail-share-btn">공유하기</button>
                                 </div>
@@ -826,10 +826,25 @@
                     <div class="content-side active">
                         <div class="content-side-top">
                             <div class="ad-banner">
-                                <img src="/static/images/experience/ad_bg_img.jpg" alt="">
+                                <div class="ad-text-box">
+                                    <p class="title">000님, 삼성 인턴 합격을 진심으로 축하드립니다!</p>
+                                    <p class="desc">최신 기술 환경에서 전문성을 키워가며 더 큰 도약을 준비하세요.</p>
+                                </div>
+                                <div class="ad-img">
+                                    <img src="/static/images/experience/ad_bg_img.jpg" alt="">
+                                </div>
                             </div>
                             <div class="ad-banner">
-                                <img src="/static/images/experience/ad_bg_img.jpg" alt="">
+                                <div class="ad-text-box">
+                                    <p class="title">차세대 글로벌 광고 플랫폼 <br/>엔지니어 모집</p>
+                                    <p class="desc">최신 기술 환경에서 전문성을 키워나가세요.</p>
+                                </div>
+                                <div class="ad-img">
+                                    <img src="/static/images/experience/ad_bg_img.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="ad-inquiry-btn">
+                                <button type="button">광고문의</button>
                             </div>
                         </div>
                         <div class="content-side-bottom">
@@ -910,7 +925,7 @@
     </div>
 
     <!-- popup - 간편지원하기 -->
-    <div id="popup1" class="popup-container pop-side">
+    <div id="quick-apply-popup" class="popup-container pop-side">
         <div class="popup-inner">
             <div class="popup-header">
                 <strong class="popup-title">간편 지원하기</strong>
@@ -942,7 +957,7 @@
                             <p class="form-label">이력서<span class="must">*</span></p>
                             <div class="form-field">
                                 <input type="hidden" id="resume-value">
-                                <button type="button" class="file-btn popup-trigger" data-target="#popup2">파일 또는 URL 선택 가능</button>
+                                <button type="button" class="file-btn popup-trigger" data-target="#resume-check-popup">파일 또는 URL 선택 가능</button>
                             </div>
                         </li>
                     </ul>
@@ -955,7 +970,7 @@
     </div>
 
     <!-- popup - 이력서 -->
-    <div id="popup2" class="popup-container pop-side">
+    <div id="resume-check-popup" class="popup-container pop-side">
         <div class="popup-inner">
             <div class="popup-header">
                 <button class="popup-prev">
@@ -992,7 +1007,8 @@
                     <li class="form-item">
                         <div class="file-container">
                             <div class="file-icon">
-                                <!-- ppt, pdf, excel, docx에 해당하지 않으면 기본 이미지가 나옴 -->
+                                <!-- 기본이미지 -->
+                                <img src="/static/images/experience/icon_file_default.svg" alt="">
                             </div>
                             <div class="file-info">
                                 <p class="file-label">포트폴리오 url</p>
@@ -1064,12 +1080,12 @@
                 </ul>
                 
                 <!-- 데이터 없을때 -->
-                <!-- <div class="no-data">
+                <div class="no-data">
                     <p class="title">아직 등록된 라이브러리가 없습니다.</p>
                     <p class="description">파일 또는 URL을 미리 등록하면 빠르게 공고에 지원할 수 있습니다.</p>
 
-                    <button type="button" class="btn-primary popup-trigger" data-target="#popup3">등록하기</button>
-                </div> -->
+                    <button type="button" class="btn-primary popup-trigger" data-target="#resume-upload-popup">등록하기</button>
+                </div>
             </div>
 
             <div class="popup-action line">
@@ -1079,7 +1095,7 @@
                 <div id="dropdown1" class="option-menu">
                     <ul class="option-list">
                         <li class="option-item">
-                            <button class="option-btn dropdown-trigger" data-target="#popup3">
+                            <button class="option-btn dropdown-trigger" data-target="#resume-upload-popup">
                                 <div>
                                     <svg fill="currentColor" height="24" role="img" width="24">
                                         <path clip-rule="evenodd" d="M5 4.8A1.2 1.2 0 0 0 3.8 6v12A1.2 1.2 0 0 0 5 19.2h14a1.2 1.2 0 0 0 1.2-1.2V9A1.2 1.2 0 0 0 19 7.8h-5.93a2.8 2.8 0 0 1-2.33-1.247l-.812-1.218A1.2 1.2 0 0 0 8.93 4.8zM2.2 6A2.8 2.8 0 0 1 5 3.2h3.93a2.8 2.8 0 0 1 2.33 1.247l.812 1.219a1.2 1.2 0 0 0 .998.534H19A2.8 2.8 0 0 1 21.8 9v9a2.8 2.8 0 0 1-2.8 2.8H5A2.8 2.8 0 0 1 2.2 18z" fill-rule="evenodd"></path>
@@ -1089,7 +1105,7 @@
                             </button>
                         </li>
                         <li class="option-item">
-                            <button class="option-btn dropdown-trigger" data-target="#popup4">
+                            <button class="option-btn dropdown-trigger" data-target="#url-upload-popup">
                                 <div>
                                     <svg fill="currentColor" height="24" role="img" width="24">
                                         <path clip-rule="evenodd" d="M12.141 5.07a4.8 4.8 0 1 1 6.788 6.789l-1.414 1.414a.8.8 0 1 1-1.131-1.131l1.414-1.415a3.2 3.2 0 0 0-4.526-4.525l-1.414 1.414a.8.8 0 0 1-1.131-1.131zm3.253 3.536a.8.8 0 0 1 0 1.131l-5.657 5.657a.8.8 0 0 1-1.132-1.131l5.657-5.657a.8.8 0 0 1 1.132 0m-7.778 2.121a.8.8 0 0 1 0 1.132L6.2 13.273a3.2 3.2 0 0 0 4.526 4.525l1.414-1.414a.8.8 0 0 1 1.131 1.131l-1.414 1.415a4.8 4.8 0 0 1-6.788-6.788l1.414-1.415a.8.8 0 0 1 1.132 0" fill-rule="evenodd"></path>
@@ -1106,7 +1122,7 @@
 
     <!-- popup - 이력서등록 -->
     <!-- data-sticky="true" 남아야 하는 팝업일때 붙임 -->
-    <div id="popup3" class="popup-container pop-center" data-sticky="true">
+    <div id="resume-upload-popup" class="popup-container pop-center" data-sticky="true">
         <div class="popup-inner">
             <div class="popup-header">
                 <strong class="popup-title">보관함 등록</strong>
@@ -1169,7 +1185,7 @@
 
     <!-- popup - url추가 -->
      <!-- data-sticky="true" 남아야 하는 팝업일때 붙임 -->
-    <div id="popup4" class="popup-container pop-center" data-sticky="true">
+    <div id="url-upload-popup" class="popup-container pop-center" data-sticky="true">
         <div class="popup-inner">
             <div class="popup-header">
                 <strong class="popup-title">보관함 등록</strong>
@@ -1228,7 +1244,7 @@
     </div>
 
     <!-- popup - 닫기 메세지 -->
-    <div id="popup5" class="popup-container pop-center pop-default">
+    <div id="message-popup" class="popup-container pop-center pop-default">
         <div class="popup-inner">
             <div class="popup-body">
                 <div class="popup-title-box">
@@ -1238,7 +1254,7 @@
             </div>
             <div class="popup-action popup-btn-row">
                 <button class="pop-btn btn-primary popup-all-close">저장하지 않고 나가기</button>
-                <button class="pop-btn btn-default popup-continue">계속 작성하기</button>
+                <button class="pop-btn btn-default popup-continue popup-remove">계속 작성하기</button>
             </div>
         </div>
     </div>

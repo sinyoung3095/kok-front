@@ -25,16 +25,38 @@
     display: flex;
 }
 
+.header-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.header-login-box {
+    display: flex;
+    position: relative;
+}
+
 .header-login {
+    width: 36px;
+    height: 36px;
     align-items: center;
     gap: 12px;
     display: flex;
+    background-color: rgba(18,19,20,0.4000);
+    border-radius: 50%;
+    overflow: hidden;
 }
 
-/* 프로필 모달 */
+.header-login img {
+    padding: 8px;
+}
+
+/* 프로필 드롭다운 */
 .profile-modal {
     height: auto;
-    left: 1248px;
+    right: 0;
     max-height: 220px;
     position: absolute;
     top: 60.6667px;
@@ -79,6 +101,7 @@
     flex-direction: column;
     padding: 4px;
     display: flex;
+    width: 100%;
 }
 
 .profile-modal-body .list-wrap .list {

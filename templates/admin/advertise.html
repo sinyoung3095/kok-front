@@ -11,6 +11,7 @@
     <div id="kok">
         <div id="kok-notify-container"></div>
         <div class="popup-manager" style="width: 0px;"></div>
+        <!-- 사이드바 -->
         <aside id="kok-side">
             <div class="d-flex flex-column" id="side-wrapper">
                 <div class="side-header">
@@ -92,7 +93,7 @@
                                 <li class="submenu menu-item">
                                     <a href="" class="kok-link active">
                                         - 
-                                        광고
+                                        광고신청
                                     </a>
                                 </li>
                                 <li class="submenu menu-item">
@@ -232,11 +233,65 @@
                         <div class="table-layout white-panel">
                             <div class="filter-section">
                                 <div class="row">
-                                    <!-- PG 선택, 결제방식선택, 결제상태선택 버튼 -->
-                                    <!-- <div class="col-auto"></div> -->
-                                    <div class="col-auto"></div>
-                                    <div class="col-auto"></div>
-                                    <div class="col-auto"></div>
+                                    <div class="col-auto">
+                                        <!-- 승인상태 필터 버튼 -->
+                                        <div class="filter-wrapper filter-pg" id="filter-pg">
+                                            <div class="kok-pop-checkbox">
+                                                <button class="kok-pop-checkbox-filter-btn btn btn-outline-filter" id="btn-filter-pg">
+                                                    승인상태
+                                                    <i class="mdi mdi-menu-down"></i>
+                                                </button>
+                                                <div class="kok-pop-menu">
+                                                    <div class="kok-pop-menu-back"></div>
+                                                    <div class="kok-pop-menu-context" style="top: 0px; bottom: unset; left: -10px; right: unset; transform: scale(0.9, 0.9) translate3d(0px, 0px, 0px);">
+                                                        <ul class="list-wrapper list-unstyled">
+                                                            <li class="text-center font-weight-bold">승인상태</li>
+                                                            <li class="list-item row"></li>
+                                                            <li class="list-item">
+                                                                <div class="row">
+                                                                    <div class="col">
+                                                                        <div class="kok-check d-flex align-items-center undefined" style="cursor: pointer;">
+                                                                            <div class="kok-check-box " tabindex="0" style="width: 20px; height: 20px;">
+                                                                                <i class="mdi mdi-check" style="display: none;"></i>
+                                                                            </div>
+                                                                            <div class="kok-check-content flex-grow-1">승인</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li class="list-item">
+                                                                <div class="row">
+                                                                    <div class="col">
+                                                                        <div class="kok-check d-flex align-items-center undefined" style="cursor: pointer;">
+                                                                            <div class="kok-check-box " tabindex="0" style="width: 20px; height: 20px;">
+                                                                                <i class="mdi mdi-check" style="display: none;"></i>
+                                                                            </div>
+                                                                            <div class="kok-check-content flex-grow-1">대기</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li class="list-item">
+                                                                <div class="row">
+                                                                    <div class="col">
+                                                                        <div class="kok-check d-flex align-items-center undefined" style="cursor: pointer;">
+                                                                            <div class="kok-check-box " tabindex="0" style="width: 20px; height: 20px;">
+                                                                                <i class="mdi mdi-check" style="display: none;"></i>
+                                                                            </div>
+                                                                            <div class="kok-check-content flex-grow-1">거절</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li class="list-item mt-2">
+                                                                <button class="btn btn-outline-primary btn-sm">확인</button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <div class="col text-right"></div>                                    
                                     <div class="col-auto">
                                         <div class="filter-wrapper filter-search ml-1">
