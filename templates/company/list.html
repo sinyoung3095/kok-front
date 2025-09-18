@@ -295,6 +295,16 @@
                     </div>
                     <div class="side-wrapper">
                         <div class="content-box">
+                            <!-- 비로그인시 -->
+                            <div class="profile-card">
+                                <div class="profile-message">
+                                    <p class="title">콕! 찍으면, <br/>오늘은 내가 그 회사의 직원</p>
+                                    <p class="desc">지금 프로필을 만들고 기회를 찾아보세요.</p>
+                                </div>
+                                <button type="button" class="btn-login btn-primary popup-trigger" data-target="#post-write-popup">로그인</button>
+                            </div>
+
+                            <!-- 로그인시 -->
                             <div class="profile-card">
                                 <div class="profile-avatar">
                                     <img alt="image" draggable="false" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" srcset="" src="/static/images/mypage/default.webp" style="color: transparent; border-radius: 999px; cursor: pointer; max-height: 60px; max-width: 60px; min-height: 60px; min-width: 60px; object-fit: contain;">
@@ -319,8 +329,9 @@
                                         <p class="stat-label">채용공고</p>
                                     </div>
                                 </div>
+
+                                <button type="button" class="btn-write btn-primary popup-trigger" data-target="#post-write-popup">글쓰기</button>
                             </div>
-                            <button type="button" class="btn-write btn-primary popup-trigger" data-target="#post-write-popup">글쓰기</button>
                         </div>
                         
                         <div class="content-box pd-0">
