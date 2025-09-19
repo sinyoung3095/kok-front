@@ -212,6 +212,7 @@ function layoutDetail() {
             if (window.matchMedia("(max-width: 1023px)").matches) {
                 contentMain.style.display = "none";
                 searchContainer.style.display = "none";
+                contentSide.style.display = "none";
             }
         });
 
@@ -256,11 +257,10 @@ function toastPopupFn() {
 
             if (!saved) {
                 saved = true;
-                if (textBox) textBox.textContent = "채용 공고를 저장했어요.";
+                if (textBox) textBox.textContent = "공고를 저장했어요.";
             } else {
                 saved = false;
-                if (textBox)
-                    textBox.textContent = "채용 공고 저장을 취소했어요.";
+                if (textBox) textBox.textContent = "공고 저장을 취소했어요.";
             }
 
             // 토스트 띄우기
@@ -592,7 +592,7 @@ popupLibraryClose("url-upload-popup", ["#type-input", "#url-input"]);
 
 // 이력서 팝업 이전 버튼 클릭시
 function setupPopupPrev() {
-    const prevBtn = document.querySelector("#resumeCheckPopup .popup-prev");
+    const prevBtn = document.querySelector("#resume-check-popup .popup-prev");
     const quickApplyPopup = document.getElementById("quick-apply-popup");
     const resumeCheckPopup = document.getElementById("resume-check-popup");
     if (!prevBtn || !quickApplyPopup || !resumeCheckPopup) return;
@@ -615,6 +615,13 @@ function setupPopupPrev() {
     });
 }
 setupPopupPrev();
+
+// 전화번호 포맷팅
+function formatPhoneNumber(input) {
+    input.value = input.value
+        .replace(/[^0-9]/g, "")
+        .replace(/(^02|^01[0-9]|[0-9]{3})([0-9]+)?([0-9]{4})$/, "$1 $2 $3");
+}
 
 // 간편지원하기 팝업
 function quickApplyPopupFn() {
@@ -693,6 +700,25 @@ function quickApplyPopupFn() {
             return;
         }
 
+        // 전화번호 숫자만 추출
+        const phoneNumber = phone.value.replace(/[^0-9]/g, "");
+
+        // 전화번호 자리수 체크
+        if (phoneNumber.length > 13) {
+            if (toast) {
+                toastText.textContent =
+                    "전화번호는 최대 13자리까지 입력 가능합니다.";
+                toast.classList.add("show");
+
+                setTimeout(() => {
+                    toast.classList.remove("show");
+                }, 2000);
+            }
+            phone.value = phoneNumber.slice(0, 13); // 13자리까지만 자르기
+            phone.focus();
+            return;
+        }
+
         // 전화번호 형식이 맞지 않을때
         if (!isPhone(phone.value)) {
             if (toast) {
@@ -703,6 +729,7 @@ function quickApplyPopupFn() {
                     toast.classList.remove("show");
                 }, 2000);
             }
+            phone.value = phone.value.slice(0, 13);
             phone.focus();
             return;
         }
@@ -728,8 +755,8 @@ quickApplyPopupFn();
 
 // 이력서선택 팝업
 function resumeCheckPopupFn() {
-    var resumeCheckPopupBox = document.getElementById("resumeCheckPopup");
-    var quickApplyPopupBox = document.getElementById("quickApplyPopup");
+    var resumeCheckPopupBox = document.getElementById("resume-check-popup");
+    var quickApplyPopupBox = document.getElementById("quick-apply-popup");
     if (!resumeCheckPopupBox || !quickApplyPopupBox) return;
 
     var doneBtn = resumeCheckPopupBox.querySelector("#file-select-btn");
@@ -1041,3 +1068,36 @@ function writeBtnActiveFn() {
     toggleBtn();
 }
 writeBtnActiveFn();
+
+// JS
+function bannerActiveFn() {
+    const banners = document.querySelectorAll(".banner-list .ad-banner");
+    let timer = null;
+    let currentIndex = -1;
+
+    if (!banners) return;
+
+    // 모두 숨기기
+    function hideAll() {
+        banners.forEach((banner) => banner.classList.remove("active"));
+    }
+
+    // 랜덤 배너 보이기
+    function showRandomBanner() {
+        hideAll();
+        let randomIndex;
+        do {
+            randomIndex = Math.floor(Math.random() * banners.length);
+        } while (randomIndex === currentIndex && banners.length > 1);
+        // 직전 배너와 겹치지 않게 처리
+        banners[randomIndex].classList.add("active");
+        currentIndex = randomIndex;
+    }
+
+    // 최초 실행
+    showRandomBanner();
+
+    // 3초마다 랜덤 배너 변경
+    timer = setInterval(showRandomBanner, 5000);
+}
+bannerActiveFn();

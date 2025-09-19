@@ -200,4 +200,9 @@ input:focus {
     #main-content {
         padding: 0;
     }
+
+    .main {
+        border-radius: 0;
+        border: 0;
+    }
 }
