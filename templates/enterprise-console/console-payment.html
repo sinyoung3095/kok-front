@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../../static/css/enterprise-console/console-payment.css">
     <link rel="stylesheet" href="../../static/css/enterprise-console/console-sidebar.css">
     <link rel="stylesheet" href="../../static/css/enterprise-console/console-header.css">
     <link rel="stylesheet" href="../../static/font/font.css">
@@ -225,10 +226,12 @@
                                         <div class="card-top-sub">결제 내역을 확인하세요.</div>
                                     </div>
                                     <div class="card-content">
-                                        <div class="no-pay">
-                                            <h3 class="content-top">결제 내역이 없습니다</h3>
-                                            <p class="content-sub">아직 결제 내역이 없습니다. 첫 번째 서비스를 이용해 보세요.</p>
-                                        </div>
+                                        <!-- 결제 건 없을 때 -->
+                                        <!-- <div class="no-pay">
+                                            <h3 class="no-h3">결제 내역이 없습니다</h3>
+                                            <p class="no-p">아직 결제 내역이 없습니다. 첫 번째 서비스를 이용해 보세요.</p>
+                                        </div> -->
+                                        <!-- 결제 건 있을 때 -->
                                         <div class="pay-exist">
                                             <table class="list-list-table">
                                                 <thead class="list-list-thead">
@@ -282,7 +285,7 @@
                                                         </td>
                                                         <td class="body-td">2025-09-15</td>
                                                         <td class="body-td">
-                                                            <span class="exp-status">환불</span>
+                                                            <span class="exp-status return-pay">환불</span>
                                                         </td>
                                                     </tr>
                                                     <tr class="body-tr">
@@ -327,7 +330,7 @@
                                                         </td>
                                                         <td class="body-td">2025-09-15</td>
                                                         <td class="body-td">
-                                                            <span class="exp-status">환불</span>
+                                                            <span class="exp-status return-pay">환불</span>
                                                         </td>
                                                     </tr>
                                                     <tr class="body-tr">
@@ -403,11 +406,6 @@
                                                         <td class="body-td">2025-09-15</td>
                                                         <td class="body-td">
                                                             <span class="exp-status">결제</span>
-                                                        </td>
-                                                    </tr>
-                                                    <tr class="body-tr-none">
-                                                        <td class="body-td">
-                                                            <div class="text">조건에 맞는 공고가 없습니다.</div>
                                                         </td>
                                                     </tr>
                                                 </tbody>
@@ -423,4 +421,5 @@
         </main>
     </div>
 </body>
+<script src="../../static/js/console/sidebar/event.js"></script>
 </html>
