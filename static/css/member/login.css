@@ -693,4 +693,13 @@ p.general-p {
 	.input-container.member {
 		transform: translateY(0);
 	}
+	.toast-warning.show {
+    	min-width: 330px;
+	}
+	.three-button {
+		font-size: 13px
+	}
+	.input-container.company {
+    	transform: translateY(70px);
+	}
 }
