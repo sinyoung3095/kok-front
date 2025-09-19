@@ -200,15 +200,36 @@ button {
     color: rgba(18,19,20,1);
     width: 100%;
     outline: none;
-/* 인증번호 받기 가능 */
-}   
+}   /* 인증번호 받기 버튼 */
+
+.btn-check {
+    cursor: pointer;
+    background-color: #0aa5ff;
+    justify-content: center;
+    align-items: center;
+    padding: 0 16px;
+    max-height: 56px;
+    min-height: 56px;
+    display: inline-flex;
+    border-radius: 999px;
+    color: rgba(18,19,20,1);
+    width: 100%;
+    outline: none;
+}   /* 확인 버튼 */
 
 .btn-submit.inactive {
     opacity: .4;
-}   /* 인증번호 받기 불가능 */
-.btn-submit.check-inactive {
+}   /* 인증번호 받기 비활성화 */
+.btn-check.inactive {
     opacity: .4;
-}   /* 인증번호 받기 불가능 */
+}   /* 확인 비활성화 */
+
+.btn-submit.none {
+    display: none;
+}   /* 인증번호 버튼 숨기기 */
+.btn-check.none {
+    display: none;
+}   /* 확인 버튼 숨기기 */
 
 .btn-submit-text {
     justify-content: center;
@@ -333,6 +354,13 @@ button {
     }
     .mob {
         display: block;
+    }
+    body {
+        background: #f5f6fa;
+    }
+    #main-content {
+        padding-top: 120px;
+        background: #f5f6fa;
     }
 }
 

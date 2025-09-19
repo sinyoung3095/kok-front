@@ -1,5 +1,6 @@
 // 토스트 오류 메시지
 const submitButton = document.querySelector(".btn-submit");
+const checkButton = document.querySelector(".btn-check");
 const inputCertiContainer = document.getElementById("input-certi-container");
 
 const inputName = document.getElementById("input-name");
@@ -108,7 +109,7 @@ submitButton.addEventListener("click", () => {
 
 // 인증번호 받은 후
 submitButton.addEventListener("click", (e) => {
-    let text = `<span class="btn-submit-text">확인</span>`;
+    // let text = `<span class="btn-submit-text">확인</span>`;
 
     if (submitButton.classList.contains('inactive')) {
         return;
@@ -117,15 +118,18 @@ submitButton.addEventListener("click", (e) => {
     else if (inputCertiContainer.style.display === "none") {
         showSendToast();
         inputCertiContainer.style.display = "block";
-        submitButton.innerHTML = text;
-        submitButton.classList.add('check-inactive');
+        // submitButton.innerHTML = text;
+        submitButton.classList.add('none');
+        checkButton.classList.remove('none');
     }
 
     // 인증번호 발송 실패 조건 추가 예정(showSendErrorToast)
     // 인증번호 확인 조건 추가 예정(showWrongCertiErrorToast)
+});
 
+checkButton.addEventListener("click", (e) => {
     // 인증번호 공란
-    else if (inputCertiContainer.style.display === "block" && inputCerti.value.length < 6) {
+    if (inputCertiContainer.style.display === "block" && inputCerti.value.length < 6) {
         showCertiErrorToast();
     }
 });
@@ -133,8 +137,8 @@ submitButton.addEventListener("click", (e) => {
 // 확인버튼 활성화
 inputCerti.addEventListener("keyup", (e) => {
     if (e.target.value.length === 6) {
-        submitButton.classList.remove('check-inactive')
+        checkButton.classList.remove('inactive')
     } else if (e.target.value.length < 6) {
-        submitButton.classList.add('check-inactive')
+        checkButton.classList.add('inactive')
     }
 });
