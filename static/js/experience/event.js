@@ -258,9 +258,11 @@ function toastPopupFn() {
             if (!saved) {
                 saved = true;
                 if (textBox) textBox.textContent = "공고를 저장했어요.";
+                saveBtn.textContent = "저장취소";
             } else {
                 saved = false;
                 if (textBox) textBox.textContent = "공고 저장을 취소했어요.";
+                saveBtn.textContent = "저장함";
             }
 
             // 토스트 띄우기

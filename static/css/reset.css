@@ -188,11 +188,12 @@ input:focus {
     align-items: center;
     align-self: stretch;
     background: #f5f6fa;
-    min-width: 480px;
+    min-width: 320px;
     border-radius: 12px;
     border: 1px solid;
     flex: 1 0 0;
     display: flex;
+    overflow-y: auto;
 }
 
 /* 반응형 */
