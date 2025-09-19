@@ -270,6 +270,10 @@
     overflow-y: auto !important;
 }
 
+.content-layout.scroll-y {
+    height: auto;
+}
+
 .content {
     flex-direction: row;
     width: 100%;
@@ -2013,6 +2017,10 @@ input:-internal-autofill-selected {
         min-width: auto;
         max-width: 360px;
         transform: translate(-50%, -80px);
+    }
+
+    .toast-warning.show {
+        top: 20px;
     }
 
     .detail-apply-btn {
