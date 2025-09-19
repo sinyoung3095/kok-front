@@ -562,6 +562,11 @@ span.side-job{
     text-align: left;
 }
 
+.side-hov:hover{
+    color: #171717;
+    background-color: oklch(.97 0 0);
+}
+
 div.service-change-wrap{
     position: fixed;
     left: 0px;
