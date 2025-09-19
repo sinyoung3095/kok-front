@@ -924,6 +924,8 @@ pagenation();
 function fileUploadFn() {
     const addPhotoBtn = document.querySelector("#btn-add-photo");
     const previewInner = document.querySelector(".popup-preview-inner");
+    const toast = document.querySelector("#toast-red");
+    const toastText = document.querySelector("#toast-red p");
 
     if (!addPhotoBtn || !previewInner) return;
 
@@ -935,7 +937,10 @@ function fileUploadFn() {
             previewInner.querySelectorAll(".preview-item").length;
 
         if (existingThumbs + files.length > 8) {
-            alert("사진은 최대 8장까지 첨부할 수 있습니다.");
+            // alert("사진은 최대 8장까지 첨부할 수 있습니다.");
+            toastText.textContent = "사진은 최대 8장까지 첨부할 수 있습니다.";
+            toast.classList.add("show");
+            setTimeout(() => toast.classList.remove("show"), 2000);
             return;
         }
 
