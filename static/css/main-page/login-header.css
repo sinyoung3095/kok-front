@@ -38,13 +38,13 @@
     display: flex;
 }
 
-.header-login {
+.header-login.avatar {
     width: 36px;
     height: 36px;
     align-items: center;
     gap: 12px;
     display: flex;
-    background-color: rgba(18,19,20,0.4000);
+    background-color: #ccc;
     border-radius: 50%;
     overflow: hidden;
 }

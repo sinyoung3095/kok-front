@@ -2057,7 +2057,6 @@ input:-internal-autofill-selected {
 /* 기본: PC */
 .pc {
     display: block !important;
-    width: 100%;
 }
 .mob {
     display: none !important;

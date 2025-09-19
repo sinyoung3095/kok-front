@@ -244,8 +244,8 @@
 }
 
 
-.sidebar-legal,
-.sidebar-address,
+.pc .sidebar-legal,
+.pc .sidebar-address,
 .pc .sidebar-business-text {
     padding: 0 8px;
     gap: 12px;
@@ -253,7 +253,7 @@
     display: flex;
 }
 
-.sidebar-legal-text,
+.pc .sidebar-legal-text,
 .pc .sidebar-address-text {
     word-break: normal !important;
     color: rgba(18,19,20,0.4000);
@@ -375,7 +375,7 @@
 }
 
 /* 검색 버튼 모달창 */
-.pc .search-modal-wrap {
+.search-modal-wrap {
     padding: 14vh !important;
     z-index: 1000;
     position: fixed; 
@@ -387,7 +387,7 @@
     padding: 14vh 16px 16px;
 }
 
-.pc .search-modal-wrap.active {
+.search-modal-wrap.active {
     padding: 14vh !important;
     z-index: 1000;
     position: fixed; 
@@ -399,7 +399,7 @@
     padding: 14vh 16px 16px;
 }
 
-.pc .search-modal {
+.search-modal {
     max-width: 800px;
     width: 800px; 
     pointer-events: auto;
@@ -408,23 +408,23 @@
     transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
-.pc .search-modal-wrap.active .search-modal {
+.search-modal-wrap.active .search-modal {
     opacity: 1;
     transform: scale(1);
 }
  
-.pc .search-modal-height-auto {
+.search-modal-height-auto {
     height: auto;
 }
 
-.pc .search-modal-header-wrap {
+.search-modal-header-wrap {
     margin-bottom: 8px;
     align-items: center;
     position: relative;
     display: flex;
 }
 
-.pc .search-modal-header {
+.search-modal-header {
     justify-content: center;
     align-items: center;
     display: inline-flex;
@@ -434,7 +434,7 @@
     padding: 0px;
 }
 
-.pc .search-magnify-icon {
+.search-magnify-icon {
     left: 16px;
     top: 50%;
     z-index: 1;
@@ -442,7 +442,7 @@
     position: absolute;
 }
 
-.pc .search-modal-input {
+.search-modal-input {
     padding-left: 45px !important;
     border-color: rgba(86,105,143,0.1200);
     justify-content: center;
@@ -465,7 +465,7 @@
     border-width: 0;
 }
 
-.pc .close-search-modal {
+.close-search-modal {
     right: 8px;
     top: 50%;
     justify-content: center;
@@ -481,7 +481,7 @@
     cursor: pointer;
 }
 
-.pc .close-search-modal-icon {
+.close-search-modal-icon {
     border-radius: 0px;
     height: 20px;
     padding: 0px;
@@ -491,7 +491,7 @@
     color: rgba(18,19,20,1);
 }
 
-.pc .search-modal-main-wrap {
+.search-modal-main-wrap {
     border-color: rgba(86,105,143,0.1200);
     align-items: flex-start;
     flex-direction: column;
@@ -506,7 +506,7 @@
     border-width: 0;
 }
 
-.pc .search-modal-list-wrap {
+.search-modal-list-wrap {
     align-items: flex-start;   
     flex-direction: row;
     align-self: stretch;
@@ -516,13 +516,13 @@
     display: flex;
 }
 
-.pc .search-modal-list-wrap2 {
+.search-modal-list-wrap2 {
     height: 100%;
     width: 100%;
     display: flex;  
 }
 
-.pc .search-modal-body-wrap {
+.search-modal-body-wrap {
     align-items: flex-start;
     flex-direction: column;
     max-height: 436px;
@@ -534,13 +534,13 @@
     display: flex;
 }
 
-.pc .search-modal-group {
+.search-modal-group {
     align-items: center;
     display: inline-flex;
     gap: 4px;
 }
 
-.pc .search-modal-group-section-active {
+.search-modal-group-section-active {
     justify-content: center;
     align-items: center;
     border-radius: 6px;
@@ -554,7 +554,7 @@
     display: flex;
 }
 
-.pc .search-modal-group-context-active {
+.search-modal-group-context-active {
     user-select: none;
     width: fit-content;
     text-overflow: ellipsis;
@@ -568,7 +568,7 @@
     font-weight: 500;
 }
 
-.pc .search-modal-group-section {
+.search-modal-group-section {
     justify-content: center;
     align-items: center;
     border-radius: 6px;
@@ -581,7 +581,7 @@
     display: flex;
 }
 
-.pc .search-modal-group-context {
+.search-modal-group-context {
     user-select: none;
     width: fit-content;
     text-overflow: ellipsis;
@@ -595,7 +595,7 @@
     font-weight: 500;
 }
 
-.pc .search-modal-list {
+.search-modal-list {
     align-items: flex-start;
     overflow-y: auto;
     flex-direction: column;
@@ -608,7 +608,7 @@
     display: flex;
 }
 
-.pc .search-modal-list-section {
+.search-modal-list-section {
     align-items: center;
     border-radius: 8px;
     background: #ffffff;
@@ -618,7 +618,7 @@
     display: flex;
 }
 
-.pc .search-modal-list-number {
+.search-modal-list-number {
     min-width: 12px;
     text-align: center;
     color: rgba(18,19,20,0.6000);
@@ -629,7 +629,7 @@
     line-height: 24px;
 }
 
-.pc .search-modal-list-member {
+.search-modal-list-member {
     align-items: flex-start;
     flex-direction: column;
     gap: 2px;
@@ -637,7 +637,7 @@
     display: flex;
 }
 
-.pc .search-modal-list-name {
+.search-modal-list-name {
     text-align: left;
     overflow: hidden;
     display: -webkit-box;
@@ -653,7 +653,7 @@
     font-weight: 500;
 }
 
-.pc .search-modal-list-job {
+.search-modal-list-job {
     overflow: hidden;
     display: -webkit-box;
     -webkit-box-orient: vertical;
@@ -667,7 +667,7 @@
     font-weight: 400;
 }
 
-.pc .search-modal-company-wrap {
+.search-modal-company-wrap {
     border-color: rgba(86,105,143,0.1200) !important;
     flex-direction: column;
     border-top: none;
@@ -681,7 +681,7 @@
     display: flex;
 }
 
-.pc .search-modal-company-wrap-top {
+.search-modal-company-wrap-top {
     justify-content: flex-end;
     align-items: center;
     padding: 8px;
@@ -690,14 +690,14 @@
     display: flex;
 }
 
-.pc .search-modal-company-text-wrap {
+.search-modal-company-text-wrap {
     align-items: center;
     gap: 6px;
     flex: 1 0 0;
     display: flex;
 }
 
-.pc .search-modal-company-text {
+.search-modal-company-text {
     user-select: none;
     color: rgba(18,19,20,1);
     letter-spacing: -.28px;
@@ -707,13 +707,13 @@
     font-weight: 500;
 }
 
-.pc .search-modal-company-all-wrap {
+.search-modal-company-all-wrap {
     justify-content: center;
     align-items: center;
     display: flex;
 }
 
-.pc .search-modal-company-all-button {
+.search-modal-company-all-button {
     column-gap: 3px;
     justify-content: center;
     align-items: center;
@@ -731,13 +731,13 @@
     line-height: 18px;
 }
 
-.pc .search-modal-company-all-text {
+.search-modal-company-all-text {
     user-select: none;
     color: rgba(18,19,20,0.6000);
     white-space: nowrap;
 }
 
-.pc .search-modal-company-list-wrap {
+.search-modal-company-list-wrap {
     align-items: flex-start;
     overflow-y: auto;
     flex-direction: column;
@@ -750,7 +750,7 @@
     display: flex;
 }
 
-.pc .search-modal-company-list {
+.search-modal-company-list {
     align-items: center;
     border-radius: 8px;
     padding: 8px;
@@ -759,7 +759,7 @@
     display: flex;
 }
 
-.pc .search-modal-company-section {
+.search-modal-company-section {
     align-items: flex-start;
     flex-direction: column;
     gap: 2px;
@@ -767,7 +767,7 @@
     display: flex;
 }
 
-.pc .search-modal-company-name {
+.search-modal-company-name {
     text-align: left;
     overflow: hidden;
     display: -webkit-box;
@@ -783,7 +783,7 @@
     font-weight: 500;
 }
 
-.pc .search-modal-company-experience {
+.search-modal-company-experience {
     overflow: hidden;
     display: -webkit-box;
     -webkit-box-orient: vertical;
@@ -797,7 +797,7 @@
     line-height: 18px;
 }
 
-.pc .sidebar-setting-wrap {
+.sidebar-setting-wrap {
     align-items: center;
     border-radius: 8px;
     cursor: pointer;
@@ -807,13 +807,13 @@
     display: flex;
 }
 
-.pc .sidebar-setting {
+.sidebar-setting {
     flex-direction: column;
     flex: 1 0 0;
     display: flex;
 }
 
-.pc .sidebar-setting-text {
+.sidebar-setting-text {
     user-select: none;
     color: rgba(18,19,20,1);
     letter-spacing: -.28px;
@@ -823,7 +823,7 @@
     font-weight: 500;
 }
 
-.pc .sidebar-support-wrap {
+.sidebar-support-wrap {
     align-items: center;
     border-radius: 8px;
     cursor: pointer;
@@ -833,13 +833,13 @@
     display: flex;
 }
 
-.pc .sidebar-support {
+.sidebar-support {
     flex-direction: column;
     flex: 1 0 0;
     display: flex;
 }
 
-.pc .sidebar-support-text {
+.sidebar-support-text {
     user-select: none;
     color: rgba(18,19,20,1);
     letter-spacing: -.28px;
@@ -849,7 +849,7 @@
     font-weight: 500;
 }  
 
-.pc .sidebar-service-wrap {
+.sidebar-service-wrap {
     align-items: center;
     border-radius: 8px;
     cursor: pointer;
@@ -859,13 +859,13 @@
     display: flex;
 }
 
-.pc .sidebar-service {
+.sidebar-service {
     flex-direction: column;
     flex: 1 0 0;
     display: flex;
 }
 
-.pc .sidebar-service-text {
+.sidebar-service-text {
     user-select: none;
     color: rgba(18,19,20,1);
     letter-spacing: -.28px;
