@@ -8,15 +8,16 @@
     display: flex;
 }
 
-.mob .main-wrap {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    border-radius: 12px;
-    background: #f5f6fa;
-    align-items: center;
-    flex-direction: column;
-}
+    .mob .main-wrap {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        border-radius: 12px;
+        background: #f5f6fa;
+        align-items: center;
+        flex-direction: column;
+    }
+
 
 .mob .top-wrap {
     top: 0;
