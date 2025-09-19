@@ -37,7 +37,7 @@ document.getElementById("bul-btn").addEventListener("click", () => {
     document.querySelectorAll("tr.pend").forEach((tr) => {
         tr.style.display = "none";
     });
-    countDiv.innerText = "총 11명 중 3명의 지원자가 표시됩니다.";
+    countDiv.innerText = "총 11명 중 6명의 지원자가 표시됩니다.";
 });
 
 document.getElementById("pend-btn").addEventListener("click", () => {
