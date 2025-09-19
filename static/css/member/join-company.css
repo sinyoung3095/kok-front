@@ -332,5 +332,9 @@ button {
     .signup-page {
         height: auto;
         width: 90%;
+        margin: 20px 0 20px 0;
+    }
+    .toast-warning {
+        min-width: 330px;
     }
 }
