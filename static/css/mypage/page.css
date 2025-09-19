@@ -741,6 +741,9 @@ gap: 16px;
     gap: 6px;
     position: relative;
     display: flex;
+    scrollbar-width: thin !important;
+    scrollbar-gutter: stable !important;
+    scrollbar-color: rgba(18,19,20,0.2400) transparent !important;
 }
 .file-10{
     flex-shrink: 0;

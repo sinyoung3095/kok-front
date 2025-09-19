@@ -83,7 +83,14 @@ changeExit.addEventListener("click", (e) => {
 });
 
 back.addEventListener("click", (e) => {
-    detail.style.display = "none";
+    replytext.forEach((text) => {
+        if (text.value !== "") {
+            change.style.display = "flex";
+        }
+    });
+    if (change.style.display !== "flex") {
+        detail.style.display = "none";
+    }
 });
 // 댓글 삭제
 const delet = document.getElementsByClassName("report-1");
