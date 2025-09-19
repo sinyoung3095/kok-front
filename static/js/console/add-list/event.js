@@ -97,32 +97,32 @@ compStatus.addEventListener("click", () => {
     });
 });
 
-// document.querySelectorAll("tr.list-tr").forEach((tr) => {
-//     const hambugerBtn = tr.querySelector("button.hambuger");
-//     const hambugerPopWrap = hambugerBtn
-//         ? hambugerBtn.querySelector(".hambuger-pop-wrap")
-//         : null;
+document.querySelectorAll("tr.list-tr").forEach((tr) => {
+    const hambugerBtn = tr.querySelector("button.hambuger");
+    const hambugerPopWrap = hambugerBtn
+        ? hambugerBtn.querySelector(".hambuger-pop-wrap")
+        : null;
 
-//     if (!hambugerBtn || !hambugerPopWrap) return;
+    if (!hambugerBtn || !hambugerPopWrap) return;
 
-//     hambugerBtn.style.position = "relative";
-//     hambugerPopWrap.style.position = "absolute";
+    hambugerBtn.style.position = "relative";
+    hambugerPopWrap.style.position = "absolute";
 
-//     hambugerBtn.addEventListener("click", (e) => {
-//         e.stopPropagation();
+    hambugerBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
 
-//         // 모든 팝업 닫기
-//         document
-//             .querySelectorAll(".hambuger-pop-wrap")
-//             .forEach((pop) => (pop.style.display = "none"));
+        // 모든 팝업 닫기
+        document
+            .querySelectorAll(".hambuger-pop-wrap")
+            .forEach((pop) => (pop.style.display = "none"));
 
-//         // 버튼 왼쪽 위에 위치시키기
-//         hambugerPopWrap.style.right = 0; // 버튼 왼쪽 옆
-//         hambugerPopWrap.style.top = -hambugerPopWrap.offsetHeight + "px"; // 버튼 위
+        // 버튼 왼쪽 위에 위치시키기
+        hambugerPopWrap.style.right = 0; // 버튼 왼쪽 옆
+        hambugerPopWrap.style.top = -hambugerPopWrap.offsetHeight + "px"; // 버튼 위
 
-//         hambugerPopWrap.style.display = "block";
-//     });
-// });
+        hambugerPopWrap.style.display = "block";
+    });
+});
 
 // 외부 클릭 시 모든 팝업 닫기
 document.addEventListener("click", (e) => {
