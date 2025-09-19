@@ -64,6 +64,7 @@ jobType.forEach((job, i) => {
         choice[i].classList.add("active");
         select.value = jobName[i].innerText;
         joblist.style.display = "none";
+        listbtn.innerHTML = `<path clip-rule="evenodd" d="M6.434 9.435a.8.8 0 0 1 1.132 0L12 13.869l4.434-4.434a.8.8 0 1 1 1.132 1.13l-5 5a.8.8 0 0 1-1.132 0l-5-5a.8.8 0 0 1 0-1.13" fill-rule="evenodd"></path>`;
     });
 });
 // 내 게시물
