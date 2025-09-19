@@ -1,4 +1,4 @@
-.main-content {
+.mob .main-content {
     padding-bottom: 58px;
     flex-direction: column;
     background: #ffffff;
@@ -8,7 +8,7 @@
     display: flex;
 }
 
-.main-wrap {
+.mob .main-wrap {
     display: flex;
     width: 100%;
     height: 100%;
@@ -18,7 +18,7 @@
     flex-direction: column;
 }
 
-.top-wrap {
+.mob .top-wrap {
     top: 0;
     flex-direction: column;
     align-items: center;
@@ -30,7 +30,7 @@
     display: flex;
 }
 
-.top {
+.mob .top {
     align-items: center;
     max-height: 56px;
     min-height: 56px;
@@ -39,14 +39,14 @@
     display: flex;
 }
 
-.top-left-section {
+.mob .top-left-section {
     align-items: center;
     gap: 8px;
     flex: 1 0 0;
     display: flex;
 }
 
-.top-left-button {
+.mob .top-left-button {
     justify-content: center;
     align-items: center;
     max-height: 48px;
@@ -58,7 +58,7 @@
     padding: 12px;
 }
 
-.top-left-button-icon {
+.mob .top-left-button-icon {
     border-radius: 0px;
     height: 24px;
     padding: 0px;
@@ -68,7 +68,7 @@
     color: rgba(18,19,20,1);
 }
 
-.top-middle-section {
+.mob .top-middle-section {
     justify-content: center;
     align-items: center;
     gap: 8px;
@@ -77,13 +77,13 @@
     display: flex;
 }
 
-.top-middle {
+.mob .top-middle {
     justify-content: center;
     align-items: center;
     display: flex;
 }
 
-.top-middle-button {
+.mob .top-middle-button {
     border-radius: 0px;
     height: 32px;
     padding: 0px;
@@ -93,7 +93,7 @@
     color: rgba(18,19,20,1);
 }
 
-.top-right-section {
+.mob .top-right-section {
     justify-content: flex-end;
     align-items: center;
     min-width: 24px;
@@ -103,7 +103,7 @@
     display: flex;
 }
 
-.top-right {
+.mob .top-right {
     justify-content: center;
     align-items: center;
     max-height: 48px;
@@ -116,7 +116,7 @@
     flex-direction: column;
 }
 
-.top-right-button {
+.mob .top-right-button {
     border-radius: 0px;
     height: 24px;
     padding: 0px;
@@ -126,7 +126,7 @@
     color: rgba(18,19,20,0.6000);
 }
 
-.top-right-button-text {
+.mob .top-right-button-text {
     text-overflow: ellipsis;
     text-align: center;
     color: rgba(18,19,20,0.6000);
@@ -139,7 +139,7 @@
 }
 
 /* 사이드바 */
-.sidebar {
+.mob .sidebar {
     pointer-events: none;
     touch-action: none;
     transform: translateX(-100%);
@@ -159,12 +159,12 @@
     display: flex;
 }
 
-.sidebar.active {
+.mob .sidebar.active {
     transform: translateX(0); 
     pointer-events: auto;
 }
 
-.sidebar-overlay {
+.mob .sidebar-overlay {
     display: none;
     position: fixed;
     inset: 0;
@@ -172,11 +172,11 @@
     z-index: 999;
 }
 
-.sidebar-overlay.active {
+.mob .sidebar-overlay.active {
     display: block;
 }
 
-.sidebar-list {
+.mob .sidebar-list {
     overflow-y: auto;
     flex-direction: column;
     padding: 8px;
@@ -185,27 +185,27 @@
     display: flex;
 }
 
-.sidebar-list-logo-section {
+.mob .sidebar-list-logo-section {
     flex-direction: column;
     padding: 8px;
     gap: 12px;
     display: flex;
 }
 
-.sidebar-list-logo {
+.mob .sidebar-list-logo {
     flex-shrink: 0;
     align-items: center;
     display: inline-flex;
     color: rgba(18,19,20,1);
 }
 
-.sidebar-list-login {
+.mob .sidebar-list-login {
     flex-direction: column;
     gap: 2px;
     display: flex;
 }
 
-.sidebar-list-login-main {
+.mob .sidebar-list-login-main {
     color: rgba(18,19,20,1);
     letter-spacing: -0.32px;
     font-size: 16px;
@@ -214,7 +214,7 @@
     font-family: "PretendardVariable","PretendardVariable Fallback";
 }
 
-.sidebar-list-login-sub {
+.mob .sidebar-list-login-sub {
     white-space: pre-line;
     color: rgba(18,19,20,0.6000);
     letter-spacing: -0.24px;
@@ -224,11 +224,11 @@
     font-family: "PretendardVariable","PretendardVariable Fallback";
 }
 
-.sidebar-line-wrap {
+.mob .sidebar-line-wrap {
     width: 100%;
 }
 
-.sidebar-line {
+.mob .sidebar-line {
     align-items: flex-start;
     flex-direction: column;
     align-self: stretch;
@@ -237,19 +237,19 @@
     display: flex;
 }
 
-.extra-text {
+.mob .extra-text {
     display: none;
 }
 
-.sidebar-list-notice-detail.active .extra-text {
+.mob .sidebar-list-notice-detail.active .extra-text {
     display: inline;
 }
 
-.sidebar-list-notice-detail.active .sidebar-list-text-button {
+.mob .sidebar-list-notice-detail.active .sidebar-list-text-button {
     content: "접기";
 }
 
-.sidebar-list-notice-section {
+.mob .sidebar-list-notice-section {
     padding-bottom: 80px;
     align-items: flex-start;
     flex-direction: column;
@@ -258,14 +258,14 @@
     display: flex;
 }
 
-.sidebar-list-notice {
+.mob .sidebar-list-notice {
     padding: 0px 8px;
     gap: 12px;
     width: 100%;
     display: flex;
 }
 
-.sidebar-list-text {
+.mob .sidebar-list-text {
     word-break: normal !important;
     color: rgba(18,19,20,0.4000);
     letter-spacing: 0px;
@@ -275,13 +275,13 @@
     line-height: 16px;
 }
 
-.sidebar-list-notice-detail {
+.mob .sidebar-list-notice-detail {
     flex-direction: column;
     gap: 0px;
     display: flex;
 }
 
-.sidebar-list-text-detail {
+.mob .sidebar-list-text-detail {
     color: rgba(18,19,20,0.4000);
     letter-spacing: 0px;
     font-family: "PretendardVariable","PretendardVariable Fallback";
@@ -290,9 +290,27 @@
     line-height: 16px;
 }
 
-.sidebar-list-text-button {
+.mob .sidebar-list-text-button {
     text-decoration-line: underline;
     text-underline-position: under;
     text-decoration-thickness: 0.8px;
     cursor: pointer;
+}
+
+.pc {
+    display: flex;
+}
+.mob {
+    display: none;
+}
+
+/* 1023px 이하일 때: 모바일 */
+@media (max-width: 1023px) {
+    .pc {
+        display: none;
+    }
+    .mob {
+        display: flex;
+        width: 100%;
+    }
 }
