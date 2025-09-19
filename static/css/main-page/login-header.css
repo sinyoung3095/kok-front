@@ -1081,3 +1081,20 @@
 .setting-modal-alarm-button-check.off {
     transform: translateX(2px);
 }
+
+.pc {
+    display: block;
+}
+.mob {
+    display: none;
+}
+
+/* 1023px 이하일 때: 모바일 */
+@media (max-width: 1023px) {
+    .pc {
+        display: none;
+    }
+    .mob {
+        display: block;
+    }
+}

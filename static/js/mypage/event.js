@@ -40,7 +40,7 @@ submit.addEventListener("click", (e) => {
 profileset.addEventListener("click", (e) => {
     profile.style.display = "flex";
 });
-// 직군 변경
+// 직군 변경 모달
 job.addEventListener("click", (e) => {
     if (joblist.style.display === "none" || joblist.style.display === "") {
         joblist.style.display = "flex";
@@ -49,6 +49,22 @@ job.addEventListener("click", (e) => {
         joblist.style.display = "none";
         listbtn.innerHTML = `<path clip-rule="evenodd" d="M6.434 9.435a.8.8 0 0 1 1.132 0L12 13.869l4.434-4.434a.8.8 0 1 1 1.132 1.13l-5 5a.8.8 0 0 1-1.132 0l-5-5a.8.8 0 0 1 0-1.13" fill-rule="evenodd"></path>`;
     }
+});
+// 직군 변경하기
+const jobType = document.getElementsByClassName("job-3");
+const choice = document.getElementsByClassName("choice");
+const select = document.getElementsByClassName("select")[0];
+const jobName = document.getElementsByClassName("job-6");
+
+jobType.forEach((job, i) => {
+    job.addEventListener("click", (e) => {
+        choice.forEach((ch) => {
+            ch.classList.remove("active");
+        });
+        choice[i].classList.add("active");
+        select.value = jobName[i].innerText;
+        joblist.style.display = "none";
+    });
 });
 // 내 게시물
 first.forEach((item) => {
@@ -329,17 +345,6 @@ function dropdownFn() {
 }
 dropdownFn();
 
-const hearts = document.getElementsByClassName("heart");
-hearts.forEach((heart, i) => {
-    heart.addEventListener("click", (e) => {
-        if (heart.color === "white") {
-            heart.color = "red";
-        } else {
-            heart.color = "white";
-        }
-    });
-});
-
 // 댓글창 열기
 const replys = document.getElementsByClassName("reply-btn");
 const modal = document.getElementsByClassName("reply")[0];
@@ -376,6 +381,7 @@ delreport.forEach((but) => {
         delreport.forEach((rep) => {
             rep.style.display = "none";
         });
+
         dele.style.display = "flex";
     });
 });
@@ -385,7 +391,96 @@ dlecancle.addEventListener("click", (e) => {
     dele.style.display = "none";
 });
 // 댓글창 닫기
+const replytext = document.getElementsByClassName("replytext");
 const down = document.getElementById("down");
+const change = document.getElementsByClassName("change")[0];
 down.addEventListener("click", (e) => {
+    replytext.forEach((text) => {
+        if (text.value !== "") {
+            change.style.display = "flex";
+        }
+    });
+    if (change.style.display !== "flex") {
+        modal.style.display = "none";
+    }
+});
+const changeCancle = document.getElementsByClassName("del-12")[2];
+const changeExit = document.getElementsByClassName("del-10")[2];
+changeCancle.addEventListener("click", (e) => {
+    change.style.display = "none";
+});
+changeExit.addEventListener("click", (e) => {
+    replytext.forEach((text) => {
+        text.value = "";
+    });
+    change.style.display = "none";
     modal.style.display = "none";
+});
+// 좋아요
+const hearts = document.getElementsByClassName("heart");
+hearts.forEach((heart, i) => {
+    heart.addEventListener("click", (e) => {
+        if (heart.style.fill === "red" || heart.style.fill === "") {
+            console.log("들어옴");
+            heart.style.fill = "white";
+            heart.style.stroke = "black";
+        } else {
+            heart.style.fill = "red";
+            heart.style.stroke = "red";
+        }
+    });
+});
+// 답글
+const comments = document.getElementsByClassName("comments");
+const commentbtn = document.getElementsByClassName("comment");
+commentbtn.forEach((comment, i) => {
+    comment.addEventListener("click", (e) => {
+        if (
+            comments[i].style.display === "none" ||
+            comments[i].style.display === ""
+        ) {
+            comments[i].style.display = "flex";
+        } else {
+            comments[i].style.display = "none";
+        }
+    });
+});
+
+// 답글 삭제 샌드위치
+const delbtn1 = document.getElementsByClassName("delbtn-0");
+const delreport1 = document.getElementsByClassName("delbtn-2");
+const delComment = document.getElementsByClassName("del-comment")[0];
+delbtn1.forEach((bt, i) => {
+    bt.addEventListener("click", (e) => {
+        if (
+            delreport1[i].style.display === "none" ||
+            delreport1[i].style.display === ""
+        ) {
+            if (bt === e.target) {
+                delreport1[i].style.display = "flex";
+            } else {
+                delreport1[i].style.display = "none";
+            }
+        } else {
+            delreport1[i].style.display = "none";
+        }
+    });
+});
+// 답글 삭제 버튼 클릭시 경고창
+delreport1.forEach((but) => {
+    but.addEventListener("click", (e) => {
+        delreport1.forEach((rep) => {
+            rep.style.display = "none";
+        });
+
+        delComment.style.display = "flex";
+    });
+});
+const commentCancle = document.getElementsByClassName("del-10")[3];
+const commentExit = document.getElementsByClassName("del-12")[3];
+commentExit.addEventListener("click", (e) => {
+    delComment.style.display = "none";
+});
+commentCancle.addEventListener("click", (e) => {
+    delComment.style.display = "none";
 });
