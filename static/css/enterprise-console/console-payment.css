@@ -273,6 +273,7 @@ th.list-head-sub{
 }
 
 tr.body-tr{
+    height: 50px;
     position: relative;
     border-style: solid;
     border-width: 0;
