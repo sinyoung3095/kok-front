@@ -700,6 +700,6 @@ p.general-p {
 		font-size: 13px
 	}
 	.input-container.company {
-    	transform: translateY(70px);
+    	transform: translateY(10px);
 	}
 }

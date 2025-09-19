@@ -327,7 +327,9 @@ button {
         background: #f5f6fa;
     }
     #main-content {
-        padding-top: 120px;
         background: #f5f6fa;
+    }
+    .signup-page {
+        width: 90%;
     }
 }
