@@ -312,3 +312,20 @@
     text-decoration-thickness: 0.8px;
     cursor: pointer;
 }
+
+.pc {
+    display: block;
+}
+.mob {
+    display: none;
+}
+
+/* 1023px 이하일 때: 모바일 */
+@media (max-width: 1023px) {
+    .pc {
+        display: none;
+    }
+    .mob {
+        display: block;
+    }
+}
