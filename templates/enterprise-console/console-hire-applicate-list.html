@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <link rel="stylesheet" href="../../static/css/enterprise-console/console-experience-upload.css">
     <link rel="stylesheet" href="../../static/css/enterprise-console/console-sidebar.css">
     <link rel="stylesheet" href="../../static/css/enterprise-console/console-header.css">
     <link rel="stylesheet" href="../../static/font/font.css">
+    <link rel="shorcut icon" href="../../static/images/member/kok_favicon.png" type="image/x-icon">
+    <title>인턴 지원서 목록 | 콕</title>
 </head>
 <body>
     <div class="wrap-enter">
@@ -51,7 +52,7 @@
                                 <ul class="sidebar-ul">
                                     <li class="sidebar-li">
                                         <a href="" class="sidebar-a side-hov">
-                                            <img src="" alt="" class="prof-img">
+                                            <img src="../../static/images/member/kok_logo.png" alt="" class="prof-img">
                                             <span class="sidebar-span">기업 프로필</span>
                                         </a>
                                     </li>
@@ -163,7 +164,7 @@
                             <li class="side-prof-li">
                                 <button class="side-prof-button side-hov">
                                     <span class="side-prof-span">
-                                        <img src="" alt="" class="side-prof-img">
+                                        <img src="../../static/images/main-page/image.png" alt="" class="side-prof-img">
                                     </span>
                                     <div class="side-prof-div">
                                         <span class="side-name">홍길동</span>
@@ -246,19 +247,25 @@
                                         </div>
                                     </div>
                                     <div class="cards">
-                                        <div class="card-title">
-                                            <div class="main-title">지원자 목록(11명)</div>
-                                            <div class="sub-title" id="count-appli-div">총 11명 중 11명의 지원자가 표시됩니다.</div>
+                                        <div class="card-title-wrap">
+                                            <div class="card-title">
+                                                <div class="main-title">지원자 목록(11명)</div>
+                                                <div class="sub-title" id="count-appli-div">총 11명 중 11명의 지원자가 표시됩니다.</div>
+                                            </div>
+                                            <button class="download">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="download-svg"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg>
+                                                이력서 다운로드
+                                            </button>
                                         </div>
                                         <div class="card-content">
                                             <table class="list-list-table">
                                                 <thead class="list-list-thead">
                                                     <tr class="list-tr">
+                                                        <th class="list-head-sub">선택</th>
                                                         <th class="list-head-main">이름</th>
                                                         <th class="list-head-sub">직군</th>
                                                         <th class="list-head-sub">이메일</th>
                                                         <th class="list-head-sub">전화번호</th>
-                                                        <th class="list-head-sub">이력서</th>
                                                         <th class="list-head-sub">지원일</th>
                                                         <th class="list-head-sub">상태</th>
                                                     </tr>
@@ -266,6 +273,9 @@
                                                 <tbody class="list-list-tbody">
                                                     <tr class="body-tr pend">
                                                         <td class="body-td">
+                                                            <input type="checkbox" name="" class="check-download">
+                                                        </td>
+                                                        <td class="body-td">
                                                             <div>
                                                                 <div class="td-title">지원자 이름</div>
                                                             </div>
@@ -277,12 +287,6 @@
                                                         <td class="body-td">
                                                             <span class="span-number">0</span>
                                                             명
-                                                        </td>
-                                                        <td class="body-td">
-                                                            <button class="yeolgi">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link h-3 w-3"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>
-                                                                다운로드
-                                                            </button>
                                                         </td>
                                                         <td class="body-td">2025-09-15</td>
                                                         <td class="body-td">
@@ -292,6 +296,9 @@
                                                     </tr>
                                                     <tr class="body-tr bul">
                                                         <td class="body-td">
+                                                            <input type="checkbox" name="" class="check-download">
+                                                        </td>
+                                                        <td class="body-td">
                                                             <div>
                                                                 <div class="td-title">지원자 이름</div>
                                                             </div>
@@ -303,12 +310,6 @@
                                                         <td class="body-td">
                                                             <span class="span-number">0</span>
                                                             명
-                                                        </td>
-                                                        <td class="body-td">
-                                                            <button class="yeolgi">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link h-3 w-3"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>
-                                                                다운로드
-                                                            </button>
                                                         </td>
                                                         <td class="body-td">2025-09-15</td>
                                                         <td class="body-td">
@@ -318,6 +319,9 @@
                                                     </tr>
                                                     <tr class="body-tr pend">
                                                         <td class="body-td">
+                                                            <input type="checkbox" name="" class="check-download">
+                                                        </td>
+                                                        <td class="body-td">
                                                             <div>
                                                                 <div class="td-title">지원자 이름</div>
                                                             </div>
@@ -329,12 +333,6 @@
                                                         <td class="body-td">
                                                             <span class="span-number">0</span>
                                                             명
-                                                        </td>
-                                                        <td class="body-td">
-                                                            <button class="yeolgi">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link h-3 w-3"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>
-                                                                다운로드
-                                                            </button>
                                                         </td>
                                                         <td class="body-td">2025-09-15</td>
                                                         <td class="body-td">
@@ -344,6 +342,9 @@
                                                     </tr>
                                                     <tr class="body-tr bul">
                                                         <td class="body-td">
+                                                            <input type="checkbox" name="" class="check-download">
+                                                        </td>
+                                                        <td class="body-td">
                                                             <div>
                                                                 <div class="td-title">지원자 이름</div>
                                                             </div>
@@ -355,12 +356,6 @@
                                                         <td class="body-td">
                                                             <span class="span-number">0</span>
                                                             명
-                                                        </td>
-                                                        <td class="body-td">
-                                                            <button class="yeolgi">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link h-3 w-3"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>
-                                                                다운로드
-                                                            </button>
                                                         </td>
                                                         <td class="body-td">2025-09-15</td>
                                                         <td class="body-td">
@@ -370,6 +365,9 @@
                                                     </tr>
                                                     <tr class="body-tr bul">
                                                         <td class="body-td">
+                                                            <input type="checkbox" name="" class="check-download">
+                                                        </td>
+                                                        <td class="body-td">
                                                             <div>
                                                                 <div class="td-title">지원자 이름</div>
                                                             </div>
@@ -381,12 +379,6 @@
                                                         <td class="body-td">
                                                             <span class="span-number">0</span>
                                                             명
-                                                        </td>
-                                                        <td class="body-td">
-                                                            <button class="yeolgi">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link h-3 w-3"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>
-                                                                다운로드
-                                                            </button>
                                                         </td>
                                                         <td class="body-td">2025-09-15</td>
                                                         <td class="body-td">
@@ -396,6 +388,9 @@
                                                     </tr>
                                                     <tr class="body-tr hap">
                                                         <td class="body-td">
+                                                            <input type="checkbox" name="" class="check-download">
+                                                        </td>
+                                                        <td class="body-td">
                                                             <div>
                                                                 <div class="td-title">지원자 이름</div>
                                                             </div>
@@ -407,12 +402,6 @@
                                                         <td class="body-td">
                                                             <span class="span-number">0</span>
                                                             명
-                                                        </td>
-                                                        <td class="body-td">
-                                                            <button class="yeolgi">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link h-3 w-3"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>
-                                                                다운로드
-                                                            </button>
                                                         </td>
                                                         <td class="body-td">2025-09-15</td>
                                                         <td class="body-td">
@@ -422,6 +411,9 @@
                                                     </tr>
                                                     <tr class="body-tr bul">
                                                         <td class="body-td">
+                                                            <input type="checkbox" name="" class="check-download">
+                                                        </td>
+                                                        <td class="body-td">
                                                             <div>
                                                                 <div class="td-title">지원자 이름</div>
                                                             </div>
@@ -433,12 +425,6 @@
                                                         <td class="body-td">
                                                             <span class="span-number">0</span>
                                                             명
-                                                        </td>
-                                                        <td class="body-td">
-                                                            <button class="yeolgi">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link h-3 w-3"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>
-                                                                다운로드
-                                                            </button>
                                                         </td>
                                                         <td class="body-td">2025-09-15</td>
                                                         <td class="body-td">
@@ -448,6 +434,9 @@
                                                     </tr>
                                                     <tr class="body-tr hap">
                                                         <td class="body-td">
+                                                            <input type="checkbox" name="" class="check-download">
+                                                        </td>
+                                                        <td class="body-td">
                                                             <div>
                                                                 <div class="td-title">지원자 이름</div>
                                                             </div>
@@ -459,12 +448,6 @@
                                                         <td class="body-td">
                                                             <span class="span-number">0</span>
                                                             명
-                                                        </td>
-                                                        <td class="body-td">
-                                                            <button class="yeolgi">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link h-3 w-3"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>
-                                                                다운로드
-                                                            </button>
                                                         </td>
                                                         <td class="body-td">2025-09-15</td>
                                                         <td class="body-td">
@@ -474,6 +457,9 @@
                                                     </tr>
                                                     <tr class="body-tr bul">
                                                         <td class="body-td">
+                                                            <input type="checkbox" name="" class="check-download">
+                                                        </td>
+                                                        <td class="body-td">
                                                             <div>
                                                                 <div class="td-title">지원자 이름</div>
                                                             </div>
@@ -485,12 +471,6 @@
                                                         <td class="body-td">
                                                             <span class="span-number">0</span>
                                                             명
-                                                        </td>
-                                                        <td class="body-td">
-                                                            <button class="yeolgi">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link h-3 w-3"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>
-                                                                다운로드
-                                                            </button>
                                                         </td>
                                                         <td class="body-td">2025-09-15</td>
                                                         <td class="body-td">
@@ -500,6 +480,9 @@
                                                     </tr>
                                                     <tr class="body-tr bul">
                                                         <td class="body-td">
+                                                            <input type="checkbox" name="" class="check-download">
+                                                        </td>
+                                                        <td class="body-td">
                                                             <div>
                                                                 <div class="td-title">지원자 이름</div>
                                                             </div>
@@ -511,12 +494,6 @@
                                                         <td class="body-td">
                                                             <span class="span-number">0</span>
                                                             명
-                                                        </td>
-                                                        <td class="body-td">
-                                                            <button class="yeolgi">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link h-3 w-3"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>
-                                                                다운로드
-                                                            </button>
                                                         </td>
                                                         <td class="body-td">2025-09-15</td>
                                                         <td class="body-td">
@@ -525,6 +502,9 @@
                                                     </tr>
                                                     <tr class="body-tr hap">
                                                         <td class="body-td">
+                                                            <input type="checkbox" name="" class="check-download">
+                                                        </td>
+                                                        <td class="body-td">
                                                             <div>
                                                                 <div class="td-title">지원자 이름</div>
                                                             </div>
@@ -536,12 +516,6 @@
                                                         <td class="body-td">
                                                             <span class="span-number">0</span>
                                                             명
-                                                        </td>
-                                                        <td class="body-td">
-                                                            <button class="yeolgi">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link h-3 w-3"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>
-                                                                다운로드
-                                                            </button>
                                                         </td>
                                                         <td class="body-td">2025-09-15</td>
                                                         <td class="body-td">

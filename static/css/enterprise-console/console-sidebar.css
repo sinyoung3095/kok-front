@@ -343,6 +343,8 @@ div.sidebar-text{
 }
 
 img.prof-img{
+    width: 16px;
+    height: 16px;
     color: transparent;
     object-fit: contain;
     border-radius: 3.40282e+38px;
@@ -558,11 +560,6 @@ span.side-job{
     white-space: nowrap;
     overflow: hidden;
     text-align: left;
-}
-
-.side-hov:hover{
-    color: #171717;
-    background-color: oklch(.97 0 0);
 }
 
 div.service-change-wrap{
