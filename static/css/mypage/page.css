@@ -1377,7 +1377,6 @@ border-radius: 8px;
     cursor: pointer;
 }
 .delbtn-1{
-    position: absolute;
     width: 100px;
     opacity: 1;
     transform: none;
@@ -1393,7 +1392,6 @@ border-radius: 8px;
     margin-left: -110px;
 }
 .delbtn-2{
-    position: absolute;
     width: 100px;
     opacity: 1;
     transform: none;
@@ -2054,11 +2052,12 @@ table {
 }
 .reply-10{
     overflow-x: hidden;
-    overflow-y: auto;
     flex-direction: column;
     height: calc(100vh - 200px);
     width: 100%;
-    display: flex;
+    scrollbar-width: thin !important;
+    scrollbar-gutter: stable !important;
+    scrollbar-color: rgba(18,19,20,0.2400) transparent !important;
 }
 .reply-11{
     margin-bottom: 90px;
