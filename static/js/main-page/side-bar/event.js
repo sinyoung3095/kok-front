@@ -50,16 +50,16 @@ document.querySelectorAll(".sidebar-menu .start-line a").forEach((link) => {
 });
 
 // 사업자 번호 더보기/접기
-const toggleBtn = document.querySelector(".sidebar-business-toggle");
-const businessSection = toggleBtn.closest(".sidebar-business");
+const businessToggleBtn = document.querySelector(".sidebar-business-toggle");
+const businessSection = businessToggleBtn.closest(".sidebar-business");
 
-toggleBtn.addEventListener("click", () => {
+businessToggleBtn.addEventListener("click", () => {
     businessSection.classList.toggle("expanded");
 
     if (businessSection.classList.contains("expanded")) {
-        toggleBtn.textContent = "접기";
+        businessToggleBtn.textContent = "접기";
     } else {
-        toggleBtn.textContent = "더보기";
+        businessToggleBtn.textContent = "더보기";
     }
 });
 
@@ -118,6 +118,8 @@ const settingCloseBtn = document.querySelector(
 
 if (settingBtn && settingModal) {
     settingBtn.addEventListener("click", () => {
+        console.log("asdasdasda");
+
         settingModal.style.display = "flex";
     });
 }
