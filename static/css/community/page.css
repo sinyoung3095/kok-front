@@ -48,6 +48,7 @@ div {
     left: 0;
     overscroll-behavior: none;
 }
+
 .comment-text{
     flex-direction: column;
     padding: 0px 12px 12px;
@@ -335,7 +336,6 @@ div {
     cursor: pointer;
 }
 .delbtn-1{
-    position: absolute;
     width: 100px;
     opacity: 1;
     transform: none;
@@ -369,7 +369,6 @@ div {
     cursor: default;
 }
 .delbtn-2{
-    position: absolute;
     width: 100px;
     opacity: 1;
     transform: none;
@@ -1338,7 +1337,9 @@ border-radius: 8px;
     height: calc(100vh - 200px);
     width: 100%;
     display: flex;
-
+    scrollbar-width: thin !important;
+    scrollbar-gutter: stable !important;
+    scrollbar-color: rgba(18,19,20,0.2400) transparent !important;
 }
 .reply-11{
     margin-bottom: 90px;
