@@ -3,6 +3,7 @@ const jobMenu = document.querySelector(".job");
 const jobItems = document.querySelectorAll(".job-3");
 const checkIcon = document.querySelector(".setting-31");
 const searchSpan = document.querySelector(".search-span");
+const cateBtns = document.querySelectorAll(".category-sub");
 
 // 1️⃣ 버튼 클릭 → 메뉴 표시/숨김 토글
 searchBtn.addEventListener("click", (e) => {
@@ -58,29 +59,36 @@ document.querySelectorAll("tr.body-tr").forEach((tr) => {
     activeCircle.style.transition = "transform 0.5s";
     expStatus.style.transition = "background-color 0.5s, color 0.5s";
 
-    let isActive = false;
-
-    // 초기 상태 설정
-    activeCircle.style.transform = "translateX(0px)";
-    expStatus.style.backgroundColor = "#171717";
-    expStatus.style.color = "#fafafa";
-    expStatus.innerText = "모집 중";
-
-    activeExp.addEventListener("click", (e) => {
-        isActive = !isActive;
-        if (isActive) {
-            activeExp.style.backgroundColor = "#e5e5e5";
-            activeCircle.style.transform = "translateX(calc(100% - 30px))";
-            expStatus.style.backgroundColor = "#f5f5f5";
-            expStatus.style.color = "#171717";
-            expStatus.innerText = "모집 완료";
-        } else {
-            activeExp.style.backgroundColor = "#171717";
-            activeCircle.style.transform = "translateX(0px)";
-            expStatus.style.backgroundColor = "#171717";
-            expStatus.style.color = "#fafafa";
+    activeExp.addEventListener("click", () => {
+        if (expStatus.classList.contains("gray")) {
+            activeExp.classList.remove("gray");
+            expStatus.classList.remove("gray");
             expStatus.innerText = "모집 중";
+        } else {
+            activeExp.classList.add("gray");
+            expStatus.classList.add("gray");
+            expStatus.innerText = "모집 완료";
         }
+    });
+
+    cateBtns.forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+            if (e.target.classList.contains("all")) {
+                tr.classList.remove("disnone");
+            } else if (e.target.classList.contains("ing")) {
+                if (expStatus.classList.contains("gray")) {
+                    tr.classList.add("disnone");
+                } else {
+                    tr.classList.remove("disnone");
+                }
+            } else if (e.target.classList.contains("end")) {
+                if (expStatus.classList.contains("gray")) {
+                    tr.classList.remove("disnone");
+                } else {
+                    tr.classList.add("disnone");
+                }
+            }
+        });
     });
 });
 

@@ -88,7 +88,7 @@ const suregoBtn = document.getElementById("surego");
 const drkbElem = document.getElementById("drkb");
 const squaElem = document.getElementById("squa");
 const sureNoBtn = document.querySelector(".sure-no");
-const sureYesBtn = document.querySelector(".sure.yes");
+const sureYesBtn = document.querySelector(".sure-yes");
 
 function showModal() {
     drkbElem.style.display = "block";

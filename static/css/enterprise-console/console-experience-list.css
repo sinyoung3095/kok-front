@@ -662,6 +662,10 @@ tr.body-tr{
     cursor: pointer;
 }
 
+body tr.body-tr.disnone{
+    display: none;
+}
+
 tr.body-tr:hover{
     background-color: #f5f5f580;
 }
@@ -723,6 +727,11 @@ span.exp-status{
     display: inline-flex;
 }
 
+span.exp-status.gray{
+    background-color: #f5f5f5;
+    color: #171717;
+}
+
 div.appli-active{
     gap: 8px;
     align-items: center;
@@ -745,6 +754,14 @@ button.appli-active-btn{
     width: 32px;
     height: 1.15rem;
     display: inline-flex;
+}
+
+button.appli-active-btn.gray{
+    background-color: #e5e5e5;
+}
+
+button.appli-active-btn.gray>span.circle{
+    transform: translateX(calc(100% - 30px));
 }
 
 span.circle{

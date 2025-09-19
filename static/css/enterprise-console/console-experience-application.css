@@ -710,3 +710,88 @@ svg.new-exp-svg{
     flex-shrink: 0;
     pointer-events: none;
 }
+
+div.table-wrap{
+    overflow-x: auto;
+    width: 100%;
+    position: relative;
+    margin-block-start: 0px;
+    margin-block-end: 16px;
+    border-color: #e5e5e5;
+    outline-color: #a1a1a180;
+    color: #0a0a0a;
+}
+
+table.card-table{
+    font-size: 14px;
+    line-height: 1.42857;
+    caption-side: bottom;
+    width: 100%;
+}
+
+thead.table-head{
+    font-size: 14px;
+    line-height: 1.42857;
+    caption-side: bottom;
+}
+
+tr.thead-tr{
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+    transition-duration: .15s;
+    font-size: 14px;
+    line-height: 1.42857;
+    caption-side: bottom;
+}
+
+th.thead-th{
+    color: #0a0a0a;
+    white-space: nowrap;
+    font-weight: 500;
+    vertical-align: middle;
+    text-align: left;
+    padding-inline: 8px;
+    height: 40px;
+    font-size: 14px;
+    line-height: 1.42857;
+}
+
+tbody.table-body{
+    font-size: 14px;
+    line-height: 1.42857;
+    caption-side: bottom;
+}
+
+tr.tbody-tr{
+    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+    transition-duration: .15s;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    font-size: 14px;
+    line-height: 1.42857;
+    caption-side: bottom;
+}
+
+td.tbody-td1{
+    white-space: nowrap;
+    font-weight: 500;
+    vertical-align: middle;
+    padding: 8px;
+    font-size:14px;
+    line-height: 1.42857;
+    caption-side: bottom;
+}
+
+td.tbody-td2{
+    color: #737373;
+    white-space: nowrap;
+    font-weight: 500;
+    vertical-align: middle;
+    padding: 8px;
+    font-size:14px;
+    line-height: 1.42857;
+    caption-side: bottom;
+}
