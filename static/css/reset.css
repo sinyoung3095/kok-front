@@ -201,7 +201,7 @@ main {
 @media (max-width: 1023px) {
     #main-content {
         padding: 0;
-        display: block;
+        /* display: block; */
     }
 
     .main {
