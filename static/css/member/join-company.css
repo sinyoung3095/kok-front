@@ -330,4 +330,7 @@ button {
         padding-top: 120px;
         background: #f5f6fa;
     }
+    .signup-page {
+        height: auto;
+    }
 }
