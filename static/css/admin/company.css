@@ -816,9 +816,12 @@ body #kok {
 .tab-box ul.tab-name-list {
     margin-bottom: 0;
     padding: 10px 20px;
+    display: flex;      
+    gap: 10px;         
+    list-style: none; 
 }
 
-.tab-box ul.tab-name-list li.tab-name {
+.tab-box ul.tab-name-list li.tab-name a {
     border-radius: 30px;
     color: #507cf3;
     display: inline-block;
@@ -830,7 +833,7 @@ body #kok {
     cursor: pointer;
 }
 
-.tab-box ul.tab-name-list li.tab-name.active {
+.tab-box ul.tab-name-list li.tab-name.active a {
     background-color: #507cf3;
     box-shadow: inset 0 -2px 4px rgba(41, 41, 41, .1);
     color: #fff;
