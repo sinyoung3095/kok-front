@@ -43,46 +43,48 @@ if (settingHeaderModal) {
     });
 }
 
+// main-ex.html 구상 시 중복된 js로 주석처리
+// 따로 쓰게되면 주석 해제하시면 됩니다!
 // 알림 설정 토글
-document.querySelectorAll(".setting-modal-alarm-button").forEach((button) => {
-    const check = button.querySelector(".setting-modal-alarm-button-check");
+// document.querySelectorAll(".setting-modal-alarm-button").forEach((button) => {
+//     const check = button.querySelector(".setting-modal-alarm-button-check");
 
-    button.addEventListener("click", () => {
-        button.classList.toggle("off");
-        check.classList.toggle("off");
-    });
-});
+//     button.addEventListener("click", () => {
+//         button.classList.toggle("off");
+//         check.classList.toggle("off");
+//     });
+// });
 
-const profileHeaderWrap = document.querySelector(
-    ".setting-modal-member-profile-wrap"
-);
-const alarmWrap = document.querySelector(".setting-modal-alarm-wrap");
-const rightLists = document.querySelectorAll(".setting-modal-right-list-wrap");
-const profileRightList = rightLists[0];
-const alarmRightList = rightLists[1];
-const activeBg = "rgba(86, 105, 143, 0.08)";
-const inactiveBg = "transparent";
+// const profileHeaderWrap = document.querySelector(
+//     ".setting-modal-member-profile-wrap"
+// );
+// const alarmWrap = document.querySelector(".setting-modal-alarm-wrap");
+// const rightLists = document.querySelectorAll(".setting-modal-right-list-wrap");
+// const profileRightList = rightLists[0];
+// const alarmRightList = rightLists[1];
+// const activeBg = "rgba(86, 105, 143, 0.08)";
+// const inactiveBg = "transparent";
 
-profileRightList.style.display = "block";
-alarmRightList.style.display = "none";
-profileHeaderWrap.style.background = activeBg;
-alarmWrap.style.background = inactiveBg;
+// profileRightList.style.display = "block";
+// alarmRightList.style.display = "none";
+// profileHeaderWrap.style.background = activeBg;
+// alarmWrap.style.background = inactiveBg;
 
-profileHeaderWrap.addEventListener("click", () => {
-    profileRightList.style.display = "block";
-    alarmRightList.style.display = "none";
+// profileHeaderWrap.addEventListener("click", () => {
+//     profileRightList.style.display = "block";
+//     alarmRightList.style.display = "none";
 
-    profileHeaderWrap.style.background = activeBg;
-    alarmWrap.style.background = inactiveBg;
-});
+//     profileHeaderWrap.style.background = activeBg;
+//     alarmWrap.style.background = inactiveBg;
+// });
 
-alarmWrap.addEventListener("click", () => {
-    alarmRightList.style.display = "block";
-    profileRightList.style.display = "none";
+// alarmWrap.addEventListener("click", () => {
+//     alarmRightList.style.display = "block";
+//     profileRightList.style.display = "none";
 
-    alarmWrap.style.background = activeBg;
-    profileHeaderWrap.style.background = inactiveBg;
-});
+//     alarmWrap.style.background = activeBg;
+//     profileHeaderWrap.style.background = inactiveBg;
+// });
 
 // 지원 내역 모달
 const historyBtn = document.querySelector(
