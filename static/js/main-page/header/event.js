@@ -92,6 +92,10 @@ const historyBtn = document.querySelector(
 );
 const historyModal = document.querySelector(".history-modal-background");
 const historyCloseBtn = document.querySelector(".history-modal-close-button");
+const experienceContent = document.querySelector(
+    ".history-modal-main-experience"
+);
+const employContent = document.querySelector(".history-modal-main-employ");
 
 if (historyBtn && historyModal) {
     historyBtn.addEventListener("click", () => {
@@ -133,6 +137,8 @@ experienceTab.addEventListener("click", () => {
     employmentTab.classList.add("history-modal-top-section");
     employmentText.classList.remove("history-modal-top-section-text-active");
     employmentText.classList.add("history-modal-top-section-text");
+    employContent.style.display = "none";
+    experienceContent.style.display = "flex";
 });
 
 employmentTab.addEventListener("click", () => {
@@ -145,4 +151,48 @@ employmentTab.addEventListener("click", () => {
     experienceTab.classList.add("history-modal-top-section");
     experienceText.classList.remove("history-modal-top-section-text-active");
     experienceText.classList.add("history-modal-top-section-text");
+    employContent.style.display = "flex";
+    experienceContent.style.display = "none";
 });
+
+// 지원내역 상세 모달
+const historyDetailModal = document.querySelector(
+    ".history-detail-modal-background"
+);
+const historyDetailCloseBtn = document.querySelector(
+    ".history-detail-modal-top-right-button"
+);
+const historyDetailBackBtn = document.querySelector(
+    ".history-detail-modal-top-left-button"
+);
+
+document.querySelectorAll(".history-modal-main-section").forEach((section) => {
+    section.addEventListener("click", () => {
+        // 불합격 지원내역은 상세보기 막기
+        if (section.classList.contains("fail")) return;
+        if (historyDetailModal) {
+            historyDetailModal.style.display = "flex";
+        }
+    });
+});
+
+if (historyDetailCloseBtn) {
+    historyDetailCloseBtn.addEventListener("click", () => {
+        historyDetailModal.style.display = "none";
+        historyModal.style.display = "none";
+    });
+}
+
+if (historyDetailBackBtn) {
+    historyDetailBackBtn.addEventListener("click", () => {
+        historyDetailModal.style.display = "none";
+    });
+}
+
+if (historyDetailModal) {
+    historyDetailModal.addEventListener("click", (e) => {
+        if (e.target === historyDetailModal) {
+            historyDetailModal.style.display = "none";
+        }
+    });
+}

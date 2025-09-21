@@ -18,7 +18,7 @@ searchModal.addEventListener("click", (e) => {
     }
 });
 
-// 사이드바 카테고리
+// 사이드바 대카테고리
 document.querySelectorAll(".sidebar-menu .start-line a").forEach((link) => {
     link.addEventListener("click", function (e) {
         // 임시 페이지 이동 막기
@@ -63,49 +63,42 @@ businessToggleBtn.addEventListener("click", () => {
     }
 });
 
-// 모달창 카테고리 선택
-const groupSections = document.querySelectorAll(
+// 검색 모달창 회원/기업 선택
+const tabs = document.querySelectorAll(
     ".search-modal-group-section, .search-modal-group-section-active"
 );
-const bodyWraps = document.querySelectorAll(".search-modal-body-wrap");
+const memberList = document.querySelector(".member-list");
+const companyList = document.querySelector(".company-list");
 
-groupSections.forEach((section) => {
-    section.addEventListener("click", () => {
-        const selectedText = section.textContent.trim();
+tabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+        const selected = tab.textContent.trim();
 
-        groupSections.forEach((s) => {
-            s.classList.remove("search-modal-group-section-active");
-            s.classList.add("search-modal-group-section");
-
-            const p = s.querySelector("p");
+        tabs.forEach((t) => {
+            const p = t.querySelector("p");
+            t.classList.remove("search-modal-group-section-active");
+            t.classList.add("search-modal-group-section");
             if (p) {
                 p.classList.remove("search-modal-group-context-active");
                 p.classList.add("search-modal-group-context");
             }
         });
 
-        section.classList.remove("search-modal-group-section");
-        section.classList.add("search-modal-group-section-active");
-
-        const p = section.querySelector("p");
+        tab.classList.remove("search-modal-group-section");
+        tab.classList.add("search-modal-group-section-active");
+        const p = tab.querySelector("p");
         if (p) {
             p.classList.remove("search-modal-group-context");
             p.classList.add("search-modal-group-context-active");
         }
 
-        bodyWraps.forEach((body) => {
-            const activeSection = body.querySelector(
-                ".search-modal-group-section-active p"
-            );
-            if (
-                activeSection &&
-                activeSection.textContent.trim() === selectedText
-            ) {
-                body.style.display = "flex";
-            } else {
-                body.style.display = "none";
-            }
-        });
+        if (selected === "회원") {
+            memberList.style.display = "flex";
+            companyList.style.display = "none";
+        } else {
+            memberList.style.display = "none";
+            companyList.style.display = "flex";
+        }
     });
 });
 
