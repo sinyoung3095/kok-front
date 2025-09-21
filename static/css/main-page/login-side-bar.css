@@ -491,6 +491,15 @@
     color: rgba(18,19,20,1);
 }
 
+/* 검색 모달창 css */
+.search-modal-list {
+  display: none;
+}
+
+.search-modal-list.member-list {
+  display: flex;
+}
+
 .search-modal-main-wrap {
     border-color: rgba(86,105,143,0.1200);
     align-items: flex-start;
@@ -1376,7 +1385,7 @@
     gap: 12px;
     width: 100%;
     display: flex;
-    cursor: pointer;
+    cursor: default;
 }
 
 .setting-modal-account-check-text {
@@ -1536,7 +1545,7 @@
     padding: 0 !important;
     font-size: 11px !important;
     width: 400px !important;
-    height: 730px !important;
+    height: 700px !important;
     right: 24px !important;
     margin-right: 0 !important;
     margin-bottom: 0 !important;
@@ -1945,7 +1954,7 @@
     padding: 0 !important;
     font-size: 11px !important;
     width: 600px !important;
-    height: 827px !important;
+    height: 700px !important;
     right: 24px !important;
     margin-right: var(0px) !important;
     margin-bottom: 0px !important;
