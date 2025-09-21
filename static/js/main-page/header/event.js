@@ -14,31 +14,31 @@ document.addEventListener("click", (e) => {
 });
 
 // 사이드바 설정 모달
-const settingBtn = document.querySelector(
+const settingHeaderBtn = document.querySelector(
     ".profile-modal-list-section-setting"
 );
-const settingModal = document.querySelector(".sidebar-setting-modal");
-const settingCloseBtn = document.querySelector(
+const settingHeaderModal = document.querySelector(".sidebar-setting-modal");
+const settingHeaderCloseBtn = document.querySelector(
     ".sidebar-setting-modal-close-button"
 );
 
-if (settingBtn && settingModal) {
-    settingBtn.addEventListener("click", () => {
+if (settingHeaderBtn && settingHeaderModal) {
+    settingHeaderBtn.addEventListener("click", () => {
         if (profileModal) profileModal.style.display = "none";
-        settingModal.style.display = "flex";
+        settingHeaderModal.style.display = "flex";
     });
 }
 
-if (settingCloseBtn && settingModal) {
-    settingCloseBtn.addEventListener("click", (e) => {
-        settingModal.style.display = "none";
+if (settingHeaderCloseBtn && settingHeaderModal) {
+    settingHeaderCloseBtn.addEventListener("click", (e) => {
+        settingHeaderModal.style.display = "none";
     });
 }
 
-if (settingModal) {
-    settingModal.addEventListener("click", (e) => {
-        if (e.target === settingModal) {
-            settingModal.style.display = "none";
+if (settingHeaderModal) {
+    settingHeaderModal.addEventListener("click", (e) => {
+        if (e.target === settingHeaderModal) {
+            settingHeaderModal.style.display = "none";
         }
     });
 }
@@ -53,7 +53,7 @@ document.querySelectorAll(".setting-modal-alarm-button").forEach((button) => {
     });
 });
 
-const profileWrap = document.querySelector(
+const profileHeaderWrap = document.querySelector(
     ".setting-modal-member-profile-wrap"
 );
 const alarmWrap = document.querySelector(".setting-modal-alarm-wrap");
@@ -65,14 +65,14 @@ const inactiveBg = "transparent";
 
 profileRightList.style.display = "block";
 alarmRightList.style.display = "none";
-profileWrap.style.background = activeBg;
+profileHeaderWrap.style.background = activeBg;
 alarmWrap.style.background = inactiveBg;
 
-profileWrap.addEventListener("click", () => {
+profileHeaderWrap.addEventListener("click", () => {
     profileRightList.style.display = "block";
     alarmRightList.style.display = "none";
 
-    profileWrap.style.background = activeBg;
+    profileHeaderWrap.style.background = activeBg;
     alarmWrap.style.background = inactiveBg;
 });
 
@@ -81,7 +81,7 @@ alarmWrap.addEventListener("click", () => {
     profileRightList.style.display = "none";
 
     alarmWrap.style.background = activeBg;
-    profileWrap.style.background = inactiveBg;
+    profileHeaderWrap.style.background = inactiveBg;
 });
 
 // 지원 내역 모달
@@ -94,7 +94,7 @@ const historyCloseBtn = document.querySelector(".history-modal-close-button");
 if (historyBtn && historyModal) {
     historyBtn.addEventListener("click", () => {
         if (profileModal) profileModal.style.display = "none";
-        if (settingModal) settingModal.style.display = "none";
+        if (settingHeaderModal) settingHeaderModal.style.display = "none";
 
         historyModal.style.display = "flex";
     });
