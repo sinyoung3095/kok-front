@@ -719,3 +719,39 @@ svg.new-exp-svg{
     flex-shrink: 0;
     pointer-events: none;
 }
+
+nav.page-nav{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+ul.page-ul{
+    border-radius: .25rem;
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+}
+
+li.page-li{
+    padding: 2.5px;
+}
+
+a.page-a{
+    border-color: transparent;
+    border-radius: 4px;
+    color: #8b9298;
+    font-size: 15px;
+    line-height: 15px;
+    min-width: 32px;
+    padding: 7px 10px;
+    text-align: center;
+}
+
+li.page-li.page-on>a{
+    color: #171717;
+    font-weight: 700;
+}
