@@ -475,6 +475,7 @@
     color: rgba(18,19,20,1);
 }
 
+/* 검색 모달창 css */
 .search-modal-main-wrap {
     border-color: rgba(86,105,143,0.1200);
     align-items: flex-start;
@@ -488,6 +489,14 @@
     background: #ffffff;
     display: flex;
     border-width: 0;
+}
+
+.search-modal-list {
+  display: none;
+}
+
+.search-modal-list.member-list {
+  display: flex;
 }
 
 .search-modal-list-wrap {
