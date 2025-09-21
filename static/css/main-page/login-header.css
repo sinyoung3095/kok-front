@@ -952,7 +952,7 @@
     gap: 12px;
     width: 100%;
     display: flex;
-    cursor: pointer;
+    cursor: default;
 }
 
 .setting-modal-account-check-text {
