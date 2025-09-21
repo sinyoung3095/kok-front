@@ -345,6 +345,16 @@ function dropdownFn() {
     // });
 }
 dropdownFn();
+// 페이징
+const pageNum = document.getElementsByClassName("pageNum");
+pageNum.forEach((page) => {
+    page.addEventListener("click", (e) => {
+        pageNum.forEach((p) => {
+            p.classList.remove("active");
+        });
+        e.target.classList.add("active");
+    });
+});
 
 // 댓글창 열기
 const replys = document.getElementsByClassName("reply-btn");
