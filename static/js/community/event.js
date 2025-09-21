@@ -48,7 +48,6 @@ cancle.addEventListener("click", (e) => {
 const down = document.getElementById("down");
 const detail = document.getElementsByClassName("reply")[0];
 const replys = document.getElementsByClassName("replys");
-const back = document.getElementById("back");
 
 replys.forEach((reply) => {
     reply.addEventListener("click", (e) => {
@@ -82,16 +81,6 @@ changeExit.addEventListener("click", (e) => {
     detail.style.display = "none";
 });
 
-back.addEventListener("click", (e) => {
-    replytext.forEach((text) => {
-        if (text.value !== "") {
-            change.style.display = "flex";
-        }
-    });
-    if (change.style.display !== "flex") {
-        detail.style.display = "none";
-    }
-});
 // 댓글 삭제
 const delet = document.getElementsByClassName("report-1");
 const del = document.getElementsByClassName("del")[0];
