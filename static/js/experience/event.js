@@ -89,6 +89,55 @@ function searchDropdownFn() {
                 );
             }
 
+            // 태그박스가 있을때
+            const previewBox = document.querySelector(
+                ".popup-category-preview-inner"
+            );
+            if (previewBox) {
+                dropdownBtns.forEach((btn) => {
+                    var text = btn.textContent.trim();
+                    var existsItem = null;
+
+                    // 이미 있는 태그 찾기
+                    var items = previewBox.querySelectorAll(
+                        ".preview-category-item"
+                    );
+                    items.forEach((item) => {
+                        var p = item.querySelector("p");
+                        if (p && p.innerText === text) {
+                            existsItem = item;
+                        }
+                    });
+
+                    if (btn.classList.contains("active")) {
+                        // active인데 태그 없으면 추가
+                        if (!existsItem) {
+                            var item = document.createElement("div");
+                            item.className = "preview-category-item";
+                            item.innerHTML = `
+                        <p>${text}</p>
+                        <button class="preview-remove-btn">✕</button>
+                    `;
+                            previewBox.appendChild(item);
+
+                            // 삭제 버튼 이벤트
+                            var removeBtn = item.querySelector(
+                                ".preview-remove-btn"
+                            );
+                            removeBtn.addEventListener("click", function () {
+                                item.remove();
+                                btn.classList.remove("active"); // 동기화
+                            });
+                        }
+                    } else {
+                        // active 해제된 경우 → 태그 있으면 삭제
+                        if (existsItem) {
+                            existsItem.remove();
+                        }
+                    }
+                });
+            }
+
             // 드롭다운 닫기
             dropdownOpenBtns.forEach((btn) => btn.classList.remove("active"));
         });
@@ -105,6 +154,48 @@ function searchDropdownFn() {
     });
 }
 searchDropdownFn();
+
+// function categoryTagFn() {
+//     const box = document.querySelector(".categoty-tag-box");
+//     if (!box) return;
+
+//     const previewInner = box.querySelector(".popup-category-preview-inner");
+//     const dropdownBtns = box.querySelectorAll(".dropdown-btn");
+
+//     dropdownBtns.forEach((btn) => {
+//         btn.addEventListener("click", () => {
+//             const text = btn.innerText.trim();
+
+//             // 이미 같은 태그가 있으면 추가 안 함
+//             const exists = [
+//                 ...previewInner.querySelectorAll(".preview-category-item p"),
+//             ].some((p) => p.innerText === text);
+//             if (exists) return;
+
+//             // 새 태그 요소 만들기
+//             const item = document.createElement("div");
+//             item.className = "preview-category-item";
+//             item.innerHTML = `
+//                 <p>${text}</p>
+//                 <button class="preview-remove-btn">
+//                     <svg viewBox="0 0 24 24" aria-label="icon" fill="currentColor" height="16" role="img" width="16">
+//                         <path clip-rule="evenodd" fill-rule="evenodd"
+//                               d="M6.434 6.435a.8.8 0 0 1 1.132 0L12 10.869l4.434-4.434a.8.8 0 1 1 1.132 1.13L13.13 12l4.435 4.435a.8.8 0 1 1-1.132 1.13L12 13.133l-4.434 4.434a.8.8 0 0 1-1.132-1.131L10.87 12 6.434 7.566a.8.8 0 0 1 0-1.131"/>
+//                     </svg>
+//                 </button>
+//             `;
+
+//             previewInner.appendChild(item);
+
+//             // 삭제 버튼 이벤트
+//             const removeBtn = item.querySelector(".preview-remove-btn");
+//             removeBtn.addEventListener("click", () => {
+//                 item.remove();
+//             });
+//         });
+//     });
+// }
+// categoryTagFn();
 
 // 접합순, 인기순, 최신순 - 필터 버튼 클릭 시 active 클래스 토글
 function sortBtnFn() {
