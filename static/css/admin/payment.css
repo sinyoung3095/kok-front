@@ -1281,7 +1281,7 @@ button.btn .comp-icon {
     white-space: nowrap;
 }
 
-.page-content .table-layout table.member-table td.td-name, td.td-id, td.td-status, td.td-start, td.td-end, td.td-pay {
+.page-content .table-layout table.member-table td.td-name, td.td-id, td.td-status, td.td-start, td.td-end, td.td-pay, td.td-date {
     color: #292929;
     font-size: 13px;
     text-align: center;

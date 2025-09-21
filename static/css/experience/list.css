@@ -2006,7 +2006,7 @@ input:-internal-autofill-selected {
     }
 
     .sort-options + .list-container {
-        height: calc(100% - 250px);
+        height: calc(100% - 240px);
     }
 
     /* 토스트 팝업 */
@@ -2065,7 +2065,6 @@ input:-internal-autofill-selected {
 /* 기본: PC */
 .pc {
     display: block !important;
-    width: 100%;
 }
 .mob {
     display: none !important;

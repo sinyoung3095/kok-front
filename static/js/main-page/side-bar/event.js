@@ -50,16 +50,16 @@ document.querySelectorAll(".sidebar-menu .start-line a").forEach((link) => {
 });
 
 // 사업자 번호 더보기/접기
-const toggleBtn = document.querySelector(".sidebar-business-toggle");
-const businessSection = toggleBtn.closest(".sidebar-business");
+const businessToggleBtn = document.querySelector(".sidebar-business-toggle");
+const businessSection = businessToggleBtn.closest(".sidebar-business");
 
-toggleBtn.addEventListener("click", () => {
+businessToggleBtn.addEventListener("click", () => {
     businessSection.classList.toggle("expanded");
 
     if (businessSection.classList.contains("expanded")) {
-        toggleBtn.textContent = "접기";
+        businessToggleBtn.textContent = "접기";
     } else {
-        toggleBtn.textContent = "더보기";
+        businessToggleBtn.textContent = "더보기";
     }
 });
 
@@ -118,6 +118,8 @@ const settingCloseBtn = document.querySelector(
 
 if (settingBtn && settingModal) {
     settingBtn.addEventListener("click", () => {
+        console.log("asdasdasda");
+
         settingModal.style.display = "flex";
     });
 }
@@ -149,33 +151,37 @@ document.querySelectorAll(".setting-modal-alarm-button").forEach((button) => {
 const profileWrap = document.querySelector(
     ".setting-modal-member-profile-wrap"
 );
-const alarmWrap = document.querySelector(".setting-modal-alarm-wrap");
-const rightLists = document.querySelectorAll(".setting-modal-right-list-wrap");
-const profileRightList = rightLists[0];
-const alarmRightList = rightLists[1];
-const activeBg = "rgba(86, 105, 143, 0.08)";
-const inactiveBg = "transparent";
+if (profileWrap) {
+    const alarmWrap = document.querySelector(".setting-modal-alarm-wrap");
+    const rightLists = document.querySelectorAll(
+        ".setting-modal-right-list-wrap"
+    );
+    const profileRightList = rightLists[0];
+    const alarmRightList = rightLists[1];
+    const activeBg = "rgba(86, 105, 143, 0.08)";
+    const inactiveBg = "transparent";
 
-profileRightList.style.display = "block";
-alarmRightList.style.display = "none";
-profileWrap.style.background = activeBg;
-alarmWrap.style.background = inactiveBg;
-
-profileWrap.addEventListener("click", () => {
     profileRightList.style.display = "block";
     alarmRightList.style.display = "none";
-
     profileWrap.style.background = activeBg;
     alarmWrap.style.background = inactiveBg;
-});
 
-alarmWrap.addEventListener("click", () => {
-    alarmRightList.style.display = "block";
-    profileRightList.style.display = "none";
+    profileWrap.addEventListener("click", () => {
+        profileRightList.style.display = "block";
+        alarmRightList.style.display = "none";
 
-    alarmWrap.style.background = activeBg;
-    profileWrap.style.background = inactiveBg;
-});
+        profileWrap.style.background = activeBg;
+        alarmWrap.style.background = inactiveBg;
+    });
+
+    alarmWrap.addEventListener("click", () => {
+        alarmRightList.style.display = "block";
+        profileRightList.style.display = "none";
+
+        alarmWrap.style.background = activeBg;
+        profileWrap.style.background = inactiveBg;
+    });
+}
 
 // 고객지원창
 const supportButton = document.querySelector(".sidebar-support-wrap");

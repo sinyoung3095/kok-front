@@ -102,6 +102,9 @@ loginButton.addEventListener("click", (e) => {
         toastLogin.addEventListener("mouseover", (e) => {
             toastEmail.classList.add("show-red");
             toastPassword.classList.remove("show-red");
+            setTimeout(() => {
+                toastEmail.classList.remove("show-red");
+            }, 2000);
         });
         toastLogin.addEventListener("mouseout", (e) => {
             toastEmail.classList.remove("show-red");
@@ -115,6 +118,9 @@ loginButton.addEventListener("click", (e) => {
         toastLogin.addEventListener("mouseover", (e) => {
             toastPassword.classList.add("show-red");
             toastEmail.classList.remove("show-red");
+            setTimeout(() => {
+                toastPassword.classList.remove("show-red");
+            }, 2000);
         });
         toastLogin.addEventListener("mouseout", (e) => {
             toastPassword.classList.remove("show-red");

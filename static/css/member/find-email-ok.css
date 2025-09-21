@@ -74,7 +74,8 @@ ol, ul {
     border-radius: 5px;
     padding: 0px 0px 40px 0;
     margin-top: 22px;
-    width: 360px;
+    /* width: 360px; */
+    width: 100%;
     font-size: 14px;
     color: #333;
     border: 1px solid #efefef;
@@ -117,6 +118,7 @@ ol, ul {
     margin-top: 27px;
     font-size: 14px;
     color: #333;
+    width: 100%;
 }
 
 .btn-find-password {
@@ -126,7 +128,7 @@ ol, ul {
     padding: 0px 10px;
     text-align: center;
     overflow: hidden;
-    width: 360px;
+    width: 100%;
     color: #0aa5ff;
     background-color: rgb(255, 255, 255);
     border: 1px solid #0aa5ff;
@@ -172,8 +174,13 @@ ol, ul {
         background: #f5f6fa;
     }
     #main-content {
-        padding-top: 120px;
         background: #f5f6fa;
+    }
+    .page-container {
+        margin: 20px 0 20px 0;
+    }
+    .form-container {
+        width: 90%;
     }
 }
 
