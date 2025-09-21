@@ -1,4 +1,4 @@
-#main-content {
+.pc #main-content {
     align-items: flex-start;
     background: #ffffff;
     height: 100svh;
@@ -8,7 +8,8 @@
     display: flex;
 }
 
-.sidebar {
+.pc .sidebar {
+    height: calc(100vh - 16px);
     align-items: flex-start;
     flex-direction: column;
     align-self: stretch;
@@ -17,14 +18,14 @@
     display: flex;
 }
 
-.sidebar-top {
+.pc .sidebar-top {
     align-items: flex-start;
     flex-direction: column;
     align-self: stretch;
     display: flex;
 }
 
-.sidebar-top-content {
+.pc .sidebar-top-content {
     align-self: stretch;
     align-items: center;
     padding: 8px 4px 8px 8px;
@@ -34,7 +35,7 @@
     display: flex;
 }
 
-.sidebar-logo {
+.pc .sidebar-logo {
     justify-content: center;
     align-items: center;
     mask: none;
@@ -46,7 +47,7 @@
     padding:0px;
 }
 
-.sidebar-search {
+.pc .sidebar-search {
     justify-content: center;
     align-items: center;
     max-height: 40px;
@@ -61,14 +62,14 @@
     display: flex;
 }
 
-.sidebar-search-text {
+.pc .sidebar-search-text {
     align-items: center;
     padding: 0 8px;
     flex: 1 0 0;
     display: flex;
 }
 
-.sidebar-search-placeholder {
+.pc .sidebar-search-placeholder {
     text-overflow: ellipsis;
     color: rgba(18,19,20,0.6000);
     white-space: nowrap;
@@ -80,13 +81,13 @@
     line-height: 20px;
 }
 
-.sidebar-search-shortcut {
+.pc .sidebar-search-shortcut {
     align-items: center;
     gap: 4px;
     display: flex;
 }
 
-.sidebar-search-key {
+.pc .sidebar-search-key {
     background-color: rgba(86,105,143,0.0600);
     justify-content: center;
     align-items: center;
@@ -96,7 +97,7 @@
     display: flex;
 }
 
-.sidebar-search-key-text {
+.pc .sidebar-search-key-text {
     color: rgba(18,19,20,0.4000);
     letter-spacing: -.24px;
     font-family: "PretendardVariable","PretendardVariable Fallback";
@@ -105,7 +106,7 @@
     line-height: 18px;
 }
 
-.sidebar-menu {
+.pc .sidebar-menu {
     align-items: flex-start;
     overflow-y: auto;
     flex-direction: column;
@@ -116,26 +117,26 @@
     display: flex;
 }
 
-.sidebar-menu-section {
+.pc .sidebar-menu-section {
     align-items: flex-start;
     flex-direction: column;
     align-self: stretch;
     display: flex;
 }
 
-.sidebar-menu-list {
+.pc .sidebar-menu-list {
     align-items: flex-start;
     flex-direction: column;
     width: 100%;
     display: flex;
 }
 
-.start-line {
+.pc .start-line {
     width: 100%;
 }
 
 /* 선택된 버튼 css */
-.sidebar-item-active {
+.pc .sidebar-item-active {
     align-items: center;
     border-radius: 8px;
     background: rgba(86,105,143,0.0600);
@@ -147,7 +148,7 @@
 }
 
 /* 선택되지 않은 버튼 css */
-.sidebar-item {
+.pc .sidebar-item {
     align-items: center;
     border-radius: 8px;
     cursor: pointer;
@@ -158,7 +159,7 @@
 }
 
 /* 선택된 버튼의 아이콘css */
-.sidebar-item-icon-active {
+.pc .sidebar-item-icon-active {
     justify-content: center;
     align-items: center;
     color: #ffffff;
@@ -170,7 +171,7 @@
 }
 
 /* 선택되지 않은 버튼의 아이콘 css */
-.sidebar-item-icon {
+.pc .sidebar-item-icon {
     justify-content: center;
     align-items: center;
     color: rgba(18,19,20,0.4000);
@@ -181,13 +182,13 @@
     padding:6.4px;
 }
 
-.sidebar-item-text {
+.pc .sidebar-item-text {
     flex-direction: column;
     flex: 1 0 0;
     display: flex;
 }
 
-.sidebar-item-title {
+.pc .sidebar-item-title {
     user-select: none;
     color: rgba(18,19,20,1);
     letter-spacing: -.28px;
@@ -197,7 +198,7 @@
     font-weight: 500;
 }
 
-.sidebar-item-subtitle {
+.pc .sidebar-item-subtitle {
     user-select: none;
     text-overflow: ellipsis;
     color: rgba(18,19,20,0.6000);
@@ -211,7 +212,7 @@
     -webkit-box-orient: vertical;
 }
 
-.sidebar-notice {
+.pc .sidebar-notice {
     padding-bottom: 80px;
     align-items: flex-start;
     flex-direction: column;
@@ -220,7 +221,7 @@
     display: flex;
 }
 
-.sidebar-line {
+.pc .sidebar-line {
     align-items: flex-start;
     flex-direction: column;
     align-self: stretch;
@@ -229,31 +230,31 @@
     display: flex;
 }
 
-.sidebar-business .extra-text {
+.pc .sidebar-business .extra-text {
     display: none;
 }
 
-.sidebar-business.expanded .extra-text {
+.pc .sidebar-business.expanded .extra-text {
     display: inline;
 }
 
-.sidebar-business-toggle {
+.pc .sidebar-business-toggle {
     cursor: pointer;
     user-select: none;
 }
 
 
-.sidebar-legal,
-.sidebar-address,
-.sidebar-business-text {
+.pc .sidebar-legal,
+.pc .sidebar-address,
+.pc .sidebar-business-text {
     padding: 0 8px;
     gap: 12px;
     width: 100%;
     display: flex;
 }
 
-.sidebar-legal-text,
-.sidebar-address-text {
+.pc .sidebar-legal-text,
+.pc .sidebar-address-text {
     word-break: normal !important;
     color: rgba(18,19,20,0.4000);
     letter-spacing: 0;
@@ -263,7 +264,7 @@
     line-height: 16px;
 }
 
-.sidebar-service-wrap {
+.pc .sidebar-service-wrap {
     align-items: center;
     border-radius: 8px;
     cursor: pointer;
@@ -273,13 +274,13 @@
     display: flex;
 }
 
-.sidebar-service {
+.pc .sidebar-service {
     flex-direction: column;
     flex: 1 0 0;
     display: flex;
 }
 
-.sidebar-service-text {
+.pc .sidebar-service-text {
     user-select: none;
     color: rgba(18,19,20,1);
     letter-spacing: -.28px;
@@ -289,13 +290,13 @@
     font-weight: 500;
 }  
 
-.sidebar-business {
+.pc .sidebar-business {
     flex-direction: column;
     gap: 0;
     display: flex;
 }
 
-.sidebar-business-text {
+.pc .sidebar-business-text {
     color: rgba(18,19,20,0.4000);
     letter-spacing: 0;
     font-family: "PretendardVariable","PretendardVariable Fallback";
@@ -304,14 +305,14 @@
     line-height: 16px;
 }
 
-.sidebar-business-toggle {
+.pc .sidebar-business-toggle {
     text-decoration-line: underline;
     text-underline-position: under;
     text-decoration-thickness: .8px;
     cursor: pointer;
 }
 
-.sidebar-login {
+.pc .sidebar-login {
     justify-content: flex-end;
     align-items: flex-start;
     flex-direction: column;
@@ -319,7 +320,7 @@
     display: flex;
 }
 
-.sidebar-login-inner {
+.pc .sidebar-login-inner {
     justify-content: flex-end;
     flex-direction: column;
     align-self: stretch;
@@ -328,12 +329,12 @@
     display: flex;
 }
 
-.sidebar-login-btn-wrap {
+.pc .sidebar-login-btn-wrap {
     text-align: center;
     width: 100%;
 }
 
-.sidebar-login-btn {
+.pc .sidebar-login-btn {
     column-gap: 4px;
     justify-content: center;
     align-items: center;
@@ -351,7 +352,7 @@
     font-weight: 500;
 }
 
-.sidebar-login-btn-text {
+.pc .sidebar-login-btn-text {
     user-select: none;
     white-space: nowrap;
     color: rgba(18,19,20,1);
@@ -474,6 +475,7 @@
     color: rgba(18,19,20,1);
 }
 
+/* 검색 모달창 css */
 .search-modal-main-wrap {
     border-color: rgba(86,105,143,0.1200);
     align-items: flex-start;
@@ -487,6 +489,14 @@
     background: #ffffff;
     display: flex;
     border-width: 0;
+}
+
+.search-modal-list {
+  display: none;
+}
+
+.search-modal-list.member-list {
+  display: flex;
 }
 
 .search-modal-list-wrap {

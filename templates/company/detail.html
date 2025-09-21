@@ -7,11 +7,28 @@
     <link rel="stylesheet" href="../../static/css/reset.css">
     <link rel="stylesheet" href="../../static/font/font.css">
     <link rel="stylesheet" href="../../static/css/experience/list.css">
+        <link rel="stylesheet" href="../../static/css/main-page/header.css">
+    <link rel="stylesheet" href="../../static/css/main-page/login-header.css">
     <title>기업홈 | 콕</title>
 </head>
 <body>
     <div id="main-content" class="main-content">
         <main class="main">
+            <div class="">
+                <!-- pc 헤더 - 로그인전 -->
+                <div class="header-wrap">
+                    <div class="header">
+                        <div class="header-space"></div>
+                        <div class="header-login">
+                            <a href="">
+                                <button type="button" class="login-button">
+                                    <span class="login-text">로그인</span>
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="content-layout scroll-y">
                 <div class="banner-section">
                     <div class="banner-container">
@@ -58,15 +75,6 @@
                                     </button>
                                 </div>
                             </div>
-                            
-                        </div>
-
-                        <div class="tab-container">
-                            <div class="tab-inner">
-                                <button class="btn-tab active">
-                                    <p class="content-20">기업 홈</p>
-                                </button>
-                            </div>
                         </div>
 
                         <div class="content-section">
@@ -86,93 +94,101 @@
                             <div class="content-box">
                                 <p class="content-title">체험/인턴 공고 &#40;<span>20</span>&#41;</p>
 
-                                <div class="sort-options">
-                                    <div class="sort-options-item">
-                                        <button class="sort-btn active">전체</button>
-                                    </div>
-                                    <div class="sort-options-item">
-                                        <button class="sort-btn">체험</button>
-                                    </div>
-                                    <div class="sort-options-item">
-                                        <button class="sort-btn">인턴</button>
-                                    </div>
-                                </div>
-                                
-                                <div class="search-container">
-                                    <div class="search-box">
-                                        <div class="search-input">
-                                            <div class="search-icon">
-                                                <svg viewBox="0 0 24 24" fill="#12131466" height="20" role="img" width="20">
-                                                    <path clip-rule="evenodd" d="M11 4.8a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4M3.2 11a7.8 7.8 0 1 1 13.852 4.921l3.514 3.514a.8.8 0 1 1-1.132 1.13l-3.513-3.513A7.8 7.8 0 0 1 3.2 11" fill-rule="evenodd"></path>
-                                                </svg>
-                                            </div>
-                                            <input type="text" id="keyword-input" placeholder="직무명, 기술 스택, 담당 업무">
-                                            <button type="button" class="keyword-delete">
-                                                <svg viewBox="0 0 24 24" aria-label="icon" fill="currentColor" height="24" role="img" width="24">
-                                                    <path clip-rule="evenodd" d="M6.434 6.435a.8.8 0 0 1 1.132 0L12 10.869l4.434-4.434a.8.8 0 1 1 1.132 1.13L13.13 12l4.435 4.435a.8.8 0 1 1-1.132 1.13L12 13.133l-4.434 4.434a.8.8 0 0 1-1.132-1.131L10.87 12 6.434 7.566a.8.8 0 0 1 0-1.131" fill-rule="evenodd"></path>
-                                                </svg>
-                                            </button>
+                                <div class="categoty-tag-box">
+                                    <div class="sort-options">
+                                        <div class="sort-options-item">
+                                            <button class="sort-btn active">전체</button>
                                         </div>
-                                        <div class="dropdown-container">
-                                            <button class="dropdown-open-btn circle">
-                                                <p>직군</p>
-                                                <svg viewBox="0 0 24 24" aria-label="icon" fill="#12131466" height="20" role="img" width="20">
-                                                    <path clip-rule="evenodd" d="M6.434 9.435a.8.8 0 0 1 1.132 0L12 13.869l4.434-4.434a.8.8 0 1 1 1.132 1.13l-5 5a.8.8 0 0 1-1.132 0l-5-5a.8.8 0 0 1 0-1.13" fill-rule="evenodd"></path>
-                                                </svg>
-                                            </button>
-                                            <div class="dropdown-menu">
-                                                <p class="dropdown-name">직군</p>
-                                                <div class="dropdown-content">
-                                                    <ul class="dropdown-list">
-                                                        <li class="dropdown-item">
-                                                            <button class="dropdown-btn">
-                                                                <p>SW 개발</p>
-                                                            </button>
-                                                        </li>
-                                                        <li class="dropdown-item">
-                                                            <button class="dropdown-btn">
-                                                                <p>데이터/AI</p>
-                                                            </button>
-                                                        </li>
-                                                        <li class="dropdown-item">
-                                                            <button class="dropdown-btn">
-                                                                <p>기획/전략</p>
-                                                            </button>
-                                                        </li>
-                                                        <li class="dropdown-item">
-                                                            <button class="dropdown-btn">
-                                                                <p>디자인/UX</p>
-                                                            </button>
-                                                        </li>
-                                                        <li class="dropdown-item">
-                                                            <button class="dropdown-btn">
-                                                                <p>마케팅/PR</p>
-                                                            </button>
-                                                        </li>
-                                                        <li class="dropdown-item">
-                                                            <button class="dropdown-btn">
-                                                                <p>경영/운영</p>
-                                                            </button>
-                                                        </li>
-                                                        <li class="dropdown-item">
-                                                            <button class="dropdown-btn">
-                                                                <p>HR/인사</p>
-                                                            </button>
-                                                        </li>
-                                                        <li class="dropdown-item">
-                                                            <button class="dropdown-btn">
-                                                                <p>회계/재무</p>
-                                                            </button>
-                                                        </li>
-                                                        <li class="dropdown-item">
-                                                            <button class="dropdown-btn">
-                                                                <p>법률/법무</p>
-                                                            </button>
-                                                        </li>
-                                                    </ul>
-                                                    <div class="dropdown-actions">
-                                                        <button class="select-all-btn">전체 선택</button>
-                                                        <button class="apply-btn">적용</button>
+                                        <div class="sort-options-item">
+                                            <button class="sort-btn">체험</button>
+                                        </div>
+                                        <div class="sort-options-item">
+                                            <button class="sort-btn">인턴</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="popup-category-preview">
+                                        <div class="popup-category-preview-inner">
+                                            <!-- 태그 들어오는곳 -->
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="search-container">
+                                        <div class="search-box">
+                                            <div class="search-input">
+                                                <div class="search-icon">
+                                                    <svg viewBox="0 0 24 24" fill="#12131466" height="20" role="img" width="20">
+                                                        <path clip-rule="evenodd" d="M11 4.8a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4M3.2 11a7.8 7.8 0 1 1 13.852 4.921l3.514 3.514a.8.8 0 1 1-1.132 1.13l-3.513-3.513A7.8 7.8 0 0 1 3.2 11" fill-rule="evenodd"></path>
+                                                    </svg>
+                                                </div>
+                                                <input type="text" id="keyword-input" placeholder="직무명, 기술 스택, 담당 업무">
+                                                <button type="button" class="keyword-delete">
+                                                    <svg viewBox="0 0 24 24" aria-label="icon" fill="currentColor" height="24" role="img" width="24">
+                                                        <path clip-rule="evenodd" d="M6.434 6.435a.8.8 0 0 1 1.132 0L12 10.869l4.434-4.434a.8.8 0 1 1 1.132 1.13L13.13 12l4.435 4.435a.8.8 0 1 1-1.132 1.13L12 13.133l-4.434 4.434a.8.8 0 0 1-1.132-1.131L10.87 12 6.434 7.566a.8.8 0 0 1 0-1.131" fill-rule="evenodd"></path>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                            <div class="dropdown-container">
+                                                <button class="dropdown-open-btn circle">
+                                                    <p>직군</p>
+                                                    <svg viewBox="0 0 24 24" aria-label="icon" fill="#12131466" height="20" role="img" width="20">
+                                                        <path clip-rule="evenodd" d="M6.434 9.435a.8.8 0 0 1 1.132 0L12 13.869l4.434-4.434a.8.8 0 1 1 1.132 1.13l-5 5a.8.8 0 0 1-1.132 0l-5-5a.8.8 0 0 1 0-1.13" fill-rule="evenodd"></path>
+                                                    </svg>
+                                                </button>
+                                                <div class="dropdown-menu">
+                                                    <p class="dropdown-name">직군</p>
+                                                    <div class="dropdown-content">
+                                                        <ul class="dropdown-list">
+                                                            <li class="dropdown-item">
+                                                                <button class="dropdown-btn">
+                                                                    <p>SW 개발</p>
+                                                                </button>
+                                                            </li>
+                                                            <li class="dropdown-item">
+                                                                <button class="dropdown-btn">
+                                                                    <p>데이터/AI</p>
+                                                                </button>
+                                                            </li>
+                                                            <li class="dropdown-item">
+                                                                <button class="dropdown-btn">
+                                                                    <p>기획/전략</p>
+                                                                </button>
+                                                            </li>
+                                                            <li class="dropdown-item">
+                                                                <button class="dropdown-btn">
+                                                                    <p>디자인/UX</p>
+                                                                </button>
+                                                            </li>
+                                                            <li class="dropdown-item">
+                                                                <button class="dropdown-btn">
+                                                                    <p>마케팅/PR</p>
+                                                                </button>
+                                                            </li>
+                                                            <li class="dropdown-item">
+                                                                <button class="dropdown-btn">
+                                                                    <p>경영/운영</p>
+                                                                </button>
+                                                            </li>
+                                                            <li class="dropdown-item">
+                                                                <button class="dropdown-btn">
+                                                                    <p>HR/인사</p>
+                                                                </button>
+                                                            </li>
+                                                            <li class="dropdown-item">
+                                                                <button class="dropdown-btn">
+                                                                    <p>회계/재무</p>
+                                                                </button>
+                                                            </li>
+                                                            <li class="dropdown-item">
+                                                                <button class="dropdown-btn">
+                                                                    <p>법률/법무</p>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                        <div class="dropdown-actions">
+                                                            <button class="select-all-btn">전체 선택</button>
+                                                            <button class="apply-btn">적용</button>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>

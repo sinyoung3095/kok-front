@@ -518,10 +518,10 @@ gap: 16px;
 }
 .etc-5{
     align-items: flex-end;
-    white-space: pre-line;
     gap: 8px;
     width: 100%;
     display: flex;
+    justify-content: space-between;
 }
 .etc-6{
     color: rgba(18,19,20,1);
@@ -2497,4 +2497,45 @@ table {
     top: 0;
     left: 0;
     overscroll-behavior: none;
+}
+#plus{
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+}
+.hidden{
+    display: none;
+    cursor: pointer;
+}
+.form-item:hover .hidden{
+    display: flex;
+}
+.page{
+    display: flex;
+    gap: 15px;
+    margin: 0 auto;
+}
+.pageNext{
+    cursor: pointer;
+    font-family: "PretendardVariable", "PretendardVariable Fallback";
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+}
+.pagePre{
+    cursor: pointer;
+    font-family: "PretendardVariable", "PretendardVariable Fallback";
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+}
+.pageNum{
+    cursor: pointer;
+    font-family: "PretendardVariable", "PretendardVariable Fallback";
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+}
+.pageNum.active{
+    color: #0aa5ff;
 }

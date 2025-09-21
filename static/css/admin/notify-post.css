@@ -1151,3 +1151,7 @@ table.table tr td, table.table tr>th {
     font-weight: 500;
     line-height: 24px;
 }
+
+.post-detail:hover {
+    cursor: pointer;
+}

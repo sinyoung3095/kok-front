@@ -197,15 +197,35 @@ main {
     overflow-y: auto;
 }
 
+.w100 {
+    width: 100%;
+}
+
+/* 기본: PC */
+.pc {
+    display: block !important;
+}
+.mob {
+    display: none !important;
+}
+
 /* 반응형 */
 @media (max-width: 1023px) {
+    .pc {
+        display: none !important;
+    }
+
+    .mob {
+        display: block !important;
+    }
+    
     #main-content {
-        padding: 0;
+        padding: 0 !important;
         /* display: block; */
     }
 
     .main {
-        border-radius: 0;
-        border: 0;
+        border-radius: 0 !important;
+        border: 0 !important;
     }
 }

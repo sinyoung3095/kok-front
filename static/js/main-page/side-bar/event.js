@@ -18,7 +18,7 @@ searchModal.addEventListener("click", (e) => {
     }
 });
 
-// 사이드바 카테고리
+// 사이드바 대카테고리
 document.querySelectorAll(".sidebar-menu .start-line a").forEach((link) => {
     link.addEventListener("click", function (e) {
         // 임시 페이지 이동 막기
@@ -50,62 +50,55 @@ document.querySelectorAll(".sidebar-menu .start-line a").forEach((link) => {
 });
 
 // 사업자 번호 더보기/접기
-const toggleBtn = document.querySelector(".sidebar-business-toggle");
-const businessSection = toggleBtn.closest(".sidebar-business");
+const businessToggleBtn = document.querySelector(".sidebar-business-toggle");
+const businessSection = businessToggleBtn.closest(".sidebar-business");
 
-toggleBtn.addEventListener("click", () => {
+businessToggleBtn.addEventListener("click", () => {
     businessSection.classList.toggle("expanded");
 
     if (businessSection.classList.contains("expanded")) {
-        toggleBtn.textContent = "접기";
+        businessToggleBtn.textContent = "접기";
     } else {
-        toggleBtn.textContent = "더보기";
+        businessToggleBtn.textContent = "더보기";
     }
 });
 
-// 모달창 카테고리 선택
-const groupSections = document.querySelectorAll(
+// 검색 모달창 회원/기업 선택
+const tabs = document.querySelectorAll(
     ".search-modal-group-section, .search-modal-group-section-active"
 );
-const bodyWraps = document.querySelectorAll(".search-modal-body-wrap");
+const memberList = document.querySelector(".member-list");
+const companyList = document.querySelector(".company-list");
 
-groupSections.forEach((section) => {
-    section.addEventListener("click", () => {
-        const selectedText = section.textContent.trim();
+tabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+        const selected = tab.textContent.trim();
 
-        groupSections.forEach((s) => {
-            s.classList.remove("search-modal-group-section-active");
-            s.classList.add("search-modal-group-section");
-
-            const p = s.querySelector("p");
+        tabs.forEach((t) => {
+            const p = t.querySelector("p");
+            t.classList.remove("search-modal-group-section-active");
+            t.classList.add("search-modal-group-section");
             if (p) {
                 p.classList.remove("search-modal-group-context-active");
                 p.classList.add("search-modal-group-context");
             }
         });
 
-        section.classList.remove("search-modal-group-section");
-        section.classList.add("search-modal-group-section-active");
-
-        const p = section.querySelector("p");
+        tab.classList.remove("search-modal-group-section");
+        tab.classList.add("search-modal-group-section-active");
+        const p = tab.querySelector("p");
         if (p) {
             p.classList.remove("search-modal-group-context");
             p.classList.add("search-modal-group-context-active");
         }
 
-        bodyWraps.forEach((body) => {
-            const activeSection = body.querySelector(
-                ".search-modal-group-section-active p"
-            );
-            if (
-                activeSection &&
-                activeSection.textContent.trim() === selectedText
-            ) {
-                body.style.display = "flex";
-            } else {
-                body.style.display = "none";
-            }
-        });
+        if (selected === "회원") {
+            memberList.style.display = "flex";
+            companyList.style.display = "none";
+        } else {
+            memberList.style.display = "none";
+            companyList.style.display = "flex";
+        }
     });
 });
 
@@ -118,6 +111,8 @@ const settingCloseBtn = document.querySelector(
 
 if (settingBtn && settingModal) {
     settingBtn.addEventListener("click", () => {
+        console.log("asdasdasda");
+
         settingModal.style.display = "flex";
     });
 }
@@ -149,33 +144,37 @@ document.querySelectorAll(".setting-modal-alarm-button").forEach((button) => {
 const profileWrap = document.querySelector(
     ".setting-modal-member-profile-wrap"
 );
-const alarmWrap = document.querySelector(".setting-modal-alarm-wrap");
-const rightLists = document.querySelectorAll(".setting-modal-right-list-wrap");
-const profileRightList = rightLists[0];
-const alarmRightList = rightLists[1];
-const activeBg = "rgba(86, 105, 143, 0.08)";
-const inactiveBg = "transparent";
+if (profileWrap) {
+    const alarmWrap = document.querySelector(".setting-modal-alarm-wrap");
+    const rightLists = document.querySelectorAll(
+        ".setting-modal-right-list-wrap"
+    );
+    const profileRightList = rightLists[0];
+    const alarmRightList = rightLists[1];
+    const activeBg = "rgba(86, 105, 143, 0.08)";
+    const inactiveBg = "transparent";
 
-profileRightList.style.display = "block";
-alarmRightList.style.display = "none";
-profileWrap.style.background = activeBg;
-alarmWrap.style.background = inactiveBg;
-
-profileWrap.addEventListener("click", () => {
     profileRightList.style.display = "block";
     alarmRightList.style.display = "none";
-
     profileWrap.style.background = activeBg;
     alarmWrap.style.background = inactiveBg;
-});
 
-alarmWrap.addEventListener("click", () => {
-    alarmRightList.style.display = "block";
-    profileRightList.style.display = "none";
+    profileWrap.addEventListener("click", () => {
+        profileRightList.style.display = "block";
+        alarmRightList.style.display = "none";
 
-    alarmWrap.style.background = activeBg;
-    profileWrap.style.background = inactiveBg;
-});
+        profileWrap.style.background = activeBg;
+        alarmWrap.style.background = inactiveBg;
+    });
+
+    alarmWrap.addEventListener("click", () => {
+        alarmRightList.style.display = "block";
+        profileRightList.style.display = "none";
+
+        alarmWrap.style.background = activeBg;
+        profileWrap.style.background = inactiveBg;
+    });
+}
 
 // 고객지원창
 const supportButton = document.querySelector(".sidebar-support-wrap");
