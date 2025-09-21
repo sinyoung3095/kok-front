@@ -216,6 +216,7 @@ div.cards{
     display: flex;
     margin-block-start: 0px;
     margin-block-end: 16px;
+    width: 80%;
 }
 
 div.card-title{

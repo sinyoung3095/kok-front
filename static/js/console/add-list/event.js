@@ -132,3 +132,14 @@ document.addEventListener("click", (e) => {
         }
     });
 });
+
+const pageNums = document.querySelectorAll(".page-num");
+const pageLis = document.querySelectorAll(".page-li");
+
+pageLis.forEach((pageLi) => {
+    pageLi.addEventListener("click", (e) => {
+        e.preventDefault();
+        pageNums.forEach((pageNum) => pageNum.classList.remove("page-on"));
+        pageLi.classList.add("page-on");
+    });
+});
