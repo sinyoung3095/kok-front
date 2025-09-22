@@ -705,7 +705,13 @@
                             <p class="form-label">이력서<span class="must">*</span></p>
                             <div class="form-field">
                                 <input type="hidden" id="resume-value">
-                                <button type="button" class="file-btn popup-trigger" data-target="#resume-check-popup">파일 또는 URL 선택 가능</button>
+                                <button type="button" class="file-btn popup-trigger" data-target="#resume-check-popup">파일 선택 가능</button>
+                            </div>
+                        </li>
+                        <li class="form-item line">
+                            <p class="form-label">URL</p>
+                            <div class="form-field">
+                                <input id="" placeholder="https://www.example.com">
                             </div>
                         </li>
                     </ul>
@@ -748,25 +754,6 @@
                             <div class="radio-box">
                                 <label for="check1" class="icon-radio">
                                     <input type="radio" name="radio" id="check1">
-                                </label>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="form-item">
-                        <div class="file-container">
-                            <div class="file-icon">
-                                <!-- 기본이미지 -->
-                                <img src="/static/images/experience/icon_file_default.svg" alt="">
-                            </div>
-                            <div class="file-info">
-                                <p class="file-label">포트폴리오 url</p>
-                                <span class="file-name url">https://shopping.naver.com/ns/home</span>
-                            </div>
-                        </div>
-                        <div class="btn-check-container">
-                            <div class="radio-box">
-                                <label for="check2" class="icon-radio">
-                                    <input type="radio" name="radio" id="check2">
                                 </label>
                             </div>
                         </div>
@@ -837,33 +824,8 @@
             </div>
 
             <div class="popup-action line">
-                <button id="file-add-btn" class="pop-btn btn-default dropdown-trigger" data-target="#dropdown1">추가 등록</button>
+                <button id="file-add-btn" class="pop-btn btn-default popup-trigger" data-target="#resume-upload-popup">추가 등록</button>
                 <button id="file-select-btn" class="pop-btn btn-primary" disabled>선택 완료</button>
-
-                <div id="dropdown1" class="option-menu">
-                    <ul class="option-list">
-                        <li class="option-item">
-                            <button class="option-btn dropdown-trigger" data-target="#resume-upload-popup">
-                                <div>
-                                    <svg fill="currentColor" height="24" role="img" width="24">
-                                        <path clip-rule="evenodd" d="M5 4.8A1.2 1.2 0 0 0 3.8 6v12A1.2 1.2 0 0 0 5 19.2h14a1.2 1.2 0 0 0 1.2-1.2V9A1.2 1.2 0 0 0 19 7.8h-5.93a2.8 2.8 0 0 1-2.33-1.247l-.812-1.218A1.2 1.2 0 0 0 8.93 4.8zM2.2 6A2.8 2.8 0 0 1 5 3.2h3.93a2.8 2.8 0 0 1 2.33 1.247l.812 1.219a1.2 1.2 0 0 0 .998.534H19A2.8 2.8 0 0 1 21.8 9v9a2.8 2.8 0 0 1-2.8 2.8H5A2.8 2.8 0 0 1 2.2 18z" fill-rule="evenodd"></path>
-                                    </svg>
-                                </div>
-                                <p>파일 추가하기</p>
-                            </button>
-                        </li>
-                        <li class="option-item">
-                            <button class="option-btn dropdown-trigger" data-target="#url-upload-popup">
-                                <div>
-                                    <svg fill="currentColor" height="24" role="img" width="24">
-                                        <path clip-rule="evenodd" d="M12.141 5.07a4.8 4.8 0 1 1 6.788 6.789l-1.414 1.414a.8.8 0 1 1-1.131-1.131l1.414-1.415a3.2 3.2 0 0 0-4.526-4.525l-1.414 1.414a.8.8 0 0 1-1.131-1.131zm3.253 3.536a.8.8 0 0 1 0 1.131l-5.657 5.657a.8.8 0 0 1-1.132-1.131l5.657-5.657a.8.8 0 0 1 1.132 0m-7.778 2.121a.8.8 0 0 1 0 1.132L6.2 13.273a3.2 3.2 0 0 0 4.526 4.525l1.414-1.414a.8.8 0 0 1 1.131 1.131l-1.414 1.415a4.8 4.8 0 0 1-6.788-6.788l1.414-1.415a.8.8 0 0 1 1.132 0" fill-rule="evenodd"></path>
-                                    </svg>
-                                </div>
-                                <p>URL 추가하기</p>
-                            </button>
-                        </li>
-                    </ul>
-                </div>
             </div>
         </div>
     </div>
@@ -920,66 +882,6 @@
                                 <input type="file" id="file-input" hidden>
                                 <!-- 파일명이 표시될 커스텀 영역 -->
                                 <label for="file-input" class="form-file-label">파일</label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="popup-action">
-                    <button id="pop-apply" class="pop-btn btn-primary">등록하기</button>
-                </div>
-            </form>
-        </div>
-    </div>
-
-    <!-- popup - url추가 -->
-     <!-- data-sticky="true" 남아야 하는 팝업일때 붙임 -->
-    <div id="url-upload-popup" class="popup-container pop-center" data-sticky="true">
-        <div class="popup-inner">
-            <div class="popup-header">
-                <strong class="popup-title">보관함 등록</strong>
-                <button class="popup-close popup-library-close">닫기</button>
-            </div>
-            <form action="">
-                <div class="popup-body">
-                    <div class="form-list form-grid">
-                        <div class="form-item flex-1-1">
-                            <label class="form-label" for="type-input">유형<span class="must">*</span></label>
-                            <div class="form-field form-field-dropdown">
-                                <input type="text" id="type-input" class="dropdown-trigger" data-target="#dropdown3" placeholder="선택 또는 입력" readonly>
-
-                                <div id="dropdown3" class="option-menu">
-                                    <ul class="option-list">
-                                        <li class="option-item option-input">
-                                            <button type="button" class="option-btn">
-                                                <svg aria-label="icon" color="foregrounds.neutral.primary" fill="currentColor" height="24" role="img" width="24">
-                                                    <path clip-rule="evenodd" d="M12 4.2a.8.8 0 0 1 .8.8v6.2H19a.8.8 0 0 1 0 1.6h-6.2V19a.8.8 0 0 1-1.6 0v-6.2H5a.8.8 0 0 1 0-1.6h6.2V5a.8.8 0 0 1 .8-.8" fill-rule="evenodd"></path>
-                                                </svg>
-                                                <p>직접 입력</p>
-                                            </button>
-                                        </li>
-                                        <li class="option-item">
-                                            <button type="button" class="option-btn">
-                                                <p>이력서</p>
-                                            </button>
-                                        </li>
-                                        <li class="option-item">
-                                            <button type="button" class="option-btn">
-                                                <p>포트폴리오</p>
-                                            </button>
-                                        </li>
-                                        <li class="option-item">
-                                            <button type="button" class="option-btn">
-                                                <p>자기소개서</p>
-                                            </button>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-item flex-3">
-                            <label class="form-label" for="file-input">URL<span class="must">*</span></label>
-                            <div class="form-field">
-                                <input type="text" id="url-input" placeholder="URL">
                             </div>
                         </div>
                     </div>
