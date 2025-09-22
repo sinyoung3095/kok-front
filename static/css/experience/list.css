@@ -398,12 +398,12 @@
 
 .list-container.pd-0 .list-item-category,
 .list-container.pd-0 .list-item-description {
-    color: #ccc;
+    color: #fff;
     font-weight: 500;
 }
 
 .list-container.pd-0 .list-item-name {
-    color: #ccc;
+    color: #fff;
     font-weight: 700;
 }
 

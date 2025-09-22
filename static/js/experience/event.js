@@ -217,6 +217,7 @@ function keywordInputValidate() {
     const keywordInput = document.querySelector("#keyword-input");
     const toast = document.querySelector("#toast-red");
     const deleteBtn = document.querySelector(".keyword-delete");
+    const resetBtns = document.querySelectorAll(".btn-reset");
 
     if (!keywordInput) return;
 
@@ -262,10 +263,12 @@ function keywordInputValidate() {
     });
 
     // 삭제 버튼 클릭 시 인풋 비우고 버튼 숨기기
-    deleteBtn.addEventListener("click", () => {
-        keywordInput.value = "";
-        deleteBtn.style.display = "none";
-        keywordInput.focus(); // 다시 입력할 수 있게 포커스 주기
+    resetBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+            keywordInput.value = "";
+            deleteBtn.style.display = "none";
+            keywordInput.focus(); // 다시 입력할 수 있게 포커스 주기
+        });
     });
 }
 keywordInputValidate();
