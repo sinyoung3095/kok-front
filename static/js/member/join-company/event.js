@@ -1,12 +1,14 @@
 // 토스트 - 입력 오류
 const submitButton = document.querySelector(".submit-button");
 
+const toastCompanyName = document.getElementById("toast-company-name");
 const toastName = document.getElementById("toast-name");
 const toastNumber = document.getElementById("toast-number");
 const toastEmail = document.getElementById("toast-email");
 const toastPassword = document.getElementById("toast-password");
 const toastCompanyNumber = document.getElementById("toast-company-number");
 
+const inputCompanyName = document.getElementById("input-company-name");
 const inputName = document.getElementById("input-name");
 const inputNumber = document.getElementById("input-number");
 const inputEmail = document.getElementById("input-email");
@@ -39,7 +41,15 @@ function formatBizNumber(input) {
     return input.value;
 }
 
-// 이름 오류 토스트
+
+// 기업 이름 오류 토스트
+function showCompanyNameErrorToast() {
+    toastCompanyName.classList.add("show");
+    setTimeout(() => {
+        toastCompanyName.classList.remove("show");
+    }, 3000);
+}
+// 대표자 이름 오류 토스트
 function showNameErrorToast() {
     toastName.classList.add("show");
     setTimeout(() => {
@@ -77,8 +87,11 @@ function showCompanyNumberErrorToast() {
 
 
 submitButton.addEventListener("click", (e) => {
-    // 이름 공란
-    if (inputName.value.length === 0) {
+    // 기업 이름 공란
+    if (inputCompanyName.value.length === 0) {
+        showCompanyNameErrorToast();
+    // 대표자 이름 공란
+    } else if (inputName.value.length === 0) {
         showNameErrorToast();
     // 전화번호 공란 또는 길이 오류
     } else if (inputNumber.value.trim().length < 13) {
