@@ -707,7 +707,7 @@
                             <p class="form-label">이력서<span class="must">*</span></p>
                             <div class="form-field">
                                 <input type="hidden" id="resume-value">
-                                <button type="button" class="file-btn popup-trigger" data-target="#resume-check-popup">파일 또는 URL 선택 가능</button>
+                                <button type="button" class="file-btn popup-trigger" data-target="#resume-check-popup">파일 선택 가능</button>
                             </div>
                         </li>
                         <li class="form-item line">
@@ -767,8 +767,8 @@
                                 <img src="/static/images/experience/icon_file_default.svg" alt="">
                             </div>
                             <div class="file-info">
-                                <p class="file-label">포트폴리오 url</p>
-                                <span class="file-name url">https://shopping.naver.com/ns/home</span>
+                                <p class="file-label">포트폴리오</p>
+                                <span class="file-name">파일이름</span>
                             </div>
                         </div>
                         <div class="btn-check-container">
@@ -845,33 +845,8 @@
             </div>
 
             <div class="popup-action line">
-                <button id="file-add-btn" class="pop-btn btn-default dropdown-trigger" data-target="#dropdown1">추가 등록</button>
+                <button id="file-add-btn" class="pop-btn btn-default popup-trigger" data-target="#resume-upload-popup">추가 등록</button>
                 <button id="file-select-btn" class="pop-btn btn-primary" disabled>선택 완료</button>
-
-                <div id="dropdown1" class="option-menu">
-                    <ul class="option-list">
-                        <li class="option-item">
-                            <button class="option-btn dropdown-trigger" data-target="#resume-upload-popup">
-                                <div>
-                                    <svg fill="currentColor" height="24" role="img" width="24">
-                                        <path clip-rule="evenodd" d="M5 4.8A1.2 1.2 0 0 0 3.8 6v12A1.2 1.2 0 0 0 5 19.2h14a1.2 1.2 0 0 0 1.2-1.2V9A1.2 1.2 0 0 0 19 7.8h-5.93a2.8 2.8 0 0 1-2.33-1.247l-.812-1.218A1.2 1.2 0 0 0 8.93 4.8zM2.2 6A2.8 2.8 0 0 1 5 3.2h3.93a2.8 2.8 0 0 1 2.33 1.247l.812 1.219a1.2 1.2 0 0 0 .998.534H19A2.8 2.8 0 0 1 21.8 9v9a2.8 2.8 0 0 1-2.8 2.8H5A2.8 2.8 0 0 1 2.2 18z" fill-rule="evenodd"></path>
-                                    </svg>
-                                </div>
-                                <p>파일 추가하기</p>
-                            </button>
-                        </li>
-                        <li class="option-item">
-                            <button class="option-btn dropdown-trigger" data-target="#url-upload-popup">
-                                <div>
-                                    <svg fill="currentColor" height="24" role="img" width="24">
-                                        <path clip-rule="evenodd" d="M12.141 5.07a4.8 4.8 0 1 1 6.788 6.789l-1.414 1.414a.8.8 0 1 1-1.131-1.131l1.414-1.415a3.2 3.2 0 0 0-4.526-4.525l-1.414 1.414a.8.8 0 0 1-1.131-1.131zm3.253 3.536a.8.8 0 0 1 0 1.131l-5.657 5.657a.8.8 0 0 1-1.132-1.131l5.657-5.657a.8.8 0 0 1 1.132 0m-7.778 2.121a.8.8 0 0 1 0 1.132L6.2 13.273a3.2 3.2 0 0 0 4.526 4.525l1.414-1.414a.8.8 0 0 1 1.131 1.131l-1.414 1.415a4.8 4.8 0 0 1-6.788-6.788l1.414-1.415a.8.8 0 0 1 1.132 0" fill-rule="evenodd"></path>
-                                    </svg>
-                                </div>
-                                <p>URL 추가하기</p>
-                            </button>
-                        </li>
-                    </ul>
-                </div>
             </div>
         </div>
     </div>
