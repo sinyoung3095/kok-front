@@ -1,50 +1,35 @@
-# kok(콕)
 
-<h1>직업 체험 프로젝트 - 'kok'</h1>
-
-
-<h2>1. 기획 의도</h2>
-<img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2070" style = "width: 80%; height : 480">
-
-경력직을 선호 하고 수시 채용에서 신입을 뽑지 않는 상황이 많아져서 <strong>청년층의 '쉬었음' 인구가 역대 최고치로 증가</strong> 했고 청년층 고용 한파가 계속 되었을 때 사회적인 문제로 자리 잡을 수 있다고 생각하였고 
-경력을 쌓을 곳이 없는 청년층이 직장을 체험해 보고 더 나아가서는 취업으로 연계가 될 수 있는 직업 체험 사이트를 제작하기로 했습니다. 
-
-</div>
+## 🎨 UI/UX 설계 및 클론코딩
+<br><br>
 
 
-<h2>2. 기대 효과</h2>
-<img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1171" style = "width: 80%; height : 480">
-STEP 1. 짧은 체험이지만 이력서보다 강한 ‘현장 경험’이 됩니다. 책이나 강의로는 알 수 없는 실제 직무의 결을 피부로 느낄 수 있습니다.<br>
-STEP 2. 체험에서 채용까지, 자연스럽게 이어지는 성장의 흐름을 만들 수 있습니다.<br>
-STEP 3. 처음 취업을 하는 청년들의 취업에 대한 부담감을 줄일 수 있고 취업이 어렵지 않은 일이라는 인식을 줄 수 있습니다.
+### 벤치마킹 대상: 로켓펀치
 
+-   ‘로켓펀치’을 벤치마킹하여 **화면 구현 능력단위**에서 배운 **HTML, CSS, JavaScript**로 화면을 직접 구현했습니다.
+-   **CSS 전환 효과(Transition)** 와 **JavaScript 이벤트 처리**를 통해 페이지 이벤트를 역동적으로 구현했습니다.
+-   클라이언트의 시선에서 필요한 UI/UX를 더 발전 시켰습니다.
 
-<h2>3. 프로젝트 사용 툴</h2>
-- Java<br>
-- Java Script<br>
-- tomcat<br>
-- MyBatis<br>
-- Spring Boot<br>
-- PostgreSql<br>
-- Visual Studio Code<br>
-- Sourcetree<br>
-- git, github<br>
-- JSON<br>
-- Redis<br>
-- JDK 17.0.10<br>
-- Naver DEVELOPER API<br>
-- Kakao DEVELOPER API<br>
-- Google DEVELOPER API<br>
-- SMTP Gmail API<br>
-- S3<br>
+  <br><br>
 
-  
-<h2>4. 담당 업무</h2>
-4-1 프론트엔드<br>
+**예시 이미지**
+
+<img width="1911" height="955" alt="image" src="https://github.com/user-attachments/assets/47e71c5f-a565-40d1-a082-ace8d48643da" />
+  <br><br>
+
+**실제 클론 코딩 이미지**
+
+<img width="1920" height="1440" alt="커뮤니티-콕" src="https://github.com/user-attachments/assets/b007c933-b685-4ad7-87a2-ddd312477811" />
+<img width="1920" height="1342" alt="마이페이지-콕" src="https://github.com/user-attachments/assets/e6b5f412-eda9-4069-9aee-d3fb59f64b07" />
+
+---
+  <br><br>
+### [front]
+
 ▶ 진행도
+  <br>
 <img width="1010" height="250" alt="image" src="https://github.com/user-attachments/assets/8cc4e568-a662-49c3-b920-e964541fa9ca" />
 
-<img width="1920" height="1342" alt="마이페이지-콕" src="https://github.com/user-attachments/assets/e6b5f412-eda9-4069-9aee-d3fb59f64b07" />
+
 
 ▶ 마이페이지
 - 프로필 편집, 공유
@@ -54,7 +39,7 @@ STEP 3. 처음 취업을 하는 청년들의 취업에 대한 부담감을 줄�
 - 결제 내역
 - 이력서 보관함
 - 광고창
-<img width="1920" height="1440" alt="커뮤니티-콕" src="https://github.com/user-attachments/assets/b007c933-b685-4ad7-87a2-ddd312477811" />
+
 
 
 ▶ 커뮤니티
@@ -65,17 +50,27 @@ STEP 3. 처음 취업을 하는 청년들의 취업에 대한 부담감을 줄�
   
 
 
+  <br><br>
+### [Back]
 <br>
-4-2 백엔드<br>
-<br>
-▶ ERD
-<img width="100%" height="100%" alt="erd" src="https://github.com/user-attachments/assets/d1bd955f-eea4-45cf-a6fe-e83c092c3811" />
+▶ ERD (Entity Relationship Diagram) <br>
+
+**데이터베이스 구현 능력단위**에서 배운 테이블 설계 및 제약조건 설정 방법을 적용하여
+테이블 간의 관계를 체계적으로 구성했습니다.
+관계 구성 시 정규화를 통해 데이터 중복을 최소화하였고,
+**SQL 활용 능력단위**에서 배운 **DML(INSERT, UPDATE, DELETE, SELECT)** 문법을 사용하여
+더미 데이터를 추가·수정·삭제·조회하며 동작을 검증했습니다.
+이를 통해 데이터 구조 설계부터 실제 조작까지의 전 과정을 경험했습니다.
+
+<img width="8866" height="6252" alt="image" src="https://github.com/user-attachments/assets/e7285cda-25af-4332-80f0-26e466395024" />
+
+
 <br><br>
 ▶ 진행도
+  <br>
 <img width="1838" height="342" alt="image" src="https://github.com/user-attachments/assets/6f99fcc2-cfff-4a81-a765-686e88fe7055" />
 
 <br><br>
-<img width="1920" height="910" alt="로그인-콕" src="https://github.com/user-attachments/assets/7021ea36-214c-4dc7-a891-1fbe8c3e670e" />
 
 ▶ 회원가입(일반회원, 기업회원)
 - 아이디, 이메일 중복 검사
@@ -102,7 +97,6 @@ STEP 3. 처음 취업을 하는 청년들의 취업에 대한 부담감을 줄�
 - 인증 코드가 일치할 경우 비밀번호 변경페이지 이동
 - 비밀번호 변경 구현
 <br><br>
- <img width="1920" height="910" alt="체험공고-콕" src="https://github.com/user-attachments/assets/4d9b5371-e5bf-4158-a5fd-670e38324d70" />
  
 ▶ 헤더(일반회원, 기업회원)
 - 헤더 드랍박스 기능 구현
@@ -112,20 +106,12 @@ STEP 3. 처음 취업을 하는 청년들의 취업에 대한 부담감을 줄�
 ▶ 사이드바(일반회원, 기업회원)
 - 알람 설정
 - 프로필 정보 구현
+- <br><br><br>
 
 
-<h2>5. 느낀점</h2>
-<h3>5-1. 어려웠던 부분</h3>
-📌jwt Security를 이용해서 보안을 높이고 사용하는데 있어서 다양한 오류를 직면 했고 전체 순환 구조를 이해하는데 힘들었고 <br>
-✔ 단계가 익숙하지 않아 유지 보수가 어려웠지만, 구조를 익히고 수정하는 과정을 통해 파악을 더 잘할수 있게 되었습니다.<br><br>
-<br>
+## 오류 상황 및 해결
 
-
-<h3>5-2. 문제를 해결했던 부분</h3>
-
-
-
-<h4>📌Oauth 계정의 accessToken의 재발급 오류</h4>
+<h4>1. 📌Oauth 계정의 accessToken의 재발급 오류</h4>
 🌩문제 상황🌩<br>
 <img width="1139" height="579" alt="oauth_reflesh_re_오류" src="https://github.com/user-attachments/assets/5b8ab062-2de0-495b-a7d9-34ef2528d763" />
 <br><br>
@@ -143,7 +129,7 @@ refreshToken을 재발급 하는 과정에서 Oauth계정과 일반 로그인 �
 
 
 
-<h4>📌메인페이지 헤더와 사이드바의 객체 인식 오류</h4> <br>
+<h4>2. 📌메인페이지 헤더와 사이드바의 객체 인식 오류</h4> <br>
 🌩문제 상황🌩<br>
 
 <img width="1919" height="916" alt="profile_오류-1" src="https://github.com/user-attachments/assets/3be08d42-a1fe-490f-8cf3-066de3dd1739" />
@@ -159,7 +145,7 @@ intercepter를 이용해서 헤더와 사이드바가 들어가는 페이지에 
 
 
 
-<h4>📌PostgreSql의 enumuration 오류</h4> <br>
+<h4>3. 📌PostgreSql의 enumuration 오류</h4> <br>
 🌩문제 상황🌩<br>
 <img width="1254" height="933" alt="enum오류-1" src="https://github.com/user-attachments/assets/5a52a938-18e5-4f00-8897-e8f0a3bc96f0" />
 Enum의 인식에 문제가 있었습니다.
@@ -173,8 +159,12 @@ MySql과는 다르게 PostgreSql은 enum을 객체로 인식하기 때문에 재
 핸들러에서 객체로 세팅해주어 인식의 오류를 해결했습니다.
 
 
+## 총평
 
-<h3>5-3. 총평</h3>
+<h4> 😅 어려웠던 부분</h4>
+  📌jwt Security를 이용해서 보안을 높이고 사용하는데 있어서 다양한 오류를 직면 했고 전체 순환 구조를 이해하는데 힘들었고 <br>
+  ✔ 단계가 익숙하지 않아 유지 보수가 어려웠지만, 구조를 익히고 수정하는 과정을 통해 파악을 더 잘할수 있게 되었습니다.<br><br>
+<br>
 <h4>🌟 기획: 완벽한 기획이란 없다.  </h4>
  기획을 하는 과정에서 충분하다고 생각하여 개발을 시작했으나 중간에 필요한 부분이 생기거나 아주 세세한 부분에서 문제가 생긴다는 것을 알게 됐습니다. 예로 user테이블에서 member테이블과 company테이블로 fk를 주었고 profile사진을 저장하는 중간 테이블이 user_profile테이블과 company_profile테이블로 나눠져서 서로 저장하는 위치가 헷갈려서 user_profile테이블에 전체 저장하는 팀원과 company_profile에 따로 저장하는 팀원이 생겨났습니다.
 
