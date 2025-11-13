@@ -176,7 +176,7 @@ MySql과는 다르게 PostgreSql은 enum을 객체로 인식하기 때문에 재
 핸들러에서 객체로 세팅해주어 인식의 오류를 해결했습니다.
 <br>
 
-## 인프라 구축구분
+## AWS Cloud 배포
 ![load-balancing](https://github.com/user-attachments/assets/0f57f6d3-c3cd-41fe-a1b0-78bc1c67b44a)
 
 
