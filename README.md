@@ -1,4 +1,4 @@
-## 📊  데이터 분석
+## 📊 공공데이터 분석(기획배경)
 
 ### 📌 분석 목적
 
@@ -14,10 +14,15 @@
 <img width="444" height="299" alt="image" src="https://github.com/user-attachments/assets/70f8106f-367b-4ea8-957c-7a227d918c85" />
 
 
-### 🩺 분석 결과 및 해석
+### 🩺 분석 결과
 
 청년층(15~29세) 취업자 수는 2025년 5월 대비 10월에 **161,000명**이 감소하였고 이는 약 **4.4% 감소**한 것으로 보입니다.  
 동일한 기간 대비 30세 이상 취업자 수는 **일정하게** 유지가 된것으로 보입니다. 
+
+### 결론
+
+5개월의 적은 기간에도 청년층의 취업이 감소를 하는 모습을 볼 수 있었고 취업을 위해서 가볍게 접근 가능한 플랫폼이 필요하다고 느껴서
+기획을 하게 되었습니다.
 
 
 ## 📱 UI/UX 설계 및 클론코딩
@@ -48,7 +53,8 @@
 <img width="1920" height="1440" alt="커뮤니티-콕" src="https://github.com/user-attachments/assets/b007c933-b685-4ad7-87a2-ddd312477811" />
 
 
----
+## 🧑🏻‍💻  담당 페이지
+
   
 ### [front]
 
@@ -145,8 +151,16 @@
 - 통합 검색 구현
  <br><br><br>
 
+## QA테스트
 
-## 오류 상황 및 해결
+<img width="564" height="591" alt="image" src="https://github.com/user-attachments/assets/82295d27-fe50-4a6d-8880-d91403abd26c" />
+
+
+애플리케이션 테스트 수행 능력단위에서 배운 내용을 토대로 QA 테스트 문서를 작성, 수행했습니다.
+
+기능별로 테스트 케이스를 작성하고, QA 테스트를 진행하였습니다.
+
+## Truble Shooting
 
 <h4>1. 📌Oauth 계정의 accessToken의 재발급 오류</h4>
 
@@ -198,7 +212,9 @@ MySql과는 다르게 PostgreSql은 enum을 객체로 인식하기 때문에 재
 <br>
 
 ## AWS Cloud 배포
-![load-balancing](https://github.com/user-attachments/assets/0f57f6d3-c3cd-41fe-a1b0-78bc1c67b44a)
+![load-balancing](https://github.com/user-attachments/assets/7325156b-c66a-4712-b12c-475993c90a11)
+
+
 
 
 ## 총평
