@@ -52,6 +52,12 @@
 
 <img width="1920" height="1440" alt="커뮤니티-콕" src="https://github.com/user-attachments/assets/b007c933-b685-4ad7-87a2-ddd312477811" />
 
+### 커뮤니티 화면 앱 전환
+
+**통합 구현 능력단위**에서 배운 react-native와 webviw를 이용하여 모바일 환경에서도 볼 수 있는 커뮤니티 화면을 구현 하였습니다.
+
+<img width="540" height="1200" alt="image" src="https://github.com/user-attachments/assets/38fe9159-86b6-401f-88f1-a46569b12f01" />
+
 
 ## 🧑🏻‍💻  담당 페이지
 
@@ -84,11 +90,6 @@
 - 신규 체험공고 목록
 - 광고창
   
-### 커뮤니티 화면 앱 전환
-
-**통합 구현 능력단위**에서 배운 react-native와 webviw를 이용하여 모바일 환경에서도 볼 수 있는 커뮤니티 화면을 구현 하였습니다.
-
-<img width="540" height="1200" alt="image" src="https://github.com/user-attachments/assets/38fe9159-86b6-401f-88f1-a46569b12f01" />
 
   <br><br>
 ### [Back]
