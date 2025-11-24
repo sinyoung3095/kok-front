@@ -1,4 +1,5 @@
 ## 📊 공공데이터 분석(기획배경)
+<br>
 
 ### 📌 분석 목적
 
@@ -24,9 +25,10 @@
 5개월의 적은 기간에도 청년층의 취업이 감소를 하는 모습을 볼 수 있었고 취업을 위해서 가볍게 접근 가능한 플랫폼이 필요하다고 느껴서
 기획을 하게 되었습니다.
 
+<br>
 
 ## 📱 UI/UX 설계 및 클론코딩
-<br><br>
+<br>
 
 
 ### 벤치마킹
@@ -38,21 +40,26 @@
   <br><br>
 
 **예시 이미지**
+<br>
 
 <img width="1911" height="955" alt="image" src="https://github.com/user-attachments/assets/47e71c5f-a565-40d1-a082-ace8d48643da" />
-  <br><br>
+<br><br>
 
-**실제 클론 코딩 이미지**<br>
+**실제 클론 코딩 이미지**
+<br>
 
 ▶ 마이페이지
 
 <img width="1920" height="1342" alt="마이페이지-콕" src="https://github.com/user-attachments/assets/e6b5f412-eda9-4069-9aee-d3fb59f64b07" />
 
+<br><br>
 ▶ 커뮤니티
 
 <img width="1920" height="1440" alt="커뮤니티-콕" src="https://github.com/user-attachments/assets/b007c933-b685-4ad7-87a2-ddd312477811" />
+<br><br><br>
 
-### 커뮤니티 화면 앱 전환
+## 🔗 커뮤니티 화면 앱 전환
+<br>
 
 **통합 구현 능력단위**에서 배운 react-native와 webviw를 이용하여 모바일 환경에서도 볼 수 있는 커뮤니티 화면을 구현 하였습니다.
 
@@ -60,6 +67,7 @@
 
 
 ## 🧑🏻‍💻  담당 페이지
+<br>
 
   
 ### [front]
@@ -81,7 +89,7 @@
 - 이력서 보관함
 - 광고창
 
-
+<br>
 
 ▶ 커뮤니티
 
@@ -120,6 +128,8 @@
 - 네이버 Oauth를 이용한 간편 회원가입
 - 구글 Oauth를 이용한 간편 회원가입
 
+<br>
+
 ▶ 로그인(일반회원, 기업회원)
 
 - Jwt security를 이용한 보안 로그인 기능 구현
@@ -127,24 +137,24 @@
 - 네이버 Oauth를 이용한 간편 로그인
 - 구글글 Oauth를 이용한 간편 로그인
 - 로그아웃 기능 구현
-
+<br>
 ▶ 아이디 찾기(일반회원, 기업회원)
 
 - 사용자가 입력한 전화번호로 인증번호 전송
 - 인증 코드가 일치할 경우 아이디 표시 페이지 이동
-
+<br>
 ▶ 비밀번호 찾기(일반회원, 기업회원)
 
 - 사용자가 입력한 이메일로 인증링크 전송
 - 인증 코드가 일치할 경우 비밀번호 변경페이지 이동
 - 비밀번호 변경 구현
 <br><br>
- 
+
 ▶ 헤더(일반회원, 기업회원)
 
 - 일반 회원 지원내역 
 - 로그아웃 구현
-
+<br>
 ▶ 사이드바(일반회원, 기업회원)
 
 - 알람 설정
@@ -153,6 +163,7 @@
  <br><br><br>
 
 ## QA테스트
+<br>
 
 <img width="564" height="591" alt="image" src="https://github.com/user-attachments/assets/82295d27-fe50-4a6d-8880-d91403abd26c" />
 
@@ -162,6 +173,7 @@
 기능별로 테스트 케이스를 작성하고, QA 테스트를 진행하였습니다.
 
 ## Truble Shooting
+<br>
 
 <h4>1. 📌Oauth 계정의 accessToken의 재발급 오류</h4>
 
@@ -213,12 +225,15 @@ MySql과는 다르게 PostgreSql은 enum을 객체로 인식하기 때문에 재
 <br>
 
 ## AWS Cloud 배포
+<br>
+
 ![load-balancing](https://github.com/user-attachments/assets/7325156b-c66a-4712-b12c-475993c90a11)
 
 
 
 
 ## 총평
+<br>
 
 <h4> 😅 어려웠던 부분</h4>
   📌jwt Security를 이용해서 보안을 높이고 사용하는데 있어서 다양한 오류를 직면 했고 전체 순환 구조를 이해하는데 힘들었고 <br>
